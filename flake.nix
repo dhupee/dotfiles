@@ -19,13 +19,13 @@
       nixos = lib.nixosSystem{
         inherit system;
 	modules = [./configuration.nix];
+        };
       };
-     };
     homeConfigurations = {
-       dhupee = home-manager.lib.homeManagerConfiguration {
-	 inherit pkgs;
-	 modules = [./home.nix];
-       };
+      dhupee = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [./home.nix];
+        };
       };
     };
 }
