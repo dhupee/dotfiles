@@ -96,7 +96,7 @@
             fi
 
 
-            ZSH_THEME="powerlevel10k/powerlevel10k"
+            ZSH_THEME="${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k"
             '';
         # initExtra = "source ~/.p10k.zsh";
         oh-my-zsh = {
