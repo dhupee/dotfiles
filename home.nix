@@ -80,12 +80,25 @@
 
     programs.zsh = {
         enable = true;
-        promptInit = "
-            source ~/.p10k.zsh"
+        promptInit = ''
+            source ~/.p10k.zsh
+
+            # Sourcing aliases
+            if [ -d ~/.aliases/ ]; then
+                # Loop through all .sh files in the aliases directory and source them
+                for file in ~/.aliases/*.sh; do
+                    if [ -f "$file" ]; then
+                        source "$file"
+                    fi
+                done
+            else
+                echo "Aliases directory not found"
+            fi
+
 
             ZSH_THEME="powerlevel10k/powerlevel10k"
-            "
-        initExtra = "source ~/.p10k.zsh";
+            '';
+        # initExtra = "source ~/.p10k.zsh";
         oh-my-zsh = {
             enable = true;
             # theme = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
