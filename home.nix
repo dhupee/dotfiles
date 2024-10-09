@@ -80,7 +80,7 @@
 
     programs.zsh = {
         enable = true;
-        promptInit = ''
+        initExtra = ''
             source ~/.p10k.zsh
 
             # Sourcing aliases
