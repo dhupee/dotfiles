@@ -78,8 +78,18 @@
         enable = true;
         oh-my-zsh = {
             enable = true;
-            theme = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
+            # theme = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
             plugins = [
+                {
+                    name = "powerlevel10k-config";
+                    src = ./config/;
+                    file = "p10k.zsh";
+                }
+                {
+                    name = "zsh-powerlevel10k"
+                    src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
+                    file = "powerlevel10k.zsh-theme";
+                }
                 "thefuck"
                 "copypath"
                 "docker"
