@@ -76,9 +76,9 @@
 
     programs.zsh = {
         enable = true;
-        promptInit = "source ${pkgs.zsh-powerlevel10k}/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme";
         oh-my-zsh = {
             enable = true;
+            theme = "source ${pkgs.zsh-powerlevel10k}/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme";
             plugins = [
                 "thefuck"
                 "copypath"
