@@ -22,6 +22,7 @@
     lazygit
     fastfetch
     gh
+    helix
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -72,6 +73,27 @@
   home.sessionVariables = {
     # EDITOR = "emacs";
   };
+
+    programs.zsh = {
+        enable = true;
+        oh-my-zsh = {
+            enable = true;
+            plugins = [
+                "thefuck"
+                "copypath"
+                "docker"
+                "podman"
+                "qrcode"
+                "nvm"
+                "node"
+                "npm"
+                "pyenv"
+                "python"
+                "golang"
+                "zoxide"
+            ];
+        };
+    };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
