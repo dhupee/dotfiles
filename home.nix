@@ -54,6 +54,7 @@
     # '';
     
     ".p10k.zsh".source = ./config/p10k.zsh;
+    ".aliases".source = ./aliases;
   };
 
   # Home Manager can also manage your environment variables through
@@ -81,7 +82,7 @@
         initExtra = "source ~/.p10k.zsh";
         oh-my-zsh = {
             enable = true;
-            theme = "${pkgs.zsh-powerlevel10k}";
+            theme = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
             plugins = [
                 "thefuck"
                 "copypath"
