@@ -52,6 +52,8 @@
     #   org.gradle.console=verbose
     #   org.gradle.daemon.idletimeout=3600000
     # '';
+    
+    "~/.p10k.zsh".source = ./config/p10k.zsh
   };
 
   # Home Manager can also manage your environment variables through
@@ -81,11 +83,7 @@
             enable = true;
             # theme = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme";
             plugins = [
-                {
-                    name = "zsh-powerlevel10k"
-                    src = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/";
-                    file = "powerlevel10k.zsh-theme";
-                }
+                "${zsh-powerlevel10k}"
                 "thefuck"
                 "copypath"
                 "docker"
