@@ -23,6 +23,7 @@
     fastfetch
     gh
     helix
+    zsh-powerlevel10k
 
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
@@ -79,10 +80,15 @@
 
     programs.zsh = {
         enable = true;
+        promptInit = "
+            source ~/.p10k.zsh"
+
+            ZSH_THEME="powerlevel10k/powerlevel10k"
+            "
         initExtra = "source ~/.p10k.zsh";
         oh-my-zsh = {
             enable = true;
-            theme = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
+            # theme = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
             plugins = [
                 "thefuck"
                 "copypath"
