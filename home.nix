@@ -53,7 +53,7 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
     
-    "~/.p10k.zsh".source = ./config/p10k.zsh
+    "~/.p10k.zsh".source = ./config/p10k.zsh;
   };
 
   # Home Manager can also manage your environment variables through
