@@ -102,6 +102,7 @@
         oh-my-zsh = {
             enable = true;
             # theme = "${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k";
+            theme = "robbyrussell";
             plugins = [
                 "thefuck"
                 "copypath"
