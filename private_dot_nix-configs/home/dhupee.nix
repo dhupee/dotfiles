@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
 {
   imports = [
@@ -6,6 +6,7 @@
     ../modules/home-manager/starship.nix
     ../modules/home-manager/neovim.nix
     ../modules/home-manager/git.nix
+    ../modules/home-manager/gh.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -16,16 +17,24 @@
   # Don't change this without reading the docs.
   home.stateVersion = "24.05";
 
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
+
   # Packages
   home.packages = with pkgs; [
     alacritty
+    chezmoi
+    discord
     fastfetch
     lazygit
-    gh
     podman
+    thefuck
+    tmux
+    zoxide
 
     # Fonts
-    (pkgs.nerdfonts.override { fonts = [ "Hack Nerd Font" ]; })
+    # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; }) # Refer to this: 
 
     # Shell scripts
     # (pkgs.writeShellScriptBin "my-hello" ''
@@ -35,7 +44,7 @@
 
   # Config that needs to be symlinked
   home.file = {
-    ".aliases".source = ./aliases;
+    ".aliases".source = ../aliases;
     ".config/PrusaSlicer".source = ../config/PrusaSlicer;
     ".config/containers".source = ../config/containers;
     ".tmux.conf".source = ../config/tmux.conf;
