@@ -1,15 +1,15 @@
-{ pkgs, ...}:
+{ pkgs, pkgs-unstable, ...}:
 
 {
   programs.neovim = {
     enable = true;
-    package = pkgs.neovim-unwrapped;
+    package = pkgs-unstable.neovim-unwrapped;
     defaultEditor = true;
     withNodeJs = true;
     withPython3 = true;
     withRuby = true;
 
-    extraPackages = with pkgs; [
+    extraPackages = with pkgs-unstable; [
       alejandra
       black
       golangci-lint
