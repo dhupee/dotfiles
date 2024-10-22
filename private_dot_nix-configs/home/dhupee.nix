@@ -23,6 +23,7 @@
   # Packages
   home.packages = with pkgs; [
     alacritty
+    bat
     chezmoi
     discord
     fastfetch
@@ -35,7 +36,7 @@
 
     # Fonts
     # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; }) # Refer to this: 
+    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; })
 
     # Shell scripts
     # (pkgs.writeShellScriptBin "my-hello" ''
@@ -49,6 +50,7 @@
     ".config/PrusaSlicer".source = ../config/PrusaSlicer;
     ".config/containers".source = ../config/containers;
     ".tmux.conf".source = ../config/tmux.conf;
+    ".config/alacritty".source = ../config/alacritty;
   };
 
   # Session variables
