@@ -16,19 +16,30 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, nix-on-droid, home-manager }:
-    let
-      system = "x86_64-linux"; # Adjust this if you are using a different architecture
-      pkgs = nixpkgs.legacyPackages.${system};
-      pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
-      lib = nixpkgs.lib;
-    in {
-
+  outputs = {
+    self,
+    nixpkgs,
+    nixpkgs-unstable,
+    nix-on-droid,
+    home-manager,
+  }: let
+    system_arch = "x86_64-linux"; # Adjust this if you are using a different architecture
+    # pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = import nixpkgs {
+      system = system_arch;
+      config.allowUnfree = true;
+    };
+    pkgs-unstable = import nixpkgs-unstable {
+      system = system_arch;
+      config.allowUnfree = true;
+    };
+    lib = nixpkgs.lib;
+  in {
     # Nix-on-Droid configuration
     nixOnDroidConfigurations = {
       default = nix-on-droid.lib.nixOnDroidConfiguration {
-        pkgs = import nixpkgs { system = "aarch64-linux"; };
-        modules = [ ./droids/default.nix ];
+        pkgs = import nixpkgs {system = "aarch64-linux";};
+        modules = [./droids/default.nix];
         # extraSpecialArgs = {
         #   pkgs-unstable = import nixpkgs-unstable { system = "aarch64-linux"; };
         # };
@@ -38,18 +49,18 @@
     # NixOS configuration
     nixosConfigurations = {
       nitro = lib.nixosSystem {
-        inherit system;
-        modules = [ ./desktop/nitro/configuration.nix ];
+        inherit system_arch;
+        modules = [./desktop/nitro/configuration.nix];
         extraSpecialArgs = {
           inherit pkgs-unstable;
         };
       };
       virts = lib.nixosSystem {
-        inherit system;
-        modules = [ ./desktop/virts/configuration.nix ];
+        inherit system_arch;
+        modules = [./desktop/virts/configuration.nix];
         extraSpecialArgs = {
           inherit pkgs-unstable;
-          };
+        };
       };
     };
 
@@ -57,7 +68,7 @@
     homeConfigurations = {
       dhupee = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
-        modules = [ ./home/dhupee.nix ];
+        modules = [./home/dhupee.nix];
         extraSpecialArgs = {
           inherit pkgs-unstable;
         };
@@ -65,4 +76,3 @@
     };
   };
 }
-
