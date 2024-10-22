@@ -98,6 +98,10 @@
         gcc
         git
         home-manager
+        htop
+        nvtop
+        p7zip
+        unrar
         wget
         wl-clipboard
   ];
