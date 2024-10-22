@@ -56,13 +56,13 @@
 
   # Enable the KDE Plasma Desktop Environment.
   # services.xserver.displayManager.sddm.enable = true; # this one uses x11
-  services.xserver.displayManager.sddm.wayland.enable = true; # this one uses wayland
-  services.xserver.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.wayland.enable = true; # this one uses wayland
+  services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
-    layout = "us";
-    xkbVariant = "";
+    xkb.layout = "us";
+    xkb.variant = "";
   };
 
   # Enable CUPS to print documents.
