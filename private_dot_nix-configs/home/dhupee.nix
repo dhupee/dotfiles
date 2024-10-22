@@ -29,6 +29,7 @@
     lazygit
     podman
     thefuck
+    tree
     tmux
     zoxide
 
