@@ -24,12 +24,22 @@
   home.packages = with pkgs; [
     alacritty
     bat
+    betterdiscordctl
+    btop
     chezmoi
     discord
+    distrobox
+    dust
     fastfetch
+    fzf
     lazygit
+    libreoffice
+    ngrok
     podman
+    prusa-slicer
+    tectonic-unwrapped
     thefuck
+    tldr
     tree
     tmux
     zoxide
