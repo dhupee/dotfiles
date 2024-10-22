@@ -95,6 +95,7 @@
   # $ nix search wget
   # Nano is installed by default
   environment.systemPackages =
+    # with pkgs; [
     (with pkgs; [
       # vim
       curl
@@ -107,6 +108,7 @@
       unrar
       wget
       wl-clipboard
+      # ];
     ])
     ++ (with pkgs-unstable; [
       codeium
@@ -114,6 +116,8 @@
 
   # List services that you want to enable:
   services.openssh.enable = true;
+
+  programs.nix-ld.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

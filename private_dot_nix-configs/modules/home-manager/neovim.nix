@@ -11,11 +11,12 @@
     withNodeJs = true;
     withPython3 = true;
     withRuby = true;
-
+    # plugins = with pkgs-unstable; [
+    #   vimPlugins.codeium-nvim
+    # ];
     extraPackages = with pkgs-unstable; [
       alejandra
       black
-      # codeium
       golangci-lint
       gopls
       gotools
@@ -32,9 +33,6 @@
       shfmt
       stylua
       yaml-language-server
-
-      # # nvim plugins
-      # vimPlugins.codeium-nvim
     ];
   };
 
