@@ -23,14 +23,14 @@
     nix-on-droid,
     home-manager,
   }: let
-    system_arch = "x86_64-linux"; # Adjust this if you are using a different architecture
+    system = "x86_64-linux"; # Adjust this if you are using a different architecture
     # pkgs = nixpkgs.legacyPackages.${system};
     pkgs = import nixpkgs {
-      system = system_arch;
+      system = system;
       config.allowUnfree = true;
     };
     pkgs-unstable = import nixpkgs-unstable {
-      system = system_arch;
+      system = system;
       config.allowUnfree = true;
     };
     lib = nixpkgs.lib;
@@ -49,16 +49,16 @@
     # NixOS configuration
     nixosConfigurations = {
       nitro = lib.nixosSystem {
-        inherit system_arch;
+        inherit system;
         modules = [./desktop/nitro/configuration.nix];
-        extraSpecialArgs = {
+        specialArgs = {
           inherit pkgs-unstable;
         };
       };
       virts = lib.nixosSystem {
-        inherit system_arch;
+        inherit system;
         modules = [./desktop/virts/configuration.nix];
-        extraSpecialArgs = {
+        specialArgs = {
           inherit pkgs-unstable;
         };
       };
