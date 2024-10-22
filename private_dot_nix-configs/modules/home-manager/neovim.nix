@@ -1,6 +1,9 @@
-{ pkgs, pkgs-unstable, ...}:
-
 {
+  pkgs,
+  pkgs-unstable,
+  lib,
+  ...
+}: {
   programs.neovim = {
     enable = true;
     package = pkgs-unstable.neovim-unwrapped;
@@ -12,6 +15,7 @@
     extraPackages = with pkgs-unstable; [
       alejandra
       black
+      codeium
       golangci-lint
       gopls
       gotools
@@ -28,6 +32,9 @@
       shfmt
       stylua
       yaml-language-server
+
+      # # nvim plugins
+      # vimPlugins.codeium-nvim
     ];
   };
 
