@@ -1,6 +1,10 @@
-{ lib, config, pkgs, ... }:
-
 {
+  lib,
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   imports = [
     ../modules/home-manager/zsh.nix
     ../modules/home-manager/starship.nix
@@ -19,6 +23,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  # nixpkgs-unstable.config.allowUnfree = true;
 
   # Packages
   home.packages = with pkgs; [
@@ -46,13 +51,16 @@
 
     # Fonts
     # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
-    (pkgs.nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; })
+    (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
 
     # Shell scripts
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
+  # ++ (with pkgs-unstable; [
+  #   codeium
+  # ]);
 
   # Config that needs to be symlinked
   home.file = {
