@@ -1,21 +1,23 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ../../machines/nitro/hardware-configuration.nix
-      ../../users/dhupee.nix
-    ];
+  config,
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    ../../machines/nitro/hardware-configuration.nix
+    ../../users/dhupee.nix
+  ];
 
   # Don't change this unless you know what you're doing!
   system.stateVersion = "24.05";
 
   # Enable experimental features.
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -92,19 +94,23 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   # Nano is installed by default
-  environment.systemPackages = with pkgs; [
-        # vim
-        curl
-        gcc
-        git
-        home-manager
-        htop
-        nvtop
-        p7zip
-        unrar
-        wget
-        wl-clipboard
-  ];
+  environment.systemPackages =
+    (with pkgs; [
+      # vim
+      curl
+      gcc
+      git
+      home-manager
+      htop
+      nvtop
+      p7zip
+      unrar
+      wget
+      wl-clipboard
+    ])
+    ++ (with pkgs-unstable; [
+      codeium
+    ]);
 
   # List services that you want to enable:
   services.openssh.enable = true;

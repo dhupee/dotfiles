@@ -15,7 +15,7 @@
     extraPackages = with pkgs-unstable; [
       alejandra
       black
-      codeium
+      # codeium
       golangci-lint
       gopls
       gotools
