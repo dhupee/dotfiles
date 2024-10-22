@@ -94,11 +94,12 @@
   # Nano is installed by default
   environment.systemPackages = with pkgs; [
         # vim
+        curl
         gcc
         git
-        wget
-        curl
         home-manager
+        wget
+        wl-clipboard
   ];
 
   # List services that you want to enable:
