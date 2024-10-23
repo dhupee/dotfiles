@@ -50,6 +50,12 @@
     tmux
     zoxide
 
+    # gtk themes
+    tokyonight-gtk-theme
+
+    # cursors
+    comixcursors
+    graphite-cursors
     # Fonts
     # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
     (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
