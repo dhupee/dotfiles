@@ -9,6 +9,7 @@ return {
   --   wrapper = "$HOME/.scripts/srghma-codeium-nix-wrapper",
   -- },
   "Exafunction/codeium.nvim",
+  enabled = false,
   dependencies = {
     "nvim-lua/plenary.nvim",
     "hrsh7th/nvim-cmp",
