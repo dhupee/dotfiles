@@ -11,7 +11,9 @@
     ../modules/home-manager/neovim.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
-    ../modules/gnome/nitro.nix
+
+    # theming
+    ../theming/gnome/nitro/home.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
