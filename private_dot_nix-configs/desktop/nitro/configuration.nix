@@ -51,13 +51,20 @@
     LC_TIME = "id_ID.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
+  # # Enable the X11 windowing system.
+  # services.xserver.enable = true;
+  #
+  # # Enable the KDE Plasma Desktop Environment.
+  # # services.xserver.displayManager.sddm.enable = true; # this one uses x11
+  # services.displayManager.sddm.wayland.enable = true; # this one uses wayland
+  # services.desktopManager.plasma6.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  # services.xserver.displayManager.sddm.enable = true; # this one uses x11
-  services.displayManager.sddm.wayland.enable = true; # this one uses wayland
-  services.desktopManager.plasma6.enable = true;
+  # Enable Gnome as Desktop Environment
+  services.xserver = {
+    enable = true;
+    displayManager.gdm.enable = true;
+    desktopManager.gnome.enable = true;
+  };
 
   # Configure keymap in X11
   services.xserver = {
@@ -101,6 +108,7 @@
       curl
       gcc
       git
+      gnome.gnome-tweaks
       home-manager
       htop
       nvtop
