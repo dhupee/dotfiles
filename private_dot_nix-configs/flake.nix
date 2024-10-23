@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nix-alien.url = "github:thiagokokada/nix-alien";
 
@@ -12,9 +13,9 @@
     };
 
     home-manager = {
-      # url = "github:nix-community/home-manager";
+      # url = "github:nix-community/home-manager/master";
       url = "github:nix-community/home-manager/release-24.05";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     plasma-manager = {
@@ -60,8 +61,10 @@
       nitro = lib.nixosSystem {
         inherit system;
         modules = [
+          # directory of the configuration nix of this profile
           ./desktop/nitro/configuration.nix
 
+          # Nix Alien tooling, not used yet though
           ({self, ...}: let
             nix-alien-pkgs = nix-alien.packages.${system};
           in {
@@ -89,8 +92,10 @@
       dhupee = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
+          # directory of my home configuration
           ./home/dhupee.nix
 
+          # Plasma manager tooling to customize KDE plasma
           plasma-manager.homeManagerModules.plasma-manager
         ];
         extraSpecialArgs = {
