@@ -77,8 +77,9 @@
     ".aliases".source = ../aliases;
     ".config/PrusaSlicer".source = ../config/PrusaSlicer;
     ".config/containers".source = ../config/containers;
-    ".tmux.conf".source = ../config/tmux.conf;
     ".config/alacritty".source = ../config/alacritty;
+    ".config/btop".source = ../config/btop;
+    ".tmux.conf".source = ../config/tmux.conf;
   };
 
   # Session variables
