@@ -1,6 +1,9 @@
-{ config, lib, pkgs, ... }:
-
 {
+  config,
+  lib,
+  pkgs,
+  ...
+}: {
   # Simply install just the packages
   environment.packages = with pkgs; [
     # User-facing stuff that you really really want to have
@@ -27,14 +30,14 @@
     zoxide
   ];
 
-
   # Home-manager specific configuration
   home-manager.config = {
     # Don't change this willy nilly
     home.stateVersion = "24.05";
 
     # Importing any modules from Home.nix goes through here
-    imports = [ # has issue for being bit heavy, dont used it for now
+    imports = [
+      # has issue for being bit heavy, dont used it for now
       ../modules/home-manager/zsh.nix
       ../modules/home-manager/starship-droid.nix
       ../modules/home-manager/helix.nix
@@ -44,13 +47,13 @@
     ];
 
     home.file = {
-    # Symlink config files you want, example:
-    # ".screenrc".source = dotfiles/screenrc;
+      # Symlink config files you want, example:
+      # ".screenrc".source = dotfiles/screenrc;
 
-    ".config/helix".source = ../config/helix;
-    ".aliases".source = ../aliases;
-    ".tmate.conf".source = ../config/tmate.conf;
-    # ".gitconfig".source = ../config/gitconfig;
+      ".config/helix".source = ../config/helix;
+      ".aliases".source = ../aliases;
+      ".tmate.conf".source = ../config/tmate.conf;
+      # ".gitconfig".source = ../config/gitconfig;
     };
   };
 
