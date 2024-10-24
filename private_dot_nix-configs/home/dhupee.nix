@@ -43,7 +43,8 @@
     lazygit
     libreoffice
     ngrok
-    podman
+    platformio-core
+    # podman
     prusa-slicer
     tectonic-unwrapped
     thefuck
