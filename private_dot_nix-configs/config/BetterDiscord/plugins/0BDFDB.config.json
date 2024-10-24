@@ -1,0 +1,23 @@
+{
+	"all": {
+		"changeLogs": {
+			"BDFDB": "3.7.9",
+			"PluginRepo": "2.5.7",
+			"SpellCheck": "1.6.9",
+			"SpotifyControls": "1.4.1"
+		},
+		"choices": {
+			"toastPosition": "right"
+		},
+		"general": {
+			"shareData": true,
+			"showToasts": true,
+			"showSupportBadges": false,
+			"useChromium": false
+		},
+		"hashes": {
+			"0BDFDB.data.json": "cdf9c332935abf569238271215c5b59b1d0e179d",
+			"0BDFDB.raw.css": "b760b98b7aaf737ca3088a5aaf68fef220274de0"
+		}
+	}
+}
