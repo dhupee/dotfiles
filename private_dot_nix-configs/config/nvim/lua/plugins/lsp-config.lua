@@ -1,9 +1,14 @@
+-- Refer to this documentation:
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
+
 return {
   {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
         bashls = {},
+        ccls = {},
+        dockerls = {},
         gopls = {
           settings = {
             gopls = {
@@ -37,6 +42,7 @@ return {
             },
           },
         },
+        marksman = {},
         nixd = {},
         pyright = {
           settings = {
@@ -52,6 +58,7 @@ return {
         },
         ruff = {},
         terraformls = {},
+        texlab = {},
         tflint = {},
         yamlls = {
           settings = {

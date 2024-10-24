@@ -15,23 +15,51 @@
     #   vimPlugins.codeium-nvim
     # ];
     extraPackages = with pkgs-unstable; [
-      alejandra
-      black
+      # C++
+      ccls
+      cpplint
+
+      # Docker
+      dockerfile-language-server-nodejs
+      hadolint
+
+      # Go
       golangci-lint
       gopls
+      gofumpt
       gotools
-      hadolint
-      isort
+
+      # LaTeX
+      texlab
+      bibtex-tidy
+
+      # Lua
       lua-language-server
+
+      # Markdown
       markdownlint-cli
+      marksman
+
+      # Nix
+      alejandra
       nixd
-      nodePackages.bash-language-server
-      nodePackages.prettier
+
+      # Python
+      black
+      isort
       pyright
       ruff
+
+      # Javascripts and it's cronies
+      nodePackages.prettier
+
+      # Shellscript
+      nodePackages.bash-language-server
       shellcheck
       shfmt
       stylua
+
+      # Yaml
       yaml-language-server
     ];
   };
