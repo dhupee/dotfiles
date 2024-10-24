@@ -10,10 +10,9 @@
   imports = [
     # Include the results of the hardware scan.
     ../../machines/nitro/hardware-configuration.nix
+    ../../modules/systems/docker.nix
     ../../users/dhupee.nix
-
-    # theming
-    ../../theming/gnome/nitro/system.nix
+    ../../theming/gnome/nitro/system.nix # theming
   ];
 
   # Don't change this unless you know what you're doing!
@@ -104,6 +103,7 @@
       gcc
       git
       gnome.gnome-tweaks
+      gnumake
       home-manager
       htop
       nvtopPackages.full
