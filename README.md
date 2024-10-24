@@ -1,8 +1,6 @@
-# Dhupee's Nix configurations Repository (EXPERIMENTAL)
+# Dhupee's Nix configurations Repository
 
 This is my Nix configurations, which "will" be part of my dotfiles. These are configurations that I currently created on my Nix dotfiles, not only for NixOS, but also for Android, and maybe hopefully servers and Macs if i have money.
-
-It's still experimental, since I havent move to NixOS yet, but it should be good enough for now.
 
 I use combination of chezmoi for dealing with sensitive files that need to be kept secret, and Home-manager for managing my home configuration.
 
@@ -45,9 +43,9 @@ TBA
 
 ## To-Do List
 
-- [ ] Neovim modules with nixvim, finished then migrate fully
+- [x] ~~Neovim modules with nixvim, finished then migrate fully~~ Managed use most of my old configs with something left behind for now
 - [ ] Vscode modules also
-- [ ] Migrating few of my scripts from old dotfiles
+- [x] Migrating few of my scripts from old dotfiles
 - [ ] Theming related, KDE, Gnome, Hyprland whatever i can just change since its Nix
 - [ ] Make a command and control like for managing nix, built in go, name Yuki
 - [ ] Either specific nix for centralized configuration, or maybe on the flake
