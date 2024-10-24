@@ -59,9 +59,11 @@
     # cursors
     comixcursors
     graphite-cursors
+
     # Fonts
     # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
     (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
+    corefonts
 
     # Shell scripts
     # (pkgs.writeShellScriptBin "my-hello" ''
