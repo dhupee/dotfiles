@@ -16,7 +16,7 @@
     # ];
     extraPackages = with pkgs-unstable; [
       # C++
-      ccls
+      clang-tools
       cpplint
 
       # Docker

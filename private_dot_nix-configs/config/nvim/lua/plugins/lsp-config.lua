@@ -7,7 +7,7 @@ return {
     opts = {
       servers = {
         bashls = {},
-        ccls = {},
+        clangd = {},
         dockerls = {},
         gopls = {
           settings = {
