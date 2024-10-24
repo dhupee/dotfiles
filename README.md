@@ -6,7 +6,8 @@ I use combination of chezmoi for dealing with sensitive files that need to be ke
 
 <!--toc:start-->
 
-- [Dhupee's Nix Dotfiles (EXPERIMENTAL)](#dhupees-nix-dotfiles-experimental)
+- [Dhupee's Nix configurations Repository](#dhupees-nix-configurations-repository)
+  - [Screenshots](#screenshots)
   - [File Structure](#file-structure)
   - [Installation](#installation)
   - [To-Do List](#to-do-list)
