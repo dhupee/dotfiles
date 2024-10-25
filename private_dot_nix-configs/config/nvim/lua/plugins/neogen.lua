@@ -1,7 +1,21 @@
 return {
   "danymat/neogen",
-  config = true,
   cmd = "Neogen",
+  opts = {
+    -- for a full list of annotation_conventions, see supported-languages below,
+    languages = {
+      lua = {
+        template = {
+          annotation_convention = "emmylua",
+        },
+      },
+      go = {
+        template = {
+          annotation_convention = "godoc",
+        },
+      },
+    },
+  },
   keys = {
     {
       "<leader>cg",
