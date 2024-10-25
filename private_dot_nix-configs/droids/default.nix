@@ -24,7 +24,6 @@
     tldr
     tmate
     tree
-    vim
     wget
     yt-dlp
     zoxide
@@ -41,7 +40,6 @@
       ../modules/home-manager/zsh.nix
       ../modules/home-manager/starship-droid.nix
       ../modules/home-manager/helix.nix
-      ../modules/home-manager/neovim.nix
       ../modules/home-manager/git.nix
       ../modules/home-manager/gh.nix
     ];
