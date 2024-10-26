@@ -12,9 +12,6 @@
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
 
-    # Input Method
-    ../modules/home-manager/input-methods.nix
-
     # theming
     ../theming/gnome/nitro/home.nix
   ];
@@ -69,6 +66,8 @@
       # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
       (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
       corefonts
+      hachimarupop
+      noto-fonts-cjk
 
       # Shell scripts
       # (pkgs.writeShellScriptBin "my-hello" ''

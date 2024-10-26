@@ -13,6 +13,7 @@
     ../../modules/systems/docker.nix
     ../../users/dhupee.nix
     ../../theming/gnome/nitro/system.nix # theming
+    ../../modules/systems/input-methods.nix
   ];
 
   # Don't change this unless you know what you're doing!
