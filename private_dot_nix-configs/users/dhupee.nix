@@ -1,15 +1,17 @@
-{config, pkgs, ...}:
-
 {
+  config,
+  pkgs,
+  ...
+}: {
   users.users.dhupee = {
     isNormalUser = true;
     description = "dhupee";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel" "docker"];
     shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
       kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
