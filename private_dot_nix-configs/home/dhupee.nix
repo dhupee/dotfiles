@@ -92,10 +92,10 @@
     ".tmux.conf".source = ../config/tmux.conf;
   };
 
-  # some config isn't read-only, so this thing is needed
+  # some config I have isn't read-only, so this thing is needed
   home.activation = {
     linkPrusaSlicerConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.local/share/chezmoi/private_dot_nix-configs/config/PrusaSlicer $HOME/.config/PrusaSlicer
+      ln -sf $HOME/.local/share/chezmoi/mutable-configs/PrusaSlicer $HOME/.config/PrusaSlicer
     '';
   };
 
