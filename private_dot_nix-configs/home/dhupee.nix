@@ -12,6 +12,9 @@
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
 
+    # Input Method
+    ../modules/home-manager/input-methods.nix
+
     # theming
     ../theming/gnome/nitro/home.nix
   ];
