@@ -6,10 +6,11 @@
 }: {
   i18n.inputMethod = {
     enabled = "fcitx5";
-    fcitx5.addons = with pkgs-unstable; [
+    fcitx5.addons = with pkgs; [
       fcitx5-mozc
       fcitx5-gtk
       fcitx5-configtool
     ];
+    fcitx5.waylandFrontend = true;
   };
 }
