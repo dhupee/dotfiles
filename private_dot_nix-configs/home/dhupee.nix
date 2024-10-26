@@ -32,59 +32,71 @@
   # nixpkgs-unstable.config.allowUnfree = true;
 
   # Packages
-  home.packages = with pkgs; [
-    alacritty
-    bat
-    betterdiscordctl
-    btop
-    chezmoi
-    discord
-    distrobox
-    dust
-    fastfetch
-    fzf
-    lazygit
-    libreoffice
-    ngrok
-    platformio-core
-    # podman
-    prusa-slicer
-    tectonic-unwrapped
-    thefuck
-    tldr
-    tree
-    tmux
-    zoxide
+  home.packages =
+    # (with pkgs; [
+    with pkgs; [
+      alacritty
+      bat
+      betterdiscordctl
+      btop
+      chezmoi
+      discord
+      distrobox
+      dust
+      fastfetch
+      fzf
+      lazygit
+      libreoffice
+      ngrok
+      platformio-core
+      prusa-slicer
+      # podman
+      tectonic-unwrapped
+      thefuck
+      tldr
+      tree
+      tmux
+      zoxide
 
-    # gtk themes
-    tokyonight-gtk-theme
+      # gtk themes
+      tokyonight-gtk-theme
 
-    # cursors
-    comixcursors
-    graphite-cursors
+      # cursors
+      comixcursors
+      graphite-cursors
 
-    # Fonts
-    # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
-    (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
-    corefonts
+      # Fonts
+      # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
+      (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
+      corefonts
 
-    # Shell scripts
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
-  ];
+      # Shell scripts
+      # (pkgs.writeShellScriptBin "my-hello" ''
+      #   echo "Hello, ${config.home.username}!"
+      # '')
+    ];
+  # ])
   # ++ (with pkgs-unstable; [
-  #   codeium
+  #   # codeium
+  #   orca-slicer
+  #   # super-slicer
   # ]);
 
   # Config that needs to be symlinked
+  # CAREFUL: it's read-only
   home.file = {
     ".aliases".source = ../aliases;
-    ".config/PrusaSlicer".source = ../config/PrusaSlicer;
     ".config/containers".source = ../config/containers;
     ".config/alacritty".source = ../config/alacritty;
     ".config/btop".source = ../config/btop;
     ".tmux.conf".source = ../config/tmux.conf;
+  };
+
+  # some config isn't read-only, so this thing is needed
+  home.activation = {
+    linkPrusaSlicerConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      ln -sf $HOME/.local/share/chezmoi/private_dot_nix-configs/config/PrusaSlicer $HOME/.config/PrusaSlicer
+    '';
   };
 
   # Session variables
