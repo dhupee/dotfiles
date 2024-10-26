@@ -10,8 +10,6 @@
     shell = pkgs.zsh;
     packages = with pkgs; [
       firefox
-      kate
-      #  thunderbird
     ];
   };
 
