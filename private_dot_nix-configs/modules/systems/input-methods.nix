@@ -21,9 +21,11 @@
         };
         "Groups/0/Items/0" = {
           "Name" = "keyboard-us";
+          "Layout" = null;
         };
         "Groups/0/Items/1" = {
           "Name" = "mozc";
+          "Layout" = null;
         };
         "GroupOrder" = {
           "0" = "Default";
