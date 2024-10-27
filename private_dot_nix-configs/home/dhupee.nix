@@ -67,7 +67,8 @@
       (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
       corefonts
       hachimarupop
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
+      noto-fonts-cjk-serif
 
       # Shell scripts
       # (pkgs.writeShellScriptBin "my-hello" ''
