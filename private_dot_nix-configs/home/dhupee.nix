@@ -41,6 +41,7 @@
       distrobox
       dust
       fastfetch
+      ffmpeg
       fzf
       lazygit
       libreoffice
@@ -53,6 +54,7 @@
       tldr
       tree
       tmux
+      yt-dlp
       zoxide
 
       # gtk themes
