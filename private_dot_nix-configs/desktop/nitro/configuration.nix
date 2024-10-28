@@ -100,6 +100,7 @@
     # with pkgs; [
     (with pkgs; [
       # vim
+      bind
       curl
       gcc
       git
