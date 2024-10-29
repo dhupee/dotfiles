@@ -32,6 +32,20 @@
     ];
     userSettings = {
       "workbench.colorTheme" = "Dracula";
+      "files.autoSave" = "afterDelay";
+      "git.autoFetch" = true;
+      "editor" = {
+        "lineNumbers" = "relative";
+        "formatOnSave" = true;
+        "quickSuggesions" = {
+          "comments" = "on";
+          "strings" = "on";
+        };
+      };
+      "nix" = {
+        "enableLanguageServer" = true;
+        "serverPath" = "${pkgs.nixd}/bin/nixd";
+      };
     };
   };
 }
