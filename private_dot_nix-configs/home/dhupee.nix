@@ -56,7 +56,6 @@
       tldr
       tree
       tmux
-      yazi
       yt-dlp
       zoxide
 
