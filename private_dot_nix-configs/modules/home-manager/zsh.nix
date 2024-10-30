@@ -25,7 +25,7 @@
               echo "Aliases directory not found"
           fi
 
-        export _ZO_DATA_DIR="~/.local/share/chezmoi/mutable-configs/zoxide"
+        export _ZO_DATA_DIR=$HOME/.local/share/chezmoi/mutable-configs/zoxide
         eval "$(zoxide init zsh)"
 
       '';
