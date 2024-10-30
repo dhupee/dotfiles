@@ -23,6 +23,9 @@ hxf() {
 # Copying Tmux.conf to tmate.conf
 alias tmux2tmate="cp ~/.tmux.conf ~/.tmate.conf"
 
+# yazi
+alias y="yazi"
+
 # Plasma
 alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
 
@@ -38,10 +41,6 @@ alias gpll="git pull"
 
 # Goenv
 alias goenv-update="cd ~/.goenv && git fetch --all && git pull && cd"
-
-# Bluetooth
-alias bt-start="systemctl start bluetooth"
-alias bt-stop="systemctl stop bluetooth"
 
 # Qemu/KVM
 alias vm-start="systemctl start libvirtd"
@@ -74,13 +73,7 @@ alias dotsave="sh $HOME/.scripts/dotsave.sh"
 # Symlink
 alias symlink="ln -s"
 
-# Run osu with dedicated graphics by default
-alias osu="DRI_PRIME=1 /usr/bin/osu-lazer"
-
 # Flatpak aliases, tidy up
-
-# Podman is Docker, fight me
-# alias docker="podman"
 
 # Arch-based maintenance
 alias orphanrm="bash $HOME/.scripts/remove-orphans.sh"
