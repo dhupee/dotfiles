@@ -4,4 +4,16 @@
     package = pkgs.yazi;
     enableZshIntegration = true;
   };
+
+  # treated it as extra packages
+  home.packages = with pkgs; [
+    jq
+    poppler
+    fd
+    ripgrep
+    fzf
+    zoxide
+    imagemagick
+    wl-clipboard
+  ];
 }
