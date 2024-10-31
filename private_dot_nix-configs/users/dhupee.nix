@@ -6,7 +6,7 @@
   users.users.dhupee = {
     isNormalUser = true;
     description = "dhupee";
-    extraGroups = ["networkmanager" "wheel" "docker"];
+    extraGroups = ["dialout" "networkmanager" "wheel" "docker"];
     shell = pkgs.zsh;
     packages = with pkgs; [
       firefox

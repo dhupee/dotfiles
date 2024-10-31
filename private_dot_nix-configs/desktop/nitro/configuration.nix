@@ -122,6 +122,9 @@
   # List services that you want to enable:
   services.openssh.enable = true;
 
+  # Make sure udev is installed for platformio
+  services.udev.packages = with pkgs; [platformio-core.udev];
+
   programs.nix-ld.enable = true;
 
   # Open ports in the firewall.
