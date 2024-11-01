@@ -1,3 +1,0 @@
-git+https://github.com/mov-cli/mov-cli@v4
-mov-cli-films
-mov-cli-anime
