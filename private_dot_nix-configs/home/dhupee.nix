@@ -46,6 +46,7 @@
       fastfetch
       ffmpeg
       fzf
+      kicad
       lazygit
       libreoffice
       ngrok
