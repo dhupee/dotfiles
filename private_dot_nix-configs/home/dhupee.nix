@@ -47,12 +47,12 @@
       ffmpeg
       fzf
       kicad
+      lazydocker
       lazygit
       libreoffice
       ngrok
       platformio-core
       prusa-slicer
-      # podman
       tectonic-unwrapped
       thefuck
       tldr

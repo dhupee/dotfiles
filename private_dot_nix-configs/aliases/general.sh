@@ -83,6 +83,9 @@ alias cacherm="rm -rf ~/.cache/*"
 # Lazygit
 alias lg="lazygit"
 
+# Lazydocker
+alias lzd-"Lazydocker"
+
 # Update Ohmyzsh's custom plugins
 alias omz_custom_update="sh $HOME/.scripts/omz-custom-upgrade.sh"
 
