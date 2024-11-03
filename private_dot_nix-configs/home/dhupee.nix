@@ -95,6 +95,7 @@
     ".config/containers".source = ../config/containers;
     ".config/alacritty".source = ../config/alacritty;
     ".config/btop".source = ../config/btop;
+    ".config/yazi".source = ../config/yazi;
     ".tmux.conf".source = ../config/tmux.conf;
   };
 
