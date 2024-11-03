@@ -1,3 +1,0 @@
-[
-	(recipe_body)
-] @indent
