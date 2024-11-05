@@ -3,6 +3,7 @@ TARGET="tmux"
 
 # General
 alias td="$TARGET detach"
+alias trst="$TARGET kill-server && $TARGET || $TARGET"
 
 # Sessions
 alias tsa="$TARGET attach -t"
