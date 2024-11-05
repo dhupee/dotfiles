@@ -33,8 +33,8 @@
 
   # Packages
   home.packages =
-    # (with pkgs; [
-    with pkgs; [
+    (with pkgs; [
+      # with pkgs; [
       alacritty
       bat
       betterdiscordctl
@@ -68,25 +68,19 @@
       comixcursors
       graphite-cursors
 
-      # Fonts
+      # Fonts, some might need to be installed system wide, check modules
       # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
       (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
-      corefonts
-      hachimarupop
-      noto-fonts-cjk-sans
-      noto-fonts-cjk-serif
 
       # Shell scripts
       # (pkgs.writeShellScriptBin "my-hello" ''
       #   echo "Hello, ${config.home.username}!"
       # '')
-    ];
-  # ])
-  # ++ (with pkgs-unstable; [
-  #   # codeium
-  #   orca-slicer
-  #   # super-slicer
-  # ]);
+      # ];
+    ])
+    ++ (with pkgs-unstable; [
+      distrobox-tui
+    ]);
 
   # Config that needs to be symlinked
   # CAREFUL: it's read-only

@@ -11,6 +11,9 @@
     # Tooling
     ../../modules/systems/docker.nix
 
+    # Fonts
+    ../../modules/systems/fonts.nix
+
     # User Configuration
     ../../users/dhupee.nix
 
