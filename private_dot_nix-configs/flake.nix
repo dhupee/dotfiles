@@ -23,6 +23,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+    nixvim = {
+      # url = "github:nix-community/nixvim/nixos-24.05";
+      # inputs.nixpkgs.follows = "nixpkgs";
+
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = {
@@ -33,6 +41,7 @@
     home-manager,
     nix-alien,
     plasma-manager,
+    nixvim,
   }: let
     system = "x86_64-linux"; # Adjust this if you are using a different architecture
 
@@ -97,6 +106,9 @@
 
           # Plasma manager tooling to customize KDE plasma
           plasma-manager.homeManagerModules.plasma-manager
+
+          # Nixvim options
+          nixvim.homeManagerModules.nixvim
         ];
         extraSpecialArgs = {
           inherit pkgs-unstable;

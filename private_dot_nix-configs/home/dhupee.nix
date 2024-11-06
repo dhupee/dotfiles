@@ -9,7 +9,8 @@
     # tooling
     ../modules/home-manager/zsh.nix
     ../modules/home-manager/starship.nix
-    ../modules/home-manager/neovim.nix
+    # ../modules/home-manager/neovim.nix
+    ../modules/home-manager/nixvim.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
     ../modules/home-manager/vscode.nix
@@ -40,7 +41,7 @@
       betterdiscordctl
       btop
       chezmoi
-      discord
+      # discord
       distrobox
       dust
       fastfetch
@@ -80,6 +81,13 @@
     ])
     ++ (with pkgs-unstable; [
       distrobox-tui
+      vesktop
+      # # discord with vencord
+      # (pkgs.discord.override {
+      #   # remove any overrides that you don't want
+      #   withOpenASAR = true;
+      #   withVencord = true;
+      # })
     ]);
 
   # Config that needs to be symlinked
