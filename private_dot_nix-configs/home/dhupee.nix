@@ -96,7 +96,7 @@
   # some config I have isn't read-only, so this thing is needed
   home.activation = {
     linkPrusaSlicerConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.local/share/chezmoi/mutable-configs/PrusaSlicer $HOME/.config/PrusaSlicer
+      ln -sf $HOME/.local/share/chezmoi/mutable-configs/PrusaSlicer $HOME/.config/
     '';
   };
 
