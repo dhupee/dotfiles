@@ -9,8 +9,8 @@
     # tooling
     ../modules/home-manager/zsh.nix
     ../modules/home-manager/starship.nix
-    # ../modules/home-manager/neovim.nix
-    ../modules/home-manager/nixvim.nix
+    ../modules/home-manager/neovim.nix
+    #../modules/home-manager/nixvim.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
     ../modules/home-manager/vscode.nix
