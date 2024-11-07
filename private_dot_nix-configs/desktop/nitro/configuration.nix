@@ -134,6 +134,7 @@
   services.udev.packages = with pkgs; [platformio-core.udev];
 
   programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = [];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
