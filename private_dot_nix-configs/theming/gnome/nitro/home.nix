@@ -15,4 +15,13 @@
       ];
     };
   };
+
+  home.packages = with pkgs; [
+    # gtk themes
+    tokyonight-gtk-theme
+
+    # cursors
+    comixcursors
+    graphite-cursors
+  ];
 }

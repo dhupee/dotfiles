@@ -8,9 +8,9 @@
     description = "dhupee";
     extraGroups = ["dialout" "networkmanager" "wheel" "docker"];
     shell = pkgs.zsh;
-    packages = with pkgs; [
-      firefox
-    ];
+    # packages = with pkgs; [
+    #   firefox
+    # ];
   };
 
   # just for the check dont get angry with me

@@ -41,11 +41,11 @@
       betterdiscordctl
       btop
       chezmoi
-      # discord
       distrobox
       dust
       fastfetch
       ffmpeg
+      firefox # will use options later on
       fzf
       kicad
       lazydocker
@@ -62,13 +62,6 @@
       yt-dlp
       zoxide
 
-      # gtk themes
-      tokyonight-gtk-theme
-
-      # cursors
-      comixcursors
-      graphite-cursors
-
       # Fonts, some might need to be installed system wide, check modules
       # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
       (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
@@ -82,12 +75,6 @@
     ++ (with pkgs-unstable; [
       distrobox-tui
       vesktop
-      # # discord with vencord
-      # (pkgs.discord.override {
-      #   # remove any overrides that you don't want
-      #   withOpenASAR = true;
-      #   withVencord = true;
-      # })
     ]);
 
   # Config that needs to be symlinked
