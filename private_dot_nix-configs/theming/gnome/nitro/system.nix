@@ -6,6 +6,10 @@
     desktopManager.gnome.enable = true;
   };
 
+  environment.systemPackages = with pkgs; [
+    gnome.gnome-tweaks
+  ];
+
   # I dont need any of this
   environment.gnome.excludePackages =
     (with pkgs; [
