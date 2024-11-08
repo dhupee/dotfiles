@@ -5,6 +5,10 @@
       hachimarupop
       noto-fonts-cjk
       corefonts
+
+      # I dont need all of them
+      # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
+      (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
     ];
 
     fontconfig = {

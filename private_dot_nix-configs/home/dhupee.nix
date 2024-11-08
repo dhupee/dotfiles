@@ -62,9 +62,7 @@
       yt-dlp
       zoxide
 
-      # Fonts, some might need to be installed system wide, check modules
-      # Refer to this: https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#patched-fonts
-      (pkgs.nerdfonts.override {fonts = ["FiraCode" "Hack"];})
+      # Fonts are installed system wide, check modules
 
       # Shell scripts
       # (pkgs.writeShellScriptBin "my-hello" ''
