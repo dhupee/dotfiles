@@ -10,6 +10,7 @@
 
     # Tooling
     ../../modules/systems/docker.nix
+    ../../modules/systems/cloudlare-warp.nix
 
     # Fonts
     ../../modules/systems/fonts.nix
