@@ -111,14 +111,14 @@
       bind
       curl
       gcc
-      git
-      gnome.gnome-tweaks
       gnumake
+      go-task
       home-manager
       htop
       nvtopPackages.full
       p7zip
       unrar
+      unzip
       wget
       wl-clipboard
       # ];
