@@ -1,6 +1,4 @@
-{ pkgs, ...}:
-
-{
+{pkgs, ...}: {
   # the issue starts to get annoying
   # so use traditional .gitconfig instead
   programs.git = {

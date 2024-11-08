@@ -1,16 +1,17 @@
 # Edit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
-
-{ config, pkgs, ... }:
-
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
-    ];
+  config,
+  pkgs,
+  ...
+}: {
+  imports = [
+    # Include the results of the hardware scan.
+    /etc/nixos/hardware-configuration.nix
+  ];
 
-  nix.settings.experimental-features = [ "nix-command" "flakes"];
+  nix.settings.experimental-features = ["nix-command" "flakes"];
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -86,11 +87,11 @@
   users.users.dhupee = {
     isNormalUser = true;
     description = "dhupee";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       firefox
       kate
-    #  thunderbird
+      #  thunderbird
     ];
   };
 
@@ -100,16 +101,16 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-        vim # Nano is installed by default
-        git
-        wget
-        curl
-        home-manager
+    vim # Nano is installed by default
+    git
+    wget
+    curl
+    home-manager
   ];
 
   programs.neovim = {
-      enable = true;
-      defaultEditor = true;
+    enable = true;
+    defaultEditor = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -127,7 +128,7 @@
 
   # Services related to qemu
   services.qemuGuest.enable = true;
-  services.spice-vdagentd.enable = true;  # enable copy and paste between host and guest
+  services.spice-vdagentd.enable = true; # enable copy and paste between host and guest
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
