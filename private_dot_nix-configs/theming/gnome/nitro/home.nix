@@ -12,6 +12,7 @@
         {package = pkgs-unstable.gnomeExtensions.open-bar;}
         {package = pkgs.gnomeExtensions.dash-to-dock;}
         {package = pkgs.gnomeExtensions.kimpanel;}
+        {package = pkgs.gnomeExtensions.caffeine;}
       ];
     };
   };
