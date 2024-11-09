@@ -5,7 +5,6 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nix-alien.url = "github:thiagokokada/nix-alien";
 
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid/release-24.05";
@@ -23,14 +22,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
-
-    nixvim = {
-      # url = "github:nix-community/nixvim/nixos-24.05";
-      # inputs.nixpkgs.follows = "nixpkgs";
-
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
-    };
   };
 
   outputs = {
@@ -39,9 +30,7 @@
     nixpkgs-unstable,
     nix-on-droid,
     home-manager,
-    nix-alien,
     plasma-manager,
-    nixvim,
   }: let
     system = "x86_64-linux"; # Adjust this if you are using a different architecture
 
@@ -72,15 +61,6 @@
         modules = [
           # directory of the configuration nix of this profile
           ./desktop/nitro/configuration.nix
-
-          # Nix Alien tooling, not used yet though
-          ({self, ...}: let
-            nix-alien-pkgs = nix-alien.packages.${system};
-          in {
-            environment.systemPackages = with pkgs; [
-              nix-alien-pkgs.nix-alien
-            ];
-          })
         ];
         specialArgs = {
           inherit pkgs-unstable;
@@ -106,9 +86,6 @@
 
           # Plasma manager tooling to customize KDE plasma
           plasma-manager.homeManagerModules.plasma-manager
-
-          # Nixvim options
-          nixvim.homeManagerModules.nixvim
         ];
         extraSpecialArgs = {
           inherit pkgs-unstable;
