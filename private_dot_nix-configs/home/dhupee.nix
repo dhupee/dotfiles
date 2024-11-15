@@ -93,6 +93,12 @@
     '';
   };
 
+  home.activation = {
+    linkNgrokYml = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      ln -sf $HOME/.secrets/ngrok $HOME/.config/
+    '';
+  };
+
   # Session variables
   home.sessionVariables = {
     # EDITOR = "emacs";
