@@ -29,15 +29,15 @@ alias y="yazi"
 # Plasma
 alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
 
-# Git
-alias ga="git add"
-alias gs="git status"
-alias gb='git branch'
-alias gl='git log'
-alias gcm="git commit -m"
-alias gco='git checkout'
-alias gpsh="git push"
-alias gpll="git pull"
+# # Git
+# alias ga="git add"
+# alias gs="git status"
+# alias gb='git branch'
+# alias gl='git log'
+# alias gcm="git commit -m"
+# alias gco='git checkout'
+# alias gpsh="git push"
+# alias gpll="git pull"
 
 # Goenv
 alias goenv-update="cd ~/.goenv && git fetch --all && git pull && cd"
@@ -46,14 +46,14 @@ alias goenv-update="cd ~/.goenv && git fetch --all && git pull && cd"
 alias vm-start="systemctl start libvirtd"
 alias vm-stop="systemctl stop libvirtd"
 
-# SSH Server
-alias ssh-server-start="systemctl start sshd.service"
-alias ssh-server-stop="systemctl stop sshd.service"
-alias ssh-server-check="nc -v -z 127.0.0.1 22"
+# # SSH Server
+# alias ssh-server-start="systemctl start sshd.service"
+# alias ssh-server-stop="systemctl stop sshd.service"
+# alias ssh-server-check="nc -v -z 127.0.0.1 22"
 
-# Firewal
-alias firewall-start="systemctl start firewalld.service"
-alias firewall-stop="systemctl stop firewalld.service"
+# # Firewal
+# alias firewall-start="systemctl start firewalld.service"
+# alias firewall-stop="systemctl stop firewalld.service"
 
 # LS & LL
 alias ls="ls --color='auto'"
@@ -75,10 +75,10 @@ alias symlink="ln -s"
 
 # Flatpak aliases, tidy up
 
-# Arch-based maintenance
-alias orphanrm="bash $HOME/.scripts/remove-orphans.sh"
-alias orphanrm-aur="yay -Yc"
-alias cacherm="rm -rf ~/.cache/*"
+# # Arch-based maintenance
+# alias orphanrm="bash $HOME/.scripts/remove-orphans.sh"
+# alias orphanrm-aur="yay -Yc"
+# alias cacherm="rm -rf ~/.cache/*"
 
 # Lazygit
 alias lg="lazygit"
@@ -86,8 +86,8 @@ alias lg="lazygit"
 # Lazydocker
 alias lzd="lazydocker"
 
-# Update Ohmyzsh's custom plugins
-alias omz_custom_update="sh $HOME/.scripts/omz-custom-upgrade.sh"
+# # Update Ohmyzsh's custom plugins
+# alias omz_custom_update="sh $HOME/.scripts/omz-custom-upgrade.sh"
 
 # zoxide as cd
 # if command -v zoxide >/dev/null; then
@@ -107,8 +107,8 @@ alias bottles-backup="bash .scripts/bottles-backup.sh"
 alias fan-speed-full="sudo nbfc set --speed=100"
 alias fan-speed-auto="sudo nbfc set --auto"
 
-# NVM
-alias nvm-update="curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep '"tag_name"' | cut -d '"' -f 4)/install.sh" | bash"
+# # NVM
+# alias nvm-update="curl -o- "https://raw.githubusercontent.com/nvm-sh/nvm/$(curl -s https://api.github.com/repos/nvm-sh/nvm/releases/latest | grep '"tag_name"' | cut -d '"' -f 4)/install.sh" | bash"
 
 # FNM
 # alias fnm-update="curl -fsSL https://fnm.vercel.app/install | zsh -s -- --skip-shell"
