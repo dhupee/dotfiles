@@ -1,6 +1,8 @@
 return {
   "anurag3301/nvim-platformio.lua",
-  cmd = {
+  -- "dhupee/nvim-platformio.lua",
+  -- branch = "main", -- branch
+  cmd = { -- comment it during development
     "Pioinit",
     "Piorun",
     "Piocmd",
