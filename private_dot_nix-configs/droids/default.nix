@@ -20,6 +20,7 @@
     man
     nano
     ncurses
+    tectonic
     thefuck
     tldr
     tmate
