@@ -3,7 +3,7 @@
     enableDefaultPackages = true;
     packages = with pkgs; [
       hachimarupop
-      noto-fonts-cjk
+      noto-fonts-cjk-sans
       corefonts
 
       # I dont need all of them
