@@ -46,6 +46,7 @@
       fastfetch
       ffmpeg
       firefox # will use options later on
+      freecad
       fzf
       kicad
       lazydocker
