@@ -13,6 +13,7 @@
     #../modules/home-manager/nixvim.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
+    ../modules/home-manager/prusa-slicer.nix
     ../modules/home-manager/vscode.nix
     ../modules/home-manager/yazi.nix
 
@@ -54,7 +55,6 @@
       libreoffice
       ngrok
       platformio-core
-      prusa-slicer
       tectonic-unwrapped
       thefuck
       tldr
@@ -88,12 +88,6 @@
   };
 
   # some config I have isn't read-only, so this thing is needed
-  home.activation = {
-    linkPrusaSlicerConfig = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.local/share/chezmoi/mutable-configs/PrusaSlicer $HOME/.config/
-    '';
-  };
-
   home.activation = {
     linkNgrokYml = lib.hm.dag.entryAfter ["writeBoundary"] ''
       ln -sf $HOME/.secrets/ngrok $HOME/.config/
