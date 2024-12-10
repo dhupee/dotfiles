@@ -49,6 +49,7 @@
       firefox # will use options later on
       freecad
       fzf
+      inkscape
       kicad
       lazydocker
       lazygit
