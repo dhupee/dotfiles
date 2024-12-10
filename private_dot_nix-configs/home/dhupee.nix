@@ -13,6 +13,7 @@
     #../modules/home-manager/nixvim.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
+    ../modules/home-manager/kicad.nix
     ../modules/home-manager/prusa-slicer.nix
     ../modules/home-manager/vscode.nix
     ../modules/home-manager/yazi.nix
@@ -50,7 +51,6 @@
       freecad
       fzf
       inkscape
-      kicad
       lazydocker
       lazygit
       libreoffice
