@@ -55,6 +55,7 @@
       lazydocker
       lazygit
       libreoffice
+      mpv
       ngrok
       platformio-core
       tectonic-unwrapped
@@ -62,6 +63,7 @@
       tldr
       tree
       tmux
+      vlc
       yt-dlp
       zoxide
 
