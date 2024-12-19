@@ -19,6 +19,9 @@
     ../modules/home-manager/vscode.nix
     ../modules/home-manager/yazi.nix
 
+    # spotify & spicetify
+    ../modules/home-manager/spicetify.nix
+
     # theming
     ../theming/gnome/nitro/home.nix
   ];
@@ -57,7 +60,10 @@
       libreoffice
       mpv
       ngrok
+      osu-lazer-bin
       platformio-core
+      rclone
+      spotube
       tectonic-unwrapped
       thefuck
       tldr
@@ -95,6 +101,12 @@
   home.activation = {
     linkNgrokYml = lib.hm.dag.entryAfter ["writeBoundary"] ''
       ln -sf $HOME/.secrets/ngrok $HOME/.config/
+    '';
+  };
+
+  home.activation = {
+    linkRcloneConf = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      ln -sf $HOME/.secrets/rclone/ $HOME/.config/
     '';
   };
 
