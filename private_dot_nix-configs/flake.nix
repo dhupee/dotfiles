@@ -23,6 +23,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -32,6 +37,7 @@
     nix-on-droid,
     home-manager,
     plasma-manager,
+    spicetify-nix,
   }: let
     system = "x86_64-linux"; # Adjust this if you are using a different architecture
 
@@ -87,9 +93,11 @@
 
           # Plasma manager tooling to customize KDE plasma
           plasma-manager.homeManagerModules.plasma-manager
+
+          spicetify-nix.homeManagerModules.default
         ];
         extraSpecialArgs = {
-          inherit pkgs-unstable;
+          inherit pkgs-unstable spicetify-nix;
         };
       };
     };
