@@ -39,12 +39,12 @@
   "aui": {
     "float_net_nav_panel": false,
     "hierarchy_panel_docked_height": -1,
-    "hierarchy_panel_docked_width": -1,
-    "hierarchy_panel_float_height": -1,
-    "hierarchy_panel_float_width": -1,
+    "hierarchy_panel_docked_width": 300,
+    "hierarchy_panel_float_height": 200,
+    "hierarchy_panel_float_width": 200,
     "net_nav_panel_docked_size": {
-      "height": -1,
-      "width": 120
+      "height": 250,
+      "width": 160
     },
     "net_nav_panel_float_pos": {
       "x": 50,
@@ -54,12 +54,12 @@
       "height": 200,
       "width": 200
     },
-    "properties_panel_width": -1,
+    "properties_panel_width": 300,
     "properties_splitter_proportion": 0.5,
     "schematic_hierarchy_float": false,
     "search_panel_dock_direction": 3,
-    "search_panel_height": -1,
-    "search_panel_width": -1,
+    "search_panel_height": 77,
+    "search_panel_width": 40,
     "show_net_nav_panel": false,
     "show_properties": true,
     "show_schematic_hierarchy": true,
@@ -261,7 +261,9 @@
     "width": -1
   },
   "system": {
-    "file_history": [],
+    "file_history": [
+      "/home/dhupee/Projects/fall-watch-thesis/schematics/schematics.kicad_sch"
+    ],
     "first_run_shown": false,
     "last_imperial_units": 5,
     "last_metric_units": 1,
@@ -325,11 +327,33 @@
     },
     "maximized": false,
     "mru_path": "",
-    "perspective": "",
-    "pos_x": 0,
-    "pos_y": 0,
-    "size_x": 0,
-    "size_y": 0,
-    "zoom_factors": []
+    "perspective": "layout2|name=InfoBar;caption=;state=131454;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=20;besth=30;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MainToolbar;caption=;state=139632;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=1204;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=MsgPanel;caption=;state=131452;dir=3;layer=6;row=0;pos=0;prop=100000;bestw=248;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=SchematicHierarchy;caption=Schematic Hierarchy;state=2099148;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=300;besth=200;minw=120;minh=60;maxw=-1;maxh=-1;floatx=378;floaty=105;floatw=200;floath=200|name=PropertiesManager;caption=Properties;state=2099148;dir=4;layer=3;row=0;pos=1;prop=100000;bestw=300;besth=200;minw=240;minh=60;maxw=-1;maxh=-1;floatx=50;floaty=200;floatw=300;floath=400|name=NetNavigator;caption=Net Navigator;state=2099150;dir=4;layer=3;row=0;pos=0;prop=100000;bestw=200;besth=200;minw=120;minh=60;maxw=-1;maxh=-1;floatx=50;floaty=200;floatw=200;floath=200|name=OptToolbar;caption=;state=139596;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=460;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ToolsToolbar;caption=;state=139596;dir=2;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=762;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DrawFrame;caption=;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=248;besth=215;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Search;caption=Search;state=2098686;dir=3;layer=0;row=0;pos=0;prop=100000;bestw=180;besth=100;minw=180;minh=60;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=480;floath=200|dock_size(1,6,0)=34|dock_size(3,6,0)=34|dock_size(4,3,0)=302|dock_size(4,2,0)=34|dock_size(2,2,0)=34|dock_size(5,0,0)=250|",
+    "pos_x": 26,
+    "pos_y": 23,
+    "size_x": 1572,
+    "size_y": 851,
+    "zoom_factors": [
+      0.05,
+      0.07,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.5,
+      0.7,
+      1.0,
+      1.5,
+      2.0,
+      3.0,
+      4.5,
+      6.5,
+      10.0,
+      15.0,
+      20.0,
+      30.0,
+      45.0,
+      65.0,
+      100.0
+    ]
   }
 }
