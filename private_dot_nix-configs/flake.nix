@@ -91,10 +91,8 @@
           # directory of my home configuration
           ./home/dhupee.nix
 
-          # Plasma manager tooling to customize KDE plasma
-          plasma-manager.homeManagerModules.plasma-manager
-
-          spicetify-nix.homeManagerModules.default
+          plasma-manager.homeManagerModules.plasma-manager # Plasma manager tooling to customize KDE plasma
+          spicetify-nix.homeManagerModules.default # Spictify to customize spotify
         ];
         extraSpecialArgs = {
           inherit pkgs-unstable spicetify-nix;
