@@ -60,6 +60,7 @@
       libreoffice
       mpv
       ngrok
+      orca-slicer
       osu-lazer-bin
       platformio-core
       rclone
