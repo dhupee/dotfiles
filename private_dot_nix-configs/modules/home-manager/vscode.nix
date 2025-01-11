@@ -51,7 +51,7 @@
     userSettings = {
       "workbench.colorTheme" = "Dracula";
       "files.autoSave" = "afterDelay";
-      "git.autoFetch" = true;
+      "git.autofetch" = true;
       "editor" = {
         "lineNumbers" = "relative";
         "formatOnSave" = true;
