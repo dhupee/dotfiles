@@ -60,6 +60,7 @@
       libreoffice
       mpv
       ngrok
+      obs-studio
       orca-slicer
       osu-lazer-bin
       platformio-core
