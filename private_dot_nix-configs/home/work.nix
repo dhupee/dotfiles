@@ -24,8 +24,14 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    chezmoi
+    lazygit
     fzf
+    thefuck
+    tldr
+    tree
     tmux
+    zoxide
   ];
 
   home.file = {
