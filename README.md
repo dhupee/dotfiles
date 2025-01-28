@@ -16,7 +16,7 @@
 
 ## What is this
 
-This is my new dotfiles that I will use in the next few years or might be my last dotfiles repo, this repo is not only for NixOS, but also for Android, and maybe hopefully servers and Macs if i have money.
+This is my new dotfiles that I will use in the next few years or might be my last dotfiles repo, this repo is not only for NixOS, but also for Android, HELL EVEN WINDOWS SUBSYSTEM FOR LINUX NOW!!! and maybe hopefully servers and Macs if i have money.
 
 I use combination of chezmoi for dealing with sensitive files that need to be kept secret, and Home-manager for managing my home configuration.
 
@@ -41,7 +41,7 @@ on the front you will have:
 - `private_dot_secrets`, well...encrypted files, configs, secrets
 - `private_dot_ssh`, obviously...my ssh key
 - `Templates`, templates of files...maybe not a lot that I added atm.
-- `Wallpapers`, Waifu and car picture for Wallpapersa
+- `Wallpapers`, Waifu and car picture for Wallpapers
 
 then when it comes to my actual `.nix-configs`, the directories looks like this.
 
@@ -54,6 +54,7 @@ then when it comes to my actual `.nix-configs`, the directories looks like this.
 - `modules`, modules of nix configs, seperated by systems and home-manager ofc.
 - `theming`, modules for my ricing.
 - `users`, modules for users, if there's more than me, or if I need a user for specific machines.
+- `wsl`, modules specifically for NixOS config but for Windows Subsystem for Linux
 
 This thing obviously can change overtime as this dotfiles grow.
 
