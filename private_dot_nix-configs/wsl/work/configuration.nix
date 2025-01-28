@@ -17,6 +17,7 @@
 
   time.timeZone = "Asia/Jakarta";
 
+  # Allow unfree
   nixpkgs.config.allowUnfree = true;
 
   wsl = {
@@ -27,6 +28,16 @@
     defaultUser = "dhupee";
     startMenuLaunchers = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    curl
+    gcc
+    gnumake
+    home-manager
+    unrar
+    unzip
+    wget
+  ];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
