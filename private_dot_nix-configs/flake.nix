@@ -73,7 +73,7 @@
         inherit system;
         modules = [
           # directory of the configuration nix of this profile
-          ./desktop/nitro/configuration.nix
+          ./linux/nitro/configuration.nix
         ];
         specialArgs = {
           inherit pkgs-unstable;
@@ -92,7 +92,7 @@
       };
       virts = lib.nixosSystem {
         inherit system;
-        modules = [./desktop/virts/configuration.nix];
+        modules = [./linux/virts/configuration.nix];
         specialArgs = {
           inherit pkgs-unstable;
         };
