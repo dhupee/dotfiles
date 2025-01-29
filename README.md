@@ -47,9 +47,9 @@ then when it comes to my actual `.nix-configs`, the directories looks like this.
 
 - `aliases`, my aliases...also carried from my old dotfiles.
 - `configs`, mostly my configuration files of packages, tried not to use nix for this so I can use it on non Nix systems.
-- `desktop`, my systems configs
 - `droids`, configurations for `Nix On Droid`, NixOS but for Android (a Termux-based app)
 - `home`, my home-manager configs, tried to seperate from systems as much as possible
+- `linux`, my systems configs for NixOS
 - `machines`, mostly for backups but it's collection of hardware-configurations.
 - `modules`, modules of nix configs, seperated by systems and home-manager ofc.
 - `theming`, modules for my ricing.
@@ -86,6 +86,7 @@ that will rebuild the systems into `nitro` profile, and `dhupee` home-manager pr
 ## References for me
 
 - [Partitioning NixOS with Disko](https://jefftp.com/nixos-disko/)
+- [NixOS on WSL Github Repository](https://github.com/nix-community/NixOS-WSL)
 - [Nix Shorts, A collection of short notes about Nix, down to what is immediately needed for users.](https://github.com/justinwoo/nix-shorts)
   - [Your First Derivation](https://github.com/justinwoo/nix-shorts/blob/master/posts/your-first-derivation.md)
 
