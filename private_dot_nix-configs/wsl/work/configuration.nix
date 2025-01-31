@@ -13,8 +13,10 @@
     ../../users/dhupee.nix
   ];
 
+  # Enable experimental features
   nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  # Set timezone
   time.timeZone = "Asia/Jakarta";
 
   # Allow unfree
@@ -34,10 +36,14 @@
     gcc
     gnumake
     home-manager
+    p7zip
     unrar
     unzip
     wget
   ];
+
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = [];
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
