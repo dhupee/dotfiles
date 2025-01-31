@@ -1,20 +1,28 @@
 return {
-  "nvim-cmp",
+  -- "hrsh7th/nvim-cmp",
+  -- dependencies = {
+  --   -- codeium
+  --   {
+  --     "Exafunction/codeium.nvim",
+  --     cmd = "Codeium",
+  --     build = ":Codeium Auth",
+  --     opts = {},
+  --   },
+  -- },
+  -- ---@param opts cmp.ConfigSchema
+  -- opts = function(_, opts)
+  --   table.insert(opts.sources, 1, {
+  --     name = "codeium",
+  --     group_index = 1,
+  --     priority = 100,
+  --   })
+  -- end,
+  "Exafunction/codeium.nvim",
   dependencies = {
-    -- codeium
-    {
-      "Exafunction/codeium.nvim",
-      cmd = "Codeium",
-      build = ":Codeium Auth",
-      opts = {},
-    },
+    "nvim-lua/plenary.nvim",
+    "hrsh7th/nvim-cmp",
   },
-  ---@param opts cmp.ConfigSchema
-  opts = function(_, opts)
-    table.insert(opts.sources, 1, {
-      name = "codeium",
-      group_index = 1,
-      priority = 100,
-    })
+  config = function()
+    require("codeium").setup({})
   end,
 }
