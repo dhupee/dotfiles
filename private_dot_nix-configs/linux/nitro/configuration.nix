@@ -79,7 +79,17 @@
   # Enable CUPS to print documents.
   services.printing = {
     enable = true;
-    drivers = with pkgs; [gutenprint canon-cups-ufr2 cups-filters];
+    drivers = with pkgs; [
+      gutenprint
+      canon-cups-ufr2
+      cups-filters
+      epson-escpr
+    ];
+  };
+
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
   };
 
   # Enable sound with pipewire.
