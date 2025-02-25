@@ -29,6 +29,9 @@
     wslConf.network.generateHosts = false;
     defaultUser = "dhupee";
     startMenuLaunchers = true;
+    usbip = {
+      enable = true;
+    };
   };
 
   environment.systemPackages = with pkgs; [
@@ -39,8 +42,19 @@
     p7zip
     unrar
     unzip
+    wayland
+    weston
     wget
+    wl-clipboard
+    xwayland
+    xorg.xhost
   ];
+
+  environment.sessionVariables = {
+    WAYLAND_DISPLAY = "wayland-0";
+    DISPLAY = ":0";
+    XDG_RUNTIME_DIR = "/run/user/1000";
+  };
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [];
