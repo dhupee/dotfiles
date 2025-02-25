@@ -26,6 +26,7 @@
   home.packages = with pkgs; [
     bat
     chezmoi
+    dust
     lazygit
     fzf
     thefuck
