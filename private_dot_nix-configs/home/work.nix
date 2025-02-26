@@ -27,7 +27,6 @@
     bat
     chezmoi
     dust
-    lazygit
     fzf
     thefuck
     tldr
