@@ -56,7 +56,6 @@
       fzf
       inkscape
       lazydocker
-      lazygit
       libreoffice
       mpv
       ngrok
