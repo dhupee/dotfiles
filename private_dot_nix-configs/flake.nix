@@ -39,6 +39,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-old,
     nixpkgs-unstable,
     nix-on-droid,
     home-manager,
@@ -63,7 +64,8 @@
     # Nix-on-Droid configuration
     nixOnDroidConfigurations = {
       default = nix-on-droid.lib.nixOnDroidConfiguration {
-        pkgs = import nixpkgs {system = "aarch64-linux";};
+        # pkgs = import nixpkgs {system = "aarch64-linux";};
+        pkgs = import nixpkgs-old {system = "aarch64-linux";};
         modules = [./droids/default.nix];
       };
     };
