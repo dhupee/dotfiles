@@ -4,11 +4,12 @@
   inputs = {
     # nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs-old.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid/release-24.05";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-old";
     };
 
     nixos-wsl = {
