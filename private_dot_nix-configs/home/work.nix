@@ -28,6 +28,7 @@
     chezmoi
     dust
     fzf
+    go-task
     thefuck
     tldr
     tree
