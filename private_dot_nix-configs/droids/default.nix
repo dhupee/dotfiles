@@ -43,6 +43,7 @@
       ../modules/home-manager/helix.nix
       ../modules/home-manager/git.nix
       ../modules/home-manager/gh.nix
+      ../modules/home-manager/micro.nix
     ];
 
     home.file = {
