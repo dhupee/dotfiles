@@ -118,11 +118,11 @@
         };
       };
 
-      work = home-manager.lib.homeManagerConfiguration {
+      wsl-work = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
           # directory of my home configuration
-          ./home/work.nix
+          ./home/wsl-work.nix
         ];
         extraSpecialArgs = {
           inherit pkgs-unstable;
