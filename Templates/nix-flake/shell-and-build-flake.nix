@@ -15,14 +15,26 @@
   }:
     utils.lib.eachDefaultSystem (
       system: let
-        pkgs = nixpkgs.legacyPackages.${system};
+        pkgs = import nixpkgs {
+          inherit system;
+          config.allowUnfree = true;
+        };
       in {
         devShells.default = pkgs.mkShell {
-          buildInputs = [
-            pkgs.platformio
-            pkgs.clang-tools
-            pkgs.esptool
-            pkgs.go-task
+          buildInputs = with pkgs; [
+            # general
+            go-task
+
+            # for IoT stuff
+            platformio-core
+            clang
+            clang-tools
+            esptool
+
+            # for Http request test
+            ngrok
+            python312
+            python312Packages.fastapi
           ];
           shellHook = "echo 'Development Shell Initialized'";
         };
@@ -32,9 +44,9 @@
           version = "0.1.0";
           src = ./.;
           sandbox = false;
-          buildInputs = [
-            pkgs.platformio
-            pkgs.esptool
+          buildInputs = with pkgs; [
+            platformio-core
+            esptool
           ];
           buildPhase = "platformio run";
           installPhase = "mkdir -p $out && cp -r .pio/build $out/";
