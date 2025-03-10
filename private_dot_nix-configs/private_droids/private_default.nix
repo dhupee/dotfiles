@@ -38,8 +38,8 @@
     # Importing any modules from Home.nix goes through here
     imports = [
       # has issue for being bit heavy, dont used it for now
-      ../modules/home-manager/zsh.nix
-      ../modules/home-manager/starship-droid.nix
+      # ../modules/home-manager/zsh.nix
+      # ../modules/home-manager/starship-droid.nix
       # ../modules/home-manager/helix.nix
       ../modules/home-manager/git.nix
       ../modules/home-manager/gh.nix
@@ -66,7 +66,7 @@
     termux-setup-storage.enable = true;
   };
 
-  user.shell = "${pkgs.zsh}/bin/zsh";
+  user.shell = "${pkgs.bash}/bin/bash";
 
   # Read the changelog before changing this value
   system.stateVersion = "24.05";
