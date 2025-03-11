@@ -63,7 +63,7 @@
     termux-setup-storage.enable = true;
   };
 
-  user.shell = "${pkgs.bash}/bin/bash";
+  user.shell = "${pkgs.bashInteractive}/bin/bash";
 
   # Read the changelog before changing this value
   system.stateVersion = "24.05";
