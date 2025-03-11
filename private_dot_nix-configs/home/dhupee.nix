@@ -8,9 +8,8 @@
   imports = [
     # tooling
     ../modules/home-manager/zsh.nix
-    ../modules/home-manager/starship.nix
+    ../modules/home-manager/starship/desktop.nix
     ../modules/home-manager/neovim.nix
-    #../modules/home-manager/nixvim.nix
     ../modules/home-manager/docker.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
