@@ -70,4 +70,11 @@
       recursive = true;
     };
   };
+
+  home.activation = {
+    linkLazyLock = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      ln -sf $HOME/.local/share/chezmoi/mutable-configs/nvim/lazy-lock.json $HOME/.config/nvim/
+      ln -sf $HOME/.local/share/chezmoi/mutable-configs/nvim/lazyvim.json $HOME/.config/nvim/
+    '';
+  };
 }
