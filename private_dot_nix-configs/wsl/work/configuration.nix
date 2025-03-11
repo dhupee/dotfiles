@@ -10,7 +10,11 @@
   ...
 }: {
   imports = [
+    # users
     ../../users/dhupee.nix
+
+    # fonts
+    ../../modules/systems/fonts.nix
   ];
 
   # Enable experimental features
