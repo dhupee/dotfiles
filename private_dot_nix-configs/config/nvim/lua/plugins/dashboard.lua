@@ -1,7 +1,7 @@
 return {
   {
     "nvimdev/dashboard-nvim",
-    enabled = false,
+    -- enabled = false,
     opts = function(_, dashboard)
       local logo = table.concat({
         "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗",
