@@ -35,6 +35,7 @@
 
       # Lua
       lua-language-server
+      stylua
 
       # Markdown
       markdownlint-cli
@@ -49,15 +50,20 @@
       isort
       pyright
       ruff
+      ruff-lsp
 
       # Javascripts and it's cronies
       nodePackages.prettier
+      svelte-language-server
+      typescript-language-server
+      tailwindcss-language-server
+      vscode-langservers-extracted
+      vue-language-server
 
       # Shellscript
-      nodePackages.bash-language-server
+      bash-language-server
       shellcheck
       shfmt
-      stylua
 
       # Yaml
       yaml-language-server
