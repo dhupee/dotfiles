@@ -37,6 +37,7 @@
 
     # Importing any modules from Home.nix goes through here
     imports = [
+      ../modules/home-manager/zoxide/droid.nix
       ../modules/home-manager/bash.nix
       ../modules/home-manager/git.nix
       ../modules/home-manager/gh.nix

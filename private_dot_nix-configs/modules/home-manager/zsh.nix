@@ -24,10 +24,6 @@
           else
               echo "Aliases directory not found"
           fi
-
-        export _ZO_DATA_DIR=$HOME/.local/share/chezmoi/mutable-configs/zoxide
-        eval "$(zoxide init zsh)"
-
       '';
       oh-my-zsh = {
         enable = true;

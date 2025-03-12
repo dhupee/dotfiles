@@ -7,6 +7,7 @@
 }: {
   imports = [
     # tooling
+    ../modules/home-manager/zoxide/work.nix
     ../modules/home-manager/zsh.nix
     ../modules/home-manager/starship/desktop.nix
     ../modules/home-manager/neovim.nix
