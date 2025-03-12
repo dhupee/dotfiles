@@ -7,6 +7,7 @@
 }: {
   imports = [
     # tooling
+    ../modules/home-manager/zoxide/nitro.nix
     ../modules/home-manager/zsh.nix
     ../modules/home-manager/starship/desktop.nix
     ../modules/home-manager/neovim.nix
@@ -108,11 +109,6 @@
     linkRcloneConf = lib.hm.dag.entryAfter ["writeBoundary"] ''
       ln -sf $HOME/.secrets/rclone/ $HOME/.config/
     '';
-  };
-
-  # Session variables
-  home.sessionVariables = {
-    # EDITOR = "emacs";
   };
 
   # Let Home Manager install and manage itself.
