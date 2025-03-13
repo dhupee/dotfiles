@@ -7,6 +7,7 @@ return {
     opts = {
       servers = {
         bashls = {},
+        biome = {},
         clangd = {},
         dockerls = {},
         gopls = {
