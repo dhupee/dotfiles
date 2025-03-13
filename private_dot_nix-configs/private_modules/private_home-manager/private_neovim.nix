@@ -53,7 +53,7 @@
       ruff-lsp
 
       # Javascripts and it's cronies
-      nodePackages.prettier
+      biome
       svelte-language-server
       typescript-language-server
       tailwindcss-language-server
