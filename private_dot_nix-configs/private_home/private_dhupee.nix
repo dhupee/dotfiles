@@ -24,7 +24,8 @@
     ../modules/home-manager/spicetify.nix
 
     # theming
-    ../theming/gnome/nitro/home.nix
+    # ../theming/gnome/nitro/home.nix
+    ../theming/plasma/nitro/home.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
