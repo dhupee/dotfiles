@@ -14,6 +14,7 @@
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
     ../modules/home-manager/yazi.nix
+    ../modules/home-manager/zellij.nix
   ];
 
   home.username = "dhupee";
@@ -33,14 +34,14 @@
     thefuck
     tldr
     tree
-    tmux
+    # tmux
     zoxide
   ];
 
   home.file = {
     ".aliases".source = ../aliases;
     ".config/yazi".source = ../config/yazi;
-    ".tmux.conf".source = ../config/tmux.conf;
+    # ".tmux.conf".source = ../config/tmux.conf;
   };
 
   # Let Home Manager install and manage itself.

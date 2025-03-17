@@ -7,17 +7,18 @@
 }: {
   imports = [
     # tooling
-    ../modules/home-manager/zoxide/nitro.nix
-    ../modules/home-manager/zsh.nix
-    ../modules/home-manager/starship/desktop.nix
-    ../modules/home-manager/neovim.nix
     ../modules/home-manager/docker.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
     ../modules/home-manager/kicad.nix
+    ../modules/home-manager/neovim.nix
     ../modules/home-manager/prusa-slicer.nix
+    ../modules/home-manager/starship/desktop.nix
     ../modules/home-manager/vscode.nix
     ../modules/home-manager/yazi.nix
+    ../modules/home-manager/zellij.nix
+    ../modules/home-manager/zoxide/nitro.nix
+    ../modules/home-manager/zsh.nix
 
     # spotify & spicetify
     ../modules/home-manager/spicetify.nix
@@ -69,7 +70,7 @@
       thefuck
       tldr
       tree
-      tmux
+      # tmux
       vlc
       yt-dlp
       zoxide
@@ -95,7 +96,7 @@
     ".config/alacritty".source = ../config/alacritty;
     ".config/btop".source = ../config/btop;
     ".config/yazi".source = ../config/yazi;
-    ".tmux.conf".source = ../config/tmux.conf;
+    # ".tmux.conf".source = ../config/tmux.conf;
   };
 
   # some config I have isn't read-only, so this thing is needed
