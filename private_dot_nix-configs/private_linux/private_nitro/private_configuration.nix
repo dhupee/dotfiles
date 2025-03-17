@@ -19,7 +19,8 @@
     ../../users/dhupee.nix
 
     # Theming
-    ../../theming/gnome/nitro/system.nix
+    # ../../theming/gnome/nitro/system.nix
+    ../../theming/plasma/nitro/system.nix
 
     # Input Methods
     ../../modules/systems/input-methods.nix
@@ -62,13 +63,6 @@
     LC_TELEPHONE = "id_ID.UTF-8";
     LC_TIME = "id_ID.UTF-8";
   };
-
-  #
-  # # Enable the KDE Plasma Desktop Environment.
-  # services.xserver.enable = true;
-  # # services.xserver.displayManager.sddm.enable = true; # this one uses x11
-  # services.displayManager.sddm.wayland.enable = true; # this one uses wayland
-  # services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
