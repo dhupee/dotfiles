@@ -26,6 +26,7 @@
     tmate
     tree
     wget
+    yazi
     yt-dlp
     zoxide
   ];
@@ -51,6 +52,7 @@
 
       ".config/helix".source = ../config/helix;
       ".aliases".source = ../aliases;
+      ".config/yazi".source = ../config/yazi;
       ".tmate.conf".source = ../config/tmate.conf;
     };
   };
