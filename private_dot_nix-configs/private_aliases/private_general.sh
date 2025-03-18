@@ -42,6 +42,8 @@ alias vm-stop="systemctl stop libvirtd"
 # alias firewall-start="systemctl start firewalld.service"
 # alias firewall-stop="systemctl stop firewalld.service"
 
+alias check-local-ip="ip a | grep 'inet ' | grep -v '127.0.0.1'"
+
 # LS & LL
 alias ls="ls --color='auto'"
 alias lsa="ls -a --color='auto'"
