@@ -109,6 +109,11 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # Enable bluetooth
+  hardware.bluetooth = {
+    enable = true;
+  };
+
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   # Nano is installed by default
@@ -123,6 +128,7 @@
       go-task
       home-manager
       htop
+      nix-prefetch-git
       nvtopPackages.full
       p7zip
       unrar
