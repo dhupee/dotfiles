@@ -10,11 +10,11 @@
       "tabsize" = 4;
       "tabstospaces" = true;
       "softwrap" = true;
-      "syntax" = "on";
+      "syntax" = true;
       "autoclose" = true;
       "relativenumber" = true;
       "clipboard" = "external";
-      "colorscheme" = "tokyonight";
-    };
+      "saveundo" = true;
+          };
   };
 }
