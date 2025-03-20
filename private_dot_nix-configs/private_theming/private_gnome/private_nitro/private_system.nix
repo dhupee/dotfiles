@@ -7,7 +7,10 @@
   };
 
   environment.systemPackages = with pkgs; [
-    gnome.gnome-tweaks
+    gnome-tweaks
+    gnome-connections
+    gnome-boxes
+    gnome-browser-connector
   ];
 
   # I dont need any of this

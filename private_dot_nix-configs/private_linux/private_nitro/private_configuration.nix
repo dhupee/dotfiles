@@ -20,7 +20,7 @@
 
     # Theming
     # ../../theming/gnome/nitro/system.nix
-    ../../theming/plasma/nitro/system.nix
+    ../../theming/plasma/dracula/system.nix
 
     # Input Methods
     ../../modules/systems/input-methods.nix

@@ -25,7 +25,7 @@
 
     # theming
     # ../theming/gnome/nitro/home.nix
-    ../theming/plasma/nitro/home.nix
+    ../theming/plasma/dracula/home.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
