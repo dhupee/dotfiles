@@ -15,6 +15,8 @@
           else
               echo "Aliases directory not found"
           fi
+
+          eval "$(thefuck --alias)"
       '';
     };
   };
