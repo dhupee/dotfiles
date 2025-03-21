@@ -31,17 +31,16 @@
     dust
     fzf
     go-task
+    htop
     thefuck
     tldr
     tree
-    # tmux
     zoxide
   ];
 
   home.file = {
     ".aliases".source = ../aliases;
     ".config/yazi".source = ../config/yazi;
-    # ".tmux.conf".source = ../config/tmux.conf;
   };
 
   # Let Home Manager install and manage itself.
