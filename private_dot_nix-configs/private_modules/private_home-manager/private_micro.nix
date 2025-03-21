@@ -15,6 +15,6 @@
       "relativenumber" = true;
       "clipboard" = "external";
       "saveundo" = true;
-          };
+    };
   };
 }

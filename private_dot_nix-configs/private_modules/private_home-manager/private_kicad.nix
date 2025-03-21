@@ -1,9 +1,13 @@
 {
   pkgs,
+  pkgs-unstable,
   lib,
   ...
 }: {
-  home.packages = with pkgs; [kicad];
+  home.packages = with pkgs-unstable; [
+    # kicad
+    kicad-small
+  ];
 
   home.activation = {
     linkKicadConfigs = lib.hm.dag.entryAfter ["writeBoundary"] ''
