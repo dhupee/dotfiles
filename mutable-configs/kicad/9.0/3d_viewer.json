@@ -1,7 +1,16 @@
 {
   "appearance": {
-    "color_theme": "_builtin_default",
-    "left_frame_width": 250
+    "color_theme": "_builtin_default"
+  },
+  "aui": {
+    "right_panel_width": -1,
+    "show_layer_manager": true
+  },
+  "camera": {
+    "animation_enabled": true,
+    "moving_speed_multiplier": 3,
+    "projection_mode": 1,
+    "rotation_increment": 10.0
   },
   "color_picker": {
     "default_tab": 0
@@ -12,6 +21,7 @@
     "on_selection": true,
     "zoom_to_fit": true
   },
+  "current_layer_preset": "legacy_preset_flag",
   "find_replace": {
     "find_history": [],
     "find_string": "",
@@ -26,26 +36,14 @@
     "highlight_factor": 0.5,
     "select_factor": 0.75
   },
+  "layer_presets": [],
   "lib_tree": {
     "column_widths": null,
     "columns": [],
     "open_libs": []
   },
   "meta": {
-    "version": 0
-  },
-  "pcm": {
-    "check_for_updates": true,
-    "last_download_dir": "",
-    "lib_auto_add": true,
-    "lib_auto_remove": true,
-    "lib_prefix": "PCM_",
-    "repositories": [
-      {
-        "name": "KiCad official repository",
-        "url": "https://repository.kicad.org/repository.json"
-      }
-    ]
+    "version": 3
   },
   "printing": {
     "background": false,
@@ -56,23 +54,106 @@
     "title_block": false,
     "use_theme": false
   },
-  "system": {
-    "check_for_kicad_updates": true,
-    "file_history": [
-      "/home/dhupee/Projects/fall-watch-thesis/schematics/schematics.kicad_pro"
+  "render": {
+    "clip_silk_on_via_annulus": false,
+    "engine": 0,
+    "grid_type": 0,
+    "material_mode": 0,
+    "opengl_AA_disableOnMove": false,
+    "opengl_AA_mode": 3,
+    "opengl_copper_thickness": false,
+    "opengl_highlight_on_rollover": true,
+    "opengl_holes_disableOnMove": false,
+    "opengl_render_bbox_only_OnMove": false,
+    "opengl_selection_color": "rgb(0, 255, 0)",
+    "opengl_show_model_bbox": false,
+    "opengl_show_off_board_silk": false,
+    "opengl_thickness_disableOnMove": false,
+    "opengl_vias_disableOnMove": false,
+    "plated_and_bare_copper": false,
+    "raytrace_anti_aliasing": true,
+    "raytrace_backfloor": false,
+    "raytrace_lightAzimuth": [
+      45,
+      135,
+      225,
+      315,
+      45,
+      135,
+      225,
+      315
     ],
+    "raytrace_lightColor": [
+      "rgb(43, 43, 43)",
+      "rgb(43, 43, 43)",
+      "rgb(43, 43, 43)",
+      "rgb(43, 43, 43)",
+      "rgb(43, 43, 43)",
+      "rgb(43, 43, 43)",
+      "rgb(43, 43, 43)",
+      "rgb(43, 43, 43)"
+    ],
+    "raytrace_lightColorBottom": "rgb(63, 63, 63)",
+    "raytrace_lightColorCamera": "rgb(51, 51, 51)",
+    "raytrace_lightColorTop": "rgb(63, 63, 63)",
+    "raytrace_lightElevation": [
+      67,
+      67,
+      67,
+      67,
+      -67,
+      -67,
+      -67,
+      -67
+    ],
+    "raytrace_nrsamples_reflections": 3,
+    "raytrace_nrsamples_refractions": 4,
+    "raytrace_nrsamples_shadows": 3,
+    "raytrace_post_processing": true,
+    "raytrace_procedural_textures": true,
+    "raytrace_recursivelevel_reflections": 3,
+    "raytrace_recursivelevel_refractions": 2,
+    "raytrace_reflections": true,
+    "raytrace_refractions": true,
+    "raytrace_shadows": true,
+    "raytrace_spread_reflections": 0.02500000037252903,
+    "raytrace_spread_refractions": 0.02500000037252903,
+    "raytrace_spread_shadows": 0.05000000074505806,
+    "show_adhesive": true,
+    "show_axis": true,
+    "show_board_body": true,
+    "show_comments": true,
+    "show_copper_bottom": true,
+    "show_copper_top": true,
+    "show_drawings": true,
+    "show_eco1": true,
+    "show_eco2": true,
+    "show_footprints_dnp": false,
+    "show_footprints_insert": true,
+    "show_footprints_normal": true,
+    "show_footprints_not_in_posfile": true,
+    "show_footprints_virtual": true,
+    "show_fp_references": true,
+    "show_fp_text": true,
+    "show_fp_values": true,
+    "show_silkscreen_bottom": true,
+    "show_silkscreen_top": true,
+    "show_soldermask_bottom": true,
+    "show_soldermask_top": true,
+    "show_solderpaste": true,
+    "show_zones": true,
+    "subtract_mask_from_silk": false
+  },
+  "system": {
+    "file_history": [],
     "first_run_shown": false,
     "last_imperial_units": 5,
     "last_metric_units": 1,
-    "last_received_update": "",
-    "last_update_check_time": "2025-03-21T22:35:22",
     "max_undo_items": 0,
-    "open_projects": [
-      "/home/dhupee/Projects/fall-watch-thesis/schematics/schematics.kicad_pro"
-    ],
     "show_import_issues": true,
     "units": 1
   },
+  "use_stackup_colors": true,
   "window": {
     "cursor": {
       "always_show_cursor": true,
@@ -216,12 +297,12 @@
       "user_grid_y": ""
     },
     "maximized": false,
-    "mru_path": "/home/dhupee/Projects/fall-watch-thesis/schematics/",
-    "perspective": "layout2|name=MainToolbar;caption=;state=139596;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=227;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ProjectTree;caption=Project Files;state=1532;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=250;besth=-1;minw=250;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Launcher;caption=Editors;state=508;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=737;besth=650;minw=737;minh=650;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,2,0)=34|dock_size(4,1,0)=250|dock_size(5,0,0)=737|",
+    "mru_path": "",
+    "perspective": "",
     "pos_x": 0,
     "pos_y": 0,
-    "size_x": 762,
-    "size_y": 822,
+    "size_x": 0,
+    "size_y": 0,
     "zoom_factors": []
   }
 }
