@@ -11,10 +11,6 @@
   };
   services.desktopManager.plasma6.enable = true;
 
-  # environment.systemPackages = with pkgs; [
-  #   polonium
-  # ];
-
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     plasma-browser-integration
     kate
