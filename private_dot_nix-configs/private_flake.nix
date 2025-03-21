@@ -2,7 +2,6 @@
   description = "Dhupee's Nix configuration for NixOS and Android.";
 
   inputs = {
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-old.url = "github:NixOS/nixpkgs/nixos-24.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -49,11 +48,13 @@
   }: let
     system = "x86_64-linux"; # Adjust this if you are using a different architecture
 
+    # Stable packages, similar update cycle to Ubuntu/Debian
     pkgs = import nixpkgs {
       system = system;
       config.allowUnfree = true;
     };
 
+    # Unstable packages, Arch like
     pkgs-unstable = import nixpkgs-unstable {
       system = system;
       config.allowUnfree = true;
@@ -72,6 +73,7 @@
 
     # NixOS configuration
     nixosConfigurations = {
+      # My Laptop
       nitro = lib.nixosSystem {
         inherit system;
         modules = [
@@ -83,6 +85,8 @@
           inherit self;
         };
       };
+
+      # WSL, hardware agnostic
       wsl-work = lib.nixosSystem {
         inherit system;
         modules = [
@@ -93,6 +97,8 @@
           inherit pkgs-unstable;
         };
       };
+
+      # Virtual Machine
       virts = lib.nixosSystem {
         inherit system;
         modules = [./linux/virts/configuration.nix];
@@ -104,6 +110,7 @@
 
     # Home Manager configuration
     homeConfigurations = {
+      # My personal shit
       dhupee = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
@@ -118,6 +125,7 @@
         };
       };
 
+      # WSL
       wsl-work = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
         modules = [
