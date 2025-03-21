@@ -9,7 +9,9 @@
     };
   };
 
-  imports = [./configs.nix];
+  imports = [./configs.nix]; # the one that generated from rc2nix
+
+  # packages specific to plasma
   home.packages = with pkgs; [
     polonium
   ];
@@ -48,6 +50,7 @@
   };
 
   programs.plasma = {
+    enable = true;
     workspace = {
       clickItemTo = "select";
       theme = "Dracula";
