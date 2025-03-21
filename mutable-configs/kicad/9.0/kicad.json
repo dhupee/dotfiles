@@ -47,6 +47,9 @@
       }
     ]
   },
+  "plugins": {
+    "actions": []
+  },
   "printing": {
     "background": false,
     "color_theme": "",
@@ -56,22 +59,38 @@
     "title_block": false,
     "use_theme": false
   },
+  "search_pane": {
+    "selection_zoom": 1
+  },
   "system": {
     "check_for_kicad_updates": true,
     "file_history": [
       "/home/dhupee/Projects/fall-watch-thesis/schematics/schematics.kicad_pro"
     ],
     "first_run_shown": false,
+    "last_design_block_lib_dir": "",
     "last_imperial_units": 5,
     "last_metric_units": 1,
     "last_received_update": "",
-    "last_update_check_time": "2025-03-21T22:35:22",
+    "last_update_check_time": "2025-03-21T23:36:13",
     "max_undo_items": 0,
     "open_projects": [
       "/home/dhupee/Projects/fall-watch-thesis/schematics/schematics.kicad_pro"
     ],
     "show_import_issues": true,
     "units": 1
+  },
+  "template": {
+    "window": {
+      "pos": {
+        "x": -1,
+        "y": -1
+      },
+      "size": {
+        "height": -1,
+        "width": -1
+      }
+    }
   },
   "window": {
     "cursor": {
@@ -217,11 +236,11 @@
     },
     "maximized": false,
     "mru_path": "/home/dhupee/Projects/fall-watch-thesis/schematics/",
-    "perspective": "layout2|name=MainToolbar;caption=;state=139596;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=227;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ProjectTree;caption=Project Files;state=1532;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=250;besth=-1;minw=250;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Launcher;caption=Editors;state=508;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=737;besth=650;minw=737;minh=650;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,2,0)=34|dock_size(4,1,0)=250|dock_size(5,0,0)=737|",
+    "perspective": "layout2|name=MainToolbar;caption=;state=139596;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=227;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ProjectTree;caption=Project Files;state=1532;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=250;besth=-1;minw=250;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Editors;caption=Editors;state=508;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=725;besth=590;minw=725;minh=590;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,2,0)=34|dock_size(4,1,0)=250|dock_size(5,0,0)=725|",
     "pos_x": 0,
     "pos_y": 0,
     "size_x": 762,
-    "size_y": 822,
+    "size_y": 392,
     "zoom_factors": []
   }
 }

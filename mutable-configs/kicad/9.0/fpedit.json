@@ -1,7 +1,14 @@
 {
   "appearance": {
-    "color_theme": "_builtin_default",
-    "left_frame_width": 250
+    "color_theme": "_builtin_default"
+  },
+  "aui": {
+    "appearance_panel_tab": 0,
+    "properties_panel_width": -1,
+    "properties_splitter_proportion": 0.5,
+    "right_panel_width": -1,
+    "show_layer_manager": true,
+    "show_properties": false
   },
   "color_picker": {
     "default_tab": 0
@@ -11,6 +18,68 @@
     "center_on_items": true,
     "on_selection": true,
     "zoom_to_fit": true
+  },
+  "design_settings": {
+    "copper_line_width": 0.2,
+    "copper_text_italic": false,
+    "copper_text_size_h": 1.5,
+    "copper_text_size_v": 1.5,
+    "copper_text_thickness": 0.3,
+    "courtyard_line_width": 0.05,
+    "default_footprint_text_items": [
+      [
+        "REF**",
+        true,
+        37
+      ],
+      [
+        "",
+        true,
+        49
+      ],
+      [
+        "${REFERENCE}",
+        true,
+        49
+      ]
+    ],
+    "edge_line_width": 0.05,
+    "fab_line_width": 0.1,
+    "fab_text_italic": false,
+    "fab_text_size_h": 1.0,
+    "fab_text_size_v": 1.0,
+    "fab_text_thickness": 0.15,
+    "others_line_width": 0.1,
+    "others_text_italic": false,
+    "others_text_size_h": 1.0,
+    "others_text_size_v": 1.0,
+    "others_text_thickness": 0.15,
+    "silk_line_width": 0.1,
+    "silk_text_italic": false,
+    "silk_text_size_h": 1.0,
+    "silk_text_size_v": 1.0,
+    "silk_text_thickness": 0.1
+  },
+  "editing": {
+    "fp_use_45_degree_limit": false,
+    "magnetic_all_layers": false,
+    "magnetic_graphics": true,
+    "magnetic_pads": 2,
+    "polar_coords": false,
+    "rotation_angle": 900,
+    "selection_filter": {
+      "dimensions": true,
+      "footprints": true,
+      "graphics": true,
+      "keepouts": true,
+      "lockedItems": false,
+      "otherItems": true,
+      "pads": true,
+      "text": true,
+      "tracks": true,
+      "vias": true,
+      "zones": true
+    }
   },
   "find_replace": {
     "find_history": [],
@@ -31,21 +100,21 @@
     "columns": [],
     "open_libs": []
   },
-  "meta": {
-    "version": 0
+  "library": {
+    "sort_mode": 0
   },
-  "pcm": {
-    "check_for_updates": true,
-    "last_download_dir": "",
-    "lib_auto_add": true,
-    "lib_auto_remove": true,
-    "lib_prefix": "PCM_",
-    "repositories": [
-      {
-        "name": "KiCad official repository",
-        "url": "https://repository.kicad.org/repository.json"
-      }
-    ]
+  "meta": {
+    "version": 2
+  },
+  "origin_invert_x_axis": false,
+  "origin_invert_y_axis": false,
+  "pcb_display": {
+    "active_layer_preset": "",
+    "graphics_fill": true,
+    "layer_presets": [],
+    "pad_fill": true,
+    "pad_numbers": true,
+    "text_fill": true
   },
   "printing": {
     "background": false,
@@ -57,19 +126,12 @@
     "use_theme": false
   },
   "system": {
-    "check_for_kicad_updates": true,
-    "file_history": [
-      "/home/dhupee/Projects/fall-watch-thesis/schematics/schematics.kicad_pro"
-    ],
+    "file_history": [],
     "first_run_shown": false,
     "last_imperial_units": 5,
+    "last_import_export_path": "",
     "last_metric_units": 1,
-    "last_received_update": "",
-    "last_update_check_time": "2025-03-21T22:35:22",
     "max_undo_items": 0,
-    "open_projects": [
-      "/home/dhupee/Projects/fall-watch-thesis/schematics/schematics.kicad_pro"
-    ],
     "show_import_issues": true,
     "units": 1
   },
@@ -79,11 +141,12 @@
       "fullscreen_cursor": false
     },
     "display": 0,
+    "footprint_text_shown_columns": "0 1 2 3 4 5 7",
     "grid": {
       "axes_enabled": false,
       "fast_grid_1": 15,
       "fast_grid_2": 16,
-      "last_size": 15,
+      "last_size": 17,
       "line_width": 1.0,
       "min_spacing": 10.0,
       "override_connected": false,
@@ -215,13 +278,14 @@
       "user_grid_x": "",
       "user_grid_y": ""
     },
+    "lib_width": 250,
     "maximized": false,
-    "mru_path": "/home/dhupee/Projects/fall-watch-thesis/schematics/",
-    "perspective": "layout2|name=MainToolbar;caption=;state=139596;dir=4;layer=2;row=0;pos=0;prop=100000;bestw=34;besth=227;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=ProjectTree;caption=Project Files;state=1532;dir=4;layer=1;row=0;pos=0;prop=100000;bestw=250;besth=-1;minw=250;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=Launcher;caption=Editors;state=508;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=737;besth=650;minw=737;minh=650;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(4,2,0)=34|dock_size(4,1,0)=250|dock_size(5,0,0)=737|",
+    "mru_path": "",
+    "perspective": "",
     "pos_x": 0,
     "pos_y": 0,
-    "size_x": 762,
-    "size_y": 822,
+    "size_x": 0,
+    "size_y": 0,
     "zoom_factors": []
   }
 }
