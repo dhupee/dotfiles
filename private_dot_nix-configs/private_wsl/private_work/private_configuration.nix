@@ -15,6 +15,9 @@
 
     # fonts
     ../../modules/systems/fonts.nix
+
+    # wsl specific
+    ../../modules/systems/wsl/usbip-horus-technology.nix
   ];
 
   # Enable experimental features
