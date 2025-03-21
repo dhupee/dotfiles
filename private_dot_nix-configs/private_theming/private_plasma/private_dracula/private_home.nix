@@ -106,4 +106,17 @@
       }
     ];
   };
+
+  # some app still need gtk, for now uses breeze for now
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Breeze"; # Change to match your KDE theme
+      package = pkgs.breeze-gtk;
+    };
+    iconTheme = {
+      name = "Breeze"; # Match with your KDE icon theme
+      package = pkgs.breeze-icons;
+    };
+  };
 }
