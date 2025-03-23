@@ -1,15 +1,15 @@
 # Dhupee's Nix configurations Repository
 
 <!--toc:start-->
-
 - [Dhupee's Nix configurations Repository](#dhupees-nix-configurations-repository)
   - [What is this](#what-is-this)
   - [Screenshots](#screenshots)
   - [File Structure](#file-structure)
   - [Installation](#installation)
   - [References for me](#references-for-me)
+  - [Tools I use in this dotfiles](#tools-i-use-in-this-dotfiles)
   - [To-Do List](#to-do-list)
-  <!--toc:end-->
+<!--toc:end-->
 
 > [!IMPORTANT]
 > I USE NIXOS, BTW
@@ -24,7 +24,7 @@ This repo is intended to combine my existing setup but also new Nix paradigm, no
 
 ## Screenshots
 
-TBA
+![Laptop's Desktop Rice](./img/Screenshot_20250323_171708.png)
 
 ## File Structure
 
@@ -96,10 +96,4 @@ TBA
 
 ## To-Do List
 
-- [x] ~~Neovim modules with nixvim, finished then migrate fully~~ Managed use most of my old configs with something left behind for now
-- [x] Vscode modules also
-- [x] Migrating few of my scripts from old dotfiles
-- [x] KDE Plasma Ricing, using Plasma-Manager, will do it once I actually have time
-- [x] ~~Make a command and control like for managing nix, built in go, name Yuki~~ Not sure if i need super command and control anyway
-- [x] Utilizing rootless Nix
 - [ ] NixOS profile specifically for Klipper Servers, for my 3D printer
