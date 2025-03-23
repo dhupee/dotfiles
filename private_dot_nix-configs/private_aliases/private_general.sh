@@ -89,3 +89,12 @@ function delete_latest_history() {
 	echo "Deleting last $count shell history entries"
 	fc -p -1 | tail -n $count | awk "{print $1}" | xargs -I {} fc -d {}
 }
+
+# Quick URL shortener
+shorten_url() {
+    if [ -z "$1" ]; then
+        echo "Usage: shorten_url <url>"
+        return 1
+    fi
+    curl -s "https://tinyurl.com/api-create.php?url=$1"
+}
