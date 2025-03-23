@@ -3,7 +3,7 @@
     "color_theme": "_builtin_default"
   },
   "aui": {
-    "right_panel_width": -1,
+    "right_panel_width": 190,
     "show_layer_manager": true
   },
   "camera": {
@@ -21,7 +21,7 @@
     "on_selection": true,
     "zoom_to_fit": true
   },
-  "current_layer_preset": "legacy_preset_flag",
+  "current_layer_preset": "",
   "find_replace": {
     "find_history": [],
     "find_string": "",
@@ -36,7 +36,87 @@
     "highlight_factor": 0.5,
     "select_factor": 0.75
   },
-  "layer_presets": [],
+  "layer_presets": [
+    {
+      "colors": [
+        {
+          "color": "rgb(102, 102, 128)",
+          "layer": 1279
+        },
+        {
+          "color": "rgb(204, 204, 230)",
+          "layer": 1280
+        },
+        {
+          "color": "rgba(110, 115, 77, 0.902)",
+          "layer": 1281
+        },
+        {
+          "color": "rgb(191, 156, 59)",
+          "layer": 1282
+        },
+        {
+          "color": "rgb(191, 156, 59)",
+          "layer": 1283
+        },
+        {
+          "color": "rgb(240, 240, 240)",
+          "layer": 1284
+        },
+        {
+          "color": "rgb(240, 240, 240)",
+          "layer": 1285
+        },
+        {
+          "color": "rgba(20, 51, 36, 0.831)",
+          "layer": 1286
+        },
+        {
+          "color": "rgba(20, 51, 36, 0.831)",
+          "layer": 1287
+        },
+        {
+          "color": "rgb(128, 128, 128)",
+          "layer": 1288
+        },
+        {
+          "color": "rgb(217, 217, 217)",
+          "layer": 1290
+        },
+        {
+          "color": "rgb(217, 217, 217)",
+          "layer": 1291
+        },
+        {
+          "color": "rgb(179, 26, 26)",
+          "layer": 1292
+        },
+        {
+          "color": "rgb(179, 26, 26)",
+          "layer": 1293
+        }
+      ],
+      "layers": [
+        266,
+        278,
+        279,
+        1281,
+        1282,
+        1283,
+        1284,
+        1285,
+        1286,
+        1287,
+        1288,
+        1289,
+        1294,
+        1295,
+        1296,
+        1299
+      ],
+      "name": "legacy colors"
+    }
+  ],
   "lib_tree": {
     "column_widths": null,
     "columns": [],
@@ -44,6 +124,9 @@
   },
   "meta": {
     "version": 3
+  },
+  "plugins": {
+    "actions": []
   },
   "printing": {
     "background": false,
@@ -142,7 +225,11 @@
     "show_soldermask_top": true,
     "show_solderpaste": true,
     "show_zones": true,
-    "subtract_mask_from_silk": false
+    "subtract_mask_from_silk": false,
+    "use_board_editor_copper_colors": false
+  },
+  "search_pane": {
+    "selection_zoom": 1
   },
   "system": {
     "file_history": [],
@@ -153,7 +240,7 @@
     "show_import_issues": true,
     "units": 1
   },
-  "use_stackup_colors": true,
+  "use_stackup_colors": false,
   "window": {
     "cursor": {
       "always_show_cursor": true,
@@ -298,11 +385,11 @@
     },
     "maximized": false,
     "mru_path": "",
-    "perspective": "",
+    "perspective": "layout2|name=MainToolbar;caption=;state=139632;dir=1;layer=6;row=0;pos=0;prop=100000;bestw=738;besth=34;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=InfoBar;caption=;state=131454;dir=1;layer=1;row=0;pos=0;prop=100000;bestw=20;besth=30;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=LayersManager;caption=Appearance;state=1532;dir=2;layer=3;row=0;pos=0;prop=100000;bestw=190;besth=-1;minw=180;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|name=DrawFrame;caption=;state=1020;dir=5;layer=0;row=0;pos=0;prop=100000;bestw=20;besth=20;minw=-1;minh=-1;maxw=-1;maxh=-1;floatx=-1;floaty=-1;floatw=-1;floath=-1|dock_size(1,6,0)=34|dock_size(2,3,0)=190|dock_size(5,0,0)=22|",
     "pos_x": 0,
     "pos_y": 0,
-    "size_x": 0,
-    "size_y": 0,
+    "size_x": 754,
+    "size_y": 400,
     "zoom_factors": []
   }
 }

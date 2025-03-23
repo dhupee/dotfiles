@@ -194,6 +194,9 @@
   "meta": {
     "version": 0
   },
+  "plugins": {
+    "actions": []
+  },
   "printing": {
     "background": false,
     "color_theme": "",
@@ -202,6 +205,9 @@
     "scale": 1.0,
     "title_block": false,
     "use_theme": false
+  },
+  "search_pane": {
+    "selection_zoom": 1
   },
   "system": {
     "file_history": [],

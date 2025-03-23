@@ -26,23 +26,34 @@
     "copper_text_size_v": 1.5,
     "copper_text_thickness": 0.3,
     "courtyard_line_width": 0.05,
+    "default_footprint_layer_names": {},
     "default_footprint_text_items": [
       [
         "REF**",
         true,
-        37
+        "F.SilkS"
       ],
       [
         "",
         true,
-        49
+        "F.Fab"
       ],
       [
         "${REFERENCE}",
         true,
-        49
+        "F.Fab"
       ]
     ],
+    "dimensions": {
+      "arrow_length": 1270000,
+      "extension_offset": 500000,
+      "keep_text_aligned": true,
+      "precision": 4,
+      "suppress_zeroes": true,
+      "text_position": 0,
+      "units": 3,
+      "units_format": 0
+    },
     "edge_line_width": 0.05,
     "fab_line_width": 0.1,
     "fab_text_italic": false,
@@ -104,7 +115,7 @@
     "sort_mode": 0
   },
   "meta": {
-    "version": 2
+    "version": 5
   },
   "origin_invert_x_axis": false,
   "origin_invert_y_axis": false,
@@ -116,6 +127,9 @@
     "pad_numbers": true,
     "text_fill": true
   },
+  "plugins": {
+    "actions": []
+  },
   "printing": {
     "background": false,
     "color_theme": "",
@@ -124,6 +138,9 @@
     "scale": 1.0,
     "title_block": false,
     "use_theme": false
+  },
+  "search_pane": {
+    "selection_zoom": 1
   },
   "system": {
     "file_history": [],
