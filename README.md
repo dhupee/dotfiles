@@ -6,8 +6,8 @@
   - [Screenshots](#screenshots)
   - [File Structure](#file-structure)
   - [Installation](#installation)
-  - [References for me](#references-for-me)
   - [Tools I use in this dotfiles](#tools-i-use-in-this-dotfiles)
+  - [References for me](#references-for-me)
   - [To-Do List](#to-do-list)
 <!--toc:end-->
 
@@ -60,7 +60,7 @@ This thing obviously can change overtime as this dotfiles grow.
 
 ## Installation
 
-ofc, i will assumed you to have nix installed with it's channel exist
+ofc, i will assumed you to have Nix or NixOS installed
 
 run this command to get my dotfiles:
 
@@ -83,16 +83,22 @@ home-manager switch --flake .#dhupee
 
 that will rebuild the systems into `nitro` profile, and `dhupee` home-manager profile and that will bring every tooling and ricing I have on such profile.
 
-## References for me
-
-- [Partitioning NixOS with Disko](https://jefftp.com/nixos-disko/)
-- [NixOS on WSL Github Repository](https://github.com/nix-community/NixOS-WSL)
-- [Nix Shorts, A collection of short notes about Nix, down to what is immediately needed for users.](https://github.com/justinwoo/nix-shorts)
-  - [Your First Derivation](https://github.com/justinwoo/nix-shorts/blob/master/posts/your-first-derivation.md)
-
 ## Tools I use in this dotfiles
 
-TBA
+- [Home Manager](https://github.com/nix-community/home-manager)
+- [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer)
+- [Plasma Manager](https://github.com/nix-community/plasma-manager)
+- [Nix On Droid](https://github.com/nix-community/nix-on-droid)
+- [NixOS WSL](https://github.com/nix-community/NixOS-WSL)
+- [Spicetify Nix](https://github.com/Gerg-L/spicetify-nix)
+- [Nix Portable](https://github.com/DavHau/nix-portable)
+
+## References for me
+
+- [Awesome Nix](https://github.com/nix-community/awesome-nix)
+- [Partitioning NixOS with Disko](https://jefftp.com/nixos-disko/)
+- [Nix Shorts, A collection of short notes about Nix, down to what is immediately needed for users.](https://github.com/justinwoo/nix-shorts)
+  - [Your First Derivation](https://github.com/justinwoo/nix-shorts/blob/master/posts/your-first-derivation.md)
 
 ## To-Do List
 
