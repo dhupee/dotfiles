@@ -17,8 +17,10 @@ in {
     enabledCustomApps = with spicePkgs.apps; [
       lyricsPlus
       marketplace
+      newReleases
+      historyInSidebar
     ];
-    theme = spicePkgs.themes.catppuccin;
-    colorScheme = "macchiato";
+    theme = spicePkgs.themes.dracula;
+    # colorScheme = "macchiato";
   };
 }
