@@ -117,29 +117,28 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   # Nano is installed by default
-  environment.systemPackages =
-    # with pkgs; [
-    (with pkgs; [
-      # vim
-      bind
-      curl
-      gcc
-      gnumake
-      go-task
-      home-manager
-      htop
-      nix-prefetch-git
-      nvtopPackages.full
-      p7zip
-      unrar
-      unzip
-      wget
-      wl-clipboard
-      # ];
-    ])
-    ++ (with pkgs-unstable; [
-      codeium
-    ]);
+  environment.systemPackages = with pkgs; [
+    # (with pkgs; [
+    # vim
+    bind
+    curl
+    gcc
+    gnumake
+    go-task
+    home-manager
+    htop
+    nix-prefetch-git
+    nvtopPackages.full
+    p7zip
+    unrar
+    unzip
+    wget
+    wl-clipboard
+  ];
+  # ])
+  # ++ (with pkgs-unstable; [
+  #   codeium
+  # ]);
 
   # List services that you want to enable:
   services.openssh.enable = true;
