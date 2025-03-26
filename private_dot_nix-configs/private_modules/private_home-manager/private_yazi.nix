@@ -3,6 +3,7 @@
     enable = true;
     package = pkgs.yazi;
     enableZshIntegration = true;
+    enableBashIntegration = true;
   };
 
   # treated it as extra packages
