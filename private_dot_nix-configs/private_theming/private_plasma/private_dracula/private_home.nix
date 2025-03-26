@@ -93,12 +93,12 @@
                 "applications:firefox.desktop"
                 "applications:codium.desktop" # VSCodium
                 "applications:spotify.desktop"
-                "applications:Alacritty.desktop"
+                "applications:com.mitchellh.ghostty.desktop"
                 "applications:systemsettings.desktop"
                 "applications:org.kicad.kicad.desktop"
                 "applications:startcenter.desktop"
                 "applications:vesktop.desktop" # Vesktop
-                "applications:PrusaSlicer.desktop"
+                "applications:OrcaSlicer.desktop"
               ];
             };
           }

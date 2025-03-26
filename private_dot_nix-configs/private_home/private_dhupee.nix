@@ -10,6 +10,7 @@
     ../modules/home-manager/docker.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
+    ../modules/home-manager/ghostty.nix
     ../modules/home-manager/kicad.nix
     ../modules/home-manager/neovim.nix
     ../modules/home-manager/prusa-slicer.nix
@@ -44,7 +45,7 @@
   home.packages =
     (with pkgs; [
       # with pkgs; [
-      alacritty
+      # alacritty
       bat
       betterdiscordctl
       btop
@@ -71,7 +72,6 @@
       thefuck
       tldr
       tree
-      # tmux
       vlc
       yt-dlp
       zoxide
@@ -94,10 +94,8 @@
   home.file = {
     ".aliases".source = ../aliases;
     ".config/containers".source = ../config/containers;
-    ".config/alacritty".source = ../config/alacritty;
     ".config/btop".source = ../config/btop;
     ".config/yazi".source = ../config/yazi;
-    # ".tmux.conf".source = ../config/tmux.conf;
   };
 
   # some config I have isn't read-only, so this thing is needed
