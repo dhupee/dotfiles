@@ -103,3 +103,5 @@ that will rebuild the systems into `nitro` profile, and `dhupee` home-manager pr
 ## To-Do List
 
 - [ ] NixOS profile specifically for Klipper Servers, for my 3D printer
+- [ ] Live USB profile
+- [ ] "Portable Linux" profile
