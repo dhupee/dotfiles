@@ -30,17 +30,19 @@
       oh-my-zsh = {
         enable = true;
         plugins = [
-          "thefuck"
           "copypath"
           "docker"
-          "podman"
-          "qrcode"
-          "nvm"
+          "docker-compose"
+          "golang"
+          "macos"
           "node"
           "npm"
+          "podman"
+          "qrcode"
           "pyenv"
           "python"
-          "golang"
+          "rust"
+          "thefuck"
           "zoxide"
         ];
       };
