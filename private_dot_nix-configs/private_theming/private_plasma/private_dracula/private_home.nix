@@ -56,7 +56,7 @@
       theme = "Dracula";
       lookAndFeel = "Dracula";
       iconTheme = "Zafiro-icons-Dark";
-      wallpaper = /home/dhupee/Wallpapers/2022_ford_rally1_36.jpeg;
+      # wallpaper = /home/dhupee/Wallpapers/2022_ford_rally1_36.jpeg;
     };
 
     panels = [
