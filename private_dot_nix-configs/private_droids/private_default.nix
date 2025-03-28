@@ -16,7 +16,6 @@
     fastfetch
     fzf
     gnugrep
-    lazygit
     man
     nano
     ncurses
