@@ -86,6 +86,7 @@
     ])
     ++ (with pkgs-unstable; [
       distrobox-tui
+      logisim-evolution
       vesktop
     ]);
 
