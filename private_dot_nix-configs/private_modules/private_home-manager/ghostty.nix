@@ -7,7 +7,7 @@
       installVimSyntax = true;
       settings = {
         "theme" = "Dracula";
-        "font-size" = 10;
+        "font-size" = 12;
         "font-family" = "Hack Nerd Font";
       };
     };
