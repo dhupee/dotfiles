@@ -37,15 +37,15 @@
           # https://marketplace.visualstudio.com/items?itemName=AykutSarac.jsoncrack-vscode
           name = "jsoncrack-vscode";
           publisher = "AykutSarac";
-          version = "2.0.3";
-          sha256 = "0pa49xg63la6gz5q652h25i2mf7wlj90rch9mpprwnbj9rw4qrb2";
+          version = "3.0.0";
+          sha256 = "SwgUm6rIEp15Lc86UHTD5gVHrs9Mwbcwsb7LL5SGVy4=";
         }
         {
           # https://marketplace.visualstudio.com/items?itemName=Codeium.codeium
           name = "codeium";
           publisher = "Codeium";
-          version = "1.31.17";
-          sha256 = "1vak6nab44ppz392qv6dky7q1pzb065yppy806m7wi7nj6dlnasp";
+          version = "1.43.3";
+          sha256 = "WejMBIG7bl7iOPsdB22jqNmT7hfCsJ/1j4P/Clv/t74=";
         }
       ];
     userSettings = {
