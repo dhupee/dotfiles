@@ -10,6 +10,7 @@
     # Make sure its CLI only
     # Check the modules to prevent duplicate installs
     bat
+    busybox
     chezmoi
     curl
     dust
@@ -18,7 +19,7 @@
     gnugrep
     man
     nano
-    ncurses
+    nmap
     tectonic
     thefuck
     tldr
@@ -62,6 +63,8 @@
   # Android/Termux specific configuration
   android-integration = {
     # to make sure I have access to phone's storage system
+    termux-open.enable = true;
+    termux-reload-settings.enable = true;
     termux-setup-storage.enable = true;
   };
 
