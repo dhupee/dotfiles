@@ -57,6 +57,7 @@
       firefox # will use options later on
       freecad
       fzf
+      gparted
       inkscape
       lazydocker
       libreoffice
@@ -67,6 +68,7 @@
       osu-lazer-bin
       platformio-core
       rclone
+      rpi-imager
       spotube
       tectonic-unwrapped
       thefuck
