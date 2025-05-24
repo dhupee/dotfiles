@@ -7,8 +7,8 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     nix-on-droid = {
-      url = "github:nix-community/nix-on-droid/release-24.05";
-      inputs.nixpkgs.follows = "nixpkgs-old";
+      url = "github:nix-community/nix-on-droid";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nixos-wsl = {
@@ -65,8 +65,8 @@
     # Nix-on-Droid configuration
     nixOnDroidConfigurations = {
       default = nix-on-droid.lib.nixOnDroidConfiguration {
-        # pkgs = import nixpkgs {system = "aarch64-linux";};
-        pkgs = import nixpkgs-old {system = "aarch64-linux";};
+        pkgs = import nixpkgs {system = "aarch64-linux";};
+        # pkgs = import nixpkgs-old {system = "aarch64-linux";};
         modules = [./droids/default.nix];
       };
     };
