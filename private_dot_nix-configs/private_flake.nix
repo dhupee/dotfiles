@@ -8,7 +8,7 @@
 
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
-      inputs.nixpkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
 
@@ -68,6 +68,9 @@
         pkgs = import nixpkgs {system = "aarch64-linux";};
         # pkgs = import nixpkgs-old {system = "aarch64-linux";};
         modules = [./droids/default.nix];
+      };
+      specialArgs = {
+        pkgs-unstable = import nixpkgs-unstable {system = "aarch64-linux";};
       };
     };
 
