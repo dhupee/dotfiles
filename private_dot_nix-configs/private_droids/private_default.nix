@@ -19,7 +19,8 @@
     gnugrep
     man
     nano
-    nmap
+    netcat
+    rustscan
     tectonic
     thefuck
     tldr
