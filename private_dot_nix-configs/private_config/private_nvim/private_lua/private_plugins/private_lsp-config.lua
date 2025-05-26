@@ -59,7 +59,6 @@ return {
           },
         },
         ruff = {},
-        ruff_lsp = {},
         svelte = {},
         tailwindcss = {},
         terraformls = {},
