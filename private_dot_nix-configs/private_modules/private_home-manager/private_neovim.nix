@@ -50,7 +50,6 @@
       isort
       pyright
       ruff
-      ruff-lsp
 
       # Javascripts and it's cronies
       biome
