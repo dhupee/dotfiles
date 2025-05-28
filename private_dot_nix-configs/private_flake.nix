@@ -46,7 +46,7 @@
     spicetify-nix,
     nixos-wsl,
   }: let
-    system = "x86_64-linux"; # Adjust this if you are using a different architecture
+    system = "x86_64-linux"; # default systems for most of the machines
 
     # Stable packages, similar update cycle to Ubuntu/Debian
     pkgs = import nixpkgs {
@@ -65,12 +65,25 @@
     # Nix-on-Droid configuration
     nixOnDroidConfigurations = {
       default = nix-on-droid.lib.nixOnDroidConfiguration {
-        pkgs = import nixpkgs {system = "aarch64-linux";};
+        # Only this config uses ARM64
+        pkgs = import nixpkgs {
+          system = "aarch64-linux";
+          config.allowUnfree = true;
+        };
+
         # pkgs = import nixpkgs-old {system = "aarch64-linux";};
-        modules = [./droids/default.nix];
-      };
-      specialArgs = {
-        pkgs-unstable = import nixpkgs-unstable {system = "aarch64-linux";};
+
+        modules = [
+          ./droids/default.nix
+
+          # Enable unstable packages to Droids
+          ({config, ...}: {
+            config._module.args.pkgs-unstable = import nixpkgs-unstable {
+              system = "aarch64-linux";
+              config.allowUnfree = true;
+            };
+          })
+        ];
       };
     };
 
@@ -84,8 +97,7 @@
           ./linux/nitro/configuration.nix
         ];
         specialArgs = {
-          inherit pkgs-unstable;
-          inherit self;
+          inherit pkgs-unstable self;
         };
       };
 
