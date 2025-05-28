@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  pkgs-unstable,
   ...
 }: {
   # Simply install just the packages
@@ -38,12 +39,13 @@
     home.stateVersion = "24.05";
 
     # Importing any modules from Home.nix goes through here
-    imports = [
+        imports = [
       ../modules/home-manager/zoxide/droid.nix
       ../modules/home-manager/bash.nix
       ../modules/home-manager/git.nix
       ../modules/home-manager/gh.nix
       ../modules/home-manager/micro.nix
+      # ../modules/home-manager/neovim.nix
       ../modules/home-manager/starship/droid.nix
     ];
 
@@ -56,6 +58,9 @@
       ".config/yazi".source = ../config/yazi;
       ".tmate.conf".source = ../config/tmate.conf;
     };
+  };
+  home-manager.extraSpecialArgs = {
+    inherit pkgs-unstable;
   };
 
   # Backup etc files instead of failing to activate generation if a file already exists in /etc

@@ -15,6 +15,9 @@
     #   vimPlugins.codeium-nvim
     # ];
     extraPackages = with pkgs-unstable; [
+      # Compilers
+      clang
+
       # C++
       clang-tools
       cpplint
