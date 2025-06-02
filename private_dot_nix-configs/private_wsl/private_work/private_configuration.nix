@@ -53,6 +53,7 @@
     weston
     wget
     wl-clipboard
+    xclip
     xwayland
     xorg.xhost
   ];
