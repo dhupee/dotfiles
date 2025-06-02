@@ -32,6 +32,7 @@
     fzf
     go-task
     htop
+    platformio-core
     thefuck
     tldr
     tree

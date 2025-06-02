@@ -63,6 +63,8 @@
     XDG_RUNTIME_DIR = "/run/user/1000";
   };
 
+  services.udev.packages = with pkgs; [platformio-core.udev];
+
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [];
 
