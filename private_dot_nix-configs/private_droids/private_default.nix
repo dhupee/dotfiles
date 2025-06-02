@@ -39,7 +39,7 @@
     home.stateVersion = "24.05";
 
     # Importing any modules from Home.nix goes through here
-        imports = [
+    imports = [
       ../modules/home-manager/zoxide/droid.nix
       ../modules/home-manager/bash.nix
       ../modules/home-manager/git.nix
