@@ -17,7 +17,6 @@
     extraPackages = with pkgs-unstable; [
       # Compilers
       clang
-      python312
 
       # C++
       clang-tools
