@@ -12,6 +12,7 @@
   "fzf-lua": { "branch": "main", "commit": "8c8845ca6d05bc768b7ce27ebe3682ddf7e6a996" },
   "gitsigns.nvim": { "branch": "main", "commit": "8bdaccdb897945a3c99c1ad8df94db0ddf5c8790" },
   "grug-far.nvim": { "branch": "main", "commit": "7434d9247c9b95234e058b07b393443d5adeb2fe" },
+  "hop.nvim": { "branch": "master", "commit": "08ddca799089ab96a6d1763db0b8adc5320bf050" },
   "jsonfly.nvim": { "branch": "main", "commit": "d713d9ef38115ab09b4a2828dac67b2b3f7d35c4" },
   "lazy.nvim": { "branch": "main", "commit": "6c3bda4aca61a13a9c63f1c1d1b16b9d3be90d7a" },
   "lazydev.nvim": { "branch": "main", "commit": "2367a6c0a01eb9edb0464731cc0fb61ed9ab9d2c" },
