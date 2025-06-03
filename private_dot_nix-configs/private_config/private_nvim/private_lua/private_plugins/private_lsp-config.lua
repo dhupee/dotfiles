@@ -9,6 +9,7 @@ return {
         bashls = {},
         biome = {},
         clangd = {},
+        docker_compose_language_service = {},
         dockerls = {},
         gopls = {
           settings = {
