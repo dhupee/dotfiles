@@ -13,6 +13,7 @@ return {
       { "<leader>h", group = "hop" }, -- group
       { "<leader>hw", "<cmd>HopWord<cr>", desc = "Hop Word" },
       { "<leader>hl", "<cmd>HopLine<cr>", desc = "Hop Line" },
+      { "<leader>hn", "<cmd>HopNodes<cr>", desc = "Hop Nodes" },
     })
   end,
 }
