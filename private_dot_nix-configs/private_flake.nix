@@ -62,7 +62,7 @@
 
     lib = nixpkgs.lib;
   in {
-    # Nix-on-Droid configuration
+    #===================NIX-ON-DROID CONFIGURATIONS==================================
     nixOnDroidConfigurations = {
       default = nix-on-droid.lib.nixOnDroidConfiguration {
         # Only this config uses ARM64
@@ -87,7 +87,7 @@
       };
     };
 
-    # NixOS configuration
+    #============================NIXOS CONFIGURATIONS==================================
     nixosConfigurations = {
       # My Laptop
       nitro = lib.nixosSystem {
@@ -123,7 +123,7 @@
       };
     };
 
-    # Home Manager configuration
+    #==============================HOME-MANAGER CONFIGURATIONS===============================
     homeConfigurations = {
       # My personal shit
       dhupee = home-manager.lib.homeManagerConfiguration {
