@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  inputs,
   lib,
   ...
 }: {
@@ -79,6 +80,8 @@
       recursive = true;
     };
   };
+
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   home.activation = {
     linkLazyLock = lib.hm.dag.entryAfter ["writeBoundary"] ''
