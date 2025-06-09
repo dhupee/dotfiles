@@ -50,21 +50,20 @@ return {
           settings = {
             nixd = {
               nixpkgs = {
-                expr = "import <nixpkgs> { }",
+                -- expr = "import <nixpkgs> { }",
+                expr = 'import (builtins.getFlake "/home/dhupee/.nix-configs").inputs.nixpkgs { }',
               },
               formatting = {
-                command = { "nixfmt" },
+                command = { "alejandra" },
               },
               options = {
                 nixos = {
-                  expr = '(builtins.getFlake ("git+file://" + toString ./.)).nixosConfigurations.k-on.options',
+                  expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixosConfigurations."nitro".options',
                 },
                 home_manager = {
-                  expr = '(builtins.getFlake ("git+file://" + toString ./.)).homeConfigurations."ruixi@k-on".options',
+                  expr = '(builtins.getFlake "/home/dhupee/.nix-configs").homeConfigurations."dhupee".options',
                 },
-                flakes = true,
-                nixosModules = true,
-                autoEvalInputs = true,
+                -- TODO: add another like spicetify or hyprland
               },
             },
           },
