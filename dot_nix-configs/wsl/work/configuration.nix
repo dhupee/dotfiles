@@ -6,6 +6,7 @@
 {
   config,
   lib,
+  inputs,
   pkgs,
   ...
 }: {
@@ -57,6 +58,8 @@
     xwayland
     xorg.xhost
   ];
+
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   environment.sessionVariables = {
     WAYLAND_DISPLAY = "wayland-0";

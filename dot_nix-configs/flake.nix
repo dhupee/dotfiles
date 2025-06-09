@@ -45,7 +45,7 @@
     plasma-manager,
     spicetify-nix,
     nixos-wsl,
-  }: let
+  } @ inputs: let
     system = "x86_64-linux"; # default systems for most of the machines
 
     # Stable packages, similar update cycle to Ubuntu/Debian
@@ -109,7 +109,7 @@
           nixos-wsl.nixosModules.wsl
         ];
         specialArgs = {
-          inherit pkgs-unstable;
+          inherit pkgs-unstable inputs;
         };
       };
 
@@ -148,7 +148,7 @@
           ./home/wsl-work.nix
         ];
         extraSpecialArgs = {
-          inherit pkgs-unstable;
+          inherit pkgs-unstable inputs;
         };
       };
     };

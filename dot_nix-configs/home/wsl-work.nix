@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  inputs,
   pkgs,
   pkgs-unstable,
   ...
@@ -24,6 +25,7 @@
   home.stateVersion = "24.05";
 
   nixpkgs.config.allowUnfree = true;
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   home.packages = with pkgs; [
     bat
