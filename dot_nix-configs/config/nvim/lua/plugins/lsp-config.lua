@@ -63,6 +63,15 @@ return {
                 home_manager = {
                   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").homeConfigurations."dhupee".options',
                 },
+                -- NOTE:: somehow home-manager and nixos LSP wont work if this is enabled, so dont
+                -- -- For flake-parts debug options, test
+                -- flake_parts = {
+                --   expr = '(builtins.getFlake ("git+file://" + toString ./.)).debug.options',
+                -- },
+                -- For a `perSystem` flake-parts option:
+                -- flake_parts = {
+                --   expr = '(builtins.getFlake ("git+file://" + toString ./.))currentSystem.options',
+                -- },
                 -- TODO: add another like spicetify or hyprland
               },
             },
