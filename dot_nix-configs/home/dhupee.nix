@@ -1,6 +1,7 @@
 {
   lib,
   config,
+  inputs,
   pkgs,
   pkgs-unstable,
   ...
@@ -39,7 +40,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  # nixpkgs-unstable.config.allowUnfree = true;
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   # Packages
   home.packages =
