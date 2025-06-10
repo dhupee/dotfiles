@@ -63,6 +63,9 @@ return {
                 home_manager = {
                   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").homeConfigurations."dhupee".options',
                 },
+                nix_on_droid = {
+                  expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixOnDroidConfigurations."default".options',
+                },
                 -- NOTE:: somehow home-manager and nixos LSP wont work if this is enabled, so dont
                 -- -- For flake-parts debug options, test
                 -- flake_parts = {
