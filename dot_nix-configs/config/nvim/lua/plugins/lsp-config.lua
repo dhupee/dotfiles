@@ -60,6 +60,9 @@ return {
                 nixos = {
                   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixosConfigurations."nitro".options',
                 },
+                wsl = {
+                  expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixosConfigurations."wsl-work".options',
+                },
                 home_manager = {
                   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").homeConfigurations."dhupee".options',
                 },
