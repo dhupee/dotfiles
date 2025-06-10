@@ -34,8 +34,6 @@
     zoxide
   ];
 
-  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-
   # Home-manager specific configuration
   # NOTE: LSP wont help you in this for now
   home-manager.config = {
