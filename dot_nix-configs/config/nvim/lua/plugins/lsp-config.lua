@@ -60,25 +60,16 @@ return {
                 nixos = {
                   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixosConfigurations."nitro".options',
                 },
-                wsl = {
-                  expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixosConfigurations."wsl-work".options',
-                },
+                -- wsl = {
+                --   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixosConfigurations."wsl-work".options',
+                -- },
                 home_manager = {
                   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").homeConfigurations."dhupee".options',
                 },
-                nix_on_droid = {
-                  expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixOnDroidConfigurations."default".options',
-                },
-                -- NOTE:: somehow home-manager and nixos LSP wont work if this is enabled, so dont
-                -- -- For flake-parts debug options, test
-                -- flake_parts = {
-                --   expr = '(builtins.getFlake ("git+file://" + toString ./.)).debug.options',
+                -- nix_on_droid = {
+                --   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixOnDroidConfigurations."default".options',
                 -- },
-                -- For a `perSystem` flake-parts option:
-                -- flake_parts = {
-                --   expr = '(builtins.getFlake ("git+file://" + toString ./.))currentSystem.options',
-                -- },
-                -- TODO: add another like spicetify or hyprland
+                -- NOTE:: other than nixos and home-manager cause the LSP to be heavy as fuck, so dont
               },
             },
           },
