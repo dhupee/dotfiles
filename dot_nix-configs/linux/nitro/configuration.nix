@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   pkgs,
   pkgs-unstable,
   ...
@@ -31,6 +32,7 @@
 
   # Enable experimental features.
   nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
