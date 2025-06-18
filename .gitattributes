@@ -1,0 +1,4 @@
+
+# language detection
+*.toml.tmpl linguist-language=toml linguist-detectable
+*chezmoiignore* linguist-language=gitignore linguist-detectable
