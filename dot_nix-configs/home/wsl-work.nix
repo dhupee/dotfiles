@@ -35,6 +35,7 @@
     go-task
     htop
     platformio-core
+    tectonic
     thefuck
     tldr
     tree
