@@ -30,6 +30,7 @@
       oh-my-zsh = {
         enable = true;
         plugins = [
+          "bun"
           "copypath"
           "docker"
           "docker-compose"
@@ -38,10 +39,11 @@
           "node"
           "npm"
           "podman"
-          "qrcode"
-          "pyenv"
           "python"
-          "rust"
+          "qrcode"
+          "ssh"
+          "ssh-agent"
+          "terraform"
           "thefuck"
           "zoxide"
         ];
