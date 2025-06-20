@@ -28,11 +28,13 @@
         vendorSha256 = "sha256-5j2GZktN1VBRqaTrb1jN2W6JxdSk2u3kSIkImC9hx8Q=";
       };
     in {
-      devShells.default = pkgs.mkShell {
-        buildInputs = [
-          pkgs.go
-          go-air
-        ];
+      devShells = {
+        default = pkgs.mkShell {
+          buildInputs = [
+            pkgs.go
+            go-air
+          ];
+        };
 
         shellHook = ''
           export GOPATH=$PWD/.gopath
