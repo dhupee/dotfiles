@@ -1,0 +1,18 @@
+#============GLOBAL============#
+
+README.md
+*.sh
+
+# Better not to clutter my home folder
+mutable-configs
+img
+
+# generated
+.vscode
+
+#============WINDOWS============#
+{{if eq .chezmoi.os "windows"}}
+dot_nix-configs
+dot_scripts
+{{end}}
+
