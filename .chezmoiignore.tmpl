@@ -3,6 +3,7 @@
 # docs and scripts
 README.md
 *.sh
+*.ps1
 
 # Better not to clutter my home folder
 mutable-configs
@@ -17,8 +18,4 @@ dot_nix-configs
 dot_scripts
 dot_zellij-layouts
 dot_distrobox-recipe
-{{end}}
-
-{{if eq .chezmoi.os "linux"}}
-*.ps1
 {{end}}
