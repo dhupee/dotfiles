@@ -1,0 +1,87 @@
+{
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "~\\scoop\\buckets\\main",
+            "Updated": "2025-06-21T11:37:45.18643+07:00",
+            "Manifests": 1391
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2025-06-21T11:29:31+07:00",
+            "Manifests": 2167
+        },
+        {
+            "Name": "anderlli0053_DEV-tools",
+            "Source": "https://github.com/anderlli0053/DEV-tools",
+            "Updated": "2025-06-21T11:38:23+07:00",
+            "Manifests": 26080
+        }
+    ],
+    "apps": [
+        {
+            "Updated": "2025-06-21T11:44:51.5017173+07:00",
+            "Version": "24.09",
+            "Info": "",
+            "Source": "main",
+            "Name": "7zip"
+        },
+        {
+            "Updated": "2025-06-21T11:41:08.4833046+07:00",
+            "Version": "2.62.6",
+            "Info": "",
+            "Source": "main",
+            "Name": "chezmoi"
+        },
+        {
+            "Updated": "2025-06-21T13:00:07.8471931+07:00",
+            "Version": "2.74.2",
+            "Info": "",
+            "Source": "main",
+            "Name": "gh"
+        },
+        {
+            "Updated": "2025-06-21T11:45:11.1891932+07:00",
+            "Version": "2.50.0",
+            "Info": "",
+            "Source": "main",
+            "Name": "git"
+        },
+        {
+            "Updated": "2025-06-21T13:17:37.8216307+07:00",
+            "Version": null,
+            "Info": "Install failed",
+            "Source": null,
+            "Name": "kicad"
+        },
+        {
+            "Updated": "2025-06-21T12:41:04.6685512+07:00",
+            "Version": "1.1.0",
+            "Info": "",
+            "Source": "extras",
+            "Name": "powertab"
+        },
+        {
+            "Updated": "2025-06-21T12:40:08.2789529+07:00",
+            "Version": "2.3.6",
+            "Info": "",
+            "Source": "extras",
+            "Name": "psreadline"
+        },
+        {
+            "Updated": "2025-06-21T12:44:57.5767536+07:00",
+            "Version": "7.5.1",
+            "Info": "",
+            "Source": "main",
+            "Name": "pwsh"
+        },
+        {
+            "Updated": "2025-06-21T11:50:22.4453754+07:00",
+            "Version": "1.11.5b",
+            "Info": "",
+            "Source": "anderlli0053_DEV-tools",
+            "Name": "zen-browser"
+        }
+    ]
+}
