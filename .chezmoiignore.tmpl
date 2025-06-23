@@ -13,9 +13,8 @@ img
 .vscode
 
 #============WINDOWS============#
-{{if eq .chezmoi.os "windows"}}
-dot_nix-configs
-dot_scripts
-dot_zellij-layouts
-dot_distrobox-recipe
-{{end}}
+{{ if eq .chezmoi.os "windows" }}
+.nix-configs
+.zellij-layouts
+.distrobox-recipe
+{{ end }}
