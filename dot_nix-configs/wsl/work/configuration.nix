@@ -14,9 +14,6 @@
     # users
     ../../users/dhupee.nix
 
-    # fonts
-    ../../modules/systems/fonts.nix
-
     # wsl specific
     ../../modules/systems/wsl/usbip-horus-technology.nix
   ];
