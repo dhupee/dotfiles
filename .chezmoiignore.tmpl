@@ -23,3 +23,9 @@ Wallpapers
 .ssh
 .secrets
 {{ end }}
+
+#=============LINUX============#
+{{ if eq .chezmoi.os "linux" }}
+AppData
+OneDrive
+{{ end }}
