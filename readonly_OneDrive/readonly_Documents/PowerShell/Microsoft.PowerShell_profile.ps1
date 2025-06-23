@@ -21,6 +21,11 @@ Set-PSReadLineOption -Colors @{
     InlinePrediction = 'DarkGray'
 }
 
+# FUNCTIONS AND ALIAS
+function dotsave {
+    & "$HOME\.local\share\chezmoi\dot_scripts\ps\dotsave.ps1"
+}
+
 # Init Starship Prompt
 Invoke-Expression (&starship init powershell)
 
