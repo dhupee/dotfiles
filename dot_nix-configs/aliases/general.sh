@@ -92,9 +92,9 @@ function delete_latest_history() {
 
 # Quick URL shortener
 shorten_url() {
-    if [ -z "$1" ]; then
-        echo "Usage: shorten_url <url>"
-        return 1
-    fi
-    curl -s "https://tinyurl.com/api-create.php?url=$1"
+	if [ -z "$1" ]; then
+		echo "Usage: shorten_url <url>"
+		return 1
+	fi
+	curl -s "https://tinyurl.com/api-create.php?url=$1"
 }
