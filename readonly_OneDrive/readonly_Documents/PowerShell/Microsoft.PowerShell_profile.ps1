@@ -21,3 +21,5 @@ Set-PSReadLineOption -Colors @{
     InlinePrediction = 'DarkGray'
 }
 
+Invoke-Expression (&starship init powershell)
+
