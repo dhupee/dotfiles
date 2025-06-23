@@ -21,5 +21,6 @@ Set-PSReadLineOption -Colors @{
     InlinePrediction = 'DarkGray'
 }
 
+# Init Starship Prompt
 Invoke-Expression (&starship init powershell)
 
