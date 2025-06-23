@@ -28,7 +28,7 @@ function Add-ToChezmoi {
     )
 
     if (-not $Paths -or $Paths.Count -eq 0) {
-        Write-Host "Skipping $Type: No paths"
+        Write-Host "Skipping $Type{} No paths"
         return
     }
 
@@ -40,10 +40,10 @@ function Add-ToChezmoi {
 
         $quotedPath = '"' + $path + '"'
         if ($Encrypt) {
-            Write-Host "Encrypting and adding $Type: $path"
+            Write-Host "Encrypting and adding $Type{} $path"
             chezmoi add --encrypt -- $path
         } else {
-            Write-Host "Adding $Type: $path"
+            Write-Host "Adding $Type{} $path"
             chezmoi add -- $path
         }
     }
