@@ -1,24 +1,25 @@
 # chezmoi-add.ps1
 
-# STATUS: UNUSED
+# STATUS: OPERATIONAL
 
 # Hardcoded arrays
 $filePaths = @(
-    "C:\Users\you\.gitconfig",
-    "C:\Users\you\AppData\Roaming\nvim\init.lua"
+    "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json",
+    "$env:LOCALAPPDATA\lazygit\config.yml",
+    "$PROFILE"
 )
 
-$dirPaths = @(
-    "C:\Users\you\AppData\Roaming\alacritty"
-)
+# $dirPaths = @(
+#     "C:\Users\you\AppData\Roaming\alacritty"
+# )
 
-$encryptedFilePaths = @(
-    "C:\Users\you\.ssh\config"
-)
+# $encryptedFilePaths = @(
+#     "C:\Users\you\.ssh\config"
+# )
 
-$encryptedDirPaths = @(
-    "C:\Users\you\AppData\Roaming\gopass"
-)
+# $encryptedDirPaths = @(
+#     "$HOME\.ssh"
+# )
 
 function Add-ToChezmoi {
     param (
