@@ -1,5 +1,8 @@
 # POWERSHELL PROFILE
 
+# Init Starship Prompt
+Invoke-Expression (&starship init powershell)
+
 # Load PSReadLine (autocomplete, syntax highlight)
 Import-Module PSReadLine -ErrorAction SilentlyContinue
 
@@ -26,6 +29,7 @@ function dotsave {
     & "$HOME\.local\share\chezmoi\dot_scripts\ps\dotsave.ps1"
 }
 
-# Init Starship Prompt
-Invoke-Expression (&starship init powershell)
+# Invoke Zoxide(MUST IN THE END)
+$env:_ZO_DATA_DIR = "$HOME\.local\share\chezmoi\mutable-configs\zoxide\windows"
+Invoke-Expression (& { (zoxide init powershell | Out-String) })
 
