@@ -10,5 +10,5 @@ encryption = "age"
     symmetry = true
 {{if eq .chezmoi.os "linux"}}
 [hooks.add.post]
-    command = ".scripts/chezmoi-nix-config-chattr.sh"
+    command = ".scripts/bash/chezmoi-nix-config-chattr.sh"
 {{end}}
