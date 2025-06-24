@@ -6,6 +6,9 @@ Invoke-Expression (&starship init powershell)
 # Load PSReadLine (autocomplete, syntax highlight)
 Import-Module PSReadLine -ErrorAction SilentlyContinue
 
+# enable completion in current shell, use absolute path because PowerShell Core not respect $env:PSModulePath
+Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
+
 # PSReadLine History Substring Search
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
@@ -24,10 +27,16 @@ Set-PSReadLineOption -Colors @{
     InlinePrediction = 'DarkGray'
 }
 
-# FUNCTIONS AND ALIAS
+#==================FUNCTIONS & ALIASES==============================#
 function dotsave {
     & "$HOME\.local\share\chezmoi\dot_scripts\ps\dotsave.ps1"
 }
+function lsa { Get-ChildItem -Force | Format-Table Mode, LastWriteTime, Length, Name -AutoSize }
+
+Set-Alias lg lazygit
+Set-Alias c Clear-Host
+
+#===================================================================#
 
 # Invoke Zoxide(MUST IN THE END)
 $env:_ZO_DATA_DIR = "$HOME\.local\share\chezmoi\mutable-configs\zoxide\windows"
