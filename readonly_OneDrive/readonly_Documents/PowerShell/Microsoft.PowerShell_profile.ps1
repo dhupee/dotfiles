@@ -31,10 +31,15 @@ Set-PSReadLineOption -Colors @{
 function dotsave {
     & "$HOME\.local\share\chezmoi\dot_scripts\ps\dotsave.ps1"
 }
-function lsa { Get-ChildItem -Force | Format-Table Mode, LastWriteTime, Length, Name -AutoSize }
 
-Set-Alias lg lazygit
+function lsa { Get-ChildItem -Force | Format-Table Mode, LastWriteTime, Length, Name -AutoSize }
+function touch { param($file) New-Item -ItemType File -Path $file -Force | Out-Null }
+function head { param($file, $n=10) Get-Content $file -Head $n }
+function tail { param($file, $n=10) Get-Content $file -Tail $n }
+
 Set-Alias c Clear-Host
+Set-Alias lg lazygit
+Set-Alias which Get-Command
 
 #===================================================================#
 
