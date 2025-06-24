@@ -16,7 +16,7 @@
 
 ## What is this
 
-This is my new dotfiles that I will use in the next few years or might be my last dotfiles repo, this repo is not only for NixOS, but also for Android, HELL EVEN WINDOWS SUBSYSTEM FOR LINUX NOW!!! and maybe hopefully servers and Macs if i have money.
+This is my new dotfiles that I will use in the next few years or might be my last dotfiles repo, this repo is unified all of the tools i use, not only for NixOS, Android, WSL and Windows in limited sense, and maybe hopefully servers and Macs if i have money.
 
 I use combination of chezmoi for dealing with sensitive files that need to be kept secret, and Home-manager for managing my home configuration.
 
