@@ -4,154 +4,168 @@
             "Info": "",
             "Source": "main",
             "Updated": "2025-06-23T08:24:15.2345046+07:00",
-            "Version": "24.09",
-            "Name": "7zip"
+            "Name": "7zip",
+            "Version": "24.09"
         },
         {
             "Info": "",
             "Source": "extras",
             "Updated": "2025-06-23T15:39:41.9132447+07:00",
-            "Version": "2.5.4594.1",
-            "Name": "advanced-ip-scanner"
+            "Name": "advanced-ip-scanner",
+            "Version": "2.5.4594.1"
         },
         {
             "Info": "",
             "Source": "main",
             "Updated": "2025-06-23T08:24:18.3902197+07:00",
-            "Version": "2.62.7",
-            "Name": "chezmoi"
+            "Name": "chezmoi",
+            "Version": "2.62.7"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-24T08:25:48.2977281+07:00",
+            "Name": "fzf",
+            "Version": "0.62.0"
         },
         {
             "Info": "",
             "Source": "main",
             "Updated": "2025-06-23T08:24:23.4234687+07:00",
-            "Version": "2.74.2",
-            "Name": "gh"
+            "Name": "gh",
+            "Version": "2.74.2"
         },
         {
             "Info": "",
             "Source": "main",
             "Updated": "2025-06-23T08:25:08.0482665+07:00",
-            "Version": "2.50.0",
-            "Name": "git"
+            "Name": "git",
+            "Version": "2.50.0"
         },
         {
             "Info": "",
             "Source": "main",
             "Updated": "2025-06-23T09:44:25.4471423+07:00",
-            "Version": "3.6.1",
-            "Name": "git-lfs"
+            "Name": "git-lfs",
+            "Version": "3.6.1"
         },
         {
             "Info": "",
             "Source": "nerd-fonts",
             "Updated": "2025-06-23T10:08:50.8854448+07:00",
-            "Version": "3.4.0",
-            "Name": "Hack-NF"
+            "Name": "Hack-NF",
+            "Version": "3.4.0"
         },
         {
             "Info": "",
             "Source": "main",
             "Updated": "2025-06-23T15:38:51.5613374+07:00",
-            "Version": "2.64.5",
-            "Name": "innounp"
+            "Name": "innounp",
+            "Version": "2.64.5"
         },
         {
             "Info": "",
             "Source": "extras",
             "Updated": "2025-06-23T08:37:35.3034508+07:00",
-            "Version": "9.0.2",
-            "Name": "kicad"
+            "Name": "kicad",
+            "Version": "9.0.2"
         },
         {
             "Info": "",
             "Source": "extras",
             "Updated": "2025-06-23T09:14:17.8963573+07:00",
-            "Version": "0.52.0",
-            "Name": "lazygit"
+            "Name": "lazygit",
+            "Version": "0.52.0"
         },
         {
             "Info": "",
             "Source": "extras",
             "Updated": "2025-06-23T08:29:38.307158+07:00",
-            "Version": "2.3.6",
-            "Name": "psreadline"
+            "Name": "psreadline",
+            "Version": "2.3.6"
         },
         {
             "Info": "",
             "Source": "main",
             "Updated": "2025-06-23T08:25:39.2085292+07:00",
-            "Version": "7.5.1",
-            "Name": "pwsh"
+            "Name": "pwsh",
+            "Version": "7.5.1"
         },
         {
             "Info": "",
             "Source": "extras",
             "Updated": "2025-06-23T15:39:04.7581401+07:00",
-            "Version": "1.9.4",
-            "Name": "raspberry-pi-imager"
+            "Name": "raspberry-pi-imager",
+            "Version": "1.9.4"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-06-24T11:45:53.3504577+07:00",
+            "Name": "scoop-completion",
+            "Version": "0.3.0"
         },
         {
             "Info": "",
             "Source": "extras",
             "Updated": "2025-06-23T09:39:02.2255179+07:00",
-            "Version": "1.2.66.447.g4e37e896",
-            "Name": "spotify"
+            "Name": "spotify",
+            "Version": "1.2.66.447.g4e37e896"
         },
         {
             "Info": "",
             "Source": "main",
             "Updated": "2025-06-23T11:35:14.8006043+07:00",
-            "Version": "1.23.0",
-            "Name": "starship"
+            "Name": "starship",
+            "Version": "1.23.0"
         },
         {
             "Info": "",
             "Source": "extras",
             "Updated": "2025-06-23T09:28:06.4492983+07:00",
-            "Version": "1.101.1",
-            "Name": "vscode"
+            "Name": "vscode",
+            "Version": "1.101.1"
         },
         {
             "Info": "",
             "Source": "extras",
             "Updated": "2025-06-23T15:39:53.3180694+07:00",
-            "Version": "6.5.2",
-            "Name": "winscp"
+            "Name": "winscp",
+            "Version": "6.5.2"
         },
         {
             "Info": "",
             "Source": "main",
             "Updated": "2025-06-23T11:33:07.3164225+07:00",
-            "Version": "25.5.31",
-            "Name": "yazi"
+            "Name": "yazi",
+            "Version": "25.5.31"
         },
         {
             "Info": "",
             "Source": "anderlli0053_DEV-tools",
             "Updated": "2025-06-23T08:30:00.6714577+07:00",
-            "Version": "1.11.5b",
-            "Name": "zen-browser"
+            "Name": "zen-browser",
+            "Version": "1.11.5b"
         },
         {
             "Info": "",
             "Source": "main",
             "Updated": "2025-06-23T15:56:50.0049355+07:00",
-            "Version": "0.9.8",
-            "Name": "zoxide"
+            "Name": "zoxide",
+            "Version": "0.9.8"
         }
     ],
     "buckets": [
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
-            "Updated": "2025-06-23T15:30:29+07:00",
+            "Updated": "2025-06-24T11:30:18+07:00",
             "Manifests": 1391
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2025-06-23T15:30:42+07:00",
+            "Updated": "2025-06-24T11:30:16+07:00",
             "Manifests": 2167
         },
         {
@@ -163,7 +177,7 @@
         {
             "Name": "anderlli0053_DEV-tools",
             "Source": "https://github.com/anderlli0053/DEV-tools",
-            "Updated": "2025-06-23T15:35:10+07:00",
+            "Updated": "2025-06-24T11:32:25+07:00",
             "Manifests": 26080
         }
     ]
