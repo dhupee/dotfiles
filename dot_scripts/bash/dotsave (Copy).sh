@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-# status: operational
+# status: UNUSED
 
 rclone_remote="mega-dh"
 

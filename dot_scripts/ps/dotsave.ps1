@@ -1,24 +1,25 @@
 # chezmoi-add.ps1
 
-# STATUS: UNUSED
+# STATUS: OPERATIONAL
 
 # Hardcoded arrays
 $filePaths = @(
-    "C:\Users\you\.gitconfig",
-    "C:\Users\you\AppData\Roaming\nvim\init.lua"
+    "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json",
+    "$env:LOCALAPPDATA\lazygit\config.yml",
+    "$PROFILE"
 )
 
-$dirPaths = @(
-    "C:\Users\you\AppData\Roaming\alacritty"
-)
+# $dirPaths = @(
+#     "C:\Users\you\AppData\Roaming\alacritty"
+# )
 
-$encryptedFilePaths = @(
-    "C:\Users\you\.ssh\config"
-)
+# $encryptedFilePaths = @(
+#     "C:\Users\you\.ssh\config"
+# )
 
-$encryptedDirPaths = @(
-    "C:\Users\you\AppData\Roaming\gopass"
-)
+# $encryptedDirPaths = @(
+#     "$HOME\.ssh"
+# )
 
 function Add-ToChezmoi {
     param (
@@ -28,7 +29,7 @@ function Add-ToChezmoi {
     )
 
     if (-not $Paths -or $Paths.Count -eq 0) {
-        Write-Host "Skipping $Type: No paths"
+        Write-Host "Skipping $Type{} No paths"
         return
     }
 
@@ -40,10 +41,10 @@ function Add-ToChezmoi {
 
         $quotedPath = '"' + $path + '"'
         if ($Encrypt) {
-            Write-Host "Encrypting and adding $Type: $path"
+            Write-Host "Encrypting and adding $Type{} $path"
             chezmoi add --encrypt -- $path
         } else {
-            Write-Host "Adding $Type: $path"
+            Write-Host "Adding $Type{} $path"
             chezmoi add -- $path
         }
     }
