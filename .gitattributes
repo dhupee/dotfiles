@@ -2,3 +2,19 @@
 # language detection
 *.toml.tmpl linguist-language=toml linguist-detectable
 *chezmoiignore* linguist-language=gitignore linguist-detectable
+
+# Force CRLF (Windows)
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+
+# Force LF (Unix)
+*.sh text eol=lf
+*.zsh text eol=lf
+*.conf text eol=lf
+*.nix text eol=lf
+*.vim text eol=lf
+*.lua text eol=lf
+*.json text eol=lf
+
+# Default to LF for everything else
+* text=auto eol=lf
