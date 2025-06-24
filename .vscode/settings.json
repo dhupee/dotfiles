@@ -1,0 +1,9 @@
+{
+  // Default to LF (Unix) for all files
+  "files.eol": "\n",
+
+  // Use CRLF (Windows) only for PowerShell scripts
+  "[powershell]": {
+    "files.eol": "\r\n"
+  }
+}

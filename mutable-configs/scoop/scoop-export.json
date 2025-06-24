@@ -1,87 +1,170 @@
 {
+    "apps": [
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-23T08:24:15.2345046+07:00",
+            "Version": "24.09",
+            "Name": "7zip"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-06-23T15:39:41.9132447+07:00",
+            "Version": "2.5.4594.1",
+            "Name": "advanced-ip-scanner"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-23T08:24:18.3902197+07:00",
+            "Version": "2.62.7",
+            "Name": "chezmoi"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-23T08:24:23.4234687+07:00",
+            "Version": "2.74.2",
+            "Name": "gh"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-23T08:25:08.0482665+07:00",
+            "Version": "2.50.0",
+            "Name": "git"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-23T09:44:25.4471423+07:00",
+            "Version": "3.6.1",
+            "Name": "git-lfs"
+        },
+        {
+            "Info": "",
+            "Source": "nerd-fonts",
+            "Updated": "2025-06-23T10:08:50.8854448+07:00",
+            "Version": "3.4.0",
+            "Name": "Hack-NF"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-23T15:38:51.5613374+07:00",
+            "Version": "2.64.5",
+            "Name": "innounp"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-06-23T08:37:35.3034508+07:00",
+            "Version": "9.0.2",
+            "Name": "kicad"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-06-23T09:14:17.8963573+07:00",
+            "Version": "0.52.0",
+            "Name": "lazygit"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-06-23T08:29:38.307158+07:00",
+            "Version": "2.3.6",
+            "Name": "psreadline"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-23T08:25:39.2085292+07:00",
+            "Version": "7.5.1",
+            "Name": "pwsh"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-06-23T15:39:04.7581401+07:00",
+            "Version": "1.9.4",
+            "Name": "raspberry-pi-imager"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-06-23T09:39:02.2255179+07:00",
+            "Version": "1.2.66.447.g4e37e896",
+            "Name": "spotify"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-23T11:35:14.8006043+07:00",
+            "Version": "1.23.0",
+            "Name": "starship"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-06-23T09:28:06.4492983+07:00",
+            "Version": "1.101.1",
+            "Name": "vscode"
+        },
+        {
+            "Info": "",
+            "Source": "extras",
+            "Updated": "2025-06-23T15:39:53.3180694+07:00",
+            "Version": "6.5.2",
+            "Name": "winscp"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-23T11:33:07.3164225+07:00",
+            "Version": "25.5.31",
+            "Name": "yazi"
+        },
+        {
+            "Info": "",
+            "Source": "anderlli0053_DEV-tools",
+            "Updated": "2025-06-23T08:30:00.6714577+07:00",
+            "Version": "1.11.5b",
+            "Name": "zen-browser"
+        },
+        {
+            "Info": "",
+            "Source": "main",
+            "Updated": "2025-06-23T15:56:50.0049355+07:00",
+            "Version": "0.9.8",
+            "Name": "zoxide"
+        }
+    ],
     "buckets": [
         {
             "Name": "main",
-            "Source": "~\\scoop\\buckets\\main",
-            "Updated": "2025-06-21T11:37:45.18643+07:00",
+            "Source": "https://github.com/ScoopInstaller/Main",
+            "Updated": "2025-06-23T15:30:29+07:00",
             "Manifests": 1391
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2025-06-21T11:29:31+07:00",
+            "Updated": "2025-06-23T15:30:42+07:00",
             "Manifests": 2167
+        },
+        {
+            "Name": "nerd-fonts",
+            "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
+            "Updated": "2025-06-18T16:27:21+07:00",
+            "Manifests": 367
         },
         {
             "Name": "anderlli0053_DEV-tools",
             "Source": "https://github.com/anderlli0053/DEV-tools",
-            "Updated": "2025-06-21T11:38:23+07:00",
+            "Updated": "2025-06-23T15:35:10+07:00",
             "Manifests": 26080
-        }
-    ],
-    "apps": [
-        {
-            "Updated": "2025-06-21T11:44:51.5017173+07:00",
-            "Version": "24.09",
-            "Info": "",
-            "Source": "main",
-            "Name": "7zip"
-        },
-        {
-            "Updated": "2025-06-21T11:41:08.4833046+07:00",
-            "Version": "2.62.6",
-            "Info": "",
-            "Source": "main",
-            "Name": "chezmoi"
-        },
-        {
-            "Updated": "2025-06-21T13:00:07.8471931+07:00",
-            "Version": "2.74.2",
-            "Info": "",
-            "Source": "main",
-            "Name": "gh"
-        },
-        {
-            "Updated": "2025-06-21T11:45:11.1891932+07:00",
-            "Version": "2.50.0",
-            "Info": "",
-            "Source": "main",
-            "Name": "git"
-        },
-        {
-            "Updated": "2025-06-21T13:17:37.8216307+07:00",
-            "Version": null,
-            "Info": "Install failed",
-            "Source": null,
-            "Name": "kicad"
-        },
-        {
-            "Updated": "2025-06-21T12:41:04.6685512+07:00",
-            "Version": "1.1.0",
-            "Info": "",
-            "Source": "extras",
-            "Name": "powertab"
-        },
-        {
-            "Updated": "2025-06-21T12:40:08.2789529+07:00",
-            "Version": "2.3.6",
-            "Info": "",
-            "Source": "extras",
-            "Name": "psreadline"
-        },
-        {
-            "Updated": "2025-06-21T12:44:57.5767536+07:00",
-            "Version": "7.5.1",
-            "Info": "",
-            "Source": "main",
-            "Name": "pwsh"
-        },
-        {
-            "Updated": "2025-06-21T11:50:22.4453754+07:00",
-            "Version": "1.11.5b",
-            "Info": "",
-            "Source": "anderlli0053_DEV-tools",
-            "Name": "zen-browser"
         }
     ]
 }
