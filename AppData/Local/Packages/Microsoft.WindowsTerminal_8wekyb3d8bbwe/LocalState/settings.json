@@ -57,6 +57,10 @@
             },
             {
                 "colorScheme": "Dracula",
+                "font": 
+                {
+                    "face": "Hack Nerd Font"
+                },
                 "guid": "{e3ee8c7c-ed56-50ed-ab3f-e0167b3b8ed9}",
                 "hidden": false,
                 "name": "NixOS",
@@ -65,6 +69,10 @@
             {
                 "colorScheme": "Dracula",
                 "commandline": "D:\\Scoop\\apps\\pwsh\\current\\pwsh.exe",
+                "font": 
+                {
+                    "face": "Hack Nerd Font"
+                },
                 "guid": "{920b47e7-b799-49ea-9456-15eea20aa3f4}",
                 "hidden": false,
                 "icon": "none",
