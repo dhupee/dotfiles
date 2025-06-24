@@ -1,15 +1,8 @@
 # not only aliases but also functions
 # if i think its going to be more cumbersome i'll split it
-# TODO: organize the aliases alphabetically
 
 # Clear
 alias c="clear"
-
-# NOTE: I dont really think using bat as cat is a good idea
-# Bat to Cat if Bat exists
-# if [ -e "/bin/bat" ]; then
-# 	alias cat="bat"
-# fi
 
 # # Helix
 # alias hx="helix"
@@ -26,21 +19,9 @@ alias y="yazi"
 # Plasma
 alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
 
-# Goenv
-alias goenv-update="cd ~/.goenv && git fetch --all && git pull && cd"
-
 # Qemu/KVM
 alias vm-start="systemctl start libvirtd"
 alias vm-stop="systemctl stop libvirtd"
-
-# # SSH Server
-# alias ssh-server-start="systemctl start sshd.service"
-# alias ssh-server-stop="systemctl stop sshd.service"
-# alias ssh-server-check="nc -v -z 127.0.0.1 22"
-
-# # Firewal
-# alias firewall-start="systemctl start firewalld.service"
-# alias firewall-stop="systemctl stop firewalld.service"
 
 alias check-local-ip="ip a | grep 'inet ' | grep -v '127.0.0.1'"
 
@@ -58,7 +39,7 @@ nvf() {
 }
 
 # Dotfile save
-alias dotsave="sh $HOME/.scripts/dotsave.sh"
+alias dotsave="sh $HOME/.scripts/bash/dotsave.sh"
 
 # Symlink
 alias symlink="ln -s"
@@ -72,11 +53,8 @@ alias lzd="lazydocker"
 # Tunneling url/localhost
 alias tunnel="cloudflared tunnel --url $1"
 
-# copy gitignore to create a similar dockerignore
-alias git2dock-ignore="cp $PWD/.gitignore $PWD/.dockerignore"
-
 # backup bottles yml
-alias bottles-backup="bash .scripts/bottles-backup.sh"
+alias bottles-backup="bash $HOME/.scripts/bash/bottles-backup.sh"
 
 # nbfc fan control
 alias fan-speed-full="sudo nbfc set --speed=100"
