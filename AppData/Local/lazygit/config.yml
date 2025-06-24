@@ -1,0 +1,71 @@
+customCommands:
+- command: 'git commit -m "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}{{if
+    eq .Form.Breaking `yes`}}!{{end}}: {{ .Form.Description }}"'
+  context: files
+  description: commit with commitizen
+  key: C
+  prompts:
+  - key: Type
+    options:
+    - description: A new feature
+      name: Feature
+      value: feat
+    - description: A bug fix
+      name: Fix
+      value: fix
+    - description: Documentation only changes
+      name: Documentation
+      value: docs
+    - description: Changes that do not affect the meaning of the code (white-space,
+        formatting, missing semi-colons, etc)
+      name: Styles
+      value: style
+    - description: A code change that neither fixes a bug nor adds a feature
+      name: Code Refactoring
+      value: refactor
+    - description: A code change that improves performance
+      name: Performance Improvements
+      value: perf
+    - description: Adding missing tests or correcting existing tests
+      name: Tests
+      value: test
+    - description: 'Changes that affect the build system or external dependencies
+        (example scopes: gulp, broccoli, npm)'
+      name: Builds
+      value: build
+    - description: 'Changes to our CI configuration files and scripts (example scopes:
+        Travis, Circle, BrowserStack, SauceLabs)'
+      name: Continuous Integration
+      value: ci
+    - description: Other changes that don't modify src or test files
+      name: Chores
+      value: chore
+    - description: Reverts a previous commit
+      name: Reverts
+      value: revert
+    title: Select the type of change you are committing.
+    type: menu
+  - key: Scopes
+    title: Enter the scope(s) of this change.
+    type: input
+  - key: Description
+    title: Enter the short description of the change.
+    type: input
+  - key: Breaking
+    options:
+    - description: This change does not introduce a breaking change.
+      name: 'No'
+      value: 'no'
+    - description: This change introduces a breaking change.
+      name: 'Yes'
+      value: 'yes'
+    title: Is this a breaking change?
+    type: menu
+  - body: '{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}{{if eq .Form.Breaking
+      `yes`}}!{{end}}: {{ .Form.Description }}'
+    title: Is the commit message correct?
+    type: confirm
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never --syntax-theme base16-256 -s
