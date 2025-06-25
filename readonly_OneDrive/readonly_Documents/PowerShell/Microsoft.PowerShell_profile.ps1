@@ -40,6 +40,7 @@ function lsa { Get-ChildItem -Force | Format-Table Mode, LastWriteTime, Length, 
 function touch { param($file) New-Item -ItemType File -Path $file -Force | Out-Null }
 function head { param($file, $n=10) Get-Content $file -Head $n }
 function tail { param($file, $n=10) Get-Content $file -Tail $n }
+function ssrm {Remove-Item -Recurse "$HOME\Pictures\Screenshots\*"}
 
 Set-Alias c Clear-Host
 Set-Alias lg lazygit
