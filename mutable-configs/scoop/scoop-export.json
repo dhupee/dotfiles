@@ -1,15 +1,199 @@
 {
+    "apps": [
+        {
+            "Version": "24.09",
+            "Info": "",
+            "Updated": "2025-06-23T08:24:15.2345046+07:00",
+            "Name": "7zip",
+            "Source": "main"
+        },
+        {
+            "Version": "2.5.4594.1",
+            "Info": "",
+            "Updated": "2025-06-23T15:39:41.9132447+07:00",
+            "Name": "advanced-ip-scanner",
+            "Source": "extras"
+        },
+        {
+            "Version": "0.25.0",
+            "Info": "",
+            "Updated": "2025-06-24T11:49:01.503732+07:00",
+            "Name": "bat",
+            "Source": "main"
+        },
+        {
+            "Version": "2.62.7",
+            "Info": "",
+            "Updated": "2025-06-23T08:24:18.3902197+07:00",
+            "Name": "chezmoi",
+            "Source": "main"
+        },
+        {
+            "Version": "0.62.0",
+            "Info": "",
+            "Updated": "2025-06-24T08:25:48.2977281+07:00",
+            "Name": "fzf",
+            "Source": "main"
+        },
+        {
+            "Version": "2.74.2",
+            "Info": "",
+            "Updated": "2025-06-23T08:24:23.4234687+07:00",
+            "Name": "gh",
+            "Source": "main"
+        },
+        {
+            "Version": "2.50.0",
+            "Info": "",
+            "Updated": "2025-06-23T08:25:08.0482665+07:00",
+            "Name": "git",
+            "Source": "main"
+        },
+        {
+            "Version": "3.6.1",
+            "Info": "",
+            "Updated": "2025-06-23T09:44:25.4471423+07:00",
+            "Name": "git-lfs",
+            "Source": "main"
+        },
+        {
+            "Version": "3.4.0",
+            "Info": "",
+            "Updated": "2025-06-23T10:08:50.8854448+07:00",
+            "Name": "Hack-NF",
+            "Source": "nerd-fonts"
+        },
+        {
+            "Version": "1.4.2_2025-05-13_f4327f4",
+            "Info": "",
+            "Updated": "2025-06-24T16:06:47.4606325+07:00",
+            "Name": "inkscape",
+            "Source": "extras"
+        },
+        {
+            "Version": "2.64.5",
+            "Info": "",
+            "Updated": "2025-06-23T15:38:51.5613374+07:00",
+            "Name": "innounp",
+            "Source": "main"
+        },
+        {
+            "Version": "9.0.2",
+            "Info": "",
+            "Updated": "2025-06-23T08:37:35.3034508+07:00",
+            "Name": "kicad",
+            "Source": "extras"
+        },
+        {
+            "Version": "0.52.0",
+            "Info": "",
+            "Updated": "2025-06-23T09:14:17.8963573+07:00",
+            "Name": "lazygit",
+            "Source": "extras"
+        },
+        {
+            "Version": "1.8.10",
+            "Info": "",
+            "Updated": "2025-06-25T08:30:06.4836715+07:00",
+            "Name": "obsidian",
+            "Source": "extras"
+        },
+        {
+            "Version": "2.3.6",
+            "Info": "",
+            "Updated": "2025-06-23T08:29:38.307158+07:00",
+            "Name": "psreadline",
+            "Source": "extras"
+        },
+        {
+            "Version": "7.5.2",
+            "Info": "",
+            "Updated": "2025-06-25T08:32:52.1839369+07:00",
+            "Name": "pwsh",
+            "Source": "main"
+        },
+        {
+            "Version": "1.9.4",
+            "Info": "",
+            "Updated": "2025-06-23T15:39:04.7581401+07:00",
+            "Name": "raspberry-pi-imager",
+            "Source": "extras"
+        },
+        {
+            "Version": "0.3.0",
+            "Info": "",
+            "Updated": "2025-06-24T11:45:53.3504577+07:00",
+            "Name": "scoop-completion",
+            "Source": "extras"
+        },
+        {
+            "Version": "1.2.66.447.g4e37e896",
+            "Info": "",
+            "Updated": "2025-06-23T09:39:02.2255179+07:00",
+            "Name": "spotify",
+            "Source": "extras"
+        },
+        {
+            "Version": "1.23.0",
+            "Info": "",
+            "Updated": "2025-06-23T11:35:14.8006043+07:00",
+            "Name": "starship",
+            "Source": "main"
+        },
+        {
+            "Version": "0.2020.01.26",
+            "Info": "",
+            "Updated": "2025-06-25T13:09:11.2103703+07:00",
+            "Name": "sudo",
+            "Source": "main"
+        },
+        {
+            "Version": "1.101.1",
+            "Info": "",
+            "Updated": "2025-06-23T09:28:06.4492983+07:00",
+            "Name": "vscode",
+            "Source": "extras"
+        },
+        {
+            "Version": "6.5.2",
+            "Info": "",
+            "Updated": "2025-06-23T15:39:53.3180694+07:00",
+            "Name": "winscp",
+            "Source": "extras"
+        },
+        {
+            "Version": "25.5.31",
+            "Info": "",
+            "Updated": "2025-06-23T11:33:07.3164225+07:00",
+            "Name": "yazi",
+            "Source": "main"
+        },
+        {
+            "Version": "1.11.5b",
+            "Info": "",
+            "Updated": "2025-06-23T08:30:00.6714577+07:00",
+            "Name": "zen-browser",
+            "Source": "anderlli0053_DEV-tools"
+        },
+        {
+            "Version": "0.9.8",
+            "Info": "",
+            "Updated": "2025-06-23T15:56:50.0049355+07:00",
+            "Name": "zoxide",
+            "Source": "main"
+        }
+    ],
     "buckets": [
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
-            "Updated": "2025-06-24T15:30:34+07:00",
+            "Updated": "2025-06-25T11:30:33+07:00",
             "Manifests": 1391
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2025-06-24T15:29:58+07:00",
+            "Updated": "2025-06-25T11:30:42+07:00",
             "Manifests": 2167
         },
         {
@@ -21,178 +205,8 @@
         {
             "Name": "anderlli0053_DEV-tools",
             "Source": "https://github.com/anderlli0053/DEV-tools",
-            "Updated": "2025-06-24T15:35:45+07:00",
-            "Manifests": 26080
-        }
-    ],
-    "apps": [
-        {
-            "Source": "main",
-            "Updated": "2025-06-23T08:24:15.2345046+07:00",
-            "Name": "7zip",
-            "Version": "24.09",
-            "Info": ""
-        },
-        {
-            "Source": "extras",
-            "Updated": "2025-06-23T15:39:41.9132447+07:00",
-            "Name": "advanced-ip-scanner",
-            "Version": "2.5.4594.1",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-24T11:49:01.503732+07:00",
-            "Name": "bat",
-            "Version": "0.25.0",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-23T08:24:18.3902197+07:00",
-            "Name": "chezmoi",
-            "Version": "2.62.7",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-24T08:25:48.2977281+07:00",
-            "Name": "fzf",
-            "Version": "0.62.0",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-23T08:24:23.4234687+07:00",
-            "Name": "gh",
-            "Version": "2.74.2",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-23T08:25:08.0482665+07:00",
-            "Name": "git",
-            "Version": "2.50.0",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-23T09:44:25.4471423+07:00",
-            "Name": "git-lfs",
-            "Version": "3.6.1",
-            "Info": ""
-        },
-        {
-            "Source": "nerd-fonts",
-            "Updated": "2025-06-23T10:08:50.8854448+07:00",
-            "Name": "Hack-NF",
-            "Version": "3.4.0",
-            "Info": ""
-        },
-        {
-            "Source": "extras",
-            "Updated": "2025-06-24T16:06:47.4606325+07:00",
-            "Name": "inkscape",
-            "Version": "1.4.2_2025-05-13_f4327f4",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-23T15:38:51.5613374+07:00",
-            "Name": "innounp",
-            "Version": "2.64.5",
-            "Info": ""
-        },
-        {
-            "Source": "extras",
-            "Updated": "2025-06-23T08:37:35.3034508+07:00",
-            "Name": "kicad",
-            "Version": "9.0.2",
-            "Info": ""
-        },
-        {
-            "Source": "extras",
-            "Updated": "2025-06-23T09:14:17.8963573+07:00",
-            "Name": "lazygit",
-            "Version": "0.52.0",
-            "Info": ""
-        },
-        {
-            "Source": "extras",
-            "Updated": "2025-06-23T08:29:38.307158+07:00",
-            "Name": "psreadline",
-            "Version": "2.3.6",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-23T08:25:39.2085292+07:00",
-            "Name": "pwsh",
-            "Version": "7.5.1",
-            "Info": ""
-        },
-        {
-            "Source": "extras",
-            "Updated": "2025-06-23T15:39:04.7581401+07:00",
-            "Name": "raspberry-pi-imager",
-            "Version": "1.9.4",
-            "Info": ""
-        },
-        {
-            "Source": "extras",
-            "Updated": "2025-06-24T11:45:53.3504577+07:00",
-            "Name": "scoop-completion",
-            "Version": "0.3.0",
-            "Info": ""
-        },
-        {
-            "Source": "extras",
-            "Updated": "2025-06-23T09:39:02.2255179+07:00",
-            "Name": "spotify",
-            "Version": "1.2.66.447.g4e37e896",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-23T11:35:14.8006043+07:00",
-            "Name": "starship",
-            "Version": "1.23.0",
-            "Info": ""
-        },
-        {
-            "Source": "extras",
-            "Updated": "2025-06-23T09:28:06.4492983+07:00",
-            "Name": "vscode",
-            "Version": "1.101.1",
-            "Info": ""
-        },
-        {
-            "Source": "extras",
-            "Updated": "2025-06-23T15:39:53.3180694+07:00",
-            "Name": "winscp",
-            "Version": "6.5.2",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-23T11:33:07.3164225+07:00",
-            "Name": "yazi",
-            "Version": "25.5.31",
-            "Info": ""
-        },
-        {
-            "Source": "anderlli0053_DEV-tools",
-            "Updated": "2025-06-23T08:30:00.6714577+07:00",
-            "Name": "zen-browser",
-            "Version": "1.11.5b",
-            "Info": ""
-        },
-        {
-            "Source": "main",
-            "Updated": "2025-06-23T15:56:50.0049355+07:00",
-            "Name": "zoxide",
-            "Version": "0.9.8",
-            "Info": ""
+            "Updated": "2025-06-25T07:46:50+07:00",
+            "Manifests": 26082
         }
     ]
 }
