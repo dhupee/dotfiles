@@ -18,12 +18,12 @@ Set-PSReadLineKeyHandler -Key DownArrow -Function HistorySearchForward
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -Colors @{
-    Command        = 'Cyan'
-    Parameter      = 'Yellow'
-    String         = 'Green'
-    Operator       = 'Gray'
-    Number         = 'Magenta'
-    Variable       = 'White'
+    Command          = 'Cyan'
+    Parameter        = 'Yellow'
+    String           = 'Green'
+    Operator         = 'Gray'
+    Number           = 'Magenta'
+    Variable         = 'White'
     InlinePrediction = 'DarkGray'
 }
 
@@ -31,16 +31,28 @@ Set-PSReadLineOption -Colors @{
 function dotsave {
     & "$HOME\.local\share\chezmoi\dot_scripts\ps\dotsave.ps1"
 }
-
+function lsa {
+    param ($file, $n = 10)
+    Get-Content $file -Head $n
+}
 function scoopex {
     & "$HOME\.local\share\chezmoi\dot_scripts\ps\scoopex.ps1"
 }
-
-function lsa { Get-ChildItem -Force | Format-Table Mode, LastWriteTime, Length, Name -AutoSize }
-function touch { param($file) New-Item -ItemType File -Path $file -Force | Out-Null }
-function head { param($file, $n=10) Get-Content $file -Head $n }
-function tail { param($file, $n=10) Get-Content $file -Tail $n }
-function ssrm {Remove-Item -Recurse "$HOME\Pictures\Screenshots\*"}
+function touch {
+    param ($file)
+    New-Item -ItemType File -Path $file -Force | Out-Null
+}
+function head {
+    param ($file, $n = 10)
+    Get-Content $file -Head $n
+}
+function tail {
+    param ($file, $n = 10)
+    Get-Content $file -Tail $n
+}
+function ssrm {
+    Remove-Item -Recurse "$HOME\Pictures\Screenshots\*"
+}
 
 Set-Alias c Clear-Host
 Set-Alias lg lazygit
