@@ -76,7 +76,38 @@
     termux-setup-storage.enable = true;
   };
 
+  # default shell
   user.shell = "${pkgs.bashInteractive}/bin/bash";
+
+  # terminal config
+  terminal = {
+    font = "${pkgs.nerd-fonts.hack}/share/fonts/truetype/NerdFonts/Hack/HackNerdFont-Regular.ttf";
+
+    # Dracula colorscheme
+    colors = {
+      background = "#282a36";
+      foreground = "#f8f8f2";
+      cursor = "#f8f8f2";
+
+      color0 = "#000000"; # black
+      color1 = "#ff5555"; # red
+      color2 = "#50fa7b"; # green
+      color3 = "#f1fa8c"; # yellow
+      color4 = "#bd93f9"; # blue
+      color5 = "#ff79c6"; # magenta
+      color6 = "#8be9fd"; # cyan
+      color7 = "#bbbbbb"; # white (light gray)
+
+      color8 = "#44475a"; # bright black (dark gray)
+      color9 = "#ff6e6e"; # bright red
+      color10 = "#69ff94"; # bright green
+      color11 = "#ffffa5"; # bright yellow
+      color12 = "#d6acff"; # bright blue
+      color13 = "#ff92df"; # bright magenta
+      color14 = "#a4ffff"; # bright cyan
+      color15 = "#ffffff"; # bright white
+    };
+  };
 
   # Read the changelog before changing this value
   system.stateVersion = "24.05";
