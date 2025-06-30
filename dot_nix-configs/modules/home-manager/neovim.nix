@@ -7,15 +7,14 @@
 }: {
   programs.neovim = {
     enable = true;
-    package = pkgs-unstable.neovim-unwrapped;
+    # package = pkgs-unstable.neovim-unwrapped;
+    package = pkgs.neovim-unwrapped;
     defaultEditor = true;
     withNodeJs = true;
     withPython3 = true;
     withRuby = true;
-    # plugins = with pkgs-unstable; [
-    #   vimPlugins.codeium-nvim
-    # ];
-    extraPackages = with pkgs-unstable; [
+    # extraPackages = with pkgs-unstable; [
+    extraPackages = with pkgs; [
       # Compilers
       clang
 
@@ -25,7 +24,7 @@
 
       # Docker
       docker-compose-language-service
-      dockerfile-language-server-nodejs
+      docker-language-server
       hadolint
 
       # Go
