@@ -192,10 +192,10 @@
                 "enabled": false
             },
             "FixSpotifyEmbeds": {
-                "enabled": false
+                "enabled": true
             },
             "FixYoutubeEmbeds": {
-                "enabled": false
+                "enabled": true
             },
             "ForceOwnerCrown": {
                 "enabled": false
@@ -581,6 +581,12 @@
             },
             "ExpressionCloner": {
                 "enabled": true
+<<<<<<< HEAD
+=======
+            },
+            "DisableDeepLinks": {
+                "enabled": true
+>>>>>>> 867ebd9 (feat(add vencord):)
             }
         },
         "notifications": {
@@ -593,7 +599,11 @@
             "authenticated": true,
             "url": "https://api.vencord.dev/",
             "settingsSync": true,
+<<<<<<< HEAD
             "settingsSyncVersion": 1751350875345
+=======
+            "settingsSyncVersion": 1751356346975
+>>>>>>> 867ebd9 (feat(add vencord):)
         }
     },
     "quickCss": ""
