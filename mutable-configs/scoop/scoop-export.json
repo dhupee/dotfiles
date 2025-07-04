@@ -215,6 +215,12 @@
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
             "Updated": "2025-06-28T21:21:49+07:00",
             "Manifests": 367
+        },
+        {
+            "Name": "anderlli0053_DEV-tools",
+            "Source": "https://github.com/anderlli0053/DEV-tools",
+            "Updated": "2025-06-30T07:50:44+07:00",
+            "Manifests": 26082
         }
     ]
 }
