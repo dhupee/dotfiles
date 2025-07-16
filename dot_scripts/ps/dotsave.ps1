@@ -8,6 +8,7 @@ $filePaths = @(
     "$env:LOCALAPPDATA\lazygit\config.yml",
     "$HOME\.gitconfig"
     "$HOME\.wslconfig"
+    "$HOME\.config\powershell\completions"
     "$PROFILE"
 )
 

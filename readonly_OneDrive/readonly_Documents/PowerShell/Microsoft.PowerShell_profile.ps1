@@ -9,6 +9,9 @@ Import-Module PSReadLine -ErrorAction SilentlyContinue
 # enable completion in current shell, use absolute path because PowerShell Core not respect $env:PSModulePath
 Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
 
+# PSReadLine Tab Completion
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+
 # PSReadLine History Substring Search
 Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 Set-PSReadLineKeyHandler -Key UpArrow -Function HistorySearchBackward
@@ -26,6 +29,11 @@ Set-PSReadLineOption -Colors @{
     Variable         = 'White'
     InlinePrediction = 'DarkGray'
 }
+
+Set-PSReadLineOption -ShowToolTips
+
+# Source all completions
+Get-ChildItem "$HOME\.config\powershell\completions\*.ps1" | ForEach-Object { . $_ }
 
 #==================FUNCTIONS & ALIASES==============================#
 function dotsave {
