@@ -4,7 +4,7 @@
     "actions": [],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{920b47e7-b799-49ea-9456-15eea20aa3f4}",
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "keybindings": 
     [
         {
@@ -55,9 +55,14 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
+                "colorScheme": "Dracula",
+                "font": 
+                {
+                    "face": "Hack Nerd Font"
+                },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                "name": "PowerShell",
+                "name": "PowerShell-Horus-Robotics",
                 "source": "Windows.Terminal.PowershellCore"
             },
             {
@@ -81,7 +86,7 @@
                 "guid": "{920b47e7-b799-49ea-9456-15eea20aa3f4}",
                 "hidden": false,
                 "icon": "none",
-                "name": "Powershell",
+                "name": "Powershell-Horus-IoT",
                 "startingDirectory": "%USERPROFILE%"
             }
         ]
