@@ -9,7 +9,6 @@ $filePaths = @(
     "$HOME\.gitconfig"
     "$HOME\.wslconfig"
     "$HOME\.config\powershell\completions"
-    "$PROFILE"
 )
 
 # $dirPaths = @(
