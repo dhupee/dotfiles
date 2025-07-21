@@ -6,6 +6,7 @@
 $filePaths = @(
     "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json",
     "$env:LOCALAPPDATA\lazygit\config.yml",
+    "$env:APPDATA\helix\config.toml",
     "$HOME\.gitconfig"
     "$HOME\.wslconfig"
     "$HOME\.config\powershell\completions"
