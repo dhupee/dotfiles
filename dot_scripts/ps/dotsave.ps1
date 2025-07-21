@@ -9,7 +9,7 @@ $filePaths = @(
     "$env:APPDATA\helix\config.toml",
     "$HOME\.gitconfig"
     "$HOME\.wslconfig"
-    "$HOME\.config\powershell\completions"
+    "$HOME\.config\powershell"
 )
 
 # $dirPaths = @(
