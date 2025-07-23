@@ -97,7 +97,7 @@
           ./linux/nitro/configuration.nix
         ];
         specialArgs = {
-          inherit pkgs-unstable self;
+          inherit pkgs-unstable self inputs;
         };
       };
 
@@ -136,7 +136,7 @@
           spicetify-nix.homeManagerModules.default # Spictify to customize spotify
         ];
         extraSpecialArgs = {
-          inherit pkgs-unstable spicetify-nix;
+          inherit pkgs-unstable spicetify-nix inputs;
         };
       };
 
