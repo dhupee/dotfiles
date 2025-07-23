@@ -7,14 +7,14 @@ $filePaths = @(
     "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json",
     "$env:LOCALAPPDATA\lazygit\config.yml",
     "$env:APPDATA\helix\config.toml",
-    "$HOME\.gitconfig"
+    "$HOME\.gitconfig",
     "$HOME\.wslconfig"
-    "$HOME\.config\powershell"
 )
 
-# $dirPaths = @(
-#     "C:\Users\you\AppData\Roaming\alacritty"
-# )
+$dirPaths = @(
+    # "$env:APPDATA\OrcaSlicer",
+    "$HOME\.config\powershell"
+)
 
 # $encryptedFilePaths = @(
 #     "C:\Users\you\.ssh\config"
