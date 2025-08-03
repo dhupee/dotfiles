@@ -17,4 +17,8 @@
       "saveundo" = true;
     };
   };
+
+  home.packages = with pkgs; [
+    alejandra
+  ];
 }

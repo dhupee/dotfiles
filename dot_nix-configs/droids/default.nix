@@ -119,4 +119,8 @@
 
   # Set your time zone
   time.timeZone = "Asia/Jakarta";
+
+  environment.sessionVariables = {
+    EDITOR = "micro";
+  };
 }
