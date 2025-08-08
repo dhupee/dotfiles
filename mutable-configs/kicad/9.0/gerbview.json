@@ -1,6 +1,7 @@
 {
   "appearance": {
     "color_theme": "_builtin_default",
+    "mode_opacity_value": 0.6,
     "page_type": "GERBER",
     "show_border_and_titleblock": false,
     "show_dcodes": false,
@@ -48,6 +49,9 @@
   "meta": {
     "version": 0
   },
+  "plugins": {
+    "actions": []
+  },
   "printing": {
     "background": false,
     "color_theme": "",
@@ -56,6 +60,10 @@
     "scale": 1.0,
     "title_block": false,
     "use_theme": false
+  },
+  "search_pane": {
+    "search_hidden_fields": true,
+    "selection_zoom": 1
   },
   "system": {
     "drill_file_history": [],

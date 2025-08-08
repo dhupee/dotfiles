@@ -23,6 +23,7 @@
     "pin_num_size": 50,
     "text_size": 50
   },
+  "drag_pins_along_with_edges": true,
   "edit_symbol_visible_columns": "0 1 2 3 4 5 6 7",
   "find_replace": {
     "find_history": [],
@@ -60,6 +61,9 @@
     "version": 1
   },
   "pin_table_visible_columns": "0 1 2 3 4 5 9 10",
+  "plugins": {
+    "actions": []
+  },
   "printing": {
     "background": false,
     "color_theme": "",
@@ -73,8 +77,24 @@
     "label_delta": 1,
     "pin_step": 100
   },
+  "search_pane": {
+    "search_hidden_fields": true,
+    "selection_zoom": 1
+  },
+  "selection_filter": {
+    "graphics": true,
+    "images": true,
+    "labels": true,
+    "lockedItems": false,
+    "otherItems": true,
+    "pins": true,
+    "symbols": true,
+    "text": true,
+    "wires": true
+  },
   "show_hidden_lib_fields": true,
   "show_hidden_lib_pins": true,
+  "show_pin_alt_icons": true,
   "show_pin_electrical_type": true,
   "system": {
     "file_history": [],
