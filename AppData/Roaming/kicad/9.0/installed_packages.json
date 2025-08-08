@@ -1,0 +1,39 @@
+{
+    "packages": [
+        {
+            "current_version": "0.1",
+            "install_timestamp": 1754622288,
+            "package": {
+                "author": {
+                    "contact": {
+                        "web": "https://2231puppy.tech"
+                    },
+                    "name": "2231puppy"
+                },
+                "description": "Purple KiCad theme. Forked from Dracula, it's dark. Try it out today!",
+                "description_full": "Vampires can't stand light. I've also heard rumors that they love pink and purple. Put those two things together, and you get a dark purple theme with pink highlights! This project is a fork of the official Dracula theme, with added PCM support. The icon used in this package is a modified version of an icon that uses the CC-BY-3.0 license. That license can be found here: https://creativecommons.org/licenses/by/3.0/ The original work can be found here: https://game-icons.net/1x1/delapouite/vampire-dracula.html",
+                "identifier": "com.github.2231puppy.kicad-vampire",
+                "license": "MIT",
+                "name": "Vampire",
+                "resources": {
+                    "homepage": "https://github.com/2231puppy/kicad-vampire"
+                },
+                "type": "colortheme",
+                "versions": [
+                    {
+                        "download_sha256": "8f6ebfa20b7366eba46d751dbd696ddd394aa40be654e5e849ff9b5d04844767",
+                        "download_size": 7088,
+                        "download_url": "https://github.com/2231puppy/kicad-vampire/releases/download/0.1/kicad-vampire.zip",
+                        "install_size": 15093,
+                        "kicad_version": "7.0",
+                        "status": "testing",
+                        "version": "0.1"
+                    }
+                ]
+            },
+            "pinned": false,
+            "repository_id": "46f88614eade3439",
+            "repository_name": "KiCad official repository"
+        }
+    ]
+}
