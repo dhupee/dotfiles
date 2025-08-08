@@ -13,7 +13,8 @@ $filePaths = @(
 
 $dirPaths = @(
     # "$env:APPDATA\OrcaSlicer",
-    "$HOME\.config\powershell"
+    "$HOME\.config\powershell",
+    "$env:APPDATA\kicad"
 )
 
 # $encryptedFilePaths = @(
