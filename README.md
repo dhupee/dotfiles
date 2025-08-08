@@ -6,6 +6,8 @@
   - [Screenshots](#screenshots)
   - [File Structure](#file-structure)
   - [Installation](#installation)
+    - [Linux/NixOS](#linuxnixos)
+    - [Windows](#windows)
   - [Tools I use in this dotfiles](#tools-i-use-in-this-dotfiles)
   - [References for me](#references-for-me)
   - [To-Do List](#to-do-list)
@@ -62,7 +64,9 @@ This thing obviously can change overtime as this dotfiles grow.
 
 ## Installation
 
-ofc, i will assumed you to have Nix or NixOS installed
+### Linux/NixOS
+
+ofc, i will assumed you to have Nix or NixOS installed in your linux systems
 
 run this command to get my dotfiles:
 
@@ -86,6 +90,12 @@ home-manager switch --flake .#dhupee
 that will rebuild the systems into `nitro` profile, and `dhupee` home-manager profile and that will bring every tooling and ricing I have on such profile.
 
 if you want to use other profiles then go on, check [the flake.nix](./dot_nix-configs/flake.nix)
+
+### Windows
+
+for this it's simple, just add my age key file to the home, then just `chezmoi init dhupee` then `chezmoi apply`.
+
+ofc, I will recommended you to use scoop to install shits.
 
 ## Tools I use in this dotfiles
 
