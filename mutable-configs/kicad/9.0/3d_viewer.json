@@ -40,79 +40,68 @@
     {
       "colors": [
         {
-          "color": "rgb(102, 102, 128)",
-          "layer": 1279
-        },
-        {
-          "color": "rgb(204, 204, 230)",
-          "layer": 1280
-        },
-        {
-          "color": "rgba(110, 115, 77, 0.902)",
-          "layer": 1281
-        },
-        {
-          "color": "rgb(191, 156, 59)",
-          "layer": 1282
-        },
-        {
-          "color": "rgb(191, 156, 59)",
-          "layer": 1283
-        },
-        {
-          "color": "rgb(240, 240, 240)",
-          "layer": 1284
-        },
-        {
-          "color": "rgb(240, 240, 240)",
-          "layer": 1285
-        },
-        {
-          "color": "rgba(20, 51, 36, 0.831)",
-          "layer": 1286
-        },
-        {
-          "color": "rgba(20, 51, 36, 0.831)",
-          "layer": 1287
-        },
-        {
-          "color": "rgb(128, 128, 128)",
-          "layer": 1288
-        },
-        {
-          "color": "rgb(217, 217, 217)",
-          "layer": 1290
-        },
-        {
-          "color": "rgb(217, 217, 217)",
-          "layer": 1291
-        },
-        {
           "color": "rgb(179, 26, 26)",
-          "layer": 1292
+          "layer": ""
         },
         {
-          "color": "rgb(179, 26, 26)",
-          "layer": 1293
+          "color": "rgb(0, 0, 0)",
+          "layer": "background_bottom"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "background_top"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "board"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "copper"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "copper_bottom"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "silkscreen_bottom"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "silkscreen_top"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "soldermask_bottom"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "soldermask_top"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "solderpaste"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "user_comments"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "user_drawings"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "user_eco1"
+        },
+        {
+          "color": "rgb(0, 0, 0)",
+          "layer": "user_eco2"
         }
       ],
       "layers": [
-        266,
-        278,
-        279,
-        1281,
-        1282,
-        1283,
-        1284,
-        1285,
-        1286,
-        1287,
-        1288,
-        1289,
-        1294,
-        1295,
-        1296,
-        1299
+        ""
       ],
       "name": "legacy colors"
     }
@@ -123,7 +112,7 @@
     "open_libs": []
   },
   "meta": {
-    "version": 3
+    "version": 4
   },
   "plugins": {
     "actions": []
@@ -154,6 +143,7 @@
     "opengl_thickness_disableOnMove": false,
     "opengl_vias_disableOnMove": false,
     "plated_and_bare_copper": false,
+    "preview_show_board_body": true,
     "raytrace_anti_aliasing": true,
     "raytrace_backfloor": false,
     "raytrace_lightAzimuth": [
@@ -224,11 +214,57 @@
     "show_soldermask_bottom": true,
     "show_soldermask_top": true,
     "show_solderpaste": true,
+    "show_user1": false,
+    "show_user10": false,
+    "show_user11": false,
+    "show_user12": false,
+    "show_user13": false,
+    "show_user14": false,
+    "show_user15": false,
+    "show_user16": false,
+    "show_user17": false,
+    "show_user18": false,
+    "show_user19": false,
+    "show_user2": false,
+    "show_user20": false,
+    "show_user21": false,
+    "show_user22": false,
+    "show_user23": false,
+    "show_user24": false,
+    "show_user25": false,
+    "show_user26": false,
+    "show_user27": false,
+    "show_user28": false,
+    "show_user29": false,
+    "show_user3": false,
+    "show_user30": false,
+    "show_user31": false,
+    "show_user32": false,
+    "show_user33": false,
+    "show_user34": false,
+    "show_user35": false,
+    "show_user36": false,
+    "show_user37": false,
+    "show_user38": false,
+    "show_user39": false,
+    "show_user4": false,
+    "show_user40": false,
+    "show_user41": false,
+    "show_user42": false,
+    "show_user43": false,
+    "show_user44": false,
+    "show_user45": false,
+    "show_user5": false,
+    "show_user6": false,
+    "show_user7": false,
+    "show_user8": false,
+    "show_user9": false,
     "show_zones": true,
     "subtract_mask_from_silk": false,
     "use_board_editor_copper_colors": false
   },
   "search_pane": {
+    "search_hidden_fields": true,
     "selection_zoom": 1
   },
   "system": {

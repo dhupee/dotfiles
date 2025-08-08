@@ -39,6 +39,9 @@
   "meta": {
     "version": 0
   },
+  "plugins": {
+    "actions": []
+  },
   "printing": {
     "background": false,
     "color_theme": "",
@@ -49,6 +52,10 @@
     "use_theme": false
   },
   "properties_frame_width": 150,
+  "search_pane": {
+    "search_hidden_fields": true,
+    "selection_zoom": 1
+  },
   "system": {
     "file_history": [],
     "first_run_shown": false,
