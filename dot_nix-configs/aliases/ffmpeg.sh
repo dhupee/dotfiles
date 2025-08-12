@@ -27,6 +27,14 @@ ff_extract_frames() {
 	ffmpeg -i "$input_file" "$output_dir/frame_%04d.png"
 }
 
+ff_downscale_img() {
+	local input_file="$1"
+	local scale="$2"
+	local output_file="$3"
+
+	ffmpeg -hide_banner -loglevel error -i "$input_file" -vf "scale=iw*$scale/100:ih*$scale/100" -q:v 1 "$output_file"
+}
+
 # Basic Aliases
 alias ffconv="ffmpeg -i"
 
