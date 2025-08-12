@@ -32,7 +32,7 @@ ff_downscale_img() {
 	local scale="$2"
 	local output_file="$3"
 
-	ffmpeg -hide_banner -loglevel error -i "$input_file" -vf "scale=iw*$scale/100:ih*$scale/100" -q:v 1 "$output_file"
+	ffmpeg -i "$input_file" -vf "scale=iw*$scale/100:ih*$scale/100" -q:v 1 "$output_file"
 }
 
 # Basic Aliases
