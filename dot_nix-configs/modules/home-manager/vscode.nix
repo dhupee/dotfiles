@@ -22,6 +22,7 @@
           ms-azuretools.vscode-docker
           ms-python.debugpy
           ms-python.python
+          ms-python.pylint
           ms-toolsai.jupyter
           ms-toolsai.jupyter-keymap
           ms-toolsai.jupyter-renderers
