@@ -47,6 +47,7 @@
     (with pkgs; [
       # with pkgs; [
       # alacritty
+      angryipscanner
       bat
       betterdiscordctl
       btop
