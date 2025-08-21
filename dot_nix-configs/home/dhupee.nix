@@ -99,8 +99,9 @@
   home.file = {
     ".aliases".source = ../aliases;
     ".config/containers".source = ../config/containers;
-    ".config/btop".source = ../config/btop;
     ".config/yazi".source = ../config/yazi;
+
+    # ".config/btop".source = ../config/btop;
   };
 
   # some config I have isn't read-only, so this thing is needed
@@ -113,6 +114,12 @@
   home.activation = {
     linkRcloneConf = lib.hm.dag.entryAfter ["writeBoundary"] ''
       ln -sf $HOME/.secrets/rclone/ $HOME/.config/
+    '';
+  };
+
+  home.activation = {
+    linkBtopConf = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      ln -sf $HOME/.local/share/chezmoi/mutable-configs/btop/ $HOME/.config/
     '';
   };
 
