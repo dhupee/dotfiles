@@ -1,1 +1,5 @@
 #.vscode
+
+# node-red
+dot_node-red/*backup
+dot_node-red/node_modules
