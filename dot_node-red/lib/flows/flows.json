@@ -1,0 +1,37 @@
+[
+    {
+        "id": "08cafb26b5fd63cc",
+        "type": "tab",
+        "label": "test",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2c1a0da223a23a68",
+        "type": "inject",
+        "z": "08cafb26b5fd63cc",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    }
+]

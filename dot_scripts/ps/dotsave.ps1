@@ -14,6 +14,7 @@ $filePaths = @(
 $dirPaths = @(
     # "$env:APPDATA\OrcaSlicer",
     "$HOME\.config\powershell",
+    "$HOME\.node-red",
     "$env:APPDATA\kicad"
 )
 
