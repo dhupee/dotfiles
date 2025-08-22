@@ -151,6 +151,18 @@
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [];
 
+  # File Systems, adding secondary SSD
+  fileSystems."/mnt/secondDrive" = {
+    device = "/dev/disk/by-uuid/1b339a8a-3c99-4c16-9e93-976364b6698e";
+    fsType = "ext4";
+    options = [
+      # If you don't have this options attribute, it'll default to "defaults"
+      # boot options for fstab. Search up fstab mount options you can use
+      "users" # Allows any user to mount and unmount
+      "nofail" # Prevent system from failing if this drive doesn't mount
+    ];
+  };
+
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
