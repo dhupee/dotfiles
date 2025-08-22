@@ -51,11 +51,21 @@
             version = "1.49.2";
             sha256 = "fLDR0Gb8J9DkKTwFm0oMHB1GENKH/Cj2jMb1AsP0ZpQ=";
           }
+          {
+            # https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor
+            name = "excalidraw-editor";
+            publisher = "pomdtr";
+            version = "3.9.0";
+            sha256 = "DTmlHiMKnRUOEY8lsPe7JLASEAXmfqfUJdBkV0t08c0=";
+          }
         ];
       userSettings = {
-        "workbench.colorTheme" = "Dracula";
+        "workbench.colorTheme" = "Dracula Theme";
         "files.autoSave" = "afterDelay";
-        "git.autofetch" = true;
+        "git" = {
+          "autofetch" = true;
+          "confirmSync" = false;
+        };
         "editor" = {
           "lineNumbers" = "relative";
           "formatOnSave" = true;
@@ -64,6 +74,7 @@
             "strings" = "on";
           };
         };
+        "excalidraw.theme" = "dark";
         "nix" = {
           "enableLanguageServer" = true;
           "serverPath" = "${pkgs.nixd}/bin/nixd";
