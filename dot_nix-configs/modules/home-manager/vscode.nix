@@ -29,6 +29,7 @@
           ms-toolsai.vscode-jupyter-cell-tags
           ms-toolsai.vscode-jupyter-slideshow
           oderwat.indent-rainbow
+          tomoki1207.pdf
           vscodevim.vim
           yzhang.markdown-all-in-one
 
