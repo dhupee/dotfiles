@@ -12,12 +12,18 @@
         genesis-plus-gx
         snes9x
         beetle-psx-hw # PS1
-        pcsx2 # PS2
+        play # PS2
       ]))
   ];
 
   # services.xserver.videoDrivers = ["nvidia"];
   services.xserver.videoDrivers = ["amdgpu"];
+
+  hardware.amdgpu = {
+    amdvlk = {
+      enable = true;
+    };
+  };
 
   # hardware.nvidia.modesetting.enable = true;
   #
