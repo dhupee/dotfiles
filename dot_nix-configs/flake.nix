@@ -48,7 +48,7 @@
   } @ inputs: let
     system = "x86_64-linux"; # default systems for most of the machines
 
-    # Stable packages, similar update cycle to Ubuntu/Debian
+    # Stable fixed-release packages, kinda like Ubuntu
     pkgs = import nixpkgs {
       system = system;
       config.allowUnfree = true;
@@ -70,8 +70,6 @@
           system = "aarch64-linux";
           config.allowUnfree = true;
         };
-
-        # pkgs = import nixpkgs-old {system = "aarch64-linux";};
 
         modules = [
           ./droids/default.nix
@@ -105,7 +103,7 @@
       wsl-work = lib.nixosSystem {
         inherit system;
         modules = [
-          ./wsl/work/configuration.nix
+          ./wsl/work.nix
           nixos-wsl.nixosModules.wsl
         ];
         specialArgs = {
