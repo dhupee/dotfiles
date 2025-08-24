@@ -12,6 +12,7 @@
     wine
     heroic
     lutris
+    osu-lazer-bin
     protonup-qt
     (retroarch.withCores (cores:
       with cores; [
