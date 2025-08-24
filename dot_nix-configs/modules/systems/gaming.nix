@@ -1,6 +1,11 @@
 {pkgs, ...}: {
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
+  # Steam & gamemode
+  programs.steam = {
+    enable = true;
+    gamescopeSession = {
+      enable = true;
+    };
+  };
   programs.gamemode.enable = true;
 
   environment.systemPackages = with pkgs; [
@@ -25,6 +30,7 @@
     };
   };
 
+  # Just in case if i have Nvidia Laptops
   # hardware.nvidia.modesetting.enable = true;
   #
   #   hardware.nvidia.prime = {
