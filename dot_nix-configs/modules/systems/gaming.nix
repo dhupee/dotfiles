@@ -9,6 +9,7 @@
   programs.gamemode.enable = true;
 
   environment.systemPackages = with pkgs; [
+    wine
     heroic
     lutris
     protonup-qt
