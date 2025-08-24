@@ -70,7 +70,6 @@
       platformio-core
       rclone
       rpi-imager
-      spotube
       tectonic-unwrapped
       thefuck
       tldr
