@@ -21,6 +21,7 @@
         beetle-psx-hw # PS1
         play # PS2
       ]))
+    ttyper
   ];
 
   # services.xserver.videoDrivers = ["nvidia"];
