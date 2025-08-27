@@ -61,7 +61,6 @@
       fzf
       gparted
       inkscape
-      lazydocker
       libreoffice
       mpv
       ngrok
