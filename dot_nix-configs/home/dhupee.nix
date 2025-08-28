@@ -26,7 +26,8 @@
     ../modules/home-manager/spicetify.nix
 
     # theming
-    ../theming/gnome/nitro/home.nix
+    ../theming/hyprland/dracula/home.nix
+    # ../theming/gnome/nitro/home.nix
     # ../theming/plasma/dracula/home.nix
   ];
 
