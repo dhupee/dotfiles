@@ -23,8 +23,8 @@
     ../../users/dhupee.nix
 
     # Theming
-    ../../theming/hyprland/dracula/systems.nix
-    # ../../theming/gnome/nitro/system.nix
+    # ../../theming/hyprland/dracula/systems.nix
+    ../../theming/gnome/nitro/system.nix
     # ../../theming/plasma/dracula/system.nix
 
     # Input Methods
