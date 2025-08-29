@@ -24,8 +24,8 @@
 
     # Theming
     # ../../theming/hyprland/dracula/systems.nix
-    ../../theming/gnome/nitro/system.nix
-    # ../../theming/plasma/dracula/system.nix
+    # ../../theming/gnome/nitro/system.nix
+    ../../theming/plasma/dracula/system.nix
 
     # Input Methods
     ../../modules/systems/input-methods.nix
