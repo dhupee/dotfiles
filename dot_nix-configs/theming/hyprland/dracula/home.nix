@@ -32,6 +32,22 @@
         # "nm-applet --no-agent"
       ];
 
+      env = [
+        "NIXOS_OZONE_WL, 1"
+        # "GTK_THEME, Dark-Gruvbox" # required for Nautilus to apply current theme
+        "XDG_SESSION_DESKTOP, Hyprland"
+        "XDG_CURRENT_DESKTOP, Hyprland"
+        "XDG_DESKTOP_DIR, $HOME/Desktop"
+        "XDG_DOWNLOAD_DIR, $HOME/Downloads"
+        # "XDG_TEMPLATES_DIR, $HOME/Templates"
+        "XDG_PUBLICSHARE_DIR, $HOME/Public"
+        "XDG_DOCUMENTS_DIR, $HOME/Documents"
+        "XDG_MUSIC_DIR, $HOME/Music"
+        "XDG_PICTURES_DIR, $HOME/Pictures"
+        "XDG_VIDEOS_DIR, $HOME/Videos"
+        "HYPRSHOT_DIR, $HOME/Pictures/Screenshots"
+      ];
+
       "$mod" = "SUPER";
       bind =
         [
@@ -39,6 +55,8 @@
           "$mod, F, exec, firefox"
           "$mod, return, exec, wofi -S drun"
           # ", Print, exec, grimblast copy area"
+
+          ", PRINT, exec, hyprshot -m region"
         ]
         ++ (
           # workspaces
