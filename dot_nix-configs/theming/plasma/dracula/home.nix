@@ -113,11 +113,11 @@
     enable = true;
     theme = {
       name = "Breeze"; # Change to match your KDE theme
-      package = pkgs.breeze-gtk;
+      package = pkgs.kdePackages.breeze-gtk;
     };
     iconTheme = {
       name = "Breeze"; # Match with your KDE icon theme
-      package = pkgs.breeze-icons;
+      package = pkgs.kdePackages.breeze-icons;
     };
   };
 }
