@@ -91,29 +91,134 @@
   programs.waybar = {
     enable = true;
     settings = {
-      mainBar = {
-        layer = "top";
-        position = "top";
-        height = 30;
-        output = [
-          "eDP-1"
-          "HDMI-A-1"
-        ];
-        modules-left = ["sway/workspaces" "sway/mode" "wlr/taskbar"];
-        modules-center = ["sway/window" "custom/hello-from-waybar"];
-        modules-right = ["mpd" "custom/mymodule#with-css-id" "temperature"];
+      mainbar = {
+        "layer" = "top";
+        "position" = "top";
+        "autohide" = true;
+        "autohide-blocked" = false;
+        "exclusive" = true;
+        "passthrough" = false;
+        "gtk-layer-shell" = true;
 
-        "sway/workspaces" = {
-          disable-scroll = true;
-          all-outputs = true;
+        # Modules Order
+        "modules-left" = [
+          "custom/archicon"
+          "clock"
+          "cpu"
+          "memory"
+          "disk"
+          "temperature"
+        ];
+        "modules-center" = [
+          "hyprland/workspaces"
+        ];
+        "modules-right" = [
+          "wlr/taskbar"
+          "idle_inhibitor"
+          "pulseaudio_slider"
+          "pulseaudio"
+          "network"
+          "hyprland/language"
+        ];
+        # Modules Left
+        "custom/archicon" = {
+          "format" = "";
+          "on-click" = "wofi --show drun";
+          "tooltip" = false;
         };
-        "custom/hello-from-waybar" = {
-          format = "hello {}";
-          max-length = 40;
-          interval = "once";
-          exec = pkgs.writeShellScript "hello-from-waybar" ''
-            echo "from within waybar"
-          '';
+        "clock" = {
+          "timezone" = "Asia/Jakarta";
+          "format" = "{:%I:%M  %d, %m}";
+          "tooltip-format" = "{calendar}";
+          "calendar" = {
+            "mode" = "month";
+          };
+        };
+        "cpu" = {
+          "format" = "{usage}% ";
+          "tooltip" = true;
+          "tooltip-format" = "Uso de CPU: {usage}%\nNúcleos: {cores}";
+        };
+        "memory" = {
+          "format" = "{}% 󰍛";
+          "tooltip" = true;
+          "tooltip-format" = "RAM en uso: {used} / {total} ({percentage}%)";
+        };
+        "disk" = {
+          "format" = "{percentage_free}% ";
+          "tooltip" = true;
+          "tooltip-format" = "Espacio libre: {free} / {total} ({percentage_free}%)";
+        };
+        "temperature" = {
+          "format" = "{temperatureC}°C {icon}";
+          "tooltip" = true;
+          "tooltip-format" = "Temperatura actual: {temperatureC}°C\nCrítico si > 80°C";
+          "format-icons" = [
+            ""
+          ];
+        };
+        # Modules Center
+        "hyprland/workspaces" = {
+          "format" = "{icon}";
+          "format-icons" = {
+            "default" = "";
+            "active" = "";
+          };
+          "persistent-workspaces" = {
+            "*" = 2;
+          };
+          "disable-scroll" = true;
+          "all-outputs" = true;
+          "show-special" = true;
+        };
+        # Modules Right
+        "wlr/taskbar" = {
+          "format" = "{icon}";
+          "all-outputs" = true;
+          "active-first" = true;
+          "tooltip-format" = "{name}";
+          "on-click" = "activate";
+          "on-click-middle" = "close";
+          "ignore-list" = [
+            "rofi"
+          ];
+        };
+        "idle_inhibitor" = {
+          "format" = "{icon}";
+          "format-icons" = {
+            "activated" = "";
+            "deactivated" = "";
+          };
+        };
+        "pulseaudio_slider" = {
+          "format" = "{volume}%";
+          "tooltip" = false;
+          "on-click" = "pavucontrol";
+        };
+        "pulseaudio" = {
+          "format" = "{volume}% {icon}";
+          "format-muted" = " {format_source}";
+          "format-icons" = {
+            "default" = [
+              ""
+              ""
+            ];
+          };
+        };
+        "network" = {
+          "format" = "{ifname}";
+          "format-ethernet" = "{ifname} 󰈀";
+          "format-disconnected" = " ";
+          "tooltip-format" = " {ifname} via {gwaddr}";
+          "tooltip-format-ethernet" = " {ifname} {ipaddr}/{cidr}";
+          "tooltip-format-disconnected" = "Disconnected";
+          "max-length" = 50;
+        };
+        "hyprland/language" = {
+          "format" = "{} ";
+          "on-click" = "hyprctl switchxkblayout at-translated-set-2-keyboard next";
+          "format-es" = "ESP";
+          "format-en" = "ENG";
         };
       };
     };
