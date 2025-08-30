@@ -73,6 +73,7 @@
     ];
   };
 
+  # Add my configs to .config directory
   xdg.configFile = {
     "nvim" = {
       source = ../../config/nvim;
@@ -80,8 +81,10 @@
     };
   };
 
+  # Just in case
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
+  # Lazy lock should be mutable for easy update, so symlink like this
   home.activation = {
     linkLazyLock = lib.hm.dag.entryAfter ["writeBoundary"] ''
       ln -sf $HOME/.local/share/chezmoi/mutable-configs/nvim/lazy-lock.json $HOME/.config/nvim/

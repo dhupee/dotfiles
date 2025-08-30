@@ -24,9 +24,10 @@
   # Set timezone
   time.timeZone = "Asia/Jakarta";
 
-  # Allow unfree
+  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+  # WSL specific configurations
   wsl = {
     enable = true;
     wslConf.automount.root = "/mnt";
@@ -39,6 +40,7 @@
     };
   };
 
+  # System packages
   environment.systemPackages = with pkgs; [
     curl
     gcc
@@ -56,16 +58,20 @@
     xorg.xhost
   ];
 
+  # Nix Path, useful for Flakes
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
+  # Environment variables
   environment.sessionVariables = {
     WAYLAND_DISPLAY = "wayland-0";
     DISPLAY = ":0";
     XDG_RUNTIME_DIR = "/run/user/1000";
   };
 
+  # Udev
   services.udev.packages = with pkgs; [platformio-core.udev];
 
+  # Dynamic Linking
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [];
 

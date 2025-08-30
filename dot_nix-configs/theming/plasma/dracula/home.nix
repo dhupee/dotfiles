@@ -16,6 +16,7 @@
     polonium
   ];
 
+  # Fetching the theming
   home.file.".local/share/plasma/desktoptheme/Dracula" = {
     source =
       pkgs.fetchFromGitHub {
@@ -49,6 +50,7 @@
       + "/Dark"; # Only grab the Dark variant
   };
 
+  # Overall Plasma Configurations
   programs.plasma = {
     enable = true;
     workspace = {
@@ -59,6 +61,7 @@
       wallpaper = /home/dhupee/Wallpapers/2022_ford_rally1_36.jpeg;
     };
 
+    # Top Plasma Panel
     panels = [
       {
         alignment = "center";
@@ -78,6 +81,8 @@
           "org.kde.plasma.showdesktop"
         ];
       }
+
+      # Bottom Plasma Panel, Dock-like thingy
       {
         alignment = "center";
         floating = true;
@@ -108,7 +113,7 @@
     ];
   };
 
-  # some app still need gtk, for now uses breeze for now
+  # some app still need gtk theming, for now uses breeze for now
   gtk = {
     enable = true;
     theme = {
