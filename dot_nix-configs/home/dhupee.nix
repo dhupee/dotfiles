@@ -68,6 +68,8 @@
       ngrok
       obs-studio
       orca-slicer
+      pdfarranger
+      pdfmm
       platformio-core
       rclone
       rpi-imager
