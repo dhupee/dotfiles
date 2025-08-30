@@ -6,7 +6,13 @@
   users.users.dhupee = {
     isNormalUser = true;
     description = "dhupee";
-    extraGroups = ["dialout" "networkmanager" "wheel" "docker"];
+    extraGroups = [
+      "dialout"
+      "docker"
+      "libvirtd"
+      "networkmanager"
+      "wheel"
+    ];
     shell = pkgs.zsh;
     # packages = with pkgs; [
     #   firefox
