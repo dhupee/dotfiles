@@ -14,6 +14,7 @@
 
     # Tooling
     ../../modules/systems/docker.nix
+    ../../modules/systems/virtual-machine.nix
     ../../modules/systems/cloudlare-warp.nix
 
     # Fonts
@@ -87,6 +88,7 @@
     ];
   };
 
+  # Enable Avahi, not sure what it does it's been there
   services.avahi = {
     enable = true;
     nssmdns4 = true;
@@ -120,9 +122,7 @@
     enable = true;
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  # Nano is installed by default
+  # System packages, Nano is installed by default
   environment.systemPackages = with pkgs; [
     # (with pkgs; [
     # vim
@@ -152,6 +152,7 @@
   # Make sure udev is installed for platformio
   services.udev.packages = with pkgs; [platformio-core.udev];
 
+  # Dynamic Linking
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = [];
 
