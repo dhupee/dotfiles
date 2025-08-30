@@ -2,10 +2,13 @@
   programs.virt-manager.enable = true;
   virtualisation.libvirtd = {
     enable = true;
-    qemu.vhostUserPackages = with pkgs; [
-      virtiofsd
-      virtio-win
-    ];
+    qemu = {
+      package = pkgs.qemu;
+      vhostUserPackages = with pkgs; [
+        virtiofsd
+        virtio-win
+      ];
+    };
   };
 
   # Use this when using NixOS as Guest
