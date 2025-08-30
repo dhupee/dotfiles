@@ -9,6 +9,8 @@
         "theme" = "Dracula";
         "font-size" = 12;
         "font-family" = "Hack Nerd Font";
+
+        "maximize" = true;
       };
     };
   };
