@@ -11,6 +11,7 @@
     };
   };
 
+  # for easy login
   home.activation = {
     linkGhSecrets = lib.hm.dag.entryAfter ["writeBoundary"] ''
       ln -sf $HOME/.secrets/gh/hosts.yml $HOME/.config/gh/hosts.yml

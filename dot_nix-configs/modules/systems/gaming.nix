@@ -8,6 +8,7 @@
   };
   programs.gamemode.enable = true;
 
+  # Add packages system level
   environment.systemPackages = with pkgs; [
     wine
     heroic
@@ -27,6 +28,7 @@
   # services.xserver.videoDrivers = ["nvidia"];
   services.xserver.videoDrivers = ["amdgpu"];
 
+  # AMD specific configs, still not sure used or not
   hardware.amdgpu = {
     amdvlk = {
       enable = true;
