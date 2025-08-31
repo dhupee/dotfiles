@@ -34,6 +34,19 @@
     zoxide
   ];
 
+  # User related configs
+  user = {
+    shell = "${pkgs.bashInteractive}/bin/bash";
+  };
+
+  # Set your time zone
+  time.timeZone = "Asia/Jakarta";
+
+  # Default values
+  environment.sessionVariables = {
+    EDITOR = "micro";
+  };
+
   # Home-manager specific configuration
   # NOTE: LSP wont help you in this for now
   home-manager.config = {
@@ -42,13 +55,14 @@
 
     # Importing any modules from Home.nix goes through here
     imports = [
-      ../modules/home-manager/zoxide/droid.nix
       ../modules/home-manager/bash.nix
       ../modules/home-manager/git.nix
       ../modules/home-manager/gh.nix
       ../modules/home-manager/micro.nix
       # ../modules/home-manager/neovim.nix
       ../modules/home-manager/starship/droid.nix
+
+      ../modules/home-manager/zoxide/droid.nix
     ];
 
     home.file = {
@@ -61,6 +75,8 @@
       ".tmate.conf".source = ../config/tmate.conf;
     };
   };
+
+  # I need pkgs-unstable
   home-manager.extraSpecialArgs = {
     inherit pkgs-unstable;
   };
@@ -70,17 +86,15 @@
 
   # Android/Termux specific configuration
   android-integration = {
-    # to make sure I have access to phone's storage system
-    termux-open.enable = true;
-    termux-reload-settings.enable = true;
-    termux-setup-storage.enable = true;
+    termux-open.enable = true; # open...file??
+    termux-open-url.enable = true; # open url
+    termux-reload-settings.enable = true; # reload settings without kill session
+    termux-setup-storage.enable = true; # access to phone storage
   };
-
-  # default shell
-  user.shell = "${pkgs.bashInteractive}/bin/bash";
 
   # terminal config
   terminal = {
+    # Fonts, find out the path by build it `nix build <packages>`
     font = "${pkgs.nerd-fonts.hack}/share/fonts/truetype/NerdFonts/Hack/HackNerdFont-Regular.ttf";
 
     # Dracula colorscheme
@@ -112,15 +126,8 @@
   # Read the changelog before changing this value
   system.stateVersion = "24.05";
 
-  # Set up nix for flakes
+  # Set up nix for flakes and nix-command
   nix.extraOptions = ''
     experimental-features = nix-command flakes
   '';
-
-  # Set your time zone
-  time.timeZone = "Asia/Jakarta";
-
-  environment.sessionVariables = {
-    EDITOR = "micro";
-  };
 }
