@@ -13,9 +13,10 @@
     ../../modules/systems/gaming.nix
 
     # Tooling
-    ../../modules/systems/docker.nix
-    ../../modules/systems/virtual-machine.nix
     ../../modules/systems/cloudlare-warp.nix
+    ../../modules/systems/docker.nix
+    # ../../modules/systems/flatpak.nix
+    ../../modules/systems/virtual-machine.nix
 
     # Fonts
     ../../modules/systems/fonts.nix
