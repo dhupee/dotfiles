@@ -14,7 +14,6 @@
     ../modules/home-manager/ghostty.nix
     ../modules/home-manager/kicad.nix
     ../modules/home-manager/neovim.nix
-    ../modules/home-manager/prusa-slicer.nix
     ../modules/home-manager/starship/desktop.nix
     ../modules/home-manager/virtual-machine.nix
     ../modules/home-manager/vscode.nix
@@ -48,8 +47,6 @@
   home.packages =
     (with pkgs; [
       # with pkgs; [
-      # alacritty
-      angryipscanner
       bat
       betterdiscordctl
       btop
@@ -72,7 +69,6 @@
       pdfmm
       platformio-core
       rclone
-      rpi-imager
       tectonic-unwrapped
       thefuck
       tldr
@@ -101,8 +97,6 @@
     ".aliases".source = ../aliases;
     ".config/containers".source = ../config/containers;
     ".config/yazi".source = ../config/yazi;
-
-    # ".config/btop".source = ../config/btop;
   };
 
   # some config I have isn't read-only, so this thing is needed
