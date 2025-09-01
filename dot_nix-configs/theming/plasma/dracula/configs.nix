@@ -956,7 +956,7 @@
       "kwinrc"."Desktops"."Rows" = 2;
       "kwinrc"."Plugins"."poloniumEnabled" = true;
       "kwinrc"."Script-polonium"."InsertionPoint" = 1;
-      "kwinrc"."Tiling"."padding" = 4;
+      "kwinrc"."Tiling"."padding" = 8;
       "kwinrc"."Tiling/1af8e216-9144-5937-a027-6e50083ba1b5"."tiles" = "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
       "kwinrc"."Tiling/213a9620-187e-58a6-b80b-85d8fb95dfce"."tiles" = "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
       "kwinrc"."Tiling/22959d2a-2b14-53dc-81a8-07412e1c3939"."tiles" = "{\"layoutDirection\":\"horizontal\",\"tiles\":[]}";
