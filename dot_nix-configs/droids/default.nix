@@ -58,10 +58,9 @@
       ../modules/home-manager/bash.nix
       ../modules/home-manager/git.nix
       ../modules/home-manager/gh.nix
+      # ../modules/home-manager/helix.nix
       ../modules/home-manager/micro.nix
-      # ../modules/home-manager/neovim.nix
       ../modules/home-manager/starship/droid.nix
-
       ../modules/home-manager/zoxide/droid.nix
     ];
 
@@ -69,7 +68,6 @@
       # Symlink config files you want, example:
       # ".screenrc".source = dotfiles/screenrc;
 
-      ".config/helix".source = ../config/helix;
       ".aliases".source = ../aliases;
       ".config/yazi".source = ../config/yazi;
       ".tmate.conf".source = ../config/tmate.conf;
