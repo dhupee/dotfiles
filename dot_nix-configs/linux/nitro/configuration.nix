@@ -135,10 +135,7 @@
     bind
     curl
     gcc
-    gnumake
-    go-task
     home-manager
-    htop
     nix-prefetch-git
     nvtopPackages.full
     p7zip
