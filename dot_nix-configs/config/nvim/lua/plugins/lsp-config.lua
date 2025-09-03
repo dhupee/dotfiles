@@ -46,6 +46,19 @@ return {
           },
         },
         marksman = {},
+        nil_ls = {
+          formatting = {
+            command = { "alejandra" },
+          },
+          nix = {
+            binary = "/run/current-system/sw/bin/nix",
+            flake = {
+              autoArchive = true,
+              autoEvalInputs = true,
+              nixpkgsInputName = "nixpkgs",
+            },
+          },
+        },
         nixd = {
           settings = {
             nixd = {
@@ -60,15 +73,9 @@ return {
                 nixos = {
                   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixosConfigurations."nitro".options',
                 },
-                -- wsl = {
-                --   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixosConfigurations."wsl-work".options',
-                -- },
                 home_manager = {
                   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").homeConfigurations."dhupee".options',
                 },
-                -- nix_on_droid = {
-                --   expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixOnDroidConfigurations."default".options',
-                -- },
                 -- NOTE:: other than nixos and home-manager cause the LSP to be heavy as fuck, so dont
               },
             },
