@@ -21,7 +21,6 @@ return {
           },
         }),
         nls.builtins.formatting.goimports,
-        nls.builtins.formatting.isort,
         nls.builtins.formatting.markdownlint,
         nls.builtins.formatting.shfmt,
         nls.builtins.formatting.stylua,
