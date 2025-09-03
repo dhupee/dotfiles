@@ -1,5 +1,5 @@
 {
-  description = "Dhupee's Nix configuration for NixOS and Android.";
+  description = "Dhupee's Nix configuration for NixOS, Home Manager, and Android.";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
