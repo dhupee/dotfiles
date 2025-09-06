@@ -48,7 +48,6 @@
       # Nix
       alejandra
       nixd
-      nil
 
       # Python
       black
