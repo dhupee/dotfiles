@@ -46,25 +46,13 @@ return {
           },
         },
         marksman = {},
-        nil_ls = {
-          formatting = {
-            command = { "alejandra" },
-          },
-          nix = {
-            binary = "/run/current-system/sw/bin/nix",
-            flake = {
-              autoArchive = true,
-              autoEvalInputs = true,
-              nixpkgsInputName = "nixpkgs",
-            },
-          },
-        },
         nixd = {
           settings = {
             nixd = {
               nixpkgs = {
                 -- expr = "import <nixpkgs> { }",
-                expr = 'import (builtins.getFlake "/home/dhupee/.nix-configs").inputs.nixpkgs { }',
+                -- expr = 'import (builtins.getFlake "/home/dhupee/.nix-configs").inputs.nixpkgs { }',
+                expr = '(builtins.getFlake "/home/dhupee/.nix-configs").nixosConfigurations."nitro".pkgs',
               },
               formatting = {
                 command = { "alejandra" },
