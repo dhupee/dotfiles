@@ -6,6 +6,8 @@
     nixpkgs-old.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
+
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -45,6 +47,7 @@
     plasma-manager,
     spicetify-nix,
     nixos-wsl,
+    nix-flatpak,
   } @ inputs: let
     system = "x86_64-linux"; # default systems for most of the machines
 
@@ -93,9 +96,11 @@
         modules = [
           # directory of the configuration nix of this profile
           ./linux/nitro/configuration.nix
+
+          nix-flatpak.nixosModules.nix-flatpak
         ];
         specialArgs = {
-          inherit pkgs-unstable self inputs;
+          inherit pkgs-unstable nix-flatpak self inputs;
         };
       };
 
@@ -130,8 +135,9 @@
           # directory of my home configuration
           ./home/dhupee.nix
 
-          plasma-manager.homeManagerModules.plasma-manager # Plasma manager tooling to customize KDE plasma
+          plasma-manager.homeModules.plasma-manager # Plasma manager tooling to customize KDE plasma
           spicetify-nix.homeManagerModules.default # Spictify to customize spotify
+          # nix-flatpak.homeManagerModules.nix-flatpak # Flatpak
         ];
         extraSpecialArgs = {
           inherit pkgs-unstable spicetify-nix inputs;
