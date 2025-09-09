@@ -97,6 +97,7 @@
           # directory of the configuration nix of this profile
           ./linux/nitro/configuration.nix
 
+          # Nix-Flatpak, managing flatpak declaratively
           nix-flatpak.nixosModules.nix-flatpak
         ];
         specialArgs = {

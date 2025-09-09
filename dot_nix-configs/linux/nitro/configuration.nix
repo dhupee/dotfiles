@@ -136,6 +136,7 @@
     curl
     gcc
     home-manager
+    nixpkgs-manual
     nix-prefetch-git
     nvtopPackages.full
     p7zip
@@ -153,11 +154,15 @@
   services.openssh.enable = true;
 
   # Make sure udev is installed for platformio
-  services.udev.packages = with pkgs; [platformio-core.udev];
+  services.udev.packages = with pkgs; [
+    platformio-core.udev
+  ];
 
   # Dynamic Linking
-  programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = [];
+  programs.nix-ld = {
+    enable = true;
+    libraries = [];
+  };
 
   # File Systems, adding secondary SSD
   fileSystems."/mnt/secondDrive" = {
@@ -165,7 +170,7 @@
     fsType = "ext4";
     options = [
       # If you don't have this options attribute, it'll default to "defaults"
-      # boot options for fstab. Search up fstab mount options you can use
+      # mount options for fstab, check https://man.archlinux.org/man/mount.8#Generic_Mount_Options
       "users" # Allows any user to mount and unmount
       "nofail" # Prevent system from failing if this drive doesn't mount
     ];
