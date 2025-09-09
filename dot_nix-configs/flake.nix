@@ -100,7 +100,7 @@
           nix-flatpak.nixosModules.nix-flatpak
         ];
         specialArgs = {
-          inherit pkgs-unstable nix-flatpak self inputs;
+          inherit pkgs-unstable self inputs;
         };
       };
 
@@ -137,7 +137,6 @@
 
           plasma-manager.homeModules.plasma-manager # Plasma manager tooling to customize KDE plasma
           spicetify-nix.homeManagerModules.default # Spictify to customize spotify
-          # nix-flatpak.homeManagerModules.nix-flatpak # Flatpak
         ];
         extraSpecialArgs = {
           inherit pkgs-unstable spicetify-nix inputs;
