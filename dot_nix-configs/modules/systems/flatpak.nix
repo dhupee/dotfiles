@@ -1,16 +1,30 @@
-{pkgs, ...}: {
-  # Enable Flatpak
-  services.flatpak.enable = true;
-
-  # Add Flathub
-  systemd.services.flatpak-repos = {
-    wantedBy = ["multi-user.target"];
-    path = [pkgs.flatpak];
-    script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    '';
+{
+  pkgs,
+  nix-flatpak,
+  ...
+}: {
+  services.flatpak = {
+    enable = true;
+    remotes = [
+      # Flathub is the default already present by this flake.
+      #   {
+      #     name = "flathub-beta";
+      #     location = "https://flathub.org/beta-repo/flathub-beta.flatpakrepo";
+      #   }
+    ];
+    packages = [
+      # {
+      #   appId = "io.github.philippkosarev.bmi";
+      #   origin = "flathub";
+      # }
+      # "page.codeberg.lo_vely.Nucleus"
+      "io.github.philippkosarev.bmi"
+    ];
+    uninstallUnmanaged = true;
+    update = {
+      auto = {
+        enable = false;
+      };
+    };
   };
-
-  # Builder, in case I need it
-  # environment.systemPackages = [ pkgs.flatpak-builder ];
 }
