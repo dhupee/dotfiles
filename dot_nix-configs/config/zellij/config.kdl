@@ -358,6 +358,9 @@ session_name "general"
 // Default: false
 // 
 attach_to_session true
+
+// Disable startup tips on every start
+show_startup_tips false
  
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
