@@ -78,6 +78,8 @@
           ./droids/default.nix
 
           # Enable unstable packages to Droids
+          # Similar effect to adding .nix configuration file to modules
+          # Ignore the LSP Warning, it's used....used!!
           ({config, ...}: {
             config._module.args.pkgs-unstable = import nixpkgs-unstable {
               system = "aarch64-linux";
@@ -110,6 +112,8 @@
         inherit system;
         modules = [
           ./wsl/work.nix
+
+          # WSL specific options
           nixos-wsl.nixosModules.wsl
         ];
         specialArgs = {
@@ -136,6 +140,7 @@
           # directory of my home configuration
           ./home/dhupee.nix
 
+          # Custom options from other community flakes
           plasma-manager.homeModules.plasma-manager # Plasma manager tooling to customize KDE plasma
           spicetify-nix.homeManagerModules.default # Spictify to customize spotify
         ];
