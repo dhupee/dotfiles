@@ -1,0 +1,41 @@
+theme = "Default"
+default_source = "Nyaa"
+download_client = "Transmission"
+timeout = 30
+scroll_padding = 3
+cursor_padding = 4
+save_config_on_change = true
+hot_reload_config = true
+
+[client.command]
+cmd = 'curl "{torrent}" > ~/{file}'
+shell_cmd = "sh -c"
+
+[client.transmission]
+base_url = "http://localhost:9091/transmission/rpc"
+
+[source.nyaa]
+base_url = "https://nyaa.si/"
+default_sort = "Date"
+default_sort_dir = "Desc"
+default_filter = "NoFilter"
+default_category = "AllCategories"
+default_search = ""
+rss = false
+
+[source.sukebei]
+base_url = "https://sukebei.nyaa.si/"
+default_sort = "Date"
+default_sort_dir = "Desc"
+default_filter = "NoFilter"
+default_category = "AllCategories"
+default_search = ""
+rss = false
+
+[source.torrentgalaxy]
+base_url = "https://torrentgalaxy-official.com/"
+default_sort = "Date"
+default_sort_dir = "Desc"
+default_filter = "NoFilter"
+default_category = "AllCategories"
+default_search = ""
