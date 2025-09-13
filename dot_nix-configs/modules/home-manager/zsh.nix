@@ -4,6 +4,11 @@
   pkgs,
   ...
 }: {
+  # symlink the aliases
+  home.file = {
+    ".aliases".source = ../../aliases;
+  };
+
   programs = {
     zsh = {
       enable = true;
