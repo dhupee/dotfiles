@@ -17,4 +17,9 @@
     imagemagick
     wl-clipboard
   ];
+
+  # Yazi config file
+  home.file = {
+    ".config/yazi".source = ../../config/yazi;
+  };
 }
