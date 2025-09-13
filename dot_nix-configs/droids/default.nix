@@ -67,9 +67,6 @@
     home.file = {
       # Symlink config files you want, example:
       # ".screenrc".source = dotfiles/screenrc;
-
-      ".aliases".source = ../aliases;
-      ".config/yazi".source = ../config/yazi;
       ".tmate.conf".source = ../config/tmate.conf;
     };
   };

@@ -49,7 +49,6 @@
     (with pkgs; [
       # with pkgs; [
       bat
-      betterdiscordctl
       btop
       chezmoi
       distrobox
@@ -62,7 +61,6 @@
       gparted
       inkscape
       libreoffice
-      mpv
       ngrok
       obs-studio
       orca-slicer
@@ -77,14 +75,6 @@
       vlc
       yt-dlp
       zoxide
-
-      # Fonts are installed system wide, check modules
-
-      # Shell scripts
-      # (pkgs.writeShellScriptBin "my-hello" ''
-      #   echo "Hello, ${config.home.username}!"
-      # '')
-      # ];
     ])
     ++ (with pkgs-unstable; [
       distrobox-tui
@@ -94,11 +84,9 @@
 
   # Config that needs to be symlinked
   # CAREFUL: it's read-only
-  home.file = {
-    ".aliases".source = ../aliases;
-    ".config/containers".source = ../config/containers;
-    ".config/yazi".source = ../config/yazi;
-  };
+  # home.file = {
+  #   ".config/containers".source = ../config/containers;
+  # };
 
   # some config I have isn't read-only, so this thing is needed
   home.activation = {

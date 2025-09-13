@@ -1,4 +1,8 @@
 {pkgs, ...}: {
+  home.file = {
+    ".aliases".source = ../../aliases;
+  };
+
   programs = {
     bash = {
       enable = true;
