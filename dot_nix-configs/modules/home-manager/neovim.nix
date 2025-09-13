@@ -57,9 +57,10 @@
 
       # Javascripts and it's cronies
       biome
+      emmet-language-server
       svelte-language-server
-      typescript-language-server
       tailwindcss-language-server
+      typescript-language-server
       vscode-langservers-extracted
       vue-language-server
 
