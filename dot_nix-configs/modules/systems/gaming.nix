@@ -32,15 +32,20 @@
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
-    # extraPackages = with pkgs; [
-    #   rocmPackages.clr
-    # ];
   };
 
   # services.xserver.videoDrivers = ["nvidia"];
   services.xserver.videoDrivers = ["amdgpu"];
 
-  # AMD specific configs, still not sure used or not
+  # AMD Ryzen specific configs
+  hardware.cpu.amd = {
+    ryzen-smu = {
+      enable = false;
+    };
+  };
+  programs.ryzen-monitor-ng.enable = false;
+
+  # AMD GPU specific configs
   hardware = {
     amdgpu = {
       amdvlk = {
@@ -53,33 +58,29 @@
         enable = false;
       };
     };
-    cpu.amd = {
-      ryzen-smu = {
-        enable = false;
-      };
-    };
   };
-  # programs.ryzen-monitor-ng.enable = true;
 
-  # Enable lact in systemd
+  # Linux GPU Configuration And Monitoring Tool (LACT)
+  # Enable lact in systemd to make it work
   # systemd = {
   #   packages = with pkgs; [lact];
   #   services.lactd.wantedBy = ["multi-user.target"];
   # };
 
-  # Just in case if i have Nvidia Laptops
-  # hardware.nvidia.modesetting.enable = true;
+  # Nvidia GPU specific configs
+  # hardware.nvidia = {
+  #   modesetting.enable = true;
+  #   prime = {
+  #     offload = {
+  #       enable = true;
+  #       enableOffloadCmd = true; # Lets you use `nvidia-offload %command%` in steam
+  #     };
   #
-  #   hardware.nvidia.prime = {
-  #   offload = {
-  #     enable = true;
-  #     enableOffloadCmd = true; # Lets you use `nvidia-offload %command%` in steam
+  #     # run `nix shell nixpkgs#pciutils -c lspci | grep VGA`
+  #     # to find the PCI Bus IDs
+  #     intelBusId = "PCI:00:02:0";
+  #     # amdgpuBusId = "PCI:0:0:0";
+  #     nvidiaBusId = "PCI:01:00:0";
   #   };
-  #
-  #   # run `nix shell nixpkgs#pciutils -c lspci | grep VGA`
-  #   # to find the PCI Bus IDs
-  #   intelBusId = "PCI:00:02:0";
-  #   # amdgpuBusId = "PCI:0:0:0";
-  #   nvidiaBusId = "PCI:01:00:0";
   # };
 }
