@@ -22,6 +22,7 @@
         beetle-psx-hw # PS1
         play # PS2
       ]))
+    mangohud
     ttyper
     # clinfo
     # ryzenadj
