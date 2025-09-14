@@ -1,5 +1,9 @@
 {pkgs, ...}: {
-  environment.systemPackages = [pkgs.cloudflare-warp]; # for warp-svc
-  systemd.packages = [pkgs.cloudflare-warp]; # for warp-cli
-  systemd.targets.multi-user.wants = ["warp-svc.service"]; # causes warp-svc to be started automatically
+  environment.systemPackages = [pkgs.cloudflare-warp];
+  systemd = {
+    packages = with pkgs; [
+      cloudflare-warp
+    ];
+    services.warp-svc.wantedBy = ["multi-user.target"];
+  };
 }
