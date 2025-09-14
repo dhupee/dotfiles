@@ -23,29 +23,49 @@
         play # PS2
       ]))
     ttyper
+    # clinfo
+    # ryzenadj
+    # lact
   ];
 
   # Enable graphics drivers
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    # extraPackages = with pkgs; [
+    #   rocmPackages.clr
+    # ];
   };
 
   # services.xserver.videoDrivers = ["nvidia"];
   services.xserver.videoDrivers = ["amdgpu"];
 
   # AMD specific configs, still not sure used or not
-  hardware.amdgpu = {
-    amdvlk = {
-      enable = true;
-      support32Bit.enable = true;
+  hardware = {
+    amdgpu = {
+      amdvlk = {
+        enable = true;
+        support32Bit.enable = true;
+      };
+      initrd.enable = true;
+      opencl.enable = true;
+      overdrive = {
+        enable = false;
+      };
     };
-    initrd.enable = true;
-    opencl.enable = true;
-    overdrive = {
-      enable = false;
+    cpu.amd = {
+      ryzen-smu = {
+        enable = false;
+      };
     };
   };
+  # programs.ryzen-monitor-ng.enable = true;
+
+  # Enable lact in systemd
+  # systemd = {
+  #   packages = with pkgs; [lact];
+  #   services.lactd.wantedBy = ["multi-user.target"];
+  # };
 
   # Just in case if i have Nvidia Laptops
   # hardware.nvidia.modesetting.enable = true;
