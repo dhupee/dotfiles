@@ -35,16 +35,8 @@
 
           # theming
           dracula-theme.theme-dracula
-          # ];
         ]
         ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-          {
-            # https://marketplace.visualstudio.com/items?itemName=AykutSarac.jsoncrack-vscode
-            name = "jsoncrack-vscode";
-            publisher = "AykutSarac";
-            version = "3.0.0";
-            sha256 = "SwgUm6rIEp15Lc86UHTD5gVHrs9Mwbcwsb7LL5SGVy4=";
-          }
           {
             # https://marketplace.visualstudio.com/items?itemName=Codeium.codeium
             name = "codeium";
@@ -59,14 +51,16 @@
             version = "3.9.0";
             sha256 = "DTmlHiMKnRUOEY8lsPe7JLASEAXmfqfUJdBkV0t08c0=";
           }
+          {
+            # https://marketplace.visualstudio.com/items?itemName=AykutSarac.jsoncrack-vscode
+            name = "jsoncrack-vscode";
+            publisher = "AykutSarac";
+            version = "3.0.0";
+            sha256 = "SwgUm6rIEp15Lc86UHTD5gVHrs9Mwbcwsb7LL5SGVy4=";
+          }
         ];
       userSettings = {
-        "workbench.colorTheme" = "Dracula Theme";
-        "files.autoSave" = "afterDelay";
-        "git" = {
-          "autofetch" = true;
-          "confirmSync" = false;
-        };
+        "clangd.path" = "${pkgs.clang-tools}/bin/clangd";
         "editor" = {
           "lineNumbers" = "relative";
           "formatOnSave" = true;
@@ -76,12 +70,17 @@
           };
         };
         "excalidraw.theme" = "dark";
+        "files.autoSave" = "afterDelay";
+        "git" = {
+          "autofetch" = true;
+          "confirmSync" = false;
+        };
+        "hediet.vscode-drawio.theme" = "dark";
         "nix" = {
           "enableLanguageServer" = true;
           "serverPath" = "${pkgs.nixd}/bin/nixd";
         };
-        "hediet.vscode-drawio.theme" = "dark";
-        "clangd.path" = "${pkgs.clang-tools}/bin/clangd";
+        "workbench.colorTheme" = "Dracula Theme";
       };
     };
   };
