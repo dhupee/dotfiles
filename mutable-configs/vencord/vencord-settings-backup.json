@@ -4,9 +4,8 @@
         "autoUpdateNotification": true,
         "useQuickCss": true,
         "themeLinks": [
-            "https://raw.githubusercontent.com/DemonKingSwarn/vencord-dracula-theme/refs/heads/master/vencord-theme-dracula.css"
+            "https://raw.githubusercontent.com/dracula/BetterDiscord/master/Dracula_Official.theme.css"
         ],
-        "eagerPatches": false,
         "enabledThemes": [],
         "enableReactDevtools": false,
         "frameless": false,
@@ -109,7 +108,7 @@
                 "enabled": false
             },
             "ClearURLs": {
-                "enabled": false
+                "enabled": true
             },
             "ClientTheme": {
                 "enabled": false
@@ -189,7 +188,7 @@
                 "enabled": false
             },
             "FixImagesQuality": {
-                "enabled": false
+                "enabled": true
             },
             "FixSpotifyEmbeds": {
                 "enabled": true
@@ -581,12 +580,15 @@
             },
             "ExpressionCloner": {
                 "enabled": true
-<<<<<<< HEAD
-=======
             },
             "DisableDeepLinks": {
                 "enabled": true
->>>>>>> 867ebd9 (feat(add vencord):)
+            },
+            "CopyStickerLinks": {
+                "enabled": false
+            },
+            "ImageFilename": {
+                "enabled": false
             }
         },
         "notifications": {
@@ -599,12 +601,9 @@
             "authenticated": true,
             "url": "https://api.vencord.dev/",
             "settingsSync": true,
-<<<<<<< HEAD
-            "settingsSyncVersion": 1751350875345
-=======
-            "settingsSyncVersion": 1751356346975
->>>>>>> 867ebd9 (feat(add vencord):)
-        }
+            "settingsSyncVersion": 1757816552471
+        },
+        "eagerPatches": false
     },
     "quickCss": ""
 }
