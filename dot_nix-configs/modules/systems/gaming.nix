@@ -25,6 +25,12 @@
     ttyper
   ];
 
+  # Enable graphics drivers
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   # services.xserver.videoDrivers = ["nvidia"];
   services.xserver.videoDrivers = ["amdgpu"];
 
@@ -32,6 +38,12 @@
   hardware.amdgpu = {
     amdvlk = {
       enable = true;
+      support32Bit.enable = true;
+    };
+    initrd.enable = true;
+    opencl.enable = true;
+    overdrive = {
+      enable = false;
     };
   };
 
@@ -44,6 +56,8 @@
   #     enableOffloadCmd = true; # Lets you use `nvidia-offload %command%` in steam
   #   };
   #
+  #   # run `nix shell nixpkgs#pciutils -c lspci | grep VGA`
+  #   # to find the PCI Bus IDs
   #   intelBusId = "PCI:00:02:0";
   #   # amdgpuBusId = "PCI:0:0:0";
   #   nvidiaBusId = "PCI:01:00:0";
