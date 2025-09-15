@@ -11,11 +11,6 @@
   };
   services.desktopManager.plasma6.enable = true;
 
-  # Add few useful packages
-  environment.systemPackages = with pkgs.kdePackages; [
-    filelight
-  ];
-
   # Remove unused plasma6 packages
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     plasma-browser-integration
