@@ -24,8 +24,8 @@
       ]))
     mangohud
     ttyper
-    tuxclocker
     ryzenadj
+    # tuxclocker
     # lact
   ];
 
@@ -37,12 +37,6 @@
 
   # services.xserver.videoDrivers = ["nvidia"];
   services.xserver.videoDrivers = ["amdgpu"];
-
-  # Laptop stuff
-  # powerManagement = {
-  #   enable = true;
-  #   cpuFreqGovernor = "powersave";
-  # };
 
   # AMD Ryzen specific configs
   hardware.cpu = {
