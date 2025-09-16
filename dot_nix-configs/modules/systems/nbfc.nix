@@ -1,6 +1,6 @@
 # nbfc.nix
 {pkgs, ...}: let
-  filename = "nbfc.json";
+  filename = "nbfc/nbfc.json";
 
   nitroConfig = ''
     {"SelectedConfigId": "Acer Nitro AN515-43"}
