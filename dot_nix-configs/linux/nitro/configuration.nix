@@ -8,6 +8,7 @@
   imports = [
     # Hardware
     ../../machines/nitro/hardware-configuration.nix
+    ../../modules/systems/nbfc.nix
 
     # Gaming
     ../../modules/systems/gaming.nix
