@@ -24,12 +24,12 @@
       ]))
     mangohud
     ttyper
-    ryzenadj
-    # tuxclocker
+    # ryzenadj
     # lact
   ];
 
   # Enable graphics drivers
+  # Already has Mesa in it
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -37,6 +37,13 @@
 
   # services.xserver.videoDrivers = ["nvidia"];
   services.xserver.videoDrivers = ["amdgpu"];
+
+  # Enable Tux Clocker
+  programs.tuxclocker = {
+    enable = true;
+    useUnfree = true;
+    # enabledNVIDIADevices = [ 0 1 ];
+  };
 
   # AMD Ryzen specific configs
   hardware.cpu = {
@@ -52,14 +59,15 @@
   # AMD GPU specific configs
   hardware = {
     amdgpu = {
+      # add AMD Vulkan
       amdvlk = {
-        enable = true;
-        support32Bit.enable = true;
+        enable = false;
+        support32Bit.enable = false;
       };
       initrd.enable = true;
       opencl.enable = true;
       overdrive = {
-        enable = false;
+        enable = true;
       };
     };
   };
