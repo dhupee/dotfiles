@@ -84,9 +84,10 @@
 
   # Config that needs to be symlinked
   # CAREFUL: it's read-only
-  # home.file = {
-  #   ".config/containers".source = ../config/containers;
-  # };
+  home.file = {
+    # ".config/containers".source = ../config/containers;
+    ".config/MangoHud".source = ../config/MangoHud;
+  };
 
   # some config I have isn't read-only, so this thing is needed
   home.activation = {
