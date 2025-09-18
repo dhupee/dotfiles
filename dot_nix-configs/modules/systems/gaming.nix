@@ -1,12 +1,42 @@
+# NOTE: If you have multiple PCs, start split Hardware side of this config, `modules/hardware` for example
 {pkgs, ...}: {
-  # Steam & gamemode
+  # Steam
   programs.steam = {
     enable = true;
     gamescopeSession = {
-      enable = true;
+      enable = false;
+    };
+    package = pkgs.steam.override {
+      # extraEnv = {
+      #   MANGOHUD = true;
+      #   OBS_VKCAPTURE = true;
+      #   RADV_TEX_ANISO = 16;
+      # };
+      extraLibraries = pkgs: [pkgs.xorg.libxcb];
+      extraPkgs = pkgs:
+        with pkgs; [
+          xorg.libXcursor
+          xorg.libXi
+          xorg.libXinerama
+          xorg.libXScrnSaver
+          libpng
+          libpulseaudio
+          libvorbis
+          stdenv.cc.cc.lib
+          libkrb5
+          keyutils
+        ];
     };
   };
-  programs.gamemode.enable = true;
+
+  # Gamemode and Gamescope
+  programs = {
+    gamemode.enable = true;
+    gamescope = {
+      enable = false;
+      # capSysNice = true;
+    };
+  };
 
   # Add packages system level
   environment.systemPackages = with pkgs; [
