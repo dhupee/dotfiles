@@ -2,35 +2,42 @@
   description = "Dhupee's Nix configuration for NixOS, Home Manager, and Android.";
 
   inputs = {
+    # Always keeps one channel older
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-old.url = "github:NixOS/nixpkgs/nixos-24.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    # Enables me to install flatpaks declaratively
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
 
+    # Using Nix on Android
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
 
+    # NixOS on Windows Subsystem for Linux
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Home-Manager, NixOS for your User Config
     home-manager = {
       # url = "github:nix-community/home-manager/master";
       url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Ricing KDE Plasma Declaratively
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
 
+    # Ricing Spotify Declaratively
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -142,7 +149,7 @@
 
           # Custom options from other community flakes
           plasma-manager.homeModules.plasma-manager # Plasma manager tooling to customize KDE plasma
-          spicetify-nix.homeManagerModules.default # Spictify to customize spotify
+          spicetify-nix.homeManagerModules.default # Spicetify to customize spotify
         ];
         extraSpecialArgs = {
           inherit pkgs-unstable spicetify-nix inputs;
