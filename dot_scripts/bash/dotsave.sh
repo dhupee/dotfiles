@@ -19,7 +19,7 @@ dir_array=(
 encrypted_dir_array=(
 	"$HOME/.ssh/"
 	"$HOME/.secrets/"
-
+	"$HOME/.torrents/"
 )
 
 # encrypted_file_array=(
