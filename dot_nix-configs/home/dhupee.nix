@@ -8,7 +8,7 @@
 }: {
   imports = [
     # tooling
-    ../modules/home-manager/bittorrent.nix
+    # ../modules/home-manager/bittorrent.nix
     ../modules/home-manager/docker.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
@@ -51,7 +51,6 @@
       bat
       btop
       chezmoi
-      distrobox
       dust
       fastfetch
       ffmpeg
@@ -67,6 +66,7 @@
       pdfarranger
       pdfmm
       platformio-core
+      qbittorrent
       rclone
       tectonic-unwrapped
       thefuck
@@ -77,7 +77,6 @@
       zoxide
     ])
     ++ (with pkgs-unstable; [
-      distrobox-tui
       logisim-evolution
       vesktop
     ]);
