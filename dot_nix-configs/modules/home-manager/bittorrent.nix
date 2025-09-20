@@ -5,6 +5,8 @@
 }: {
   home.packages = with pkgs; [
     nyaa
+    stig
+    transgui
     transmission_4-gtk
   ];
 
