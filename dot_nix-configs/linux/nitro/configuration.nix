@@ -15,6 +15,7 @@
     ../../modules/systems/gaming.nix
 
     # Tooling
+    # ../../modules/systems/android-dev.nix
     ../../modules/systems/cloudlare-warp.nix
     ../../modules/systems/docker.nix
     # ../../modules/systems/flatpak.nix
