@@ -27,6 +27,7 @@ ff_extract_frames() {
 	ffmpeg -i "$input_file" "$output_dir/frame_%04d.png"
 }
 
+# Scale in %
 ff_downscale_img() {
 	local input_file="$1"
 	local scale="$2"
