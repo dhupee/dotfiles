@@ -57,6 +57,7 @@
       firefox # will use options later on
       freecad
       fzf
+      go-task
       gparted
       inkscape
       libreoffice
