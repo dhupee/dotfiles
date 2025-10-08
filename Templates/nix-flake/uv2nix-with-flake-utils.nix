@@ -34,10 +34,7 @@
   }:
     flake-utils.lib.eachDefaultSystem (
       system: let
-        pkgs = import nixpkgs {
-          inherit system;
-          config.allowUnfree = true;
-        };
+        pkgs = nixpkgs.legacyPackages.${system};
 
         # Load workspace and create overlays
         workspace = uv2nix.lib.workspace.loadWorkspace {
