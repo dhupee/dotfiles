@@ -47,6 +47,7 @@ return {
           },
         },
         marksman = {},
+        nil_ls = {},
         nixd = {
           settings = {
             nixd = {

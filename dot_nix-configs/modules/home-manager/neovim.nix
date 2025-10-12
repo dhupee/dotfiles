@@ -47,6 +47,7 @@
 
       # Nix
       alejandra
+      nil
       nixd
 
       # Python
