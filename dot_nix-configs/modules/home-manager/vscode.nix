@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  # NOTE: If you want to install and change the plugins at will, use Flatpak not Nix
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium-fhs;
