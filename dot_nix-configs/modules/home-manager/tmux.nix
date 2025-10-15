@@ -24,7 +24,7 @@
         bind - split-window -v
 
         # enable yazi to passtrough preview
-        set -g allow-passthrough all
+        set -g allow-passthrough on
         set -ga update-environment TERM
         set -ga update-environment TERM_PROGRAM
       '';
