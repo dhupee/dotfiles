@@ -19,7 +19,7 @@
     ../modules/home-manager/virtual-machine.nix
     ../modules/home-manager/vscode.nix
     ../modules/home-manager/yazi.nix
-    ../modules/home-manager/zellij.nix
+    ../modules/home-manager/tmux.nix
     ../modules/home-manager/zoxide/nitro.nix
     ../modules/home-manager/zsh.nix
 
