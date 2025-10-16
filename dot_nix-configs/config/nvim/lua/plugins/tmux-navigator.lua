@@ -1,7 +1,7 @@
 return {
   {
     "christoomey/vim-tmux-navigator",
-    enabled = false, -- keep it but disable it as i use zellij atm
+    enabled = true,
     cmd = {
       "TmuxNavigateLeft",
       "TmuxNavigateDown",
