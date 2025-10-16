@@ -1,6 +1,6 @@
 return {
   {
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
     -- Disable Mason in favor of Nix packages
     enabled = false,
     opts = function(_, opts)
