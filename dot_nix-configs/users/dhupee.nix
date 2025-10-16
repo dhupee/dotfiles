@@ -9,9 +9,9 @@
       description = "dhupee";
       extraGroups = [
         "dialout"
-        "docker"
         "libvirtd"
         "networkmanager"
+        "podman"
         "wheel"
       ];
       shell = pkgs.zsh;

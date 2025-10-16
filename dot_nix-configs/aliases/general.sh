@@ -50,6 +50,9 @@ alias lg="lazygit"
 # Lazydocker
 alias lzd="lazydocker"
 
+# Distrobox
+alias dtui="distrobox-tui"
+
 # Tunneling url/localhost
 alias tunnel="cloudflared tunnel --url $1"
 
