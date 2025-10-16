@@ -7,7 +7,7 @@ rclone_remote="mega-dh"
 dir_array=(
 	"$HOME/.nix-configs/"
 	"$HOME/.scripts/"
-	"$HOME/.distrobox-recipe/"
+	"$HOME/.distrobox-manifests/"
 	"$HOME/.zellij-layouts/"
 	"$HOME/Templates/"
 	"$HOME/Wallpapers/"
