@@ -10,8 +10,15 @@ return {
     "Piomon",
   },
   dependencies = {
-    { "akinsho/nvim-toggleterm.lua" },
+    { "akinsho/toggleterm.nvim" },
     { "nvim-telescope/telescope.nvim" },
+    { "nvim-telescope/telescope-ui-select.nvim" },
     { "nvim-lua/plenary.nvim" },
+    { "folke/which-key.nvim" },
   },
+  config = function()
+    require("platformio").setup({
+      lsp = "clangd",
+    })
+  end,
 }
