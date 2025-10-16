@@ -9,12 +9,13 @@
   imports = [
     # tooling
     # ../modules/home-manager/bittorrent.nix
-    ../modules/home-manager/docker.nix
+    # ../modules/home-manager/docker.nix
     ../modules/home-manager/git.nix
     ../modules/home-manager/gh.nix
     ../modules/home-manager/ghostty.nix
     ../modules/home-manager/kicad.nix
     ../modules/home-manager/neovim.nix
+    ../modules/home-manager/podman.nix
     ../modules/home-manager/starship/desktop.nix
     ../modules/home-manager/virtual-machine.nix
     ../modules/home-manager/vscode.nix
