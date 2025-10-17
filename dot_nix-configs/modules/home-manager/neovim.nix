@@ -15,8 +15,10 @@
     withRuby = true;
     extraPackages = with pkgs-unstable; [
       # extraPackages = with pkgs; [
-      # Compilers
+
+      # Compilers and other tooling
       clang
+      tree-sitter
 
       # C++
       clang-tools
