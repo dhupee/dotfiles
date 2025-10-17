@@ -1,13 +1,18 @@
 return {
-  "anurag3301/nvim-platformio.lua",
-  -- "dhupee/nvim-platformio.lua",
-  -- branch = "main", -- branch
+  -- "anurag3301/nvim-platformio.lua",
+  "dhupee/nvim-platformio.lua",
+  branch = "main", -- branch
   cmd = { -- comment it during development
     "Pioinit",
     "Piorun",
     "Piocmd",
     "Piolib",
     "Piomon",
+    "Piodb",
+    "Piocmdh",
+    "Piocmdf",
+    "Piodebug",
+    "PioTermList",
   },
   dependencies = {
     { "akinsho/toggleterm.nvim" },
