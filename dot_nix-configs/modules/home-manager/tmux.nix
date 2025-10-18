@@ -15,6 +15,8 @@
       newSession = true;
       sensibleOnTop = true;
       keyMode = "vi";
+      customPaneNavigationAndResize = true;
+      escapeTime = 0;
       terminal = "screen-256color";
       extraConfig = ''
         # Rebind the splits
