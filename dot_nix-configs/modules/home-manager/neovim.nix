@@ -16,6 +16,8 @@
     extraPackages = with pkgs-unstable; [
       # extraPackages = with pkgs; [
 
+      # NOTE: The packages list here can be run in nvim's cmdline but never outside of that
+
       # Compilers and other tooling
       clang
       tree-sitter
