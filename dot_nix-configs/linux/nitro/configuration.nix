@@ -18,7 +18,7 @@
     # ../../modules/systems/android-dev.nix
     ../../modules/systems/cloudlare-warp.nix
     # ../../modules/systems/docker.nix
-    # ../../modules/systems/flatpak.nix
+    ../../modules/systems/flatpak.nix
     ../../modules/systems/podman.nix
     ../../modules/systems/virtual-machine.nix
 
@@ -105,7 +105,6 @@
   };
 
   # Enable sound with pipewire.
-  # sound.enable = true;
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -113,12 +112,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
@@ -133,8 +126,8 @@
   };
 
   # System packages, Nano is installed by default
+  # NOTE: Avoid using unstable-packages
   environment.systemPackages = with pkgs; [
-    # (with pkgs; [
     # vim
     bind
     curl
@@ -149,10 +142,6 @@
     wget
     wl-clipboard
   ];
-  # ])
-  # ++ (with pkgs-unstable; [
-  #   codeium
-  # ]);
 
   # List services that you want to enable:
   services.openssh.enable = true;
