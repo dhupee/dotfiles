@@ -13,11 +13,15 @@ img
 # generated
 .vscode
 
+#=========WINDOWS & MAC=========#
+{{ if (or (eq .chezmoi.os "windows") (eq .chezmoi.os "darwin")) }}
+.distrobox-manifest
+{{ end }}
+
 #============WINDOWS============#
 {{ if eq .chezmoi.os "windows" }}
 .nix-configs
 .zellij-layouts
-.distrobox-recipe
 Templates
 Wallpapers
 .secrets
@@ -27,9 +31,14 @@ Wallpapers
 {{ if eq .chezmoi.os "linux" }}
 AppData
 OneDrive
-.gitconfig
 .wslconfig
 .node-red
 
 .config/powershell
+{{ end }}
+
+
+#=============NIXOS============#
+{{ if (and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "nixos")) }}
+.gitconfig
 {{ end }}
