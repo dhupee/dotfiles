@@ -6,8 +6,11 @@
     profiles."default" = {
       enableUpdateCheck = false;
       enableExtensionUpdateCheck = false;
+      userSettings = {
+        "window.newWindowProfile" = "dhupee";
+      };
     };
-    profiles."nix-dhupee" = {
+    profiles."dhupee" = {
       extensions = with pkgs.vscode-extensions;
         [
           # tooling
@@ -29,7 +32,10 @@
           ms-toolsai.jupyter-renderers
           ms-toolsai.vscode-jupyter-cell-tags
           ms-toolsai.vscode-jupyter-slideshow
+          ms-vscode.cpptools
+          ms-vscode.powershell
           oderwat.indent-rainbow
+          platformio.platformio-vscode-ide
           tomoki1207.pdf
           vscodevim.vim
           yzhang.markdown-all-in-one
@@ -56,8 +62,15 @@
             # https://marketplace.visualstudio.com/items?itemName=AykutSarac.jsoncrack-vscode
             name = "jsoncrack-vscode";
             publisher = "AykutSarac";
-            version = "3.0.0";
-            sha256 = "SwgUm6rIEp15Lc86UHTD5gVHrs9Mwbcwsb7LL5SGVy4=";
+            version = "5.0.0";
+            sha256 = "ctJdpLeZLTm+IsuPHw2pvSVoiiNG9Nzm/YVmaz7jQKQ=";
+          }
+          {
+            # https://marketplace.visualstudio.com/items?itemName=Wokwi.wokwi-vscode
+            name = "wokwi-vscode";
+            publisher = "Wokwi";
+            version = "2.8.0";
+            sha256 = "JaIQoxrX5sMt5dkxMsPaSxeiQcGyPEGnOsdUMPDiGPw=";
           }
         ];
       userSettings = {
