@@ -5,10 +5,7 @@
 }: {
   services.flatpak = {
     enable = true;
-
-    # Uncomment the entire list, not just the list
     remotes = [
-      # Flathub is the default already present by this flake.
       {
         name = "flathub";
         location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
@@ -25,10 +22,9 @@
       #   origin = "flathub";
       # }
       # "page.codeberg.lo_vely.Nucleus"
-      # "io.github.philippkosarev.bmi"
       # "so.libdb.dissent"
       {
-        appId = "com.visualstudio.code";
+        appId = "com.vscodium.codium";
         origin = "flathub";
       }
     ];
@@ -37,6 +33,7 @@
       auto = {
         enable = false;
       };
+      onActivation = true;
     };
   };
 }
