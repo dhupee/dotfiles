@@ -31,14 +31,9 @@ Wallpapers
 {{ if eq .chezmoi.os "linux" }}
 AppData
 OneDrive
+.gitconfig
 .wslconfig
 .node-red
 
 .config/powershell
-{{ end }}
-
-
-#=============NIXOS============#
-{{ if (and (eq .chezmoi.os "linux") (eq .chezmoi.osRelease.id "nixos")) }}
-.gitconfig
 {{ end }}
