@@ -29,7 +29,6 @@
     tmate
     tree
     wget
-    yazi
     yt-dlp
     zoxide
   ];
@@ -61,14 +60,15 @@
       # ../modules/home-manager/helix.nix
       ../modules/home-manager/micro.nix
       ../modules/home-manager/starship/droid.nix
+      ../modules/home-manager/yazi.nix
       ../modules/home-manager/zoxide/droid.nix
     ];
 
-    home.file = {
-      # Symlink config files you want, example:
-      # ".screenrc".source = dotfiles/screenrc;
-      ".tmate.conf".source = ../config/tmate.conf;
-    };
+    # home.file = {
+    # Symlink config files you want, example:
+    # ".screenrc".source = dotfiles/screenrc;
+    # ".tmate.conf".source = ../config/tmate.conf
+    # };
   };
 
   # I need pkgs-unstable
