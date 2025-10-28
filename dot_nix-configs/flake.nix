@@ -87,12 +87,14 @@
           # Enable unstable packages to Droids
           # Similar effect to adding .nix configuration file to modules
           # Ignore the LSP Warning, it's used....used!!
-          ({config, ...}: {
-            config._module.args.pkgs-unstable = import nixpkgs-unstable {
-              system = "aarch64-linux";
-              config.allowUnfree = true;
-            };
-          })
+          (
+            {config, ...}: {
+              config._module.args.pkgs-unstable = import nixpkgs-unstable {
+                system = "aarch64-linux";
+                config.allowUnfree = true;
+              };
+            }
+          )
         ];
       };
     };
