@@ -7,11 +7,8 @@ alias c="clear"
 # # Helix
 # alias hx="helix"
 hxf() {
-	hx $(fzf)
+    hx $(fzf)
 }
-
-# Copying Tmux.conf to tmate.conf
-alias tmux2tmate="cp ~/.tmux.conf ~/.tmate.conf"
 
 # yazi
 alias y="yazi"
@@ -35,7 +32,7 @@ alias lla="ls -la --color='auto'"
 alias v="vim"
 alias nv="nvim"
 nvf() {
-	nvim $(fzf)
+    nvim $(fzf)
 }
 
 # Dotfile save
@@ -65,17 +62,17 @@ alias fan-speed-auto="sudo nbfc set --auto"
 
 # Delete X number of latest shell history
 function delete_latest_history() {
-	# Default count is 1
-	local count=${1:-1}
-	echo "Deleting last $count shell history entries"
-	fc -p -1 | tail -n $count | awk "{print $1}" | xargs -I {} fc -d {}
+    # Default count is 1
+    local count=${1:-1}
+    echo "Deleting last $count shell history entries"
+    fc -p -1 | tail -n $count | awk "{print $1}" | xargs -I {} fc -d {}
 }
 
 # Quick URL shortener
 shorten_url() {
-	if [ -z "$1" ]; then
-		echo "Usage: shorten_url <url>"
-		return 1
-	fi
-	curl -s "https://tinyurl.com/api-create.php?url=$1"
+    if [ -z "$1" ]; then
+        echo "Usage: shorten_url <url>"
+        return 1
+    fi
+    curl -s "https://tinyurl.com/api-create.php?url=$1"
 }
