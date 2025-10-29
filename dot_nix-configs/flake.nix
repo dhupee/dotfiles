@@ -158,6 +158,24 @@
         };
       };
 
+      # Minimum, CLI-only, distro agnostic config
+      min = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          # directory of my home configuration
+          ./home/min.nix
+          {
+            home = {
+              username = "dhupee";
+              homeDirectory = "/home/dhupee/.distrobox/dev-arch";
+            };
+          }
+        ];
+        extraSpecialArgs = {
+          inherit pkgs-unstable inputs;
+        };
+      };
+
       # WSL
       wsl-work = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
