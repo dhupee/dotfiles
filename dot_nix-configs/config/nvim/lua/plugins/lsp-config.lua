@@ -1,6 +1,8 @@
 -- Refer to this documentation:
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
+-- NOTE: No need to config dartls here, use the flutter-tools for that
+
 return {
   {
     "neovim/nvim-lspconfig",
