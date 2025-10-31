@@ -35,6 +35,13 @@
         tmuxPlugins.cpu
         tmuxPlugins.resurrect
         tmuxPlugins.vim-tmux-navigator
+        # {
+        #   plugin = tmuxPlugins.vim-tmux-navigator;
+        #   extraConfig = ''
+        #     bind -n C-j if-shell "[ #{pane_current_command} = lazygit ]" "send-keys C-j"  "select-pane -D"
+        #     bind -n C-k if-shell "[ #{pane_current_command} = lazygit ]" "send-keys C-k"  "select-pane -U";
+        #   '';
+        # }
         {
           plugin = tmuxPlugins.continuum;
           extraConfig = ''
