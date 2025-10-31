@@ -35,14 +35,15 @@
       oh-my-zsh = {
         enable = true;
         plugins = [
-          "bun"
+          # "bun"
           "copypath"
           "docker"
           "docker-compose"
+          "flutter"
           "golang"
           "macos"
-          "node"
-          "npm"
+          # "node"
+          # "npm"
           "podman"
           "python"
           "qrcode"
