@@ -17,12 +17,6 @@
     ];
 
     packages = [
-      # {
-      #   appId = "io.github.philippkosarev.bmi";
-      #   origin = "flathub";
-      # }
-      # "page.codeberg.lo_vely.Nucleus"
-      # "so.libdb.dissent"
       {
         appId = "com.vscodium.codium";
         origin = "flathub";
@@ -34,6 +28,18 @@
         enable = false;
       };
       onActivation = true;
+    };
+    overrides = {
+      "com.vscodium.codium".Context = {
+        filesystem = [
+          # it's nix, keep it ro
+          "~/.config/git/config:ro"
+
+          # Expose NixOS and Home-Manager packages
+          "/run/current-system/sw/bin:ro"
+          "~/.nix-profile/bin:ro"
+        ];
+      };
     };
   };
 }
