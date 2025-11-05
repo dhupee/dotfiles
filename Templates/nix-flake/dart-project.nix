@@ -1,9 +1,11 @@
 {
-  description = "Nix Flake Template for Flutter Development";
+  description = "Dart Project Flakes using FVM";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    utils.url = "github:numtide/flake-utils";
+    utils = {
+      url = "github:numtide/flake-utils";
+    };
   };
 
   outputs = {
@@ -16,7 +18,7 @@
         pkgs = import nixpkgs {
           inherit system;
           config = {
-            android_sdk.accept_license = true;
+            android_sdk.accept_license = true; # can delete if you dont use android SDK
             allowUnfree = true;
           };
         };
@@ -32,9 +34,18 @@
         # prepackaged SDK
         androidSdk_2 = pkgs.androidenv.androidPkgs.androidsdk;
 
-        # Cause the shell to be impure by default
+        # Path for chromium
+        chrome_path = "${pkgs.chromium}/bin/chromium";
+
+        # FVM Paths
+        paths = ''
+          export PATH=$PATH:~/.pub-cache/bin
+          export PATH="$HOME/fvm/default/bin:$PATH"
+          export PATH="$HOME/.fvm_flutter/bin:$PATH"
+        '';
+
+        # Shellhook, use ZSH by default, cause it to run impurely
         impure_hook = ''
-          # impure by default
           export SHELL=$(which ${pkgs.zsh})
           echo 'Development Shell Initialized'
           exec zsh
@@ -43,38 +54,38 @@
         devShells = {
           # Web Only
           default = pkgs.mkShell {
-            CHROME_EXECUTABLE = "${pkgs.chromium}/bin/chromium";
+            CHROME_EXECUTABLE = chrome_path;
             buildInputs = with pkgs; [
-              flutter
+              fvm
               chromium
             ];
-            shellHook = impure_hook;
+            shellHook = paths + impure_hook;
           };
 
           # use fine-tuned sdk
           android1 = pkgs.mkShell {
             ANDROID_SDK_ROOT = "${androidSdk_1}/libexec/android-sdk";
-            CHROME_EXECUTABLE = "${pkgs.chromium}/bin/chromium";
+            CHROME_EXECUTABLE = chrome_path;
             buildInputs = with pkgs; [
-              flutter
+              fvm
               androidSdk_1
               jdk17
               chromium
             ];
-            shellHook = impure_hook;
+            shellHook = paths + impure_hook;
           };
 
           # use prepackaged sdk
           android2 = pkgs.mkShell {
             ANDROID_SDK_ROOT = "${androidSdk_2}/libexec/android-sdk";
-            CHROME_EXECUTABLE = "${pkgs.chromium}/bin/chromium";
+            CHROME_EXECUTABLE = chrome_path;
             buildInputs = with pkgs; [
-              flutter
+              fvm
               androidSdk_2
               jdk17
               chromium
             ];
-            shellHook = impure_hook;
+            shellHook = paths + impure_hook;
           };
         };
       }
