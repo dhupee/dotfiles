@@ -130,6 +130,18 @@
         };
       };
 
+      # Bare ISO Configurations
+      # Used only to build custom ISO
+      iso-bare = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./iso/bare-x86/configuration.nix
+        ];
+        specialArgs = {
+          inherit inputs;
+        };
+      };
+
       # Virtual Machine
       virts = lib.nixosSystem {
         inherit system;
