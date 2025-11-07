@@ -107,6 +107,7 @@ ofc, I will recommended you to use scoop to install shits.
 - [NixOS WSL](https://github.com/nix-community/NixOS-WSL)
 - [Spicetify Nix](https://github.com/Gerg-L/spicetify-nix)
 - [Nix Portable](https://github.com/DavHau/nix-portable)
+- [NixOS-Generator](https://github.com/nix-community/nixos-generators/)
 - [Scoop Package Manager](https://scoop.sh/)
 
 ## References for me
