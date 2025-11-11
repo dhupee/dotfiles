@@ -52,6 +52,7 @@
       bat
       btop
       chezmoi
+      dbeaver-bin
       dust
       fastfetch
       ffmpeg
