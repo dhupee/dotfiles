@@ -116,6 +116,7 @@ ofc, I will recommended you to use scoop to install shits.
 - [Partitioning NixOS with Disko](https://jefftp.com/nixos-disko/)
 - [Nix Shorts, A collection of short notes about Nix, down to what is immediately needed for users.](https://github.com/justinwoo/nix-shorts)
   - [Your First Derivation](https://github.com/justinwoo/nix-shorts/blob/master/posts/your-first-derivation.md)
+- [Installing a Custom NixOS Image on a Raspberry Pi](https://blog.janissary.xyz/posts/nixos-install-custom-image)
 
 ## To-Do List
 
