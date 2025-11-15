@@ -3,6 +3,7 @@
     docker = {
       enable = true;
       package = pkgs.docker;
+      extraPackages = with pkgs; [docker-compose];
       rootless = {
         enable = true;
         setSocketVariable = true;

@@ -6,19 +6,10 @@
 }: {
   # supporting tools
   home = {
-    packages =
-      (with pkgs; [
-        distrobox
-        lazydocker
-      ])
-      ++ (with pkgs-unstable; [
-        distrobox-tui
-      ]);
-
-    sessionVariables = {
-      # To specify a container manager use one of
-      DBX_CONTAINER_MANAGER = "docker";
-    };
+    packages = with pkgs; [
+      distrobox
+      lazydocker
+    ];
 
     # for easy login
     activation = {
