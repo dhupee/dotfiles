@@ -16,6 +16,7 @@
       sensibleOnTop = true;
       keyMode = "vi";
       customPaneNavigationAndResize = true;
+      resizeAmount = 5;
       escapeTime = 0;
       terminal = "screen-256color";
       extraConfig = ''
