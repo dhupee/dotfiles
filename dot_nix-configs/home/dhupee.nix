@@ -50,6 +50,7 @@
     (with pkgs; [
       # with pkgs; [
       bat
+      bruno
       btop
       chezmoi
       dbeaver-bin
