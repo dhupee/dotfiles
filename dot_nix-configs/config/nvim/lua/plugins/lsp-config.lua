@@ -34,7 +34,9 @@ return {
             },
           },
         },
-        html = {},
+        html = {
+          settings = {},
+        },
         jsonls = {},
         lua_ls = {
           settings = {
@@ -88,6 +90,7 @@ return {
         ruff = {},
         svelte = {},
         tailwindcss = {},
+        templ = {},
         terraformls = {},
         texlab = {},
         tflint = {},

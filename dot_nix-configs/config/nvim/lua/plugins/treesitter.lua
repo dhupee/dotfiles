@@ -38,6 +38,7 @@ return {
         "nix",
         "python",
         "regex",
+        "templ",
         "terraform",
         "typescript",
         "vim",
