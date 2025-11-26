@@ -37,6 +37,7 @@
       gopls
       gofumpt
       gotools
+      templ
 
       # LaTeX
       texlab
