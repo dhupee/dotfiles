@@ -9,7 +9,7 @@
       description = "dhupee";
       extraGroups = [
         "dialout"
-        "docker"
+        # "docker"
         "libvirtd"
         "networkmanager"
         "podman"
