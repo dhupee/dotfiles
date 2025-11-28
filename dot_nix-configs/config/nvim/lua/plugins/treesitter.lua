@@ -50,13 +50,14 @@ return {
   {
     vim.filetype.add({
       pattern = {
+        -- Template
         [".+%.toml%.tmpl"] = "toml",
         [".+%.json%.tmpl"] = "json",
         [".+%.yaml%.tmpl"] = "yaml",
         [".+%.yml%.tmpl"] = "yaml",
-        -- add more mappings here, e.g.:
-        -- [".+%.lua%.tmpl"] = "lua",
-        -- [".+%.py%.tmpl"]  = "python",
+        -- Chezmoi
+        [".chezmoiignore"] = "gitignore",
+        [".chezmoiignore.tmpl"] = "gitignore",
       },
     }),
   },
