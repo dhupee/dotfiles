@@ -17,7 +17,7 @@
     # Tooling
     # ../../modules/systems/android-dev.nix
     ../../modules/systems/cloudlare-warp.nix
-    ../../modules/systems/docker.nix
+    # ../../modules/systems/docker.nix
     ../../modules/systems/flatpak.nix
     ../../modules/systems/podman.nix
     ../../modules/systems/virtual-machine.nix
