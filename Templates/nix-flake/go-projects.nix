@@ -34,17 +34,17 @@
             pkgs.go
             go-air
           ];
+
+          shellHook = ''
+            export GOPATH=$PWD/.gopath
+            export GOBIN=$GOPATH/bin
+            export PATH=$GOBIN:$PATH
+            mkdir -p $GOBIN
+
+            echo "GOPATH set to $GOPATH"
+            echo "Go Projects Environment Initialized"
+          '';
         };
-
-        shellHook = ''
-          export GOPATH=$PWD/.gopath
-          export GOBIN=$GOPATH/bin
-          export PATH=$GOBIN:$PATH
-          mkdir -p $GOBIN
-
-          echo "GOPATH set to $GOPATH"
-          echo "Go Projects Environment Initialized"
-        '';
       };
     });
 }
