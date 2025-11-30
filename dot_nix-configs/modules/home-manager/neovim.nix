@@ -63,6 +63,7 @@
       ruff
 
       # Javascripts and it's cronies
+      astro-language-server
       biome
       emmet-language-server
       svelte-language-server
