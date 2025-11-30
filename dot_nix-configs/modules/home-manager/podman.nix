@@ -8,7 +8,9 @@
   home = {
     packages =
       (with pkgs; [
-        lazydocker
+        # lazydocker
+        podman-desktop
+        podman-tui
       ])
       ++ (with pkgs-unstable; [
         distrobox-tui
