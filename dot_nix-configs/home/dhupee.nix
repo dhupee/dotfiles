@@ -73,7 +73,6 @@
       qbittorrent
       rclone
       tectonic-unwrapped
-      thefuck
       tldr
       tree
       vlc

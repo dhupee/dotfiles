@@ -9,6 +9,10 @@
     ".aliases".source = ../../aliases;
   };
 
+  imports = [
+    ./pay-respects.nix
+  ];
+
   programs = {
     zsh = {
       enable = true;
@@ -29,28 +33,25 @@
          else
            echo "Aliases directory not found"
          fi
-
-        eval "$(thefuck --alias)"
       '';
       oh-my-zsh = {
         enable = true;
         plugins = [
-          # "bun"
+          "bun"
           "copypath"
           "docker"
           "docker-compose"
           "flutter"
           "golang"
           "macos"
-          # "node"
-          # "npm"
+          "node"
+          "npm"
           "podman"
           "python"
           "qrcode"
           "ssh"
           "ssh-agent"
           "terraform"
-          "thefuck"
           "zoxide"
         ];
       };

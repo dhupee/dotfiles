@@ -30,11 +30,6 @@
   # AMD GPU specific configs
   hardware = {
     amdgpu = {
-      # add AMD Vulkan
-      amdvlk = {
-        enable = false;
-        support32Bit.enable = false;
-      };
       initrd.enable = true;
       opencl.enable = true;
       overdrive = {

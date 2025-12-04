@@ -3,6 +3,10 @@
     ".aliases".source = ../../aliases;
   };
 
+  imports = [
+    ./pay-respects.nix
+  ];
+
   programs = {
     bash = {
       enable = true;
@@ -19,8 +23,6 @@
           else
               echo "Aliases directory not found"
           fi
-
-          eval "$(thefuck --alias)"
       '';
     };
   };
