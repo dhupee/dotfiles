@@ -1,9 +1,7 @@
 {pkgs, ...}: {
-  environment.systemPackages = [pkgs.cloudflare-warp];
-  systemd = {
-    packages = with pkgs; [
-      cloudflare-warp
-    ];
-    services.warp-svc.wantedBy = ["multi-user.target"];
+  services.cloudflare-warp = {
+    enable = true;
+    package = pkgs.cloudflare-warp;
+    openFirewall = true;
   };
 }
