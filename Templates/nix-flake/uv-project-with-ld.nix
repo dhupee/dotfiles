@@ -20,9 +20,13 @@
       };
     in {
       devShells.default = pkgs.mkShell {
+        # your project name
         name = "adamata-dev-environment";
 
-        # Enable nix-ld for better compatibility with precompiled binaries
+        # Here is where you will add all the libraries required by your native modules
+        # You can use the following one-liner to find out which ones you need.
+        # Just make sure you have `gcc` installed.
+        # `find .venv/ -type f -name "*.so" | xargs ldd | grep "not found" | sort | uniq`
         NIX_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath (with pkgs; [
           stdenv.cc.cc
           zlib
@@ -32,10 +36,11 @@
         # Set the dynamic linker for nix-ld
         NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker";
 
+        # packages you actually need
         packages = with pkgs; [
-          uv
+          # or use something other than UV
 
-          # Development tools
+          uv
           gcc
           gnumake
         ];
