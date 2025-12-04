@@ -3,12 +3,19 @@
 
   inputs = {
     # Always keeps one channel older
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
-    nixpkgs-old.url = "github:NixOS/nixpkgs/nixos-24.11";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-old.url = "github:NixOS/nixpkgs/nixos-25.05";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Enables me to install flatpaks declaratively
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
+
+    # Home-Manager, NixOS for your User Config
+    home-manager = {
+      # url = "github:nix-community/home-manager/master";
+      url = "github:nix-community/home-manager/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Using Nix on Android
     nix-on-droid = {
@@ -20,13 +27,6 @@
     # NixOS on Windows Subsystem for Linux
     nixos-wsl = {
       url = "github:nix-community/NixOS-WSL";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Home-Manager, NixOS for your User Config
-    home-manager = {
-      # url = "github:nix-community/home-manager/master";
-      url = "github:nix-community/home-manager/release-25.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

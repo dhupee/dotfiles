@@ -5,14 +5,21 @@
     # Git cli
     git = {
       enable = true;
-      userEmail = "narutohaj00@gmail.com";
-      userName = "Daffa Haj Tsaqif";
+      settings = {
+        user = {
+          email = "narutohaj00@gmail.com";
+          name = "Daffa Haj Tsaqif";
+        };
+      };
       lfs = {
         enable = true;
       };
-      delta = {
-        enable = true;
-      };
+    };
+
+    # git delta
+    delta = {
+      enable = true;
+      enableGitIntegration = true;
     };
 
     # Lazygit
@@ -20,10 +27,12 @@
       enable = true;
       settings = {
         git = {
-          paging = {
-            "colorArg" = "always";
-            "pager" = "delta --dark --paging=never --syntax-theme base16-256 -s";
-          };
+          pagers = [
+            {
+              colorArg = "always";
+              pager = "delta --dark --paging=never --syntax-theme base16-256 -s";
+            }
+          ];
         };
         customCommands = [
           {
