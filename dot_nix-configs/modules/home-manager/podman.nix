@@ -12,6 +12,7 @@
         lazydocker
       ])
       ++ (with pkgs-unstable; [
+        distrobox
         distrobox-tui
       ]);
 

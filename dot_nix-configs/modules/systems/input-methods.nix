@@ -12,7 +12,7 @@
         fcitx5-mozc
         fcitx5-anthy
         fcitx5-gtk
-        fcitx5-configtool
+        kdePackages.fcitx5-configtool
       ];
       waylandFrontend = true;
       settings.inputMethod = {
