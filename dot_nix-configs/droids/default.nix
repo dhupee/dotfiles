@@ -24,7 +24,6 @@
     netcat
     rustscan
     tectonic
-    thefuck
     tldr
     tmate
     tree
