@@ -21,12 +21,9 @@
     in {
       devShells.default = pkgs.mkShell {
         # your project name
-        name = "adamata-dev-environment";
+        name = "dev-environment";
 
         # Here is where you will add all the libraries required by your native modules
-        # You can use the following one-liner to find out which ones you need.
-        # Just make sure you have `gcc` installed.
-        # `find .venv/ -type f -name "*.so" | xargs ldd | grep "not found" | sort | uniq`
         NIX_LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath (with pkgs; [
           stdenv.cc.cc
           zlib
@@ -47,8 +44,9 @@
 
         # Shell hook with nix-ld configuration
         shellHook = ''
-          # Set up nix-ld for compatibility
+          # Set up nix-ld for compatibility, and alias to search for missing libraries
           export LD_LIBRARY_PATH=$NIX_LD_LIBRARY_PATH
+          alias venv-ldd-check='find .venv/ -type f -name "*.so" | xargs ldd | grep "not found" | sort | uniq'
 
           # Initialize uv virtual environment if not exists
           if [ ! -d .venv ] && command -v uv > /dev/null; then
