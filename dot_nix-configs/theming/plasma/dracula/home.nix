@@ -12,17 +12,14 @@
   imports = [./configs.nix]; # the one that generated from rc2nix
 
   # packages specific to plasma
-  home.packages =
-    (with pkgs; [
-      polonium
-    ])
-    ++ (with pkgs.kdePackages; [
-      filelight
-      kaccounts-integration
-      kaccounts-providers
-      kio-gdrive
-      powerdevil
-    ]);
+  home.packages = with pkgs.kdePackages; [
+    filelight
+    kaccounts-integration
+    kaccounts-providers
+    kio-gdrive
+    krohnkite
+    powerdevil
+  ];
 
   # Fetching the theming
   home.file.".local/share/plasma/desktoptheme/Dracula" = {
