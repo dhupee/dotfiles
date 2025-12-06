@@ -72,6 +72,7 @@
       platformio-core
       qbittorrent
       rclone
+      speedtest-cli
       tectonic-unwrapped
       tldr
       tree
