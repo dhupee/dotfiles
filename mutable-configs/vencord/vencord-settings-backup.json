@@ -4,7 +4,7 @@
         "autoUpdateNotification": true,
         "useQuickCss": true,
         "themeLinks": [
-            "https://raw.githubusercontent.com/dracula/BetterDiscord/master/Dracula_Official.theme.css"
+            "https://raw.githubusercontent.com/CtorW/Vesktop-Discord/refs/heads/main/Dracula.theme.css"
         ],
         "enabledThemes": [],
         "enableReactDevtools": false,
@@ -480,7 +480,7 @@
                 "enabled": false
             },
             "Translate": {
-                "enabled": false
+                "enabled": true
             },
             "TypingIndicator": {
                 "enabled": false
@@ -589,6 +589,15 @@
             },
             "ImageFilename": {
                 "enabled": false
+            },
+            "ContextMenuAPI": {
+                "enabled": true
+            },
+            "MenuItemDemanglerAPI": {
+                "enabled": true
+            },
+            "NoticesAPI": {
+                "enabled": true
             }
         },
         "notifications": {
@@ -601,9 +610,13 @@
             "authenticated": true,
             "url": "https://api.vencord.dev/",
             "settingsSync": true,
-            "settingsSyncVersion": 1757816552471
+            "settingsSyncVersion": 1765016728852
         },
-        "eagerPatches": false
+        "eagerPatches": false,
+        "uiElements": {
+            "chatBarButtons": {},
+            "messagePopoverButtons": {}
+        }
     },
     "quickCss": ""
 }
