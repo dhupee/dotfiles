@@ -37,7 +37,8 @@ for d in "${dir_array[@]}"; do
 
     fi
     # also change attribute with chezmoi
-    chezmoi add $d
+    # chezmoi add $d
+    chezmoi re-add $d
     chezmoi chattr --recursive -- -private $d
 done
 
@@ -68,7 +69,8 @@ for d in "${encrypted_dir_array[@]}"; do
         esac
 
     fi
-    chezmoi add --encrypt $d
+    # chezmoi add --encrypt $d
+    chezmoi re-add $d
 done
 
 # for f in "${encrypted_file_array[@]}"; do
