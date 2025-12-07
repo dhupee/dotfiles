@@ -13,12 +13,9 @@ hxf() {
 # yazi
 alias y="yazi"
 
-# Plasma
-alias plasma-restart="kquitapp5 plasmashell ; sleep 2s ; kstart5 plasmashell"
-
-# Qemu/KVM
-alias vm-start="systemctl start libvirtd"
-alias vm-stop="systemctl stop libvirtd"
+# # Qemu/KVM
+# alias vm-start="systemctl start libvirtd"
+# alias vm-stop="systemctl stop libvirtd"
 
 alias check-local-ip="ip a | grep 'inet ' | grep -v '127.0.0.1'"
 
