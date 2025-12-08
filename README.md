@@ -112,15 +112,16 @@ ofc, I will recommended you to use scoop to install shits.
 
 ## References for me
 
+- [Arch Wiki](https://wiki.archlinux.org)
 - [Awesome Nix](https://github.com/nix-community/awesome-nix)
 - [Partitioning NixOS with Disko](https://jefftp.com/nixos-disko/)
 - [Nix Shorts, A collection of short notes about Nix, down to what is immediately needed for users.](https://github.com/justinwoo/nix-shorts)
   - [Your First Derivation](https://github.com/justinwoo/nix-shorts/blob/master/posts/your-first-derivation.md)
 - [Installing a Custom NixOS Image on a Raspberry Pi](https://blog.janissary.xyz/posts/nixos-install-custom-image)
 - [Python and NixOS: A match made in hell](https://crescentro.se/posts/python-nixos/#solution-cheat-on-nixos)
+- [Nixpkgs Overlays](https://nixos.wiki/wiki/Overlays)
 
 ## To-Do List
 
 - [ ] NixOS profile specifically for Klipper Servers, for my 3D printer
-- [ ] Live USB profile
-- [ ] "Portable Linux" profile
+- [ ] Live USB profile, packages as an custom ISO
