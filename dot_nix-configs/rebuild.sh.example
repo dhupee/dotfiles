@@ -1,0 +1,14 @@
+NIXOS_PROFILE="nitro"
+HOME_MANAGER_PROFILE="dhupee"
+HOME_MANAGER_ONLY=false
+HOME_MANAGER_BACKUP=true
+
+if [[ $HOME_MANAGER_BACKUP && -n $HOME_MANAGER_ONLY ]]; then
+	sudo nixos-rebuild switch --flake .#${NIXOS_PROFILE} && home-manager switch -b "backup $(date)" --flake .#${HOME_MANAGER_PROFILE}
+elif [[ -n $HOME_MANAGER_BACKUP && -n $HOME_MANAGER_ONLY ]]; then
+	sudo nixos-rebuild switch --flake .#${NIXOS_PROFILE} && home-manager switch --flake .#${HOME_MANAGER_PROFILE}
+elif [[ $HOME_MANAGER_BACKUP && $HOME_MANAGER_ONLY ]]; then
+	home-manager switch -b "backup $(date)" --flake .#${HOME_MANAGER_PROFILE}
+elif [[ -n $HOME_MANAGER_BACKUP && $HOME_MANAGER_ONLY ]]; then
+	home-manager switch --flake .#${HOME_MANAGER_PROFILE}
+fi
