@@ -1,4 +1,6 @@
 # make sure pointing existing flake, not downloading new one
+
+alias rebuild="sh ~/.nix-configs/rebuild.sh"
 alias nsh="nix shell --inputs-from ~/.nix-configs"
 
 alias nd="nix develop"
