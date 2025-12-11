@@ -4,10 +4,13 @@
   lib,
   ...
 }: {
+  services.podman.enable = true;
+
   # supporting tools
   home = {
     packages =
       (with pkgs; [
+        podman-compose
         podman-desktop
         lazydocker
       ])
