@@ -26,6 +26,7 @@
       }
     ];
     uninstallUnmanaged = true;
+    uninstallUnused = true;
     update = {
       auto = {
         enable = false;
