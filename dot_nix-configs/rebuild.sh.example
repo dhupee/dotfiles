@@ -1,14 +1,148 @@
+#!/usr/bin/env bash
+# rebuild.sh - Fixed version with enhanced error handling
+
+set -euo pipefail  # Exit on error, treat unset variables as errors, fail on pipe errors
+
+# Configuration
 NIXOS_PROFILE="nitro"
 HOME_MANAGER_PROFILE="dhupee"
 HOME_MANAGER_ONLY=false
 HOME_MANAGER_BACKUP=true
+FLAKE_PATH="$HOME/.nix-configs"  # Your custom flake directory
 
-if [[ $HOME_MANAGER_BACKUP && -n $HOME_MANAGER_ONLY ]]; then
-	sudo nixos-rebuild switch --flake .#${NIXOS_PROFILE} && home-manager switch -b "backup $(date)" --flake .#${HOME_MANAGER_PROFILE}
-elif [[ -n $HOME_MANAGER_BACKUP && -n $HOME_MANAGER_ONLY ]]; then
-	sudo nixos-rebuild switch --flake .#${NIXOS_PROFILE} && home-manager switch --flake .#${HOME_MANAGER_PROFILE}
-elif [[ $HOME_MANAGER_BACKUP && $HOME_MANAGER_ONLY ]]; then
-	home-manager switch -b "backup $(date)" --flake .#${HOME_MANAGER_PROFILE}
-elif [[ -n $HOME_MANAGER_BACKUP && $HOME_MANAGER_ONLY ]]; then
-	home-manager switch --flake .#${HOME_MANAGER_PROFILE}
-fi
+# Colors for output
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Store original directory
+ORIGINAL_DIR="$(pwd)"
+
+# Logging function
+log_info() { echo -e "${BLUE}[INFO]${NC} $1"; }
+log_success() { echo -e "${GREEN}[SUCCESS]${NC} $1"; }
+log_warning() { echo -e "${YELLOW}[WARNING]${NC} $1"; }
+log_error() { echo -e "${RED}[ERROR]${NC} $1" >&2; }
+
+# Error handler with directory restoration
+cleanup_and_exit() {
+    local exit_code=$?
+    
+    # Always return to original directory, even on error
+    if [ -d "$ORIGINAL_DIR" ]; then
+        cd "$ORIGINAL_DIR" || log_warning "Failed to return to original directory"
+    fi
+    
+    if [ $exit_code -eq 0 ]; then
+        log_success "Script completed successfully"
+    else
+        log_error "Script failed with exit code: $exit_code"
+    fi
+    
+    exit $exit_code
+}
+
+# Set trap to run cleanup on exit (normal or error)
+trap cleanup_and_exit EXIT
+
+# Check if flake directory exists
+check_flake_dir() {
+    if [ ! -d "$FLAKE_PATH" ]; then
+        log_error "Flake directory not found: $FLAKE_PATH"
+        log_error "Please check your configuration or create the directory"
+        exit 1
+    fi
+    
+    if [ ! -f "$FLAKE_PATH/flake.nix" ]; then
+        log_error "flake.nix not found in: $FLAKE_PATH"
+        log_error "Make sure your flake configuration exists"
+        exit 1
+    fi
+}
+
+# Confirm execution
+confirm_action() {
+    echo "========================================"
+    echo "Configuration Summary:"
+    echo "----------------------------------------"
+    echo "Flake Path: $FLAKE_PATH"
+    echo "Current Dir: $ORIGINAL_DIR"
+    
+    if [ "$HOME_MANAGER_ONLY" = true ]; then
+        echo "Mode: Home Manager Only"
+        echo "Profile: $HOME_MANAGER_PROFILE"
+        echo "Backup: $([ "$HOME_MANAGER_BACKUP" = true ] && echo "Enabled" || echo "Disabled")"
+    else
+        echo "Mode: Full System + Home Manager"
+        echo "NixOS Profile: $NIXOS_PROFILE"
+        echo "Home Manager Profile: $HOME_MANAGER_PROFILE"
+        echo "Backup: $([ "$HOME_MANAGER_BACKUP" = true ] && echo "Enabled" || echo "Disabled")"
+    fi
+    echo "========================================"
+    
+    read -p "Proceed with rebuild? [y/N] " -n 1 -r
+    echo
+    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
+        log_warning "Rebuild cancelled by user"
+        exit 0
+    fi
+}
+
+# Change to flake directory
+cd_to_flake() {
+    log_info "Changing to flake directory: $FLAKE_PATH"
+    cd "$FLAKE_PATH" || {
+        log_error "Failed to change directory to: $FLAKE_PATH"
+        exit 1
+    }
+}
+
+# Main execution
+main() {
+    log_info "Starting rebuild process..."
+    
+    # Check flake directory exists
+    check_flake_dir
+    
+    # Show confirmation
+    confirm_action
+    
+    # Change to flake directory
+    cd_to_flake
+    
+    if [ "$HOME_MANAGER_ONLY" = true ]; then
+        log_info "Running Home Manager only..."
+        
+        if [ "$HOME_MANAGER_BACKUP" = true ]; then
+            backup_name="backup $(date '+%Y-%m-%d_%H-%M-%S')"
+            log_info "Creating backup: $backup_name"
+            home-manager switch -b "$backup_name" --flake .#${HOME_MANAGER_PROFILE}
+        else
+            home-manager switch --flake .#${HOME_MANAGER_PROFILE}
+        fi
+        
+        log_success "Home Manager rebuild completed"
+        
+    else
+        log_info "Running NixOS system rebuild..."
+        sudo nixos-rebuild switch --flake .#${NIXOS_PROFILE}
+        log_success "NixOS system rebuild completed"
+        
+        log_info "Running Home Manager..."
+        if [ "$HOME_MANAGER_BACKUP" = true ]; then
+            backup_name="backup $(date '+%Y-%m-%d_%H-%M-%S')"
+            log_info "Creating backup: $backup_name"
+            home-manager switch -b "$backup_name" --flake .#${HOME_MANAGER_PROFILE}
+        else
+            home-manager switch --flake .#${HOME_MANAGER_PROFILE}
+        fi
+        
+        log_success "Home Manager rebuild completed"
+        log_success "All rebuild tasks completed successfully!"
+    fi
+}
+
+# Run main function
+main
