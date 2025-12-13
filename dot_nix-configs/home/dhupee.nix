@@ -52,7 +52,6 @@
       bat
       bruno
       btop
-      chezmoi
       dbeaver-bin
       dust
       fastfetch
@@ -66,7 +65,6 @@
       libreoffice
       ngrok
       obs-studio
-      orca-slicer
       pdfarranger
       pdfmm
       platformio-core
@@ -78,12 +76,14 @@
       tldr
       tree
       vlc
-      yt-dlp
       zoxide
     ])
     ++ (with pkgs-unstable; [
+      chezmoi
       logisim-evolution
+      orca-slicer
       vesktop
+      yt-dlp
     ]);
 
   # Config that needs to be symlinked
