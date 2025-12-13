@@ -5,8 +5,8 @@
   ...
 }: {
   home.packages = with pkgs-unstable; [
-    # kicad
-    kicad-small
+    kicad
+    # kicad-small
   ];
 
   home.activation = {
