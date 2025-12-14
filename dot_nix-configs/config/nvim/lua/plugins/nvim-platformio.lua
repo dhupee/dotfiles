@@ -20,10 +20,12 @@ return {
     { "nvim-telescope/telescope-ui-select.nvim" },
     { "nvim-lua/plenary.nvim" },
     { "folke/which-key.nvim" },
+    { "nvim-treesitter/nvim-treesitter" },
   },
   config = function()
     require("platformio").setup({
       lsp = "clangd",
+      clangd_source = "compiledb",
     })
   end,
 }
