@@ -76,6 +76,7 @@
       tldr
       tree
       vlc
+      zoom-us
       zoxide
     ])
     ++ (with pkgs-unstable; [
