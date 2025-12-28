@@ -24,6 +24,10 @@
         appId = "com.vscodium.codium";
         origin = "flathub";
       }
+      {
+        appId = "com.usebottles.bottles";
+        origin = "flathub";
+      }
     ];
     uninstallUnmanaged = true;
     uninstallUnused = true;
