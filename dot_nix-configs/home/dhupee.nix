@@ -56,7 +56,7 @@
       dust
       fastfetch
       ffmpeg
-      firefox # will use options later on
+      firefox
       freecad
       fzf
       go-task
