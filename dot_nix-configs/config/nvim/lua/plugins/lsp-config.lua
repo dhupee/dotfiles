@@ -76,6 +76,7 @@ return {
             },
           },
         },
+        openscad_lsp = {},
         pyright = {
           settings = {
             python = {
