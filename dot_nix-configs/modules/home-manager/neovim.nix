@@ -56,6 +56,9 @@
       nil
       nixd
 
+      # Openscad
+      openscad-lsp
+
       # Python
       black
       isort

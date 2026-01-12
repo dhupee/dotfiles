@@ -57,7 +57,6 @@
       fastfetch
       ffmpeg
       firefox-bin
-      freecad
       fzf
       go-task
       gparted
@@ -65,6 +64,7 @@
       libreoffice
       ngrok
       obs-studio
+      openscad
       pdfarranger
       pdfmm
       platformio-core
@@ -81,6 +81,7 @@
     ])
     ++ (with pkgs-unstable; [
       chezmoi
+      freecad
       logisim-evolution
       orca-slicer
       vesktop
