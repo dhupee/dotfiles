@@ -151,6 +151,12 @@
     platformio-core.udev
   ];
 
+  # adding /bin/bash, needed by platformio
+  system.activationScripts.binbash = ''
+    mkdir -p /bin
+    ln -sfn ${pkgs.bash}/bin/bash /bin/bash
+  '';
+
   # Dynamic Linking
   programs.nix-ld = {
     enable = true;
