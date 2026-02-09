@@ -52,6 +52,7 @@
       bat
       bruno
       btop
+      google-chrome
       dbeaver-bin
       dust
       fastfetch
