@@ -1,0 +1,44 @@
+[project]
+name = "THE"
+version = "0.1.0"
+description = "THE"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.129.0",
+    "pyezvizapi>=1.0.4.5",
+    "pyserial>=3.5",
+    "python-dotenv>=1.2.1",
+]
+
+[dependency-groups]
+dev = ["ruff>=0.11.13"]
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+line-length = 120
+indent-width = 2
+
+[tool.ruff.format]
+quote-style = "single"
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D100",    # undocumented-public-module
+    "D103",    # undocumented-public-function
+    "G004",    # Logging statement uses f-string
+    "PERF401", # Use `list.extend` to create a transformed list - Less readable
+    "Q000",    # Single quotes found but double quotes preferred
+    "S60",     # Subprocess
+    "TRY400",  # error-instead-of-exception
+]
+
+[tool.ruff.lint.flake8-type-checking]
+quote-annotations = true
+
+[tool.uv]
+package = true
