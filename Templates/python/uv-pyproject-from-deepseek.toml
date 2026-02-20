@@ -1,0 +1,90 @@
+# Project metadata - defines your package name, version, and core dependencies
+[project]
+name = "biologic-camera-platform-controller"
+version = "0.1.0"
+description = "THE"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.129.0",
+    "pillow>=12.1.1",
+    "pyezvizapi>=1.0.4.5",
+    "pyserial>=3.5",
+    "python-dotenv>=1.2.1",
+]
+
+# Development dependencies - tools for testing, linting, and code quality
+[dependency-groups]
+dev = [
+    "ruff>=0.11.13",
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+    "mypy>=1.10.0",
+    "pre-commit>=3.7.0",
+]
+
+# Build system configuration - defines how to package your project
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# Pyright (static type checker) configuration - points to your virtual environment
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+# Ruff (linter and formatter) main configuration - sets code style rules
+[tool.ruff]
+line-length = 120
+indent-width = 2
+
+# Ruff formatting rules - prefers single quotes for strings
+[tool.ruff.format]
+quote-style = "single"
+
+# Ruff linting rules - enables all checks except explicitly ignored ones
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D100",    # undocumented-public-module
+    "D103",    # undocumented-public-function
+    "G004",    # Logging statement uses f-string
+    "PERF401", # Use `list.extend` to create a transformed list - Less readable
+    "Q000",    # Single quotes found but double quotes preferred
+    "S60",     # Subprocess
+    "TRY400",  # error-instead-of-exception
+]
+preview = true
+
+# Per-file linting exceptions - allows assertions in test files
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]   # Allow assertions in tests
+
+# Type checking annotations - ensures quotes are used consistently in type hints
+[tool.ruff.lint.flake8-type-checking]
+quote-annotations = true
+
+# Pytest configuration - sets test discovery rules and coverage reporting
+[tool.pytest.ini_options]
+minversion = "8.0"
+addopts = "-ra -q --cov=biologic_camera_platform_controller --cov-report=term-missing"
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test_*"
+
+# Coverage.py configuration - defines which code to measure and branch coverage
+[tool.coverage.run]
+source = ["biologic_camera_platform_controller"]
+branch = true
+
+# MyPy static type checking - enforces strict type checking rules
+[tool.mypy]
+python_version = "3.13"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+# UV package manager configuration - marks this as a package
+[tool.uv]
+package = true
