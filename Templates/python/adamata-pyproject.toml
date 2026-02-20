@@ -1,0 +1,80 @@
+# Project metadata - defines your ML package name, version, and core dependencies
+[project]
+name = "bsort"
+version = "0.1.0"
+description = "ML Pipeline for Object Detection"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    {name = "Daffa Haj Tsaqif", email = "narutohaj00@gmail.com"},
+]
+dependencies = [
+  "ultralytics==8.3.232",
+  "requests==2.32.5",
+  "opencv-python==4.12.0.88",
+  "pandas==2.2.3",
+  "numpy==2.2.6",
+  "PyYAML==6.0.3",
+  "pillow==11.3.0",
+  "click>=8.3.1",
+  "onnx>=1.19.1",
+]
+
+# Development dependencies - tools for code quality and testing
+[dependency-groups]
+dev = [
+    "ruff>=0.14.6",
+]
+
+# Console script entry point - makes `bsort` command available in terminal
+[project.scripts]
+bsort = "src.cli:main"
+
+# Project URLs - links to repository and issue tracker
+[project.urls]
+"Homepage" = "https://github.com/dhupee/adamata-ml-engineer-test"
+"Bug Reports" = "https://github.com/dhupee/adamata-ml-engineer-test/issues"
+
+# Build system configuration - uses setuptools for packaging
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+# Setuptools package discovery - tells setuptools where to find your code
+[tool.setuptools]
+packages = ["src"]
+
+[tool.setuptools.package-dir]
+bsort = "src"
+
+# isort import sorter - configures to work well with Black formatter
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+# Ruff main configuration - sets line length and Python version target
+[tool.ruff]
+line-length = 70 
+target-version = "py311"
+
+# Ruff linting rules - only enables error, pyflakes, and import rules
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]  # Ignore line length warnings (handled by formatter)
+
+# Ruff formatting rules - prefers double quotes and consistent spacing
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+# Docstring convention - follows Google style for documentation
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+# Pytest configuration - test discovery patterns
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
