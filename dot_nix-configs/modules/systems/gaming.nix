@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  pkgs-unstable,
+  ...
+}: {
   # Steam
   programs.steam = {
     enable = true;
@@ -38,22 +42,25 @@
   };
 
   # Add packages system level
-  environment.systemPackages = with pkgs; [
-    wine
-    heroic
-    lutris
-    osu-lazer-bin
-    protonup-qt
-    (retroarch.withCores (cores:
-      with cores; [
-        genesis-plus-gx
-        snes9x
-        beetle-psx-hw # PS1
-        play # PS2
-      ]))
-    mangohud
-    ttyper
-    # ryzenadj
-    # lact
-  ];
+  environment.systemPackages =
+    (with pkgs; [
+      wine
+      heroic
+      lutris
+      protonup-qt
+      (retroarch.withCores (cores:
+        with cores; [
+          genesis-plus-gx
+          snes9x
+          beetle-psx-hw # PS1
+          play # PS2
+        ]))
+      mangohud
+      ttyper
+      # ryzenadj
+      # lact
+    ])
+    ++ (with pkgs-unstable; [
+      osu-lazer-bin
+    ]);
 }
