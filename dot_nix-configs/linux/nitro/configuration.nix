@@ -19,6 +19,7 @@
     ../../modules/systems/cloudlare-warp.nix
     # ../../modules/systems/docker.nix
     ../../modules/systems/flatpak.nix
+    ../../modules/systems/localsend.nix
     ../../modules/systems/podman.nix
     ../../modules/systems/virtual-machine.nix
 
