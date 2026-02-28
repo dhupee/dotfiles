@@ -8,7 +8,7 @@
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Enables me to install flatpaks declaratively
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.6.0";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
 
     # Home-Manager, NixOS for your User Config
     home-manager = {
