@@ -7,10 +7,10 @@
 # alias warp-service-stop="systemctl stop warp-svc.service"
 
 # Initialize the app
-alias warp-init="warp-cli register ; sleep 1s ; warp-cli set-mode warp+doh"
+alias warp-init="warp-cli registration new ; sleep 1s ; warp-cli mode warp+doh"
 
 # Check whether the connections is established and connected to cloudflare server
-alias warp-check="curl https://www.cloudflare.com/cdn-cgi/trace/"
+alias warp-check="curl https://www.cloudflare.com/cdn-cgi/trace"
 
 # Connect to WARP server
 alias warp-connect="warp-cli connect"
