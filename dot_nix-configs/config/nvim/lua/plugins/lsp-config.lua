@@ -8,6 +8,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        arduino_language_server = {},
         astro = {},
         bashls = {},
         biome = {},
