@@ -49,6 +49,7 @@
   home.packages =
     (with pkgs; [
       # with pkgs; [
+      arduino-cli
       bat
       bruno
       btop
@@ -69,6 +70,7 @@
       pdfarranger
       pdfmm
       platformio-core
+      python3
       qbittorrent
       rclone
       rclone-ui

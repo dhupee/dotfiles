@@ -19,8 +19,12 @@
       # NOTE: The packages list here can be run in nvim's cmdline but never outside of that
       # dart-ls no need to be installed, already integrated with Flutter
 
-      # Compilers and other tooling
+      # Arduino
+      arduino-language-server
+
+      # Compilers and other outside tooling
       clang
+      fzf
       tree-sitter
 
       # C++
