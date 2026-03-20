@@ -6,7 +6,7 @@
                 "view-store-position": false,
                 "view-show-grid": true,
                 "view-snap-grid": true,
-                "view-grid-size": 20,
+                "view-grid-size": "20",
                 "view-node-status": true,
                 "view-node-info-icon": true,
                 "view-node-show-label": true,
@@ -20,6 +20,19 @@
                 "export": {
                     "pretty": true
                 }
+            }
+        },
+        "git": {
+            "globalUser": {
+                "name": "Daffa Haj Tsaqif",
+                "email": "narutohaj00@gmail.com"
+            },
+            "user": {
+                "name": "Daffa Haj Tsaqif",
+                "email": "narutohaj00@gmail.com"
+            },
+            "workflow": {
+                "mode": "manual"
             }
         }
     }

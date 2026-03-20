@@ -1,0 +1,23 @@
+# Node.js dependencies
+node_modules/
+
+# Backup files
+*.backup
+.flows.json.backup
+.config.*.json.backup
+
+# Runtime‑generated Node‑RED configs (these are machine‑specific)
+.config.runtime.json
+.config.users.json
+.config.nodes.json
+.config.projects.json
+
+# Node‑RED projects (each project is a separate repository)
+projects
+
+# lib/ – likely contains copies or generated flows
+lib/
+
+# Credentials (encrypted, but many users still prefer to ignore)
+# Uncomment the next line if you do NOT want to commit flows_cred.json
+# flows_cred.json
