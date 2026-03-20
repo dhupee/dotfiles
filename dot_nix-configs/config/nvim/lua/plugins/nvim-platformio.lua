@@ -1,6 +1,6 @@
 return {
-  -- "anurag3301/nvim-platformio.lua",
-  "dhupee/nvim-platformio.lua",
+  "anurag3301/nvim-platformio.lua",
+  -- "dhupee/nvim-platformio.lua",
   branch = "main", -- branch
   cmd = { -- comment it during development
     "Pioinit",
@@ -25,7 +25,6 @@ return {
   config = function()
     require("platformio").setup({
       lsp = "clangd",
-      clangd_source = "compiledb",
     })
   end,
 }
