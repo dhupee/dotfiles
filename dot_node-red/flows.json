@@ -1,0 +1,59 @@
+[
+    {
+        "id": "186dedd0a1da45e4",
+        "type": "tab",
+        "label": "Hello",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "602c5e6963284166",
+        "type": "http in",
+        "z": "186dedd0a1da45e4",
+        "name": "",
+        "url": "/api/hello",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 260,
+        "wires": [
+            [
+                "e1543c765c648a64"
+            ]
+        ]
+    },
+    {
+        "id": "468957b21b9e433b",
+        "type": "http response",
+        "z": "186dedd0a1da45e4",
+        "name": "hello",
+        "statusCode": "200",
+        "headers": {},
+        "x": 670,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e1543c765c648a64",
+        "type": "file in",
+        "z": "186dedd0a1da45e4",
+        "name": "whasaaap",
+        "filename": "status.text",
+        "filenameType": "msg",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 370,
+        "y": 160,
+        "wires": [
+            [
+                "468957b21b9e433b"
+            ]
+        ]
+    }
+]
