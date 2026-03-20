@@ -65,6 +65,7 @@
       inkscape
       libreoffice
       ngrok
+      node-red
       obs-studio
       openscad
       pdfarranger
