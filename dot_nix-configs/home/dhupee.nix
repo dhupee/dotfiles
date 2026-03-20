@@ -86,6 +86,7 @@
       chezmoi
       freecad
       logisim-evolution
+      obsidian
       orca-slicer
       vesktop
       yt-dlp
