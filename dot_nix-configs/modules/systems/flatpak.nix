@@ -28,6 +28,10 @@
         appId = "com.usebottles.bottles";
         origin = "flathub";
       }
+      {
+        appId = "org.freecad.FreeCAD";
+        origin = "flathub";
+      }
     ];
     uninstallUnmanaged = true;
     uninstallUnused = true;
