@@ -85,7 +85,6 @@
     ])
     ++ (with pkgs-unstable; [
       chezmoi
-      freecad
       logisim-evolution
       obsidian
       orca-slicer
