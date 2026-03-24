@@ -32,6 +32,10 @@
         appId = "org.freecad.FreeCAD";
         origin = "flathub";
       }
+      {
+        appId = "com.github.k4zmu2a.spacecadetpinball";
+        origin = "flathub";
+      }
     ];
     uninstallUnmanaged = true;
     uninstallUnused = true;
