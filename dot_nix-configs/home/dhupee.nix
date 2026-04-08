@@ -53,7 +53,7 @@
       bat
       bruno
       btop
-      google-chrome
+      # google-chrome
       dbeaver-bin
       dust
       fastfetch
@@ -67,7 +67,7 @@
       ngrok
       node-red
       obs-studio
-      openscad
+      # openscad
       pdfarranger
       pdfmm
       platformio-core
@@ -75,7 +75,7 @@
       python3
       qbittorrent
       rclone
-      rclone-ui
+      # rclone-ui
       speedtest-cli
       tectonic-unwrapped
       tldr
