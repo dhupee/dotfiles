@@ -71,6 +71,7 @@
       pdfarranger
       pdfmm
       platformio-core
+      pulseview
       python3
       qbittorrent
       rclone

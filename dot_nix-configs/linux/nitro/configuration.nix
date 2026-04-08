@@ -138,6 +138,8 @@
     nix-prefetch-git
     nvtopPackages.full
     p7zip
+    platformio-core
+    sigrok-firmware-fx2lafw
     unrar
     unzip
     wget
