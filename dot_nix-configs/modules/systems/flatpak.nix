@@ -20,14 +20,14 @@
     ];
 
     packages = [
-      {
-        appId = "com.vscodium.codium";
-        origin = "flathub";
-      }
-      {
-        appId = "com.usebottles.bottles";
-        origin = "flathub";
-      }
+      # {
+      #   appId = "com.vscodium.codium";
+      #   origin = "flathub";
+      # }
+      # {
+      #   appId = "com.usebottles.bottles";
+      #   origin = "flathub";
+      # }
       {
         appId = "org.freecad.FreeCAD";
         origin = "flathub";
@@ -45,18 +45,18 @@
       };
       onActivation = true;
     };
-    overrides = {
-      "com.vscodium.codium".Context = {
-        filesystem = [
-          # it's nix, keep it ro
-          "~/.config/git/config:ro"
-
-          # Expose NixOS and Home-Manager packages
-          "/run/current-system/sw/bin:ro"
-          "~/.nix-profile/bin:ro"
-        ];
-      };
-    };
+    # overrides = {
+    #   "com.vscodium.codium".Context = {
+    #     filesystem = [
+    #       # it's nix, keep it ro
+    #       "~/.config/git/config:ro"
+    #
+    #       # Expose NixOS and Home-Manager packages
+    #       "/run/current-system/sw/bin:ro"
+    #       "~/.nix-profile/bin:ro"
+    #     ];
+    #   };
+    # };
   };
 
   # Required to install flatpak
