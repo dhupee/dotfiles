@@ -107,6 +107,7 @@ common.Control.showContextMenu
 common.Control.showDatasheet	D	
 common.Control.showFootprintBrowser		
 common.Control.showFootprintEditor		
+common.Control.showLibraryTable		
 common.Control.showLibraryTree		
 common.Control.showProjectManager		
 common.Control.showProperties		
@@ -223,7 +224,9 @@ eeschema.EditorControl.lineModeFree
 eeschema.EditorControl.lineModeNext	Shift+Space	
 eeschema.EditorControl.lineModeOrthonal		
 eeschema.EditorControl.markSimExclusions		
+eeschema.EditorControl.nextNetItem	Tab	
 eeschema.EditorControl.nextUnit		
+eeschema.EditorControl.previousNetItem	Shift+Tab	
 eeschema.EditorControl.previousUnit		
 eeschema.EditorControl.remapSymbols		
 eeschema.EditorControl.repairSchematic		
@@ -553,6 +556,7 @@ pcbnew.EditorControl.appendBoard
 pcbnew.EditorControl.assignNetclass		
 pcbnew.EditorControl.boardSetup		
 pcbnew.EditorControl.clearHighlight	~	
+pcbnew.EditorControl.collect3DModels		
 pcbnew.EditorControl.drillOrigin		
 pcbnew.EditorControl.drillResetOrigin		
 pcbnew.EditorControl.drillSetOrigin		
@@ -683,6 +687,7 @@ pcbnew.InteractiveMove.moveWithReference
 pcbnew.InteractiveRouter.AttemptFinish	F	
 pcbnew.InteractiveRouter.Autoroute	Shift+F	
 pcbnew.InteractiveRouter.BreakTrack		
+pcbnew.InteractiveRouter.CancelCurrentItem		
 pcbnew.InteractiveRouter.ContinueFromEnd	Ctrl+E	
 pcbnew.InteractiveRouter.CustomTrackViaSize	Q	
 pcbnew.InteractiveRouter.CycleRouterMode		

@@ -1,0 +1,268 @@
+{
+    "packages": [
+        {
+            "current_version": "2026.02.09",
+            "install_timestamp": 1774456446,
+            "package": {
+                "author": {
+                    "contact": {
+                        "github": "https://github.com/Steffen-W"
+                    },
+                    "name": "Steffen Wittemeier"
+                },
+                "description": "Plugin to analyze the wires in the PCB editor.",
+                "description_full": "Plugin to analyze the wires in the PCB editor. To use the plugin, two points must be marked on the board. This is best two pads that are connected with a wire. The tool then determines the DC resistance between the two points. A parasitic inductance wired also estimated. In future versions, the parasitic capacitance to the ground plane will be determined.",
+                "identifier": "com.github.Steffen-W.KiCad-Parasitics",
+                "license": "GPL-3.0",
+                "maintainer": {
+                    "contact": {
+                        "github": "https://github.com/Steffen-W"
+                    },
+                    "name": "Steffen Wittemeier"
+                },
+                "name": "Parasitics",
+                "resources": {
+                    "homepage": "https://github.com/Steffen-W/KiCad-Parasitics"
+                },
+                "tags": [
+                    "postlayoutsimulation",
+                    "inductor",
+                    "resistor",
+                    "capacitor"
+                ],
+                "type": "plugin",
+                "versions": [
+                    {
+                        "download_sha256": "85ec5eab9681f24125b932d21df26a8569e1eb6e79e8af2e40e8581e19e2c2db",
+                        "download_size": 68740,
+                        "download_url": "https://github.com/Steffen-W/KiCad-Parasitics/releases/download/2026.02.09/KiCad-Parasitics.zip",
+                        "install_size": 239341,
+                        "kicad_version": "8.00",
+                        "status": "stable",
+                        "version": "2026.02.09"
+                    },
+                    {
+                        "download_sha256": "75254068734dda5ebf5f83d001872356d5952f9492880df739d50ecd07403c3c",
+                        "download_size": 31436,
+                        "download_url": "https://github.com/Steffen-W/KiCad-Parasitics/releases/download/2025.04.07/KiCad-Parasitics.zip",
+                        "install_size": 94469,
+                        "kicad_version": "8.00",
+                        "status": "stable",
+                        "version": "2025.04.07"
+                    },
+                    {
+                        "download_sha256": "523d77af16ef5fe976daf4bb9fc61fcf2a3d3782e65dd6c0c4f5d33bdac26842",
+                        "download_size": 122426,
+                        "download_url": "https://github.com/Steffen-W/KiCad-Parasitics/releases/download/2023.09.20/KiCad-Parasitics.zip",
+                        "install_size": 613633,
+                        "kicad_version": "7.00",
+                        "status": "stable",
+                        "version": "2023.09.20"
+                    }
+                ]
+            },
+            "pinned": false,
+            "repository_id": "46f88614eade3439",
+            "repository_name": "KiCad official repository"
+        },
+        {
+            "current_version": "0.3",
+            "install_timestamp": 1774456273,
+            "package": {
+                "author": {
+                    "contact": {
+                        "web": "https://adamws.github.io"
+                    },
+                    "name": "adamws"
+                },
+                "description": "KiCad plugin for git",
+                "description_full": "Git actions directly from KiCad's PCB editor window",
+                "identifier": "com.github.adamws.kicad-git",
+                "license": "GPL-3.0",
+                "name": "Git plugin",
+                "resources": {
+                    "Bug Tracker": "https://github.com/adamws/kicad-git/issues",
+                    "Homepage": "https://github.com/adamws/kicad-git",
+                    "Sponsor": "https://ko-fi.com/adamws"
+                },
+                "type": "plugin",
+                "versions": [
+                    {
+                        "download_sha256": "54a0a5882e5bc4c557424f352f88877303c6bc95e86d6a66cd804f2cf17cdf7d",
+                        "download_size": 8755,
+                        "download_url": "https://github.com/adamws/kicad-git/releases/download/v0.3/kicad_git-0.3.zip",
+                        "install_size": 7947,
+                        "kicad_version": "7.0",
+                        "status": "stable",
+                        "version": "0.3"
+                    },
+                    {
+                        "download_sha256": "f0ac36a2cfef71f0f5756ae74011a4bc7e849fcb7f59f75172036ff93b1bc101",
+                        "download_size": 8605,
+                        "download_url": "https://github.com/adamws/kicad-git/releases/download/v0.2/kicad_git-0.2.zip",
+                        "install_size": 7797,
+                        "kicad_version": "7.0",
+                        "status": "stable",
+                        "version": "0.2"
+                    },
+                    {
+                        "download_sha256": "a5e3135204c562e216cfce92cd13714a89287c5a63cc5a6f24835ceef6484061",
+                        "download_size": 16807,
+                        "download_url": "https://github.com/adamws/kicad-git/releases/download/v0.1/kicad_git-0.1.zip",
+                        "install_size": 15885,
+                        "kicad_version": "7.0",
+                        "status": "stable",
+                        "version": "0.1"
+                    }
+                ]
+            },
+            "pinned": false,
+            "repository_id": "46f88614eade3439",
+            "repository_name": "KiCad official repository"
+        },
+        {
+            "current_version": "4.2.0",
+            "install_timestamp": 1774456449,
+            "package": {
+                "author": {
+                    "contact": {
+                        "web": "https://github.com/Alarm-Siren/"
+                    },
+                    "name": "Nicholas Parks Young"
+                },
+                "description": "KiCad Symbol and Footprint Library for Arduino Modules",
+                "description_full": "You may need to manually update the library tables in the Library Manager to get the new symbols and footprints to show up: please refer to the GitHub link below for full documentation and installation instructions.\n\nThis is a library of KiCad schematic symbols and PCB footprints for most Arduino modules. You can use them to make your own PCB design which will effortlessly connect with your chosen Arduino module.",
+                "identifier": "com.github.alarm-siren.arduino-kicad-library",
+                "license": "CC-BY-SA-4.0",
+                "name": "KiCad Library for Arduino Modules",
+                "resources": {
+                    "github": "https://github.com/Alarm-Siren/arduino-kicad-library"
+                },
+                "tags": [
+                    "footprints",
+                    "symbols",
+                    "arduino",
+                    "modules"
+                ],
+                "type": "library",
+                "versions": [
+                    {
+                        "download_sha256": "3e47f464d326b4c4752d4a0c725b92ec571c61d7b20d8f6d8f654e26349aff56",
+                        "download_size": 162805,
+                        "download_url": "https://github.com/Alarm-Siren/arduino-kicad-library/releases/download/v4.2.0/arduino-kicad-library-4.2.0-pcm.zip",
+                        "install_size": 931125,
+                        "kicad_version": "6.0",
+                        "status": "stable",
+                        "version": "4.2.0"
+                    }
+                ]
+            },
+            "pinned": false,
+            "repository_id": "46f88614eade3439",
+            "repository_name": "KiCad official repository"
+        },
+        {
+            "current_version": "5.2.0",
+            "install_timestamp": 1774705221,
+            "package": {
+                "author": {
+                    "contact": {
+                        "github": "https://github.com/bennymeg"
+                    },
+                    "name": "Benny Megidish"
+                },
+                "description": "JLC PCB fabrication toolkit\nAutomate PCB fabrication process in conjunction with JLC PCB",
+                "description_full": "Toolkit for automating PCB fabrication process with KiCad and JLC PCB. \n\n Features: \n• Generates gerber files in correct format for production. \n• Generates BOM file in correct format for production. \n• Generates Pick and Place file in correct format for assembly. \n• Automatic and manual component translations. \n• Many more unique additional features. \n♥ https://github.com/sponsors/bennymeg",
+                "identifier": "com.github.bennymeg.JLC-Plugin-for-KiCad",
+                "license": "Apache-2.0",
+                "maintainer": {
+                    "contact": {
+                        "github": "https://github.com/bennymeg"
+                    },
+                    "name": "Benny Megidish"
+                },
+                "name": "Fabrication Toolkit",
+                "resources": {
+                    "Sponsor": "https://github.com/sponsors/bennymeg",
+                    "homepage": "https://github.com/bennymeg/JLC-Plugin-for-KiCad"
+                },
+                "tags": [
+                    "jlc",
+                    "production",
+                    "fabrication",
+                    "toolkit"
+                ],
+                "type": "plugin",
+                "versions": [
+                    {
+                        "download_sha256": "4561b8feeeb37446caabeb815bc56b6e863760604bd1342781bccc91c767077a",
+                        "download_size": 21235,
+                        "download_url": "https://github.com/bennymeg/JLC-Plugin-for-KiCad/releases/download/5.2.0/JLC-Plugin-for-KiCad-5.2.0.zip",
+                        "install_size": 58037,
+                        "kicad_version": "6.00",
+                        "status": "stable",
+                        "version": "5.2.0"
+                    },
+                    {
+                        "download_sha256": "2285113715d24d6e581ee1bee4c8e2fd92ad92bc72737e1dd05f7c05210e0e67",
+                        "download_size": 17732,
+                        "download_url": "https://github.com/bennymeg/JLC-Plugin-for-KiCad/releases/download/4.5.0/JLC-Plugin-for-KiCad-4.5.0.zip",
+                        "install_size": 44106,
+                        "kicad_version": "6.00",
+                        "status": "stable",
+                        "version": "4.5.0"
+                    }
+                ]
+            },
+            "pinned": false,
+            "repository_id": "46f88614eade3439",
+            "repository_name": "KiCad official repository"
+        },
+        {
+            "current_version": "9.0.0",
+            "install_timestamp": 1774456454,
+            "package": {
+                "author": {
+                    "contact": {
+                        "github": "https://github.com/sparkfun",
+                        "twitter": "https://twitter.com/sparkfun",
+                        "web": "https://sparkfun.com"
+                    },
+                    "name": "SparkFun"
+                },
+                "description": "SparkFun's Libraries for KiCad 7 / 8 / 9",
+                "description_full": "This library contains SparkFun's commonly used parts.\nIt is a cultivated combination of KiCad stock parts, SparkFun-unique footprints, and open-source 3D models.\n\nCheck your settings in Preferences -> Packages and Updates.\nIf you have the default Library nickname prefix 'PCM_', you can proceed to install the libraries through the PCM.\nIf you don't want that prefix, leave that field blank and install the libraries from zip file instead.\nThe installation link below has more details.",
+                "identifier": "com.github.sparkfun.SparkFun-KiCad-Libraries",
+                "license": "CC-BY-4.0",
+                "maintainer": {
+                    "contact": {
+                        "github": "https://github.com/sparkfun",
+                        "twitter": "https://twitter.com/sparkfun",
+                        "web": "https://sparkfun.com"
+                    },
+                    "name": "SparkFun"
+                },
+                "name": "SparkFun KiCad Libraries",
+                "resources": {
+                    "homepage": "https://github.com/sparkfun/SparkFun-KiCad-Libraries",
+                    "installation": "https://github.com/sparkfun/SparkFun-KiCad-Libraries#installing-and-using-these-libraries"
+                },
+                "type": "library",
+                "versions": [
+                    {
+                        "download_sha256": "87119b9f2152413ebf943fe6261338483143636c3c075bee856c2d0a999d58bb",
+                        "download_size": 34532916,
+                        "download_url": "https://github.com/sparkfun/SparkFun-KiCad-Libraries/releases/download/v9.0.0/SparkFun-KiCad-Libraries-9.0.0-with-pcm.zip",
+                        "install_size": 205743035,
+                        "kicad_version": "7.0",
+                        "status": "stable",
+                        "version": "9.0.0"
+                    }
+                ]
+            },
+            "pinned": false,
+            "repository_id": "46f88614eade3439",
+            "repository_name": "KiCad official repository"
+        }
+    ]
+}
