@@ -8,6 +8,7 @@
   "catppuccin": { "branch": "main", "commit": "426dbebe06b5c69fd846ceb17b42e12f890aedf1" },
   "codeium.nvim": { "branch": "main", "commit": "821b570b526dbb05b57aa4ded578b709a704a38a" },
   "conform.nvim": { "branch": "master", "commit": "dca1a190aa85f9065979ef35802fb77131911106" },
+  "csvview.nvim": { "branch": "main", "commit": "5c22774c3ecc7f8883af5d143b366e45b1f0875d" },
   "dracula.nvim": { "branch": "main", "commit": "ae752c13e95fb7c5f58da4b5123cb804ea7568ee" },
   "dressing.nvim": { "branch": "master", "commit": "2d7c2db2507fa3c4956142ee607431ddb2828639" },
   "flash.nvim": { "branch": "main", "commit": "fcea7ff883235d9024dc41e638f164a450c14ca2" },
