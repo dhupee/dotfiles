@@ -142,6 +142,7 @@
     sigrok-firmware-fx2lafw
     unrar
     unzip
+    usbutils
     wget
     wl-clipboard
   ];
