@@ -46,7 +46,6 @@
     (with pkgs; [
       wine
       heroic
-      lutris
       protonup-qt
       (retroarch.withCores (cores:
         with cores; [
