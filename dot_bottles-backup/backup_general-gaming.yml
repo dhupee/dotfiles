@@ -1,0 +1,149 @@
+Arch: win64
+CompatData: ''
+Creation_Date: '2026-05-23 14:49:38.123268'
+Custom_Path: false
+DLL_Overrides: {}
+DXVK: dxvk-2.7.1
+Environment: Gaming
+Environment_Variables: {}
+External_Programs:
+    26e62514-22b4-44d8-b682-5b8757682d24:
+        arguments: null
+        dxvk: null
+        dxvk_nvapi: null
+        executable: gta_sa.exe
+        folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
+            Files (x86)/GTA San Andreas
+        gamescope: null
+        icon: com.usebottles.bottles-program
+        id: 26e62514-22b4-44d8-b682-5b8757682d24
+        name: GTA San Andreas - Single Player
+        path: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
+            Files (x86)/GTA San Andreas/gta_sa.exe
+        post_script: null
+        post_script_args: null
+        pre_script: null
+        pre_script_args: null
+        pulseaudio_latency: null
+        removed: null
+        virtual_desktop: null
+        vkd3d: null
+        winebridge: null
+    2dd26c3b-7a99-4dcb-9889-490ed090ba90:
+        arguments: ''
+        dxvk: null
+        dxvk_nvapi: null
+        executable: sdhdship.exe
+        folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/GOG
+            Games/Sleeping Dogs Definitive Edition
+        gamescope: null
+        icon: com.usebottles.bottles-program
+        id: 2dd26c3b-7a99-4dcb-9889-490ed090ba90
+        name: Sleeping Dogs Definitive Edition
+        path: C:\GOG Games\Sleeping Dogs Definitive Edition\sdhdship.exe
+        post_script: null
+        post_script_args: null
+        pre_script: null
+        pre_script_args: null
+        pulseaudio_latency: null
+        removed: null
+        virtual_desktop: true
+        vkd3d: null
+        winebridge: null
+Inherited_Environment_Variables:
+- DBUS_SESSION_BUS_ADDRESS
+- DISPLAY
+- HOME
+- LANG
+- LC_ALL
+- LC_CTYPE
+- LC_MESSAGES
+- PATH
+- PULSE_SERVER
+- TERM
+- TZ
+- USER
+- WAYLAND_DISPLAY
+- XAUTHORITY
+- XDG_RUNTIME_DIR
+Installed_Dependencies:
+- d3dx9
+- msls31
+- arial32
+- times32
+- courie32
+- d3dcompiler_43
+- d3dcompiler_47
+- mono
+- gecko
+Language: sys
+LatencyFleX: latencyflex-v0.1.1
+Limit_System_Environment: true
+NVAPI: dxvk-nvapi-v0.9.2
+Name: general-gaming
+Parameters:
+    custom_dpi: 96
+    decorated: true
+    discrete_gpu: true
+    dxvk: true
+    dxvk_nvapi: false
+    fixme_logs: false
+    fsr: false
+    fsr_sharpening_strength: 8
+    fullscreen_capture: false
+    gamemode: false
+    gamescope: false
+    gamescope_borderless: false
+    gamescope_custom_options: ''
+    gamescope_fps: 0
+    gamescope_fps_no_focus: 0
+    gamescope_fullscreen: true
+    gamescope_game_height: 0
+    gamescope_game_width: 0
+    gamescope_scaling: false
+    gamescope_window_height: 0
+    gamescope_window_width: 0
+    latencyflex: false
+    mangohud: false
+    mangohud_display_on_game_start: true
+    mouse_warp: true
+    obsvkc: false
+    pulseaudio_latency: false
+    renderer: gl
+    sandbox: false
+    sync: fsync
+    take_focus: false
+    use_be_runtime: true
+    use_eac_runtime: true
+    use_runtime: false
+    use_steam_runtime: false
+    versioning_automatic: false
+    versioning_compression: false
+    versioning_exclusion_patterns: false
+    virtual_desktop: false
+    virtual_desktop_res: 1280x720
+    vkbasalt: false
+    vkd3d: true
+    vmtouch: true
+    vmtouch_cache_cwd: false
+    wayland: false
+    winebridge: false
+Path: general-gaming
+Registry_Rules: []
+Runner: soda-9.0-1
+RunnerPath: ''
+Sandbox:
+    share_net: false
+    share_sound: false
+State: 0
+Uninstallers: {}
+Update_Date: '2026-05-23 20:26:38.711442'
+VKD3D: vkd3d-proton-3.0.1
+Versioning: false
+Versioning_Exclusion_Patterns: []
+Windows: win10
+Winebridge: false
+WorkingDir: ''
+data: {}
+run_in_terminal: false
+session_arguments: ''
