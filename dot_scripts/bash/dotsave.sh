@@ -7,6 +7,7 @@ dir_array=(
   "$HOME/Templates/"
   "$HOME/Wallpapers/"
   "$HOME/.node-red/"
+  "$HOME/.bottles-backup/"
 )
 
 # file_array=(
