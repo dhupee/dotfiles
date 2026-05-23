@@ -24,10 +24,10 @@
       #   appId = "com.vscodium.codium";
       #   origin = "flathub";
       # }
-      # {
-      #   appId = "com.usebottles.bottles";
-      #   origin = "flathub";
-      # }
+      {
+        appId = "com.usebottles.bottles";
+        origin = "flathub";
+      }
       {
         appId = "org.freecad.FreeCAD";
         origin = "flathub";
