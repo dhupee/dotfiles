@@ -176,6 +176,7 @@
       # mount options for fstab, check https://man.archlinux.org/man/mount.8#Generic_Mount_Options
       "users" # Allows any user to mount and unmount
       "nofail" # Prevent system from failing if this drive doesn't mount
+      "noatime" # Do not update inode access times on this filesystem (e.g. for faster access on the news spool to speed up news servers).
     ];
   };
 
