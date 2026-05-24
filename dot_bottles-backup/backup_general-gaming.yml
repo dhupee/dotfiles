@@ -3,7 +3,7 @@ CompatData: ''
 Creation_Date: '2026-05-23 14:49:38.123268'
 Custom_Path: false
 DLL_Overrides: {}
-DXVK: dxvk-2.7.1
+DXVK: dxvk-2.7.1-16-2097f56
 Environment: Gaming
 Environment_Variables: {}
 External_Programs:
@@ -50,6 +50,14 @@ External_Programs:
         virtual_desktop: true
         vkd3d: null
         winebridge: null
+    c5ac445b-188d-433e-af4a-530c11bc3266:
+        executable: PPJ2DD.EXE
+        folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
+            Files (x86)/VirtuaCop2
+        id: c5ac445b-188d-433e-af4a-530c11bc3266
+        name: VirtuaCop2
+        path: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
+            Files (x86)/VirtuaCop2/PPJ2DD.EXE
 Inherited_Environment_Variables:
 - DBUS_SESSION_BUS_ADDRESS
 - DISPLAY
@@ -91,7 +99,7 @@ Parameters:
     fsr: false
     fsr_sharpening_strength: 8
     fullscreen_capture: false
-    gamemode: false
+    gamemode: true
     gamescope: false
     gamescope_borderless: false
     gamescope_custom_options: ''
@@ -111,7 +119,7 @@ Parameters:
     pulseaudio_latency: false
     renderer: gl
     sandbox: false
-    sync: fsync
+    sync: wine
     take_focus: false
     use_be_runtime: true
     use_eac_runtime: true
@@ -137,7 +145,7 @@ Sandbox:
     share_sound: false
 State: 0
 Uninstallers: {}
-Update_Date: '2026-05-23 20:26:38.711442'
+Update_Date: '2026-05-24 20:51:14.043692'
 VKD3D: vkd3d-proton-3.0.1
 Versioning: false
 Versioning_Exclusion_Patterns: []
