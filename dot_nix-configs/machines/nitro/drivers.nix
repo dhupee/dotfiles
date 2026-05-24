@@ -1,9 +1,38 @@
-{...}: {
+{pkgs, ...}: {
+  boot.kernelParams = ["amd_pstate=passive"];
+  boot.kernel.sysctl = {
+    "scaling_governor" = "performance";
+
+    "vm.dirty_background_ratio" = 3; # start flushing very early
+    "vm.dirty_ratio" = 40; # still allow large cache
+    "vm.dirty_writeback_centisecs" = 500; # flush every 5 sec
+    "vm.dirty_expire_centisecs" = 500; # expire quickly
+    "vm.swappiness" = 10; # how aggressively your system moves data out of RAM and into Swap
+  };
+  powerManagement.cpuFreqGovernor = "performance";
+
+  # Add additional mount options
+  fileSystems."/" = {
+    options = [
+      "noatime" # Do not update inode access times on this filesystem
+    ];
+  };
+
+  # ZRAM
+  zramSwap = {
+    enable = true;
+    memoryPercent = 20; # smaller = less CPU work
+    algorithm = "lz4"; # fastest compression
+    priority = 100; # use ZRAM before disk swap
+  };
+
   # Enable graphics drivers
   # Already has Mesa in it
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
+    package = pkgs.mesa;
+    package32 = pkgs.pkgsi686Linux.mesa;
   };
 
   # services.xserver.videoDrivers = ["nvidia"];
