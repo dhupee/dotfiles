@@ -1,4 +1,5 @@
 {pkgs, ...}: {
+  boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.kernelParams = ["amd_pstate=passive"];
   boot.kernel.sysctl = {
     "scaling_governor" = "performance";
