@@ -7,7 +7,7 @@
   programs.steam = {
     enable = true;
     gamescopeSession = {
-      enable = false;
+      enable = true;
     };
     package = pkgs.steam.override {
       # extraEnv = {
@@ -28,6 +28,12 @@
           stdenv.cc.cc.lib
           libkrb5
           keyutils
+
+          # NOTE: use this launch option `gamescope -W 1920 -H 1080 -e -- gamemoderun mangohud %command%`
+          # switch to X11 if you really need gamescope
+          steam-run
+          mangohud
+          gamemode
         ];
     };
   };
@@ -36,14 +42,16 @@
   programs = {
     gamemode.enable = true;
     gamescope = {
-      enable = false;
-      # capSysNice = true;
+      enable = true;
+      capSysNice = true;
     };
   };
 
   # Add packages system level
   environment.systemPackages =
     (with pkgs; [
+      steam-run
+      gamescope
       wine
       heroic
       protonup-qt
