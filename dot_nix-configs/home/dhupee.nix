@@ -49,14 +49,15 @@
   home.packages =
     (with pkgs; [
       # with pkgs; [
-      arduino-cli
+      # arduino-cli
       bat
       bruno
       btop
       # google-chrome
-      dbeaver-bin
+      # dbeaver-bin
       dust
       fastfetch
+      fd
       ffmpeg
       firefox-bin
       fzf
@@ -65,14 +66,13 @@
       inkscape
       libreoffice
       ngrok
-      node-red
+      # node-red
       obs-studio
       # openscad
       pdfarranger
       pdfmm
       platformio-core
-      pulseview
-      python3
+      # pulseview
       qbittorrent
       rclone
       # rclone-ui
@@ -86,7 +86,7 @@
     ])
     ++ (with pkgs-unstable; [
       chezmoi
-      logisim-evolution
+      # logisim-evolution
       obsidian
       orca-slicer
       vesktop
