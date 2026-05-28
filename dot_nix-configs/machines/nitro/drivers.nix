@@ -1,34 +1,35 @@
 {pkgs, ...}: {
+  # ---- Kernel & Performance Tuning ----
   boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.kernelParams = ["amd_pstate=passive"];
   boot.kernel.sysctl = {
     "scaling_governor" = "performance";
-
-    "vm.dirty_background_ratio" = 3; # start flushing very early
-    "vm.dirty_ratio" = 40; # still allow large cache
-    "vm.dirty_writeback_centisecs" = 500; # flush every 5 sec
-    "vm.dirty_expire_centisecs" = 500; # expire quickly
-    "vm.swappiness" = 10; # how aggressively your system moves data out of RAM and into Swap
+    "vm.dirty_background_ratio" = 3;
+    "vm.dirty_ratio" = 40;
+    "vm.dirty_writeback_centisecs" = 500;
+    "vm.dirty_expire_centisecs" = 500;
+    "vm.swappiness" = 10;
   };
   powerManagement.cpuFreqGovernor = "performance";
 
-  # Add additional mount options
+  # Filesystem mount options
   fileSystems."/" = {
-    options = [
-      "noatime" # Do not update inode access times on this filesystem
-    ];
+    options = ["noatime"];
   };
 
-  # ZRAM
+  # ZRAM (swap in RAM)
   zramSwap = {
     enable = true;
-    memoryPercent = 20; # smaller = less CPU work
-    algorithm = "lz4"; # fastest compression
-    priority = 100; # use ZRAM before disk swap
+    memoryPercent = 20;
+    algorithm = "lz4";
+    priority = 100;
   };
 
-  # Enable graphics drivers
-  # Already has Mesa in it
+  # Load amdgpu module early in initrd
+  boot.initrd.kernelModules = ["amdgpu"];
+  services.xserver.videoDrivers = ["amdgpu"]; # For X11 (ignored on Wayland, but safe)
+
+  # Modern graphics stack (Mesa OpenGL / Vulkan)
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -36,59 +37,59 @@
     package32 = pkgs.pkgsi686Linux.mesa;
   };
 
-  # services.xserver.videoDrivers = ["nvidia"];
-  services.xserver.videoDrivers = ["amdgpu"];
+  # Vulkan: RADV is the default Mesa driver (best for most games)
+  # To switch to AMDVLK (AMD’s official driver), uncomment the next line.
+  # hardware.amdgpu.amdvlk = true;
 
-  # Enable Tux Clocker
+  # Hardware video acceleration (VA-API)
+  environment.variables = {
+    LIBVA_DRIVER_NAME = "radeonsi";
+    VDPAU_DRIVER = "radeonsi";
+  };
+
+  # ---- ROCm / OpenCL for compute (Blender, DaVinci Resolve, etc.) ----
+  nixpkgs.config.rocmSupport = true;
+  hardware.amdgpu.opencl.enable = true;
+  hardware.graphics.extraPackages = with pkgs; [
+    rocmPackages.clr.icd # OpenCL ICD for ROCm
+  ];
+
+  # Symlink ROCm libraries to standard /opt/rocm
+  systemd.tmpfiles.rules = [
+    "L+ /opt/rocm - - - - ${pkgs.rocmPackages.clr}"
+  ];
+
+  # For older AMD cards (Polaris / Vega) you might need this:
+  environment.variables.ROC_ENABLE_PRE_VEGA = "1";
+
+  # ---- Monitoring & Overclocking ----
   programs.tuxclocker = {
     enable = true;
     useUnfree = true;
-    # enabledNVIDIADevices = [ 0 1 ];
+    # enabledNVIDIADevices = [ 0 1 ];  # not needed for AMD
   };
 
-  # AMD Ryzen specific configs
+  # AMD SMU (for sensors / overdrive)
   hardware.cpu = {
     x86.msr.enable = true;
-    amd = {
-      ryzen-smu = {
-        enable = true;
-      };
-    };
+    amd.ryzen-smu.enable = true;
   };
-  programs.ryzen-monitor-ng.enable = false;
+  programs.ryzen-monitor-ng.enable = false; # use tuxclocker instead
 
-  # AMD GPU specific configs
-  hardware = {
-    amdgpu = {
-      initrd.enable = true;
-      opencl.enable = true;
-      overdrive = {
-        enable = true;
-      };
-    };
-  };
+  # AMD GPU overdrive (allows clock / voltage control)
+  hardware.amdgpu.overdrive.enable = true;
 
-  # Linux GPU Configuration And Monitoring Tool (LACT)
-  # Enable lact in systemd to make it work
-  # systemd = {
-  #   packages = with pkgs; [lact];
-  #   services.lactd.wantedBy = ["multi-user.target"];
-  # };
+  # ---- Optional: Lact (another GPU control tool) ----
+  # systemd.services.lactd.wantedBy = [ "multi-user.target" ];
+  # environment.systemPackages = [ pkgs.lact ];
 
-  # Nvidia GPU specific configs
-  # hardware.nvidia = {
-  #   modesetting.enable = true;
-  #   prime = {
-  #     offload = {
-  #       enable = true;
-  #       enableOffloadCmd = true; # Lets you use `nvidia-offload %command%` in steam
-  #     };
-  #
-  #     # run `nix shell nixpkgs#pciutils -c lspci | grep VGA`
-  #     # to find the PCI Bus IDs
-  #     intelBusId = "PCI:00:02:0";
-  #     # amdgpuBusId = "PCI:0:0:0";
-  #     nvidiaBusId = "PCI:01:00:0";
-  #   };
-  # };
+  # ---- PRIME (Dual GPU offload) ----
+  # Your Vega 8 iGPU will handle the desktop by default.
+  # To run an app on the discrete Radeon RX GPU, use `DRI_PRIME=1`:
+  #   DRI_PRIME=1 steam
+  #   DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
+  # No additional configuration is required for AMD+AMD PRIME.
+
+  # ---- (Optional) Suspend fix for some AMD laptops ----
+  # boot.kernelParams = [ "modprobe.blacklist=amdgpu" ];
 }
