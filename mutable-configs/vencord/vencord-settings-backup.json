@@ -15,7 +15,7 @@
         "winNativeTitleBar": false,
         "plugins": {
             "ChatInputButtonAPI": {
-                "enabled": false
+                "enabled": true
             },
             "CommandsAPI": {
                 "enabled": true
@@ -36,7 +36,7 @@
                 "enabled": true
             },
             "MessagePopoverAPI": {
-                "enabled": false
+                "enabled": true
             },
             "MessageUpdaterAPI": {
                 "enabled": false
@@ -182,13 +182,14 @@
                 "enabled": false
             },
             "FavoriteGifSearch": {
-                "enabled": false
+                "enabled": true
             },
             "FixCodeblockGap": {
                 "enabled": false
             },
             "FixImagesQuality": {
-                "enabled": true
+                "enabled": true,
+                "originalImagesInChat": false
             },
             "FixSpotifyEmbeds": {
                 "enabled": true
@@ -260,9 +261,6 @@
                 "enabled": false
             },
             "MessageLogger": {
-                "enabled": false
-            },
-            "MessageTags": {
                 "enabled": false
             },
             "MoreCommands": {
@@ -480,7 +478,8 @@
                 "enabled": false
             },
             "Translate": {
-                "enabled": true
+                "enabled": true,
+                "autoTranslate": false
             },
             "TypingIndicator": {
                 "enabled": false
@@ -598,6 +597,18 @@
             },
             "NoticesAPI": {
                 "enabled": true
+            },
+            "CustomCommands": {
+                "enabled": false
+            },
+            "CharacterCounter": {
+                "enabled": true
+            },
+            "MoreQuickReactions": {
+                "enabled": false
+            },
+            "ConcatenatedComponentExtractor": {
+                "enabled": true
             }
         },
         "notifications": {
@@ -610,7 +621,7 @@
             "authenticated": true,
             "url": "https://api.vencord.dev/",
             "settingsSync": true,
-            "settingsSyncVersion": 1765016728852
+            "settingsSyncVersion": 1777269582232
         },
         "eagerPatches": false,
         "uiElements": {
