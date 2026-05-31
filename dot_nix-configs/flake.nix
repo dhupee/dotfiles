@@ -10,6 +10,9 @@
     # Enables me to install flatpaks declaratively
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
 
+    # Using cachyos's kernel
+    nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+
     # Home-Manager, NixOS for your User Config
     home-manager = {
       # url = "github:nix-community/home-manager/master";
@@ -49,6 +52,7 @@
     nixpkgs,
     nixpkgs-old,
     nixpkgs-unstable,
+    nix-cachyos-kernel,
     nix-on-droid,
     home-manager,
     plasma-manager,
@@ -110,6 +114,19 @@
 
           # Nix-Flatpak, managing flatpak declaratively
           nix-flatpak.nixosModules.nix-flatpak
+          (
+            {pkgs, ...}: {
+              # Use nixpkgs from your environment, nixpkgs.config will apply.
+              nixpkgs.overlays = [
+                nix-cachyos-kernel.overlays.pinned
+              ];
+              boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
+
+              # Binary cache for Cachy kernel
+              nix.settings.substituters = ["https://attic.xuyh0120.win/lantian"];
+              nix.settings.trusted-public-keys = ["lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="];
+            }
+          )
         ];
         specialArgs = {
           inherit pkgs-unstable self inputs;
