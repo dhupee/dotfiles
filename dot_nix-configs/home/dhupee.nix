@@ -17,7 +17,7 @@
     ../modules/home-manager/neovim.nix
     ../modules/home-manager/podman.nix
     ../modules/home-manager/starship/desktop.nix
-    ../modules/home-manager/virtual-machine.nix
+    # ../modules/home-manager/virtual-machine.nix
     # ../modules/home-manager/vscode.nix
     ../modules/home-manager/yazi.nix
     ../modules/home-manager/tmux.nix
