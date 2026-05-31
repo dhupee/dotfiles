@@ -1,7 +1,10 @@
 {pkgs, ...}: {
   # ---- Kernel & Performance Tuning ----
-  boot.kernelPackages = pkgs.linuxPackages_zen;
-  boot.kernelParams = ["amd_pstate=passive"];
+  # boot.kernelPackages = pkgs.linuxPackages_zen;
+  # NOTE: Kernel packages of choice move to flake for now
+  boot.kernelParams = [
+    "amd_pstate=passive"
+  ];
   boot.kernel.sysctl = {
     "scaling_governor" = "performance";
     "vm.dirty_background_ratio" = 3;
@@ -14,7 +17,11 @@
 
   # Filesystem mount options
   fileSystems."/" = {
-    options = ["noatime"];
+    options = [
+      "noatime"
+      "discard"
+      "commit=60"
+    ];
   };
 
   # ZRAM (swap in RAM)
@@ -27,7 +34,7 @@
 
   # Load amdgpu module early in initrd
   boot.initrd.kernelModules = ["amdgpu"];
-  services.xserver.videoDrivers = ["amdgpu"]; # For X11 (ignored on Wayland, but safe)
+  services.xserver.videoDrivers = ["amdgpu"];
 
   # Modern graphics stack (Mesa OpenGL / Vulkan)
   hardware.graphics = {
