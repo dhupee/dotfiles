@@ -21,7 +21,7 @@
     ../../modules/systems/flatpak.nix
     ../../modules/systems/localsend.nix
     ../../modules/systems/podman.nix
-    ../../modules/systems/virtual-machine.nix
+    # ../../modules/systems/virtual-machine.nix
 
     # Fonts
     ../../modules/systems/fonts.nix
