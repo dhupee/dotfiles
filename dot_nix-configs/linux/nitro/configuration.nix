@@ -45,6 +45,28 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
+  # nix store optimization
+  nix = {
+    # Garbage Collection
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      # Options passed to nix-collect-garbage
+      options = "--delete-older-than 7d";
+    };
+
+    # Optimization Settings
+    optimise = {
+      automatic = true; # Enable automatic optimization
+      dates = ["04:00"];
+    };
+
+    # Optional: For even more aggressive space saving, you can enable
+    # auto-optimise-store. This optimizes new files *as they are added*.
+    # WARNING: This can slow down builds significantly on some systems.
+    # settings.auto-optimise-store = true;
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
