@@ -58,6 +58,7 @@
       ../modules/home-manager/gh.nix
       # ../modules/home-manager/helix.nix
       ../modules/home-manager/micro.nix
+      # ../modules/home-manager/opencode.nix
       ../modules/home-manager/starship/droid.nix
       ../modules/home-manager/yazi.nix
       ../modules/home-manager/zoxide/droid.nix
