@@ -15,6 +15,7 @@
     ../modules/home-manager/ghostty.nix
     ../modules/home-manager/kicad.nix
     ../modules/home-manager/neovim.nix
+    ../modules/home-manager/opencode.nix
     ../modules/home-manager/podman.nix
     ../modules/home-manager/starship/desktop.nix
     # ../modules/home-manager/virtual-machine.nix
