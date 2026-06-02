@@ -3,6 +3,10 @@
   pkgs-unstable,
   ...
 }: {
+  environment.sessionVariables = rec {
+    OSU_SDL3 = "0";
+  };
+
   # Steam
   programs.steam = {
     enable = true;
@@ -15,13 +19,13 @@
       #   OBS_VKCAPTURE = true;
       #   RADV_TEX_ANISO = 16;
       # };
-      extraLibraries = pkgs: [pkgs.xorg.libxcb];
+      extraLibraries = pkgs: [pkgs.libxcb];
       extraPkgs = pkgs:
         with pkgs; [
-          xorg.libXcursor
-          xorg.libXi
-          xorg.libXinerama
-          xorg.libXScrnSaver
+          libxcursor
+          libxi
+          libxinerama
+          libxscrnsaver
           libpng
           libpulseaudio
           libvorbis
@@ -68,6 +72,6 @@
       # lact
     ])
     ++ (with pkgs-unstable; [
-      osu-lazer-bin
+      osu-lazer
     ]);
 }

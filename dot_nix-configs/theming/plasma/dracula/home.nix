@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   services = {
@@ -132,6 +133,7 @@
 
   # some app still need gtk theming, for now uses breeze for now
   gtk = {
+    gtk4.theme = config.gtk.theme;
     enable = true;
     theme = {
       name = "Breeze"; # Change to match your KDE theme
