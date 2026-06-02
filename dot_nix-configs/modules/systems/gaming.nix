@@ -3,7 +3,7 @@
   pkgs-unstable,
   ...
 }: {
-  environment.sessionVariables = rec {
+  environment.sessionVariables = {
     OSU_SDL3 = "0";
   };
 
