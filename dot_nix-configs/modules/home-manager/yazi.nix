@@ -1,6 +1,7 @@
 {pkgs, ...}: {
   programs.yazi = {
     enable = true;
+    shellWrapperName = "y";
     package = pkgs.yazi;
     enableZshIntegration = true;
     enableBashIntegration = true;

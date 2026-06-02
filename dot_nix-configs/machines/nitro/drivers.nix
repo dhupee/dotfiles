@@ -71,8 +71,8 @@
 
   # ---- Monitoring & Overclocking ----
   programs.tuxclocker = {
-    enable = true;
-    useUnfree = true;
+    enable = false;
+    useUnfree = false;
     # enabledNVIDIADevices = [ 0 1 ];  # not needed for AMD
   };
 
