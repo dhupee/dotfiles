@@ -56,7 +56,6 @@
     (with pkgs; [
       steam-run
       gamescope
-      wine
       heroic
       protonup-qt
       (retroarch.withCores (cores:
