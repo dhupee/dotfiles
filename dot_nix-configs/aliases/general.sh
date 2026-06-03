@@ -7,15 +7,11 @@ alias c="clear"
 # # Helix
 # alias hx="helix"
 hxf() {
-    hx $(fzf)
+  hx $(fzf)
 }
 
 # yazi
 alias y="yazi"
-
-# # Qemu/KVM
-# alias vm-start="systemctl start libvirtd"
-# alias vm-stop="systemctl stop libvirtd"
 
 alias check-local-ip="ip a | grep 'inet ' | grep -v '127.0.0.1'"
 
@@ -29,7 +25,7 @@ alias lla="ls -la --color='auto'"
 alias v="vim"
 alias nv="nvim"
 nvf() {
-    nvim $(fzf)
+  nvim $(fzf)
 }
 
 # Dotfile save
@@ -57,19 +53,11 @@ alias bottles-backup="bash $HOME/.scripts/bash/bottles-backup.sh"
 alias fan-speed-full="sudo nbfc set --speed=100"
 alias fan-speed-auto="sudo nbfc set --auto"
 
-# Delete X number of latest shell history
-function delete_latest_history() {
-    # Default count is 1
-    local count=${1:-1}
-    echo "Deleting last $count shell history entries"
-    fc -p -1 | tail -n $count | awk "{print $1}" | xargs -I {} fc -d {}
-}
-
 # Quick URL shortener
 shorten_url() {
-    if [ -z "$1" ]; then
-        echo "Usage: shorten_url <url>"
-        return 1
-    fi
-    curl -s "https://tinyurl.com/api-create.php?url=$1"
+  if [ -z "$1" ]; then
+    echo "Usage: shorten_url <url>"
+    return 1
+  fi
+  curl -s "https://tinyurl.com/api-create.php?url=$1"
 }
