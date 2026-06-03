@@ -10,7 +10,7 @@ return {
       fvm = true,
       lsp = {
         color = {
-          enabled = true,
+          enabled = false,
         },
       },
     })
