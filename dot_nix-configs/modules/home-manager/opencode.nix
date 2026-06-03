@@ -9,6 +9,9 @@
     package = pkgs.opencode;
     enableMcpIntegration = true;
     settings = {
+      plugin = [
+        "caveman-opencode-plugin"
+      ];
       permission = {
         websearch = "allow";
         "context7_*" = "allow";
@@ -46,6 +49,12 @@
   home.activation = {
     linkOpencodeAuth = lib.hm.dag.entryAfter ["writeBoundary"] ''
       ln -sf $HOME/.secrets/opencode/auth.json $HOME/.local/share/opencode/auth.json
+    '';
+  };
+
+  home.activation = {
+    linkCaveman = lib.hm.dag.entryAfter ["writeBoundary"] ''
+      ln -sf $HOME/.secrets/opencode/caveman.json $HOME/.config/opencode/caveman.json
     '';
   };
 }
