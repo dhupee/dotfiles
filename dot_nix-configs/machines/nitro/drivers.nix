@@ -3,33 +3,43 @@
   # boot.kernelPackages = pkgs.linuxPackages_zen;
   # NOTE: Kernel packages of choice move to flake for now
   boot.kernelParams = [
-    "amd_pstate=passive"
+    "amd_pstate=passive" # AMD CPU freq. scaling driver (passive mode)
+    "pcie_aspm=off" # Disable PCIe ASPM (reduces NVMe latency)
+    "nvme_core.default_ps_max_latency_us=0" # Disable NVMe low-power states
   ];
   boot.kernel.sysctl = {
-    "scaling_governor" = "performance";
-    "vm.dirty_background_ratio" = 3;
-    "vm.dirty_ratio" = 40;
-    "vm.dirty_writeback_centisecs" = 500;
-    "vm.dirty_expire_centisecs" = 500;
-    "vm.swappiness" = 10;
+    "scaling_governor" = "performance"; # Force CPU to stay at high freq
+    "vm.dirty_background_ratio" = 3; # Start background writeback early
+    "vm.dirty_ratio" = 40; # Max dirty pages before blocking writes
+    "vm.dirty_writeback_centisecs" = 500; # Flush dirty pages every 5 secs
+    "vm.dirty_expire_centisecs" = 500; # Dirty pages expire after 5 secs
+    "vm.swappiness" = 10; # Avoid swapping to disk
   };
   powerManagement.cpuFreqGovernor = "performance";
+
+  # Forces the NVMe device to use BFQ
+  services.udev.extraRules = ''
+    ACTION=="add|change", KERNEL=="nvme[0-9]*n[0-9]*", ATTR{queue/scheduler}="bfq"
+  '';
 
   # Filesystem mount options
   fileSystems."/" = {
     options = [
-      "noatime"
-      "discard"
-      "commit=60"
+      "noatime" # Don't update access time on reads
+      "discard" # Real-time TRIM for SSD blocks
+      "commit=60" # Sync FS journal every 60 secs
     ];
   };
+
+  # Enable FSTrim (periodic TRIM for SSD)
+  services.fstrim.enable = true;
 
   # ZRAM (swap in RAM)
   zramSwap = {
     enable = true;
-    memoryPercent = 20;
-    algorithm = "lz4";
-    priority = 100;
+    memoryPercent = 20; # Use 20% of RAM for compressed swap
+    algorithm = "lz4"; # Fast compression algorithm
+    priority = 100; # High priority, use ZRAM first
   };
 
   # Load amdgpu module early in initrd
@@ -71,15 +81,15 @@
 
   # ---- Monitoring & Overclocking ----
   programs.tuxclocker = {
-    enable = false;
+    enable = false; # Disabled, but available
     useUnfree = false;
     # enabledNVIDIADevices = [ 0 1 ];  # not needed for AMD
   };
 
   # AMD SMU (for sensors / overdrive)
   hardware.cpu = {
-    x86.msr.enable = true;
-    amd.ryzen-smu.enable = true;
+    x86.msr.enable = true; # Enable MSR (for monitoring)
+    amd.ryzen-smu.enable = true; # Enable Ryzen SMU (sensors)
   };
   programs.ryzen-monitor-ng.enable = false; # use tuxclocker instead
 
