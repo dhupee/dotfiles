@@ -3,32 +3,20 @@ CompatData: ''
 Creation_Date: '2026-05-23 14:49:38.123268'
 Custom_Path: false
 DLL_Overrides: {}
-DXVK: dxvk-2.7.1-16-2097f56
+DXVK: dxvk-2.7.1-17-8ee652a
 Environment: Gaming
 Environment_Variables: {}
 External_Programs:
-    26e62514-22b4-44d8-b682-5b8757682d24:
-        arguments: null
-        dxvk: null
-        dxvk_nvapi: null
-        executable: gta_sa.exe
+    249fda7c-5e7b-4026-8a44-8d19e1a325db:
+        arguments: ''
+        auto_discovered: true
+        executable: Insaniquarium.exe
         folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
-            Files (x86)/GTA San Andreas
-        gamescope: null
+            Files (x86)/GameHouse Games Collection/Insaniquarium Deluxe
         icon: com.usebottles.bottles-program
-        id: 26e62514-22b4-44d8-b682-5b8757682d24
-        name: GTA San Andreas - Single Player
-        path: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
-            Files (x86)/GTA San Andreas/gta_sa.exe
-        post_script: null
-        post_script_args: null
-        pre_script: null
-        pre_script_args: null
-        pulseaudio_latency: null
-        removed: null
-        virtual_desktop: null
-        vkd3d: null
-        winebridge: null
+        id: 249fda7c-5e7b-4026-8a44-8d19e1a325db
+        name: Insaniquarium
+        path: C:\Program Files (x86)\GameHouse Games Collection\Insaniquarium Deluxe\Insaniquarium.exe
     2dd26c3b-7a99-4dcb-9889-490ed090ba90:
         arguments: ''
         dxvk: null
@@ -50,14 +38,71 @@ External_Programs:
         virtual_desktop: true
         vkd3d: null
         winebridge: null
+    377d9742-2949-4f76-a3a2-a9f5f813b0f9:
+        arguments: ''
+        arguments_enabled: true
+        dxvk: false
+        dxvk_nvapi: null
+        executable: gta_sa.exe
+        folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/MagiPacks/Grand
+            Theft Auto - San Andreas
+        gamescope: null
+        icon: com.usebottles.bottles-program
+        id: 377d9742-2949-4f76-a3a2-a9f5f813b0f9
+        name: gta_sa
+        path: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/MagiPacks/Grand
+            Theft Auto - San Andreas/gta_sa.exe
+        post_script: null
+        post_script_args: null
+        pre_script: null
+        pre_script_args: null
+        pulseaudio_latency: null
+        removed: null
+        virtual_desktop: null
+        vkd3d: true
+        winebridge: null
+    5d5f59b1-0ca5-4a2c-9fce-b6228a0aca0a:
+        arguments: ''
+        auto_discovered: true
+        executable: FeedingFrenzy.exe
+        folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
+            Files (x86)/GameHouse Games Collection/Feeding Frenzy
+        icon: com.usebottles.bottles-program
+        id: 5d5f59b1-0ca5-4a2c-9fce-b6228a0aca0a
+        name: FeedingFrenzy
+        path: C:\Program Files (x86)\GameHouse Games Collection\Feeding Frenzy\FeedingFrenzy.exe
+    ac35cf96-a5d9-4a5c-a59b-6edd68f57822:
+        arguments: ''
+        auto_discovered: true
+        executable: Zuma.exe
+        folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
+            Files (x86)/GameHouse Games Collection/Zuma Deluxe
+        icon: com.usebottles.bottles-program
+        id: ac35cf96-a5d9-4a5c-a59b-6edd68f57822
+        name: Zuma
+        path: C:\Program Files (x86)\GameHouse Games Collection\Zuma Deluxe\Zuma.exe
     c5ac445b-188d-433e-af4a-530c11bc3266:
+        arguments: null
+        dxvk: null
+        dxvk_nvapi: null
         executable: PPJ2DD.EXE
         folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
             Files (x86)/VirtuaCop2
+        gamescope: null
+        icon: com.usebottles.bottles-program
         id: c5ac445b-188d-433e-af4a-530c11bc3266
         name: VirtuaCop2
         path: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
             Files (x86)/VirtuaCop2/PPJ2DD.EXE
+        post_script: null
+        post_script_args: null
+        pre_script: null
+        pre_script_args: null
+        pulseaudio_latency: null
+        removed: null
+        virtual_desktop: null
+        vkd3d: null
+        winebridge: null
 Inherited_Environment_Variables:
 - DBUS_SESSION_BUS_ADDRESS
 - DISPLAY
@@ -119,7 +164,7 @@ Parameters:
     pulseaudio_latency: false
     renderer: gl
     sandbox: false
-    sync: wine
+    sync: esync
     take_focus: false
     use_be_runtime: true
     use_eac_runtime: true
@@ -145,7 +190,7 @@ Sandbox:
     share_sound: false
 State: 0
 Uninstallers: {}
-Update_Date: '2026-05-24 20:51:14.043692'
+Update_Date: '2026-06-04 11:07:55.625377'
 VKD3D: vkd3d-proton-3.0.1
 Versioning: false
 Versioning_Exclusion_Patterns: []
