@@ -41,12 +41,9 @@
   # Don't change this unless you know what you're doing!
   system.stateVersion = "24.05";
 
-  # Enable experimental features.
-  nix.settings.experimental-features = ["nix-command" "flakes"];
-  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-
   # nix store optimization
   nix = {
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     # Garbage Collection
     gc = {
       automatic = true;
@@ -54,17 +51,16 @@
       # Options passed to nix-collect-garbage
       options = "--delete-older-than 7d";
     };
-
     # Optimization Settings
     optimise = {
       automatic = true; # Enable automatic optimization
       dates = ["04:00"];
     };
 
-    # Optional: For even more aggressive space saving, you can enable
-    # auto-optimise-store. This optimizes new files *as they are added*.
-    # WARNING: This can slow down builds significantly on some systems.
-    # settings.auto-optimise-store = true;
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = ["nix-command" "flakes"];
+    };
   };
 
   # Bootloader.
