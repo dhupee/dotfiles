@@ -21,8 +21,6 @@
     gnugrep
     man
     nano
-    netcat
-    rustscan
     tectonic
     tldr
     tmate
