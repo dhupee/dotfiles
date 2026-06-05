@@ -44,13 +44,15 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
   # Home Manager GC settings
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 7d";
+  nix = {
+    nixPath = ["nixpkgs=${inputs.nixpkgs}"];
+    gc = {
+      automatic = true;
+      dates = "weekly";
+      options = "--delete-older-than 7d";
+    };
   };
 
   # Packages
