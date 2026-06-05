@@ -23,8 +23,14 @@
     # Using Nix on Android
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
+      inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+      inputs.home-manager = {
+        url = "github:nix-community/home-manager/release-25.11";
+        inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+      };
+
+      # inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.home-manager.follows = "home-manager";
     };
 
     # NixOS on Windows Subsystem for Linux
@@ -80,7 +86,7 @@
     nixOnDroidConfigurations = {
       default = nix-on-droid.lib.nixOnDroidConfiguration {
         # Only this config uses ARM64
-        pkgs = import nixpkgs {
+        pkgs = import nixpkgs-old {
           system = "aarch64-linux";
           config.allowUnfree = true;
         };
