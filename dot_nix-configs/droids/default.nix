@@ -45,6 +45,7 @@
 
   # Home-manager specific configuration
   # NOTE: LSP wont help you in this for now
+  home-manager.backupFileExtension = "bak";
   home-manager.config = {
     # Don't change this willy nilly
     home.stateVersion = "24.05";
