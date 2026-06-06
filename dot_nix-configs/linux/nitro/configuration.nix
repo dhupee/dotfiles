@@ -56,11 +56,14 @@
       automatic = true; # Enable automatic optimization
       dates = ["04:00"];
     };
-
     settings = {
       auto-optimise-store = true;
       experimental-features = ["nix-command" "flakes"];
     };
+    extraOptions = ''
+      keep-outputs = true
+      keep-derivations = true
+    '';
   };
 
   # Bootloader.
