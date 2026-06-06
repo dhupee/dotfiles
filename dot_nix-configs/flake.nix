@@ -139,6 +139,17 @@
         };
       };
 
+      # Bare OCI image configuration
+      oci-bare = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./image/oci/bare/configuration.nix
+        ];
+        specialArgs = {
+          inherit pkgs-unstable inputs;
+        };
+      };
+
       # WSL, hardware agnostic
       wsl-work = lib.nixosSystem {
         inherit system;
@@ -158,7 +169,7 @@
       iso-bare = lib.nixosSystem {
         inherit system;
         modules = [
-          ./iso/bare-x86/configuration.nix
+          ./image/iso/bare-x86/configuration.nix
         ];
         specialArgs = {
           inherit inputs;

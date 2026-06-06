@@ -10,7 +10,7 @@
     # tooling
     ../modules/home-manager/neovim.nix
     ../modules/home-manager/git.nix
-    ../modules/home-manager/gh.nix
+    # ../modules/home-manager/gh.nix
     ../modules/home-manager/starship/desktop.nix
     ../modules/home-manager/tmux.nix
     ../modules/home-manager/yazi.nix
@@ -26,14 +26,15 @@
   home.packages = with pkgs; [
     bat
     chezmoi
+    cmatrix
     dust
     fzf
     go-task
     htop
-    platformio-core
     tectonic
     tldr
     tree
+    vim
   ];
 
   # Let Home Manager install and manage itself.
