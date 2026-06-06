@@ -20,11 +20,13 @@
     fzf
     gnugrep
     man
-    nano
+    # nano
+    rclone
     tectonic
     tldr
-    tmate
+    # tmate
     tree
+    udocker
     wget
     yt-dlp
     zoxide
@@ -68,6 +70,12 @@
     # ".screenrc".source = dotfiles/screenrc;
     # ".tmate.conf".source = ../config/tmate.conf
     # };
+
+    home.activation = {
+      linkRcloneConf = lib.hm.dag.entryAfter ["writeBoundary"] ''
+        ln -sf $HOME/.secrets/rclone/ $HOME/.config/
+      '';
+    };
   };
 
   # I need pkgs-unstable
