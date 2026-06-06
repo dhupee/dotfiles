@@ -234,5 +234,53 @@
         };
       };
     };
+
+    #======================= DOCKER IMAGES ===========================#
+
+    packages.${system} = {
+      docker-min = pkgs.dockerTools.buildImage {
+        name = "docker-min";
+        tag = "latest";
+        copyToRoot = pkgs.buildEnv {
+          name = "root";
+          paths = with pkgs; [
+            bashInteractive
+            coreutils
+            curl
+            git
+            vim
+          ];
+          pathsToLink = ["/bin"];
+        };
+        config = {
+          # exact same config to dockerfile
+          # capital, not uppercase
+          Cmd = ["/bin/bash"];
+          Env = ["PATH=/bin"];
+        };
+      };
+
+      docker-layered = pkgs.dockerTools.buildLayeredImage {
+        name = "docker-layered";
+        tag = "latest";
+        contents = with pkgs; [
+          bashInteractive
+          coreutils
+          curl
+          git
+          vim
+        ];
+
+        # Optional: maximum number of layers (default 32, max 128)
+        maxLayers = 20;
+
+        config = {
+          Cmd = ["${pkgs.bashInteractive}/bin/bash"];
+          Env = ["PATH=/bin"];
+        };
+
+        # NOT available: runAsRoot, fromImage, fakeRootCommands, etc.
+      };
+    };
   };
 }
