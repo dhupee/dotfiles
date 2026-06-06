@@ -5,6 +5,7 @@
     # Always keeps one channel older
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
     nixpkgs-old.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-droid.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     # Enables me to install flatpaks declaratively
@@ -23,12 +24,17 @@
     # Using Nix on Android
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
-      inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+      inputs.nixpkgs.follows = "nixpkgs-droid";
       inputs.home-manager = {
         url = "github:nix-community/home-manager/release-25.11";
-        inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+        inputs.nixpkgs.follows = "nixpkgs-droid";
       };
 
+      # inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+      # inputs.home-manager = {
+      #   url = "github:nix-community/home-manager/release-25.11";
+      #   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+      # };
       # inputs.nixpkgs.follows = "nixpkgs";
       # inputs.home-manager.follows = "home-manager";
     };
@@ -57,6 +63,7 @@
     self,
     nixpkgs,
     nixpkgs-old,
+    nixpkgs-droid,
     nixpkgs-unstable,
     nix-cachyos-kernel,
     nix-on-droid,
@@ -84,29 +91,43 @@
   in {
     #===================NIX-ON-DROID CONFIGURATIONS==================================
     nixOnDroidConfigurations = {
-      default = nix-on-droid.lib.nixOnDroidConfiguration {
+      default = let
         # Only this config uses ARM64
-        pkgs = import nixpkgs-old {
+        pkgs-droid = import nixpkgs-droid {
           system = "aarch64-linux";
           config.allowUnfree = true;
         };
 
-        modules = [
-          ./droids/default.nix
+        # Create the dummy derivation that references the input sources
+        keepSource-droid = pkgs-droid.runCommand "keep-nixpkgs-droid-source" {} ''
+          mkdir -p $out
+          echo ${inputs.nixpkgs-droid} > $out/droid-source-path
+        '';
 
-          # Enable unstable packages to Droids
-          # Similar effect to adding .nix configuration file to modules
-          # Ignore the LSP Warning, it's used....used!!
-          (
-            {config, ...}: {
-              config._module.args.pkgs-unstable = import nixpkgs-unstable {
-                system = "aarch64-linux";
-                config.allowUnfree = true;
-              };
+        keepSource-unstable = pkgs-droid.runCommand "keep-nixpkgs-unstable-source" {} ''
+          mkdir -p $out
+          echo ${inputs.nixpkgs-unstable} > $out/unstable-source-path
+        '';
+      in
+        nix-on-droid.lib.nixOnDroidConfiguration {
+          pkgs = pkgs-droid;
+          modules = [
+            ./droids/default.nix
+            {
+              environment.packages = [keepSource-droid keepSource-unstable];
             }
-          )
-        ];
-      };
+
+            # Enable unstable packages to Droids
+            (
+              {config, ...}: {
+                config._module.args.pkgs-unstable = import nixpkgs-unstable {
+                  system = "aarch64-linux";
+                  config.allowUnfree = true;
+                };
+              }
+            )
+          ];
+        };
     };
 
     #============================NIXOS CONFIGURATIONS==================================
@@ -245,6 +266,7 @@
           name = "root";
           paths = with pkgs; [
             bashInteractive
+            cmatrix
             coreutils
             curl
             git

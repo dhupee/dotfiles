@@ -70,17 +70,18 @@
     # ".screenrc".source = dotfiles/screenrc;
     # ".tmate.conf".source = ../config/tmate.conf
     # };
-
-    home.activation = {
-      linkRcloneConf = lib.hm.dag.entryAfter ["writeBoundary"] ''
-        ln -sf $HOME/.secrets/rclone/ $HOME/.config/
-      '';
-    };
   };
 
   # I need pkgs-unstable
   home-manager.extraSpecialArgs = {
     inherit pkgs-unstable;
+  };
+
+  # Link Rclone config
+  build.activationAfter = {
+    linkRcloneConf = ''
+      ln -sf $HOME/.secrets/rclone/ $HOME/.config/
+    '';
   };
 
   # Backup etc files instead of failing to activate generation if a file already exists in /etc
@@ -131,5 +132,7 @@
   # Set up nix for flakes and nix-command
   nix.extraOptions = ''
     experimental-features = nix-command flakes
+    keep-outputs = true
+    keep-derivations = true
   '';
 }
