@@ -19,4 +19,10 @@
       defaultNetwork.settings.dns_enabled = true; # Required for containers under podman-compose to be able to talk to each other.
     };
   };
+
+  # Enable execution of ARM64 binaries via QEMU emulation
+  boot.binfmt = {
+    emulatedSystems = ["aarch64-linux"];
+    preferStaticEmulators = true;
+  };
 }
