@@ -11,6 +11,7 @@
     # User-facing stuff that you really really want to have
     # Make sure its CLI only
     # Check the modules to prevent duplicate installs
+    apptainer
     bat
     busybox
     chezmoi
@@ -19,6 +20,7 @@
     fastfetch
     fzf
     gnugrep
+    gnutar
     man
     # nano
     rclone
@@ -42,7 +44,9 @@
 
   # Default values
   environment.sessionVariables = {
+    PATH = "${pkgs.gnutar}/bin:$PATH";
     EDITOR = "micro";
+    UDOCKER_DEFAULT_EXECUTION_MODE = "S1";
   };
 
   # Home-manager specific configuration
