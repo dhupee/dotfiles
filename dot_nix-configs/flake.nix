@@ -70,6 +70,7 @@
     nixos-wsl,
     nix-flatpak,
   } @ inputs: let
+    # SYSTEM VARIABLES
     system = "x86_64-linux"; # default systems for most of the machines
 
     # Stable fixed-release packages, kinda like Ubuntu
@@ -84,8 +85,17 @@
       config.allowUnfree = true;
     };
 
+    # One generation older stable packages
     pkgs-older = import nixpkgs-older {
       system = system;
+      config.allowUnfree = true;
+    };
+
+    # CONTAINER VARIABLES
+    system-docker = "x86_64-linux";
+
+    pkgs-docker = import nixpkgs {
+      system = system-docker;
       config.allowUnfree = true;
     };
 
@@ -260,13 +270,13 @@
 
     #======================= DOCKER IMAGES ===========================#
 
-    packages.${system} = {
-      docker-min = pkgs.dockerTools.buildImage {
+    packages.${system-docker} = {
+      docker-min = pkgs-docker.dockerTools.buildImage {
         name = "docker-min";
         tag = "latest";
-        copyToRoot = pkgs.buildEnv {
+        copyToRoot = pkgs-docker.buildEnv {
           name = "root";
-          paths = with pkgs; [
+          paths = with pkgs-docker; [
             bashInteractive
             cmatrix
             coreutils
@@ -284,10 +294,10 @@
         };
       };
 
-      docker-layered = pkgs.dockerTools.buildLayeredImage {
+      docker-layered = pkgs-docker.dockerTools.buildLayeredImage {
         name = "docker-layered";
         tag = "latest";
-        contents = with pkgs; [
+        contents = with pkgs-docker; [
           bashInteractive
           coreutils
           curl
@@ -299,7 +309,7 @@
         maxLayers = 20;
 
         config = {
-          Cmd = ["${pkgs.bashInteractive}/bin/bash"];
+          Cmd = ["${pkgs-docker.bashInteractive}/bin/bash"];
           Env = ["PATH=/bin"];
         };
 
