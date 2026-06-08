@@ -4,7 +4,7 @@
   inputs = {
     # Always keeps one channel older
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
-    nixpkgs-old.url = "github:NixOS/nixpkgs/nixos-25.11";
+    nixpkgs-older.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-droid.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
@@ -25,18 +25,15 @@
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
       inputs.nixpkgs.follows = "nixpkgs-droid";
+      # inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+
       inputs.home-manager = {
         url = "github:nix-community/home-manager/release-25.11";
-        inputs.nixpkgs.follows = "nixpkgs-droid";
-      };
+        # follows = "home-manager";
 
-      # inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-      # inputs.home-manager = {
-      #   url = "github:nix-community/home-manager/release-25.11";
-      #   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-      # };
-      # inputs.nixpkgs.follows = "nixpkgs";
-      # inputs.home-manager.follows = "home-manager";
+        inputs.nixpkgs.follows = "nixpkgs-droid";
+        #   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+      };
     };
 
     # NixOS on Windows Subsystem for Linux
@@ -62,7 +59,7 @@
   outputs = {
     self,
     nixpkgs,
-    nixpkgs-old,
+    nixpkgs-older,
     nixpkgs-droid,
     nixpkgs-unstable,
     nix-cachyos-kernel,
@@ -83,6 +80,11 @@
 
     # Unstable packages, Arch like
     pkgs-unstable = import nixpkgs-unstable {
+      system = system;
+      config.allowUnfree = true;
+    };
+
+    pkgs-older = import nixpkgs-older {
       system = system;
       config.allowUnfree = true;
     };
