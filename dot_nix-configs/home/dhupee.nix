@@ -90,6 +90,7 @@
       tectonic-unwrapped
       tldr
       tree
+      tty-share
       vlc
       zoom-us
       zoxide

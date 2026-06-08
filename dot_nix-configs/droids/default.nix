@@ -22,12 +22,11 @@
     gnugrep
     gnutar
     man
-    # nano
     rclone
     tectonic
     tldr
-    # tmate
     tree
+    tty-share
     udocker
     wget
     yt-dlp
