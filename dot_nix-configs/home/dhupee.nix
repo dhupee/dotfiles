@@ -85,7 +85,7 @@
       # pulseview
       qbittorrent
       rclone
-      # rclone-ui
+      rclone-browser
       speedtest-cli
       tectonic-unwrapped
       tldr
