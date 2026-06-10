@@ -19,6 +19,13 @@
         distrobox-tui
       ]);
 
+    # for easy login
+    activation = {
+      linkDockerSecrets = lib.hm.dag.entryAfter ["writeBoundary"] ''
+        ln -sf $HOME/.secrets/docker/config.json $HOME/.docker/config.json
+      '';
+    };
+
     # For Lazydocker to work with podman
     sessionVariables = {
       DOCKER_HOST = "unix://$XDG_RUNTIME_DIR/podman/podman.sock";
