@@ -25,6 +25,9 @@
     ../modules/home-manager/zoxide/nitro.nix
     ../modules/home-manager/zsh.nix
 
+    # documentation
+    ../modules/home-manager/docs.nix
+
     # spotify & spicetify
     ../modules/home-manager/spicetify.nix
 
