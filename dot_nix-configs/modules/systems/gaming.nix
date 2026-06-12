@@ -3,6 +3,7 @@
   pkgs-unstable,
   ...
 }: {
+  # For Osu!
   environment.sessionVariables = {
     OSU_SDL3 = "0";
   };
@@ -71,6 +72,11 @@
       # lact
     ])
     ++ (with pkgs-unstable; [
-      osu-lazer
+      /*
+      Osu! need to be placed in unstable for frequent update
+
+      if the bin has issue, switch to non bin variant but some feature like score submission wont be available
+      */
+      osu-lazer-bin
     ]);
 }
