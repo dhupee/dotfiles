@@ -4,7 +4,10 @@
   lib,
   ...
 }: {
-  services.podman.enable = true;
+  services.podman = {
+    enable = true;
+    package = pkgs.podman;
+  };
 
   # supporting tools
   home = {
