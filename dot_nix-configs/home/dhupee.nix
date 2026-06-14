@@ -112,6 +112,10 @@
   home.file = {
     # ".config/containers".source = ../config/containers;
     ".config/MangoHud".source = ../config/MangoHud;
+    ".config/fastfetch/config.jsonc" = {
+      source = ../config/fastfetch/aayush/config.jsonc;
+      force = true;
+    };
   };
 
   # some config I have isn't read-only, so this thing is needed
