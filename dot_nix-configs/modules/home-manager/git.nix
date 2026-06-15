@@ -10,6 +10,10 @@
           email = "narutohaj00@gmail.com";
           name = "Daffa Haj Tsaqif";
         };
+        extraConfig = {
+          pull.rebase = true;
+          rebase.autoStash = true;
+        };
       };
       lfs = {
         enable = true;
