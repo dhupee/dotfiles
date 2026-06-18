@@ -72,7 +72,6 @@
       fastfetch
       fd
       ffmpeg
-      firefox-bin
       fzf
       go-task
       gparted
@@ -100,6 +99,7 @@
     ])
     ++ (with pkgs-unstable; [
       chezmoi
+      firefox-bin
       # logisim-evolution
       obsidian
       orca-slicer
