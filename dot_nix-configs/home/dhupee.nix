@@ -69,6 +69,7 @@
       # google-chrome
       # dbeaver-bin
       dust
+      emote
       fastfetch
       fd
       ffmpeg
