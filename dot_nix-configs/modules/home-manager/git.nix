@@ -1,6 +1,12 @@
 {pkgs, ...}: {
   # the issue starts to get annoying
   # so use traditional .gitconfig instead
+
+  # Extra packages
+  home.packages = with pkgs; [
+    git-filter-repo
+  ];
+
   programs = {
     # Git cli
     git = {
