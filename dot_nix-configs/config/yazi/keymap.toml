@@ -58,6 +58,9 @@ keymap = [
 	# Spotting
 	{ on = "<Tab>", run = "spot", desc = "Spot hovered file" },
 
+  # Lazygit
+  { on = [ "g", "l" ], run = "shell lazygit --block", desc = "Open lazygit in current directory" },
+
 	# Operation
 	{ on = "o",         run = "open",                        desc = "Open selected files" },
 	{ on = "O",         run = "open --interactive",          desc = "Open selected files interactively" },
