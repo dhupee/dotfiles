@@ -100,7 +100,9 @@ if you want to use other profiles then go on, check [the flake.nix](./dot_nix-co
 
 for this it's simple, just add my age key file to the home, then just `chezmoi init dhupee` then `chezmoi apply`.
 
-then, you just install whatever software that you need, I prefer using `Scoop` or `Winget` if the packages need system integration.
+then, you just install whatever software that you need, I prefer using `Scoop` for most of the packages or `Winget` if the packages need system integration.
+
+Dotifles configs in for windows still simplistic compare to WSL/Linux, but it should be enough for now.
 
 ## Tools I use in this dotfiles
 
@@ -121,9 +123,11 @@ then, you just install whatever software that you need, I prefer using `Scoop` o
 - [Partitioning NixOS with Disko](https://jefftp.com/nixos-disko/)
 - [Nix Shorts, A collection of short notes about Nix, down to what is immediately needed for users.](https://github.com/justinwoo/nix-shorts)
   - [Your First Derivation](https://github.com/justinwoo/nix-shorts/blob/master/posts/your-first-derivation.md)
+- [Nix.Dev](https://nix.dev)
 - [Installing a Custom NixOS Image on a Raspberry Pi](https://blog.janissary.xyz/posts/nixos-install-custom-image)
 - [Python and NixOS: A match made in hell](https://crescentro.se/posts/python-nixos/#solution-cheat-on-nixos)
-- [Nixpkgs Overlays](https://nixos.wiki/wiki/Overlays)
+- [Nixpkgs Overlays](https://wiki.nixos.org/wiki/Overlays)
+- [Librephoenix's NixOS Config Guide for Nerds and Other Cool People Youtube Playlist](https://www.youtube.com/watch?v=6WLaNIlDW0M&list=PL_WcXIXdDWWpuypAEKzZF2b5PijTluxRG)
 
 ## To-Do List
 
