@@ -8,11 +8,11 @@ return {
   config = function()
     require("flutter-tools").setup({
       fvm = true,
-      lsp = {
-        color = {
-          enabled = false,
-        },
-      },
+      -- lsp = {
+      --   color = {
+      --     enabled = false,
+      --   },
+      -- },
     })
   end,
 }
