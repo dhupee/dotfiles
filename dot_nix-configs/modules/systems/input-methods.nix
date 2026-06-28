@@ -11,6 +11,7 @@
       addons = with pkgs; [
         fcitx5-mozc
         fcitx5-anthy
+        fcitx5-hangul
         fcitx5-gtk
         kdePackages.fcitx5-configtool
       ];
@@ -27,6 +28,10 @@
         };
         "Groups/0/Items/1" = {
           "Name" = "mozc";
+          "Layout" = null;
+        };
+        "Groups/0/Items/2" = {
+          "Name" = "hangul";
           "Layout" = null;
         };
         "GroupOrder" = {
