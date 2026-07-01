@@ -45,9 +45,10 @@
     uninstallUnused = true;
     update = {
       auto = {
-        enable = false;
+        enable = true;
+        onCalendar = "weekly";
       };
-      onActivation = true;
+      onActivation = false;
     };
     # overrides = {
     #   "com.vscodium.codium".Context = {
