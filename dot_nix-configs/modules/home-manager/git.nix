@@ -47,7 +47,7 @@
         customCommands = [
           {
             key = "C";
-            command = ''git commit -m "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}{{if eq .Form.Breaking `yes`}}!{{end}}: {{ .Form.Description }}"'';
+            command = ''git commit -m "{{ .Form.Type }}{{ if .Form.Scopes }}({{ .Form.Scopes }}){{ end }}{{ if eq .Form.Breaking `yes` }}!{{ end }}: {{ .Form.Description }}"'';
             description = "commit with commitizen";
             context = "files";
             prompts = [
@@ -117,11 +117,14 @@
                 type = "input";
                 title = "Enter the scope(s) of this change.";
                 key = "Scopes";
+                # scope is optional – leave blank if none
               }
               {
                 type = "input";
                 title = "Enter the short description of the change.";
                 key = "Description";
+                # 👇 this ensures description is never empty
+                validator = ".+";
               }
               {
                 type = "menu";
@@ -143,7 +146,7 @@
               {
                 type = "confirm";
                 title = "Is the commit message correct?";
-                body = "{{ .Form.Type }}{{if .Form.Scopes}}({{ .Form.Scopes }}){{end}}{{if eq .Form.Breaking `yes`}}!{{end}}: {{ .Form.Description }}";
+                body = "{{ .Form.Type }}{{ if .Form.Scopes }}({{ .Form.Scopes }}){{ end }}{{ if eq .Form.Breaking `yes` }}!{{ end }}: {{ .Form.Description }}";
               }
             ];
           }
