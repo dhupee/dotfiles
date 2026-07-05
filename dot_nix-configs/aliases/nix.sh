@@ -2,6 +2,7 @@
 
 alias rebuild="sh ~/.nix-configs/rebuild.sh"
 alias expire="sudo nix-collect-garbage --delete-older-than '7d' && nix-collect-garbage --delete-older-than '7d'"
+alias expire-all="home-manager expire-generations && sudo nix-collect-garbage -d"
 alias nsh="nix shell --inputs-from ~/.nix-configs"
 
 alias nd="nix develop"
