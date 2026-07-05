@@ -62,6 +62,7 @@
   home.packages =
     (with pkgs; [
       # with pkgs; [
+      anki-bin
       # arduino-cli
       bat
       bruno
@@ -78,6 +79,7 @@
       gparted
       inkscape
       libreoffice
+      mpv
       ngrok
       # node-red
       obs-studio
