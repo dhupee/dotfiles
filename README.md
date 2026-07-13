@@ -6,8 +6,11 @@
   - [Screenshots](#screenshots)
   - [File Structure](#file-structure)
   - [Installation](#installation)
-    - [Linux/NixOS](#linuxnixos)
+    - [Linux / NixOS](#linux-nixos)
     - [Windows](#windows)
+      - [Installing](#installing)
+      - [Uninstalling Scoop as cleanly as possible](#uninstalling-scoop-as-cleanly-as-possible)
+  - [Removing Dotfiles](#removing-dotfiles)
   - [Tools I use in this dotfiles](#tools-i-use-in-this-dotfiles)
   - [References for me](#references-for-me)
   - [To-Do List](#to-do-list)
@@ -22,9 +25,13 @@ This is my current dotfiles that I will use in the next few years or might be my
 
 By combining both [Chezmoi](https://www.chezmoi.io/), [NixOS](https://nixos.org/), and [Home-Manager](https://github.com/nix-community/plasma-manager), not only I benefit from NixOS/Home-Manager reproducability for my Linux/WSL/Android config, using Chezmoi allows me to use my dotfiles on setups that don't/can't use Nix like Windows or Random PCs/Servers that shouldn't be littered with Nix immutability.
 
+---
+
 ## Screenshots
 
 ![Laptop's Desktop Rice](./img/Screenshot_20250323_171708.png)
+
+---
 
 ## File Structure
 
@@ -61,48 +68,102 @@ then when it comes to my actual `.nix-configs`, the directories looks like this.
 | `linux`     | my systems configs for NixOS                                               |
 | `machines`  | `hardware-configuration.nix` backup and also hardware tweak for any machines I use|
 | `modules`   | modules of nix configs, seperated by systems and home-manager ofc          |
-| `theming`   | modules for my ricing, has Gnome, KDE Plasma 6, maybe Hyprland if I want a neckbeard |
-| `users`     | modules for users, if there's more than me, or if I need a user for specific machines |
-| `wsl`       | NixOS config on Windows Subsystem for Linux       |
+| `theming`   | modules for my ricing, has Gnome, KDE Plasma 6, maybe Hyprland if I want a neckbeard | | `users`     | modules for users, if there's more than me, or if I need a user for specific machines | | `wsl`       | NixOS config on Windows Subsystem for Linux       |
 
 This thing obviously can change overtime as this dotfiles grow, and I can forgot the directories.
 
+---
+
 ## Installation
 
-### Linux/NixOS
+### Linux / NixOS
 
-ofc, I will assumed you to have Nix or NixOS installed in your linux systems
+1. **Install Nix** - To use this Dotfiles, you need Nix to install Chezmoi. You can install it using the [Nix installer](https://nixos.org/download/).
 
-run this command to get my dotfiles:
+    Then grab my configs:
 
-```bash
-nix-shell -p chezmoi git --run "chezmoi init dhupee"
-```
+    ```bash
+    nix-shell -p chezmoi git --run "chezmoi init dhupee"
+    ```
 
-then you add my Age key to the home directory, if you don't know, rob me. After that you run:
+2. **Drop your Age key** - put the Age key where Chezmoi can read it and run chezmoi apply. That unlocks all the encrypted bits and installs my dotfiles.
 
-```bash
-chezmoi apply
-```
+    Finally, from the .nix-configs directory, fire off:
 
-This will decrypt encypted files, and send the directories to targeted place, then `switch` your NixOS and Home-Manager, in `.nix-configs` directory run this one by one:
+    ```bash
+    sudo nixos-rebuild switch --flake .#nitro   # if you're on NixOS
+    home-manager switch --flake .#dhupee        # always
+    ```
 
-```bash
-sudo nixos-rebuild switch --flake .#nitro
-home-manager switch --flake .#dhupee
-```
+    Swap the flake names if you're not nitro/dhupee – look inside flake.nix for alternatives. If you're on a non‑NixOS distro, skip the nixos-rebuild and just use Home‑Manager.
 
-that will rebuild the systems into `nitro` profile, and `dhupee` home-manager profile and that will bring every tooling and ricing I have on such profile.
-
-if you want to use other profiles then go on, check [the flake.nix](./dot_nix-configs/flake.nix)
+---
 
 ### Windows
 
-for this it's simple, just add my age key file to the home, then just `chezmoi init dhupee` then `chezmoi apply`.
+#### Installing
 
-then, you just install whatever software that you need, I prefer using `Scoop` for most of the packages or `Winget` if the packages need system integration.
+Windows support is lighter than Linux/WSL, but Chezmoi makes it work. Setup takes four steps:
 
-Dotifles configs in for windows still simplistic compare to WSL/Linux, but it should be enough for now.
+1. **Install Scoop** - This Dotfiles for Windows uses Scoop to install it's program, to install Scoop, run:
+
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+    Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+    ```
+
+    After this, you should be able to run `scoop install chezmoi` to install chezmoi from there
+
+2. **Place your Age key** – Copy your `age.key` file into your home directory (`%USERPROFILE%`). Chezmoi needs it to decrypt your encrypted files.
+
+3. **Bootstrap Chezmoi** – Open a terminal and initialise the repo:
+
+   ```powershell
+   chezmoi init dhupee
+    ```
+
+    Apply the dotfiles – Run:
+
+    ```powershell
+    chezmoi apply
+    ```
+
+    Install your applications – The dotfiles only handle configs; you supply the actual software. I recommend Scoop for most CLI tools and Winget for apps that need system integration.
+
+> [!NOTE]
+> This setup is intentionally kept minimal compared to my NixOS machines, but it gives you consistent scripts, aliases, and shell customisation on Windows.
+
+#### Uninstalling Scoop as cleanly as possible
+
+1. **Uninstall Scoop and all its apps**
+
+   ```powershell
+   scoop uninstall scoop
+   ```
+
+1. **Delete leftover directories** (if they still exist)
+
+   ```powershell
+   Remove-Item -Recurse -Force "$env:USERPROFILE\scoop" -ErrorAction SilentlyContinue
+   Remove-Item -Recurse -Force "$env:USERPROFILE\.config\scoop" -ErrorAction SilentlyContinue
+   ```
+
+1. **Clean your `PATH` and Scoop‑related environment variables**
+   Open *System Properties* → *Environment Variables* and remove:
+   - Any user/system `Path` entries containing `scoop` (e.g., `%USERPROFILE%\scoop\shims`).
+   - Any user/system variables named `SCOOP` or `SCOOP_GLOBAL`.
+
+1. **Restart your terminal** for changes to take effect.
+
+## Removing Dotfiles
+
+Because Dotfiles is managed using Chezmoi, in order to remove dotfiles from **BOTH** Sources and Destination, run:
+
+```powershell
+chezmoi destroy
+```
+
+Then you can let it rip, remove Scoop or Nix, depending on the systems
 
 ## Tools I use in this dotfiles
 
