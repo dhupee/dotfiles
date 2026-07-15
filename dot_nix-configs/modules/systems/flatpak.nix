@@ -20,10 +20,10 @@
     ];
 
     packages = [
-      {
-        appId = "com.github.tchx84.Flatseal";
-        origin = "flathub";
-      }
+      # {
+      #   appId = "com.github.tchx84.Flatseal";
+      #   origin = "flathub";
+      # }
       # {
       #   appId = "com.vscodium.codium";
       #   origin = "flathub";
@@ -41,6 +41,16 @@
         origin = "flathub";
       }
     ];
+    # overrides = {
+    #   "com.vscodium.codium" = {
+    #     context = {
+    #       devices = "all";
+    #       filesystems = "host";
+    #       sockets = "wayland;x11;network";
+    #       shared = "network;ipc";
+    #     };
+    #   };
+    # };
     uninstallUnmanaged = true;
     uninstallUnused = true;
     update = {
@@ -50,18 +60,6 @@
       };
       onActivation = false;
     };
-    # overrides = {
-    #   "com.vscodium.codium".Context = {
-    #     filesystem = [
-    #       # it's nix, keep it ro
-    #       "~/.config/git/config:ro"
-    #
-    #       # Expose NixOS and Home-Manager packages
-    #       "/run/current-system/sw/bin:ro"
-    #       "~/.nix-profile/bin:ro"
-    #     ];
-    #   };
-    # };
   };
 
   # Required to install flatpak
