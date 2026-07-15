@@ -135,6 +135,8 @@ Windows support is lighter than Linux/WSL, but Chezmoi makes it work. Setup take
 
 #### Uninstalling Scoop as cleanly as possible
 
+By design, Scoop isolates almost all instalation in `Scoop` folder in `%USERPROFILE%`, However if you want it to be deleted as clean as possible, do this few steps
+
 1. **Uninstall Scoop and all its apps**
 
    ```powershell
