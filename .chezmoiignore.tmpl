@@ -16,6 +16,8 @@ img
 #=========WINDOWS & MAC=========#
 {{ if (or (eq .chezmoi.os "windows") (eq .chezmoi.os "darwin")) }}
 .distrobox-manifest
+.bottles-backup
+Wallpapers
 {{ end }}
 
 #============WINDOWS============#
@@ -23,7 +25,6 @@ img
 .nix-configs
 .zellij-layouts
 Templates
-Wallpapers
 .secrets
 {{ end }}
 
