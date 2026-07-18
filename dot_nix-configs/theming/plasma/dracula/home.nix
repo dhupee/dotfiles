@@ -121,7 +121,7 @@
                 "applications:org.kicad.kicad.desktop"
                 "applications:startcenter.desktop"
                 "applications:vesktop.desktop" # Vesktop
-                "applications:OrcaSlicer.desktop"
+                "applications:com.orcaslicer.OrcaSlicer.desktop"
                 "applications:org.kde.dolphin.desktop"
               ];
             };
