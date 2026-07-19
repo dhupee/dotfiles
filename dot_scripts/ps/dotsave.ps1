@@ -47,10 +47,10 @@ function Add-ToChezmoi {
         $quotedPath = '"' + $path + '"'
         if ($Encrypt) {
             Write-Host "Encrypting and adding $Type{} $path"
-            chezmoi add --encrypt -- $path
+            chezmoi re-add --encrypt -- $path
         } else {
             Write-Host "Adding $Type{} $path"
-            chezmoi add -- $path
+            chezmoi re-add -- $path
         }
     }
 }
