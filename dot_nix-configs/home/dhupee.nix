@@ -96,7 +96,6 @@
       tldr
       tree
       tty-share
-      vesktop
       vlc
       zoom-us
       zoxide
@@ -107,6 +106,7 @@
       # logisim-evolution
       obsidian
       orca-slicer
+      vesktop
       yt-dlp
     ]);
 
