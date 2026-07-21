@@ -1,16 +1,13 @@
 {pkgs, ...}: {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode-fhs;
-    # package = pkgs.vscode.fhsWithPackages (
-    #   ps:
-    #     with ps; [
-    #       rustup
-    #       zlib
-    #       openssl.dev
-    #       pkg-config
-    #     ]
-    # );
+    # package = pkgs.vscode-fhs;
+    package = pkgs.vscode.fhsWithPackages (
+      ps:
+        with ps; [
+          gnumake
+        ]
+    );
   };
 }
 # {pkgs, ...}: {
