@@ -1,0 +1,155 @@
+disabled:
+  - id: pomdtr.excalidraw-editor
+    uuid: 3dc917d8-e986-4abf-8159-6fc2233995bd
+enabled:
+  - id: aaron-bond.better-comments
+    uuid: 7a0110bb-231a-4598-aa1b-0769ea46d28b
+  - id: adpyke.codesnap
+    uuid: 8c1fc960-44b1-45e8-89b5-85f982fdaf27
+  - id: alefragnani.Bookmarks
+    uuid: b689fcc8-d494-4dbf-a228-2c694a578afc
+  - id: bbenoist.Nix
+    uuid: 5b21bd54-5258-4a3e-887f-193d9bb5f063
+  - id: bruno-api-client.bruno
+    uuid: d9d9d9f5-a013-42bb-bc1d-a22090e5d31c
+  - id: Codeium.codeium
+    uuid: acab4f40-b6db-42ec-bcd1-01802cbdd988
+  - id: cweijan.dbclient-jdbc
+    uuid: 1fe0d785-8db6-44ef-8113-cb0d98a88473
+  - id: cweijan.vscode-mysql-client2
+    uuid: c0fde3ce-39d4-4ea8-89ce-e2a202eeacaf
+  - id: DavidAnson.vscode-markdownlint
+    uuid: daf8b44d-8aae-4da2-80c5-1f770219f643
+  - id: dracula-theme.theme-dracula
+    uuid: 4e44877c-1c8d-4f9c-ba86-1372d0fbeeb1
+  - id: eclipse-cdt.memory-inspector
+    uuid: 681ef5db-1230-4f71-8675-8df7a812b966
+  - id: eclipse-cdt.serial-monitor
+    uuid: ffc7ff71-1d53-4a30-8e4d-8492416fe50c
+  - id: EditorConfig.EditorConfig
+    uuid: f60a60a6-95ba-42d4-b41c-3d24c1b89588
+  - id: frhtylcn.pythonsnippets
+    uuid: 0ad8c94b-76b2-4033-b703-18596182bfcc
+  - id: GitHub.remotehub
+    uuid: fc7d7e85-2e58-4c1c-97a3-2172ed9a77cd
+  - id: golang.go
+    uuid: d6f6cfea-4b6f-41f4-b571-6ad2ab7918da
+  - id: hediet.vscode-drawio
+    uuid: ea6a6046-2132-421f-a984-664909fcf0b8
+  - id: James-Yu.latex-workshop
+    uuid: 61d03280-3919-4dd1-bce1-178ca21fdeaf
+  - id: mads-hartmann.bash-ide-vscode
+    uuid: b1b0f283-8246-4e90-832e-a6c409d378d1
+  - id: mechatroner.rainbow-csv
+    uuid: 3792588c-3d35-442d-91ea-fe6a755e8155
+  - id: mhutchie.git-graph
+    uuid: 438221f8-1107-4ccd-a6fe-f3b7fe0856b7
+  - id: ms-azuretools.vscode-docker
+    uuid: 0479fc1c-3d67-49f9-b087-fb9069afe48f
+  - id: ms-python.autopep8
+    uuid: 5a21b0c3-89ca-46dd-8ada-658518fb94a5
+  - id: ms-python.debugpy
+    uuid: 4bd5d2c9-9d65-401a-b0b2-7498d9f17615
+  - id: ms-python.isort
+    uuid: 4ad0ce32-ff3f-49f0-83b5-93e5dc00cfff
+  - id: ms-python.python
+    uuid: f1f59ae4-9318-4f3c-a9b5-81b2eaa5f8a5
+  - id: ms-python.vscode-pylance
+    uuid: 364d2426-116a-433a-a5d8-a5098dc3afbd
+  - id: ms-toolsai.jupyter
+    uuid: 6c2f1801-1e7f-45b2-9b5c-7782f1e076e8
+  - id: ms-toolsai.jupyter-keymap
+    uuid: 9f6dc8db-620c-4844-b8c5-e74914f1be27
+  - id: ms-toolsai.jupyter-renderers
+    uuid: b15c72f8-d5fe-421a-a4f7-27ed9f6addbf
+  - id: ms-toolsai.vscode-jupyter-cell-tags
+    uuid: ab4fb32a-befb-4102-adf9-1652d0cd6a5e
+  - id: ms-toolsai.vscode-jupyter-slideshow
+    uuid: e153ca70-b543-4865-b4c5-b31d34185948
+  - id: ms-vscode-remote.remote-containers
+    uuid: 93ce222b-5f6f-49b7-9ab1-a0463c6238df
+  - id: ms-vscode-remote.remote-ssh
+    uuid: 607fd052-be03-4363-b657-2bd62b83d28a
+  - id: ms-vscode-remote.remote-ssh-edit
+    uuid: bfeaf631-bcff-4908-93ed-fda4ef9a0c5c
+  - id: ms-vscode-remote.vscode-remote-extensionpack
+    uuid: 23d72dfc-8dd1-4e30-926e-8783b4378f13
+  - id: ms-vscode.cmake-tools
+    uuid: 7c889349-8749-43d4-8b5e-08939936d7f4
+  - id: ms-vscode.cpp-devtools
+    uuid: a71e0b52-0402-498f-a148-d2e344390f14
+  - id: ms-vscode.cpptools
+    uuid: 690b692e-e8a9-493f-b802-8089d50ac1b2
+  - id: ms-vscode.cpptools-extension-pack
+    uuid: 3957b2f6-f086-49b5-a7b4-5da772123130
+  - id: ms-vscode.cpptools-themes
+    uuid: 99b17261-8f6e-45f0-9ad5-a69c6f509a4f
+  - id: ms-vscode.makefile-tools
+    uuid: e09cf600-90a1-414e-92a0-031f1a5391c6
+  - id: ms-vscode.remote-explorer
+    uuid: 11858313-52cc-4e57-b3e4-d7b65281e34b
+  - id: ms-vscode.remote-repositories
+    uuid: cf5142f0-3701-4992-980c-9895a750addf
+  - id: ms-vscode.remote-server
+    uuid: 105c0b3c-07a9-4156-a4fc-4141040eb07e
+  - id: ms-vscode.vscode-serial-monitor
+    uuid: 17dcad22-0c4b-428f-8a04-5d2629f1480e
+  - id: ms-vsliveshare.vsliveshare
+    uuid: 5a6dc0d5-dc02-4121-8e24-cad33a2ff0af
+  - id: njpwerner.autodocstring
+    uuid: 2d6fea35-f68e-461d-9b7b-5cd05be99451
+  - id: oderwat.indent-rainbow
+    uuid: eaa2127d-cb69-4ab9-8505-a60c9ee5f28b
+  - id: platformio.platformio-ide
+    uuid: 9d96b65c-c227-4a9e-80b7-e52b8a58c5f2
+  - id: redhat.vscode-yaml
+    uuid: 2061917f-f76a-458a-8da9-f162de22b97e
+  - id: slevesque.vscode-zipexplorer
+    uuid: 95081bc3-2540-4424-bf89-775d1118862f
+  - id: STMicroelectronics.stm32-vscode-extension
+    uuid: 569eb621-469d-436a-aa6e-65a4f1c7443b
+  - id: STMicroelectronics.stm32cube-ide-build-analyzer
+    uuid: 1a62025c-933a-464a-a22f-606757c63160
+  - id: STMicroelectronics.stm32cube-ide-build-cmake
+    uuid: eb3f8aca-3bf2-475a-b118-3507b9779248
+  - id: STMicroelectronics.stm32cube-ide-bundles-manager
+    uuid: f4dc427c-18ee-47c0-ac75-363a9b614374
+  - id: STMicroelectronics.stm32cube-ide-clangd
+    uuid: 174ed790-6b1a-479a-a6ca-2b3b4c56a7f1
+  - id: STMicroelectronics.stm32cube-ide-core
+    uuid: 9b4d8467-4873-4c41-b451-f68beace9fed
+  - id: STMicroelectronics.stm32cube-ide-debug-core
+    uuid: ab94ed18-0be4-4bf0-bb30-bbd2708e6f61
+  - id: STMicroelectronics.stm32cube-ide-debug-generic-gdbserver
+    uuid: 002f3dac-ada9-4990-b00d-7e188cb4e90c
+  - id: STMicroelectronics.stm32cube-ide-debug-jlink-gdbserver
+    uuid: 5d8c6ee0-04ba-4e55-a502-0579ba287a92
+  - id: STMicroelectronics.stm32cube-ide-debug-stlink-gdbserver
+    uuid: 3dcee264-affb-43ec-96f7-871ed7440e44
+  - id: STMicroelectronics.stm32cube-ide-project-manager
+    uuid: 5efd5ba2-10af-47a8-8282-1fbebe026b8a
+  - id: STMicroelectronics.stm32cube-ide-registers
+    uuid: 1b1331a0-f1e8-4e1b-8119-e0e2ba15133a
+  - id: STMicroelectronics.stm32cube-ide-rtos
+    uuid: 8f61244e-b822-4b0c-ae94-1f8ff5ed54d3
+  - id: tomoki1207.pdf
+    uuid: 6db08635-0c6a-45ba-9a4b-8c3e192c63c2
+  - id: twxs.cmake
+    uuid: 2be7cf14-2603-402e-9771-fd79df83cdf8
+  - id: usernamehw.errorlens
+    uuid: 9d8c32ab-354c-4daf-a9bf-20b633734435
+  - id: vscode-icons-team.vscode-icons
+    uuid: 9ccc1dd7-7ec4-4a46-bd4f-7d7b8b9d322a
+  - id: vscodevim.vim
+    uuid: d96e79c6-8b25-4be3-8545-0e0ecefcae03
+  - id: windmilleng.vscode-go-autotest
+    uuid: df3d5e8c-3354-48be-8c7b-9065d2168580
+  - id: Wokwi.wokwi-vscode
+    uuid: 51c34fa3-18ea-4f95-aae8-1dbe5438fe31
+  - id: yzhang.markdown-all-in-one
+    uuid: 98790d67-10fa-497c-9113-f6c7489207b2
+  - id: zokugun.cron-tasks
+    uuid: b7bbbbd5-7a39-4312-87aa-ef6a41de67fb
+builtin:
+  disabled:
+    - GitHub.copilot-chat

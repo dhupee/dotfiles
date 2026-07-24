@@ -1,0 +1,8 @@
+resources:
+  - extensions
+  - keybindings
+  - settings
+  - snippets
+  - tasks
+  - uiState
+additionalFiles: []

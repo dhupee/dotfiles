@@ -1,0 +1,290 @@
+modified:
+  alefragnani.Bookmarks: '{"Bookmarks.version":"14.1.1","Bookmarks.whatsNew.shown":"14.1.1"}'
+  Codeium.codeium: '{"codeium.installationID":"lY7AbYNNNCX1YCpBR74nEanFuSDdsZcv","codeium.hasInstalledKey":true,"codeium.hasShownFirstTimeAuthModalKey":true,"codeium.windsurfCrossSellNotificationShown":true}'
+  ms-vscode-remote.remote-containers: '{"userConfirmedAttachToContainerRequiresTrust":true,"VSCode.ABExp.FeatureData":{"features":["config.chat.subagentTool.customAgents","config.github.copilot.nextEditSuggestions.enabled","config.inlineChat.renderMode","copilotappmodcontextmenuenabled","copilotappmodproblemsviewenabledcf","copilotchat.disableReplaceStringHealing","copilotchat.hiddenModelBEditTool","copilotsearchagentenabled","copilottransparenttokenrefresh","copilot_ci","cveremediatoragentenabled","dynamic_mcpcf","featureflag-23-1","github.copilot.chat.agentDebugLog.enabled","github.copilot.chat.agentDebugLog.fileLogging.enabled","ideenablecopilotnes","ideenablecopilotsemanticsearch","livesharecontinuousaa","mindaroBinariesVersion","new_test","suggestNativePreview","test_t","workspace.embeddingIndex.automaticReindexingDelay"],"assignmentContext":"vsliv368:30146709;binariesv615:30325510;copilot_t_ci:31333650;6518g693:31463988;aj953862:31281341;3efgi100_wstrepl:31403338;ec5jj548:31422691;cp_cls_t_966_ss:31526232;cp_cls_t_1081:31454832;test_treatment2:31471001;ei9d7968:31496641;ghj88844:31499326;cp_cls_t_1082:31535311;logging_enabled_new:31498466;jb_cp_cls_t_632:31543129;ha629193:31508444;jbcp_cls_pctr_t:31531130;cp_intellij_t_nes:31548657;ihg5j128:31534457;treatment-23-1:31555779;unuse_dynamic_mcp:31555281;","configs":[{"Id":"vscode","Parameters":{"config.chat.subagentTool.customAgents":true,"config.github.copilot.nextEditSuggestions.enabled":true,"config.inlineChat.renderMode":"zone","copilotappmodcontextmenuenabled":true,"copilotappmodproblemsviewenabled":false,"copilotchat.disableReplaceStringHealing":true,"copilotchat.hiddenModelBEditTool":"with_replace_string","copilotsearchagentenabled":true,"copilottransparenttokenrefresh":true,"copilot_ci":true,"cveremediatoragentenabled":true,"dynamic_mcp":false,"featureflag-23-1":true,"github.copilot.chat.agentDebugLog.enabled":true,"github.copilot.chat.agentDebugLog.fileLogging.enabled":true,"ideenablecopilotnes":true,"ideenablecopilotsemanticsearch":true,"livesharecontinuousaa":true,"mindaroBinariesVersion":"1.0.20210615.1","new_test":true,"suggestNativePreview":true,"test_t":"cindytest","workspace.embeddingIndex.automaticReindexingDelay":100000000}}]}}'
+  ms-vscode.cpp-devtools: '{"VSCode.ABExp.FeatureData":{"features":["config.chat.subagentTool.customAgents","config.github.copilot.nextEditSuggestions.enabled","config.inlineChat.renderMode","copilotappmodcontextmenuenabled","copilotappmodproblemsviewenabledcf","copilotchat.disableReplaceStringHealing","copilotchat.hiddenModelBEditTool","copilotsearchagentenabled","copilottransparenttokenrefresh","copilot_ci","cveremediatoragentenabled","github.copilot.chat.agentDebugLog.enabled","github.copilot.chat.agentDebugLog.fileLogging.enabled","ideenablecopilotnes","ideenablecopilotsemanticsearch","livesharecontinuousaa","mindaroBinariesVersion","new_test","suggestNativePreview","test-ai-12","test_t","workspace.embeddingIndex.automaticReindexingDelay"],"assignmentContext":"vsliv368:30146709;binariesv615:30325510;copilot_t_ci:31333650;6518g693:31463988;aj953862:31281341;63221493:31336333;3efgi100_wstrepl:31403338;ec5jj548:31422691;cp_cls_t_966_ss:31526232;cp_cls_t_1081:31454832;test_treatment2:31471001;ei9d7968:31496641;ghj88844:31499326;cp_cls_t_1082:31535311;logging_enabled_new:31498466;jb_cp_cls_t_632:31543129;ha629193:31508444;jbcp_cls_pctr_t:31531130;cp_intellij_t_nes:31548657;ihg5j128:31534457;","configs":[{"Id":"vscode","Parameters":{"config.chat.subagentTool.customAgents":true,"config.github.copilot.nextEditSuggestions.enabled":true,"config.inlineChat.renderMode":"zone","copilotappmodcontextmenuenabled":true,"copilotappmodproblemsviewenabled":false,"copilotchat.disableReplaceStringHealing":true,"copilotchat.hiddenModelBEditTool":"with_replace_string","copilotsearchagentenabled":true,"copilottransparenttokenrefresh":true,"copilot_ci":true,"cveremediatoragentenabled":true,"github.copilot.chat.agentDebugLog.enabled":true,"github.copilot.chat.agentDebugLog.fileLogging.enabled":true,"ideenablecopilotnes":true,"ideenablecopilotsemanticsearch":true,"livesharecontinuousaa":true,"mindaroBinariesVersion":"1.0.20210615.1","new_test":true,"suggestNativePreview":true,"test-ai-12":true,"test_t":"cindytest","workspace.embeddingIndex.automaticReindexingDelay":100000000}}]}}'
+  ms-vscode.cpptools: '{"CPP.1.33.4.Progress":300,"CPP.1.33.4.ignoreMismatchedCompatibleVsix":false,"CPP.displayedPreReleasePrompt":false,"CPP.isOnPreRelease":true,"CPP.machineId":"e650ae5517b3948156642a8703d5c2ebf543914ddfc10a9d5418cb9fcd884ab5","CPP.1.33.4.checkForConflictingExtensions":false,"CPP.lastWorkspaceFallbackEncoding":"utf8","VSCode.ABExp.FeatureData":{"features":["config.chat.subagentTool.customAgents","config.github.copilot.nextEditSuggestions.enabled","config.python.analysis.enablePrecomputeContext","copilotappmodcontextmenuenabled","copilotappmodproblemsviewenabledcf","copilotchat.hiddenModelBEditTool","copilotsearchagentenabled","copilottransparenttokenrefresh","copilot_ci","cveremediatoragentenabled","github.copilot.chat.agentDebugLog.enabled","github.copilot.chat.agentDebugLog.fileLogging.enabled","ideenablecopilotnes","ideenablecopilotsemanticsearch","livesharecontinuousaa","new_test","suggestNativePreview","test-ai-12","test_t"],"assignmentContext":"vsliv368:30146709;copilot_t_ci:31333650;pythonpcpt1:31399616;6518g693:31302842;63221493:31336333;3efgi100_wstrepl:31403338;cp_cls_t_966_ss:31526232;cp_cls_t_1081:31454832;test_treatment2:31471001;ei9d7968:31462942;cp_cls_t_1082:31535311;logging_enabled_new:31490725;jb_cp_cls_t_632:31543129;ha629193:31508444;jbcp_cls_pctr_t:31531130;cp_intellij_t_nes:31548657;ihg5j128:31534457;","configs":[{"Id":"vscode","Parameters":{"config.chat.subagentTool.customAgents":true,"config.github.copilot.nextEditSuggestions.enabled":true,"config.python.analysis.enablePrecomputeContext":true,"copilotappmodcontextmenuenabled":true,"copilotappmodproblemsviewenabled":false,"copilotchat.hiddenModelBEditTool":"with_replace_string","copilotsearchagentenabled":true,"copilottransparenttokenrefresh":true,"copilot_ci":true,"cveremediatoragentenabled":true,"github.copilot.chat.agentDebugLog.enabled":true,"github.copilot.chat.agentDebugLog.fileLogging.enabled":true,"ideenablecopilotnes":true,"ideenablecopilotsemanticsearch":true,"livesharecontinuousaa":true,"new_test":true,"suggestNativePreview":true,"test-ai-12":true,"test_t":"cindytest"}}]},"CPP.1.33.4.IntelliSenseProgress":1000,"CPP.referencesGroupByFile":false}'
+  ms-vsliveshare.vsliveshare: '{"vsliveshare-first-activation-flag":"1.1.122","firstActivationTime":1784209796370,"anonymousAuthReloadFlag":null,"wasForceReload":false,"firstActivationVersion":"1.1.122","authenticationProvider":"github","VSCode.ABExp.FeatureData":{"features":["authProviderPicker","config.chat.subagentTool.customAgents","config.github.copilot.nextEditSuggestions.enabled","config.inlineChat.renderMode","copilotappmodcontextmenuenabled","copilotappmodproblemsviewenabledcf","copilotchat.disableReplaceStringHealing","copilotchat.hiddenModelBEditTool","copilotsearchagentenabled","copilottransparenttokenrefresh","copilot_ci","cveremediatoragentenabled","followIndicator","github.copilot.chat.agentDebugLog.enabled","github.copilot.chat.agentDebugLog.fileLogging.enabled","ideenablecopilotnes","ideenablecopilotsemanticsearch","livesharecontinuousaa","mindaroBinariesVersion","nativeAuth","new_test","readWriteAnonymous","resyncOnMisappliedEdit","suggestNativePreview","test-ai-12","test_t","workspace.embeddingIndex.automaticReindexingDelay"],"assignmentContext":"vsliv368:30146709;vsrea433:30283384;vsnat461:30259396;binariesv615:30325510;vsfol871:30383134;vslsresync:30385087;copilot_t_ci:31333650;6518g693:31463988;aj953862:31281341;63221493:31336333;3efgi100_wstrepl:31403338;ec5jj548:31422691;cp_cls_t_966_ss:31526232;cp_cls_t_1081:31454832;test_treatment2:31471001;ei9d7968:31496641;ghj88844:31499326;cp_cls_t_1082:31535311;logging_enabled_new:31498466;jb_cp_cls_t_632:31543129;ha629193:31508444;jbcp_cls_pctr_t:31531130;cp_intellij_t_nes:31548657;ihg5j128:31534457;","configs":[{"Id":"vscode","Parameters":{"authProviderPicker":true,"config.chat.subagentTool.customAgents":true,"config.github.copilot.nextEditSuggestions.enabled":true,"config.inlineChat.renderMode":"zone","copilotappmodcontextmenuenabled":true,"copilotappmodproblemsviewenabled":false,"copilotchat.disableReplaceStringHealing":true,"copilotchat.hiddenModelBEditTool":"with_replace_string","copilotsearchagentenabled":true,"copilottransparenttokenrefresh":true,"copilot_ci":true,"cveremediatoragentenabled":true,"followIndicator":true,"github.copilot.chat.agentDebugLog.enabled":true,"github.copilot.chat.agentDebugLog.fileLogging.enabled":true,"ideenablecopilotnes":true,"ideenablecopilotsemanticsearch":true,"livesharecontinuousaa":true,"mindaroBinariesVersion":"1.0.20210615.1","nativeAuth":true,"new_test":true,"readWriteAnonymous":true,"resyncOnMisappliedEdit":true,"suggestNativePreview":true,"test-ai-12":true,"test_t":"cindytest","workspace.embeddingIndex.automaticReindexingDelay":100000000}}]}}'
+  STMicroelectronics.stm32cube-ide-core: '{"STM32CubeIDE_Telemetry_Show_Explanations":false}'
+  vscode-icons-team.vscode-icons: '{"vsicons":{"version":"12.19.0","status":2,"welcomeShown":true}}'
+  workbench.activity.pinnedViewlets2: '[{"id":"workbench.view.explorer","pinned":true,"visible":true,"order":0},{"id":"workbench.view.search","pinned":true,"visible":true,"order":1},{"id":"workbench.view.scm","pinned":true,"visible":true,"order":2},{"id":"workbench.view.debug","pinned":true,"visible":true,"order":3},{"id":"workbench.view.extensions","pinned":true,"visible":true,"order":4},{"id":"workbench.view.remote","pinned":true,"visible":true,"order":4},{"id":"workbench.view.extension.test","pinned":true,"visible":false,"order":6},{"id":"workbench.view.extension.references-view","pinned":true,"visible":false,"order":7},{"id":"workbench.view.voiceTranscriptsContainer","pinned":true,"visible":false,"order":10},{"id":"workbench.view.extension.github-dbclient-history","pinned":true,"visible":false,"order":12},{"id":"workbench.view.extension.jupyter","pinned":true,"visible":false,"order":15},{"id":"workbench.view.extension.liveshare","pinned":true,"visible":true,"order":18},{"id":"workbench.view.extension.codeium","pinned":true,"visible":true,"order":10},{"id":"workbench.view.extension.github-cweijan-mysql","pinned":true,"visible":true,"order":11},{"id":"workbench.view.extension.github-cweijan-nosql","pinned":true,"visible":true,"order":13},{"id":"workbench.view.extension.cmake-view","pinned":true,"visible":false,"order":16},{"id":"workbench.view.extension.makefile__viewContainer","pinned":true,"visible":true,"order":17},{"id":"workbench.view.extension.platformio","pinned":true,"visible":true,"order":19},{"id":"workbench.view.extension.latex-workshop-activitybar","pinned":true,"visible":true,"order":14},{"id":"workbench.view.extension.dockerView","pinned":true,"visible":true,"order":18},{"id":"workbench.view.extension.bookmarks","pinned":true,"visible":false,"order":8},{"id":"workbench.view.extension.bruno","pinned":true,"visible":false,"order":9},{"id":"workbench.view.extension.stm32cube-ide-core-activity-id","pinned":true,"visible":false,"order":20},{"id":"workbench.view.extension.wokwi-sidebar","pinned":true,"visible":false,"order":21},{"id":"workbench.panel.chatSidebar","pinned":true,"visible":false,"order":100},{"id":"userDataProfiles","pinned":true,"visible":false},{"id":"workbench.view.sync","pinned":true,"visible":false},{"id":"workbench.view.editSessions","pinned":true,"visible":false}]'
+  workbench.activity.placeholderViewlets: "[{\"id\":\"workbench.view.explorer\",\
+    \"themeIcon\":{\"id\":\"explorer-view-icon\"},\"name\":\"Explorer\",\"isBui\
+    ltin\":true,\"views\":[{},{},{},{\"when\":\"timelineHasProvider\"},{\"when\
+    \":\"npm:showScriptExplorer\"},{\"when\":\"workbenchState !=
+    'empty'\"},{\"when\":\"go.showExplorer\"},{\"when\":\"go.showPackageOutline\
+    \"},{\"when\":\"liveshare:isCollaborating &&
+    liveshare:showExplorer\"},{},{\"when\":\"stm32cube-ide-clangd.typeHierarchy\
+    Visible\"},{\"when\":\"stm32cube-ide-clangd.memoryUsage.hasData\"},{\"when\
+    \":\"stm32cube-ide-clangd.ast.hasData\"}]},{\"id\":\"workbench.view.search\
+    \",\"themeIcon\":{\"id\":\"search-view-icon\"},\"name\":\"Search\",\"isBuil\
+    tin\":true,\"views\":[{}]},{\"id\":\"workbench.view.scm\",\"themeIcon\":{\"\
+    id\":\"source-control-view-icon\"},\"name\":\"Source
+    Control\",\"isBuiltin\":true,\"views\":[{\"when\":\"scm.providerCount &&
+    scm.providerCount != '0'\"},{},{\"when\":\"scm.historyProviderCount &&
+    scm.historyProviderCount !=
+    '0'\"}]},{\"id\":\"workbench.view.debug\",\"themeIcon\":{\"id\":\"run-view-\
+    icon\"},\"name\":\"Run and
+    Debug\",\"isBuiltin\":true,\"views\":[{\"when\":\"debugUx ==
+    'simple'\"},{\"when\":\"debugUx == 'default'\"},{\"when\":\"debugUx ==
+    'default'\"},{\"when\":\"debugUx ==
+    'default'\"},{\"when\":\"loadedScriptsSupported && debugUx ==
+    'default'\"},{\"when\":\"breakpointsExist || hasDebugged || debugUx ==
+    'default'\"},{\"when\":\"debugType == 'pwa-chrome' || debugType ==
+    'pwa-editor-browser' || debugType ==
+    'pwa-msedge'\"},{\"when\":\"jsDebugHasExcludedCallers && debugType ==
+    'node-terminal' || jsDebugHasExcludedCallers && debugType == 'pwa-chrome' ||
+    jsDebugHasExcludedCallers && debugType == 'pwa-editor-browser' ||
+    jsDebugHasExcludedCallers && debugType == 'pwa-extensionHost' ||
+    jsDebugHasExcludedCallers && debugType == 'pwa-msedge' ||
+    jsDebugHasExcludedCallers && debugType ==
+    'pwa-node'\"},{\"when\":\"jsDebugNetworkAvailable\"},{\"when\":\"cpptools.e\
+    nableSshTargetsView\"},{},{},{},{},{\"when\":\"st-cube-fault-detector.has-a\
+    ctive-session\"},{},{},{\"when\":\"stm32cube-ide-registers.svd.hasData\"}]}\
+    ,{\"id\":\"workbench.view.extensions\",\"themeIcon\":{\"id\":\"extensions-v\
+    iew-icon\"},\"name\":\"Extensions\",\"isBuiltin\":true,\"views\":[{\"when\":\
+    \"defaultExtensionViews && extensionsGalleryStatus == 'accessDenied' ||
+    defaultExtensionViews && extensionsGalleryStatus == 'requiresSignIn' ||
+    searchMarketplaceExtensions && extensionsGalleryStatus == 'accessDenied' ||
+    searchMarketplaceExtensions && extensionsGalleryStatus ==
+    'requiresSignIn'\"},{\"when\":\"defaultExtensionViews\"},{\"when\":\"search\
+    ExtensionUpdates ||
+    searchOutdatedExtensions\"},{\"when\":\"recommendedExtensions &&
+    workbenchState != 'empty'\"},{\"when\":\"defaultExtensionViews && hasGallery
+    && !hasInstalledExtensions\"},{\"when\":\"searchExtensionUpdates ||
+    searchRecentlyUpdatedExtensions\"},{\"when\":\"recommendedExtensions\"},{\"\
+    when\":\"defaultExtensionViews && hasGallery &&
+    !config.extensions.showRecommendationsOnlyOnDemand &&
+    !sortByUpdateDate\"},{\"when\":\"defaultExtensionViews &&
+    hasInstalledExtensions\"},{\"when\":\"defaultExtensionViews &&
+    hasInstalledMcpServers && !chatSetupDisabledInWorkspace &&
+    !chatSetupHidden\"},{\"when\":\"config.chat.mcp.gallery.enabled &&
+    defaultExtensionViews && !chatSetupDisabledInWorkspace && !chatSetupHidden
+    && !hasInstalledMcpServers && mcpServersGalleryStatus == 'available' ||
+    config.chat.mcp.gallery.serviceUrl && defaultExtensionViews &&
+    !chatSetupDisabledInWorkspace && !chatSetupHidden && !hasInstalledMcpServers
+    && mcpServersGalleryStatus == 'available' || defaultExtensionViews &&
+    !chatSetupDisabledInWorkspace && !chatSetupHidden && !hasInstalledMcpServers
+    && mcpServersGalleryStatus == 'available' && productQualityType !=
+    'stable'\"},{\"when\":\"defaultExtensionViews &&
+    !chatSetupDisabledInWorkspace && !chatSetupHidden &&
+    !config.chat.mcp.gallery.enabled && !config.chat.mcp.gallery.serviceUrl &&
+    !hasInstalledMcpServers && mcpServersGalleryStatus == 'available' &&
+    productQualityType == 'stable'\"},{\"when\":\"defaultExtensionViews &&
+    hasInstalledExtensions\"},{\"when\":\"defaultExtensionViews &&
+    hasInstalledAgentPlugins &&
+    !chatSetupHidden\"},{\"when\":\"defaultExtensionViews && !chatSetupHidden &&
+    !hasInstalledAgentPlugins\"},{\"when\":\"hasGallery &&
+    searchMarketplaceExtensions\"},{\"when\":\"installedExtensions ||
+    searchInstalledExtensions\"},{\"when\":\"searchEnabledExtensions\"},{\"when\
+    \":\"searchDisabledExtensions\"},{\"when\":\"searchBuiltInExtensions\"},{\"\
+    when\":\"searchWorkspaceUnsupportedExtensions\"},{\"when\":\"builtInExtensi\
+    ons\"},{\"when\":\"builtInExtensions\"},{\"when\":\"builtInExtensions\"},{\
+    \"when\":\"searchUnsupportedWorkspaceExtensions\"},{\"when\":\"searchUnsupp\
+    ortedWorkspaceExtensions\"},{\"when\":\"searchUnsupportedWorkspaceExtensions
+    && virtualWorkspace\"},{\"when\":\"searchUnsupportedWorkspaceExtensions &&
+    virtualWorkspace\"},{\"when\":\"searchDeprecatedExtensions\"},{\"when\":\"s\
+    earchRestartRequiredExtensions\"},{\"when\":\"searchAgentPlugins &&
+    !chatSetupHidden\"},{\"when\":\"config.chat.mcp.gallery.enabled &&
+    searchMcpServers && !chatSetupDisabledInWorkspace && !chatSetupHidden &&
+    mcpServersGalleryStatus == 'available' || config.chat.mcp.gallery.serviceUrl
+    && searchMcpServers && !chatSetupDisabledInWorkspace && !chatSetupHidden &&
+    mcpServersGalleryStatus == 'available' || searchMcpServers &&
+    !chatSetupDisabledInWorkspace && !chatSetupHidden && mcpServersGalleryStatus
+    == 'available' && productQualityType !=
+    'stable'\"},{\"when\":\"searchMcpServers && !chatSetupDisabledInWorkspace &&
+    !chatSetupHidden && !config.chat.mcp.gallery.enabled &&
+    !config.chat.mcp.gallery.serviceUrl && mcpServersGalleryStatus ==
+    'available' && productQualityType ==
+    'stable'\"}]},{\"id\":\"workbench.view.remote\",\"themeIcon\":{\"id\":\"rem\
+    ote-explorer-view-icon\"},\"name\":\"Remote
+    Explorer\",\"isBuiltin\":true,\"views\":[{},{},{\"when\":\"!hideConnectComm\
+    ands\"},{\"when\":\"remote-containers:showDetails &&
+    !hideConnectCommands\"},{\"when\":\"!hideConnectCommands\"}]},{\"id\":\"wor\
+    kbench.view.extension.test\",\"themeIcon\":{\"id\":\"test-view-icon\"},\"na\
+    me\":\"Testing\",\"isBuiltin\":true,\"views\":[{\"when\":\"testing.provider\
+    Count >
+    0\"},{\"when\":\"testing.isTestCoverageOpen\"},{\"when\":\"go.hasProfiles\"\
+    }]},{\"id\":\"workbench.view.extension.references-view\",\"themeIcon\":{\"id\
+    \":\"references\"},\"name\":\"References\",\"isBuiltin\":false,\"views\":[{\
+    \"when\":\"reference-list.isActive\"},{\"when\":\"cpptools.hasReferencesRes\
+    ults\"}]},{\"id\":\"workbench.view.voiceTranscriptsContainer\",\"isBuiltin\
+    \":false},{\"id\":\"workbench.view.extension.github-dbclient-history\",\"ic\
+    onUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PATH%%/cweijan.vscode-mysql\
+    -client2-9.0.2/resources/icon/history.svg\",\"scheme\":\"file\"},\"name\":\
+    \"SQL
+    History\",\"isBuiltin\":false,\"views\":[{\"when\":\"showDatabaseClientHist\
+    ory\"}]},{\"id\":\"workbench.view.extension.jupyter\",\"themeIcon\":{\"id\":\
+    \"notebook\"},\"name\":\"Jupyter\",\"isBuiltin\":false,\"views\":[]},{\"id\
+    \":\"workbench.view.extension.liveshare\",\"iconUrl\":{\"$mid\":1,\"path\":\
+    \"%%EXTENSION_DATA_PATH%%/ms-vsliveshare.vsliveshare-1.1.122/images/dark/li\
+    veshare.svg\",\"scheme\":\"file\"},\"name\":\"Live
+    Share\",\"isBuiltin\":false,\"views\":[{},{\"when\":\"liveshare:isCollabora\
+    ting && liveshare:showExplorer &&
+    liveshare:showHelpViewlet\"},{\"when\":\"config.liveshare.teamStatus ||
+    liveshare:isTeamMember\"}]},{\"id\":\"workbench.view.extension.codeium\",\"\
+    iconUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PATH%%/codeium.codeium-1.\
+    48.2/assets/windsurf.svg\",\"scheme\":\"file\"},\"name\":\"Windsurf\",\"isB\
+    uiltin\":false,\"views\":[{}]},{\"id\":\"workbench.view.extension.github-cw\
+    eijan-mysql\",\"iconUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PATH%%/cw\
+    eijan.vscode-mysql-client2-9.0.2/resources/icon/database.svg\",\"scheme\":\
+    \"file\"},\"name\":\"Database\",\"isBuiltin\":false,\"views\":[{}]},{\"id\":\
+    \"workbench.view.extension.github-cweijan-nosql\",\"iconUrl\":{\"$mid\":1,\
+    \"path\":\"%%EXTENSION_DATA_PATH%%/cweijan.vscode-mysql-client2-9.0.2/resou\
+    rces/icon/layer-group.svg\",\"scheme\":\"file\"},\"name\":\"Service\",\"isB\
+    uiltin\":false,\"views\":[{}]},{\"id\":\"workbench.view.extension.cmake-view\
+    \",\"themeIcon\":{\"id\":\"cmake-tools-cmake-view-2\"},\"name\":\"CMake\",\
+    \"isBuiltin\":false,\"views\":[{\"when\":\"cmake:enableFullFeatureSet\"},{\
+    \"when\":\"cmake:enableFullFeatureSet\"},{\"when\":\"cmake:enableFullFeatur\
+    eSet\"},{\"when\":\"cmake:enableFullFeatureSet\"},{\"when\":\"cmake:enableF\
+    ullFeatureSet\"}]},{\"id\":\"workbench.view.extension.makefile__viewContain\
+    er\",\"iconUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PATH%%/ms-vscode.m\
+    akefile-tools-0.12.17/res/viewcontainer.svg\",\"scheme\":\"file\"},\"name\":\
+    \"Makefile\",\"isBuiltin\":false,\"views\":[{\"when\":\"isWorkspaceTrusted
+    ||
+    makefile:testing\"}]},{\"id\":\"workbench.view.extension.platformio\",\"ico\
+    nUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PATH%%/platformio.platformio\
+    -ide-3.3.4-linux-x64/assets/icons/platformio-activity-icon.svg\",\"scheme\":\
+    \"file\"},\"name\":\"PlatformIO\",\"isBuiltin\":false,\"views\":[{\"when\":\
+    \"pioCoreReady\"},{}]},{\"id\":\"workbench.view.extension.latex-workshop-ac\
+    tivitybar\",\"iconUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PATH%%/jame\
+    s-yu.latex-workshop-10.16.1/icons/activity-bar.svg\",\"scheme\":\"file\"},\
+    \"name\":\"LaTeX\",\"isBuiltin\":false,\"views\":[{\"when\":\"latex-worksho\
+    p:enabled\"},{\"when\":\"latex-workshop:enabled\"},{\"when\":\"latex-worksh\
+    op:enabled\"}]},{\"id\":\"workbench.view.extension.dockerView\",\"isBuiltin\
+    \":false},{\"id\":\"workbench.view.extension.bookmarks\",\"themeIcon\":{\"id\
+    \":\"bookmark\"},\"name\":\"Bookmarks\",\"isBuiltin\":false,\"views\":[{},{\
+    }]},{\"id\":\"workbench.view.extension.bruno\",\"iconUrl\":{\"$mid\":1,\"pa\
+    th\":\"%%EXTENSION_DATA_PATH%%/bruno-api-client.bruno-5.0.2/media/logo-side\
+    bar.svg\",\"scheme\":\"file\"},\"name\":\"Bruno\",\"isBuiltin\":false,\"vie\
+    ws\":[{}]},{\"id\":\"workbench.view.extension.stm32cube-ide-core-activity-id\
+    \",\"themeIcon\":{\"id\":\"stm32-vscode-icon\"},\"name\":\"STM32Cube\",\"is\
+    Builtin\":false,\"views\":[{},{},{}]},{\"id\":\"workbench.view.extension.wo\
+    kwi-sidebar\",\"themeIcon\":{\"id\":\"wokwi-icon\"},\"name\":\"Wokwi
+    Simulator\",\"isBuiltin\":false,\"views\":[{}]},{\"id\":\"workbench.panel.c\
+    hatSidebar\",\"isBuiltin\":false},{\"id\":\"userDataProfiles\",\"isBuiltin\
+    \":false},{\"id\":\"workbench.view.sync\",\"themeIcon\":{\"id\":\"settings-\
+    sync-view-icon\"},\"name\":\"Settings
+    Sync\",\"isBuiltin\":true,\"views\":[{\"when\":\"enableSyncConflictsView &&
+    hasConflicts\"},{\"when\":\"enableSyncActivityViews &&
+    userDataSyncAccountStatus == 'available' && syncStatus !=
+    'uninitialized'\"},{\"when\":\"enableSyncActivityViews &&
+    userDataSyncAccountStatus == 'available' && syncStatus !=
+    'uninitialized'\"},{\"when\":\"enableSyncActivityViews &&
+    userDataSyncAccountStatus == 'available' && syncStatus !=
+    'uninitialized'\"},{\"when\":\"enableSyncActivityViews\"},{\"when\":\"enabl\
+    eSyncActivityViews\"}]},{\"id\":\"workbench.view.editSessions\",\"themeIcon\
+    \":{\"id\":\"edit-sessions-view-icon\"},\"name\":\"Cloud
+    Changes\",\"isBuiltin\":true,\"views\":[{\"when\":\"editSessionsShowView\"}\
+    ]}]"
+  workbench.activityBar.location: default
+  workbench.auxiliaryBar.empty: "false"
+  workbench.auxiliaryBar.lastNonMaximizedSize: "300"
+  workbench.auxiliarybar.pinnedPanels: '[{"id":"workbench.panel.chat","pinned":true,"visible":false,"order":1}]'
+  workbench.auxiliarybar.placeholderPanels: '[{"id":"workbench.panel.chat","themeIcon":{"id":"chat-view-icon"},"name":"Chat","isBuiltin":true,"views":[{"when":"chatExtensionInvalid
+    && !chatAccountPolicyGateActive || chatPanelParticipantRegistered &&
+    !chatAccountPolicyGateActive || !chatAccountPolicyGateActive &&
+    !chatSetupDisabledInWorkspace && !chatSetupHidden"}]}]'
+  workbench.auxiliaryBar.size: "246"
+  workbench.editor.languageDetectionOpenedLanguages.global: '[["c",true],["shellscript",true],["markdown",true],["jsonc",true],["plaintext",true],["yaml",true]]'
+  workbench.explorer.views.state.hidden: '[{"id":"outline","isHidden":false},{"id":"timeline","isHidden":false},{"id":"workbench.explorer.openEditorsView","isHidden":true},{"id":"workbench.explorer.emptyView","isHidden":false},{"id":"npm","isHidden":true},{"id":"go.explorer","isHidden":false},{"id":"liveshare.session.explorer","isHidden":false},{"id":"workbench.explorer.fileView","isHidden":false},{"id":"zipExplorer","isHidden":false},{"id":"arduinoExampleExplorer","isHidden":false},{"id":"thunder-client-sidebar","isHidden":false},{"id":"ansible.lightspeed.trainingMatchPanel","isHidden":false},{"id":"ansible-creator","isHidden":false},{"id":"lightspeed-explorer-treeview","isHidden":false},{"id":"lightspeed-feedback-webview","isHidden":false},{"id":"go.package.outline","isHidden":false},{"id":"stm32cube-ide-clangd.typeHierarchyView","isHidden":false},{"id":"stm32cube-ide-clangd.memoryUsage","isHidden":false},{"id":"stm32cube-ide-clangd.ast","isHidden":false},{"id":"grepperPopup","isHidden":false},{"id":"bruno.workspaceCollections","isHidden":false},{"id":"gitlens.views.welcome","isHidden":false},{"id":"gitlens.views.home","isHidden":false},{"id":"gitlens.views.launchpad","isHidden":false},{"id":"gitlens.views.drafts","isHidden":false},{"id":"gitlens.views.workspaces","isHidden":false},{"id":"gitlens.views.commitDetails","isHidden":false},{"id":"gitlens.views.pullRequest","isHidden":false},{"id":"gitlens.views.lineHistory","isHidden":false},{"id":"gitlens.views.fileHistory","isHidden":false},{"id":"gitlens.views.timeline","isHidden":false},{"id":"gitlens.views.searchAndCompare","isHidden":false},{"id":"gitlens.views.patchDetails","isHidden":false},{"id":"gitlens.views.graph","isHidden":false}]'
+  workbench.newDefaultThemeNotification: "true"
+  workbench.panel.alignment: center
+  workbench.panel.chat.hidden: '[{"id":"workbench.panel.chat.view.copilot","isHidden":false}]'
+  workbench.panel.lastNonMaximizedHeight: "300"
+  workbench.panel.lastNonMaximizedWidth: "300"
+  workbench.panel.markers.hidden: '[{"id":"workbench.panel.markers.view","isHidden":false}]'
+  workbench.panel.output.hidden: '[{"id":"workbench.panel.output","isHidden":false}]'
+  workbench.panel.pinnedPanels: '[{"id":"workbench.panel.markers","pinned":true,"visible":false,"order":0},{"id":"workbench.panel.output","pinned":true,"visible":false,"order":1},{"id":"workbench.panel.repl","pinned":true,"visible":false,"order":2},{"id":"terminal","pinned":true,"visible":false,"order":3},{"id":"workbench.panel.testResults","pinned":true,"visible":false,"order":3},{"id":"~remote.forwardedPortsContainer","pinned":true,"visible":false,"order":5},{"id":"workbench.view.extension.dbclient-search-result","pinned":true,"visible":false,"order":7},{"id":"workbench.view.extension.dbclient-variable-config-view","pinned":true,"visible":false,"order":8},{"id":"workbench.view.extension.jupyter-variables","pinned":true,"visible":false,"order":9},{"id":"workbench.view.extension.vscode-serial-monitor-tools","pinned":true,"visible":false,"order":10},{"id":"workbench.view.extension.stm32cube-ide-tcp","pinned":true,"visible":false,"order":11},{"id":"workbench.view.extension.stm32cube-ide-rtos","pinned":true,"visible":false,"order":12},{"id":"workbench.view.extension.brunoLogsContainer","pinned":true,"visible":false,"order":6},{"id":"refactorPreview","pinned":true,"visible":false},{"id":"workbench.views.service.panel.6ccfcd46-73d3-4299-93aa-d618e89b6b4a","pinned":true,"visible":false}]'
+  workbench.panel.placeholderPanels: "[{\"id\":\"workbench.panel.markers\",\"them\
+    eIcon\":{\"id\":\"markers-view-icon\"},\"name\":\"Problems\",\"isBuiltin\":\
+    true,\"views\":[{}]},{\"id\":\"workbench.panel.output\",\"themeIcon\":{\"id\
+    \":\"output-view-icon\"},\"name\":\"Output\",\"isBuiltin\":true,\"views\":[\
+    {}]},{\"id\":\"workbench.panel.repl\",\"themeIcon\":{\"id\":\"debug-console\
+    -view-icon\"},\"name\":\"Debug
+    Console\",\"isBuiltin\":true,\"views\":[{\"when\":\"debuggersAvailable\"}]}\
+    ,{\"id\":\"terminal\",\"themeIcon\":{\"id\":\"terminal-view-icon\"},\"name\
+    \":\"Terminal\",\"isBuiltin\":true,\"views\":[]},{\"id\":\"workbench.panel.\
+    testResults\",\"themeIcon\":{\"id\":\"test-results-icon\"},\"name\":\"Test
+    Results\",\"isBuiltin\":true,\"views\":[{\"when\":\"testing.hasAnyResults\"\
+    }]},{\"id\":\"~remote.forwardedPortsContainer\",\"themeIcon\":{\"id\":\"por\
+    ts-view-icon\"},\"name\":\"Ports\",\"isBuiltin\":true,\"views\":[]},{\"id\":\
+    \"workbench.view.extension.dbclient-search-result\",\"iconUrl\":{\"$mid\":1,\
+    \"path\":\"%%EXTENSION_DATA_PATH%%/cweijan.vscode-mysql-client2-9.0.2/resou\
+    rces/icon/database.svg\",\"scheme\":\"file\"},\"name\":\"Full-Text
+    Search\",\"isBuiltin\":false,\"views\":[{\"when\":\"showFullTextSearchResult\
+    \"}]},{\"id\":\"workbench.view.extension.dbclient-variable-config-view\",\"\
+    iconUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PATH%%/cweijan.vscode-mys\
+    ql-client2-9.0.2/resources/icon/database.svg\",\"scheme\":\"file\"},\"name\
+    \":\"SQL
+    Variables\",\"isBuiltin\":false,\"views\":[{\"when\":\"showSQLVariableConfig\
+    \"}]},{\"id\":\"workbench.view.extension.jupyter-variables\",\"themeIcon\":{\
+    \"id\":\"notebook\"},\"name\":\"Jupyter\",\"isBuiltin\":false,\"views\":[{\
+    \"when\":\"jupyter.hasNativeNotebookOrInteractiveWindowOpen\"},{\"when\":\"\
+    jupyter.hasNativeNotebookOrInteractiveWindowOpen &&
+    jupyter:showTagsExplorer\"}]},{\"id\":\"workbench.view.extension.vscode-ser\
+    ial-monitor-tools\",\"iconUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PAT\
+    H%%/ms-vscode.vscode-serial-monitor-0.13.1/assets/icons/SerialMonitor_128.p\
+    ng\",\"scheme\":\"file\"},\"name\":\"Serial
+    Monitor\",\"isBuiltin\":false,\"views\":[]},{\"id\":\"workbench.view.extens\
+    ion.stm32cube-ide-tcp\",\"iconUrl\":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA\
+    _PATH%%/stmicroelectronics.stm32cube-ide-debug-core-1.4.0/${chip}\",\"scheme\
+    \":\"file\"},\"name\":\"STM32Cube TCP
+    Console\",\"isBuiltin\":false,\"views\":[{\"when\":\"stm32cube-ide-tcp:show\
+    TCP\"}]},{\"id\":\"workbench.view.extension.stm32cube-ide-rtos\",\"iconUrl\
+    \":{\"$mid\":1,\"path\":\"%%EXTENSION_DATA_PATH%%/stmicroelectronics.stm32c\
+    ube-ide-rtos-1.4.0/${chip}\",\"scheme\":\"file\"},\"name\":\"STM32Cube
+    RTOS\",\"isBuiltin\":false,\"views\":[{\"when\":\"stm32cube-ide-rtos:showRT\
+    OS\"}]},{\"id\":\"workbench.view.extension.brunoLogsContainer\",\"themeIcon\
+    \":{\"id\":\"output\"},\"name\":\"Bruno
+    Logs\",\"isBuiltin\":false,\"views\":[{}]},{\"id\":\"refactorPreview\",\"th\
+    emeIcon\":{\"id\":\"refactor-preview-view-icon\"},\"name\":\"Refactor
+    Preview\",\"isBuiltin\":true,\"views\":[{\"when\":\"refactorPreview.enabled\
+    \"}]},{\"id\":\"workbench.views.service.panel.6ccfcd46-73d3-4299-93aa-d618e\
+    89b6b4a\",\"themeIcon\":{\"id\":\"terminal-view-icon\"},\"name\":\"Terminal\
+    \",\"isBuiltin\":true,\"views\":[{},{\"when\":\"vscode-serial-monitor.monit\
+    or1 == 'active'\"},{\"when\":\"vscode-serial-monitor.monitor2 ==
+    'active'\"},{}]}]"
+  workbench.panel.repl.hidden: '[{"id":"workbench.panel.repl.view","isHidden":false}]'
+  workbench.panel.size: "139"
+  workbench.panel.testResults.state.hidden: '[{"id":"workbench.panel.testResults.view","isHidden":false}]'
+  workbench.scm.views.state.hidden: '[{"id":"workbench.scm.repositories","isHidden":true},{"id":"workbench.scm","isHidden":false},{"id":"gitlens.views.repositories","isHidden":true},{"id":"gitlens.views.commits","isHidden":false},{"id":"gitlens.views.branches","isHidden":false},{"id":"gitlens.views.remotes","isHidden":false},{"id":"gitlens.views.stashes","isHidden":false},{"id":"gitlens.views.tags","isHidden":false},{"id":"gitlens.views.worktrees","isHidden":false},{"id":"gitlens.views.contributors","isHidden":false},{"id":"workbench.scm.sync","isHidden":false},{"id":"workbench.scm.history","isHidden":false},{"id":"gitlens.views.scm.grouped","isHidden":false}]'
+  workbench.sideBar.size: "299"
+  workbench.statusbar.hidden: '["status.workspaceTrust.a264f2bdb4610cac936403e5d28009fc","status.workspaceTrust.2b61aff00f8dda559518b08db55e88d5","status.workspaceTrust.b60d247434d8d3dcb73130cad85208e2","status.workspaceTrust.9b9816621a7692ba6f7a4de5e15a9d88","status.workspaceTrust.325d0162ad0e2e8d07c7e4575c5141e6","status.workspaceTrust.d3225f8cadb1c5acef69da0d5852db57","status.workspaceTrust.a82f78752db0a9a6145399bc070aada1","status.workspaceTrust.36e815a86f2d0eda965f2f8faf1e757c","status.workspaceTrust.252465075ad6f84d2e4dc76f0181861b","status.workspaceTrust.9ab846fcc444c0720e3c356dee5165c6","status.workspaceTrust.1695133756304","status.workspaceTrust.1695143383705","status.workspaceTrust.80cdb0f29daa50bbcb36ccf5437716a0","status.workspaceTrust.e82fdb044283a145e36b4a18fc9e7fa7","status.workspaceTrust.e7243cea652822cebce355e5516562aa","status.workspaceTrust.e3c35fb1eab09e3e9cfd066dbb5b477e","status.workspaceTrust.828b88ac54ec55212408e100aefe3bdd","status.workspaceTrust.1696703418390","status.workspaceTrust.bc73965445b7876d43d0ff2b660c0b22","status.workspaceTrust.31080917c9901d209fcf9348cfbc1097","status.workspaceTrust.3939cea93c94e751f7915087f46cd95a","status.workspaceTrust.ee13f875fb7e70bfe9971c25338d93f6","status.workspaceTrust.b4cea9d3b8386a0228359f7c22f6ca3c","status.workspaceTrust.1702728195196","status.workspaceTrust.1702728239054","status.workspaceTrust.1703664693163","status.workspaceTrust.1703664751503","status.workspaceTrust.a28a3c3dc1a566975efa19874895ff9c","status.workspaceTrust.3c78c40c2e6f3d0f5b2352e8c4c8b1d3","status.workspaceTrust.1703665345345","status.workspaceTrust.5abc3e781b4df985fbaf5249f4101a4b","status.workspaceTrust.96af548c9922608bbb94babf2695c3ca","status.workspaceTrust.1704086236760","status.workspaceTrust.d019e899ea47de48027e181909b723fc","status.workspaceTrust.1704303252067","status.workspaceTrust.1704326808155","status.workspaceTrust.db067768a8ea70b94288350d9d5d3681","status.workspaceTrust.1704340500478","status.workspaceTrust.1704340580084","status.workspaceTrust.d050c53504daa829095dd929cc7b6692","status.workspaceTrust.1704611163839","status.workspaceTrust.322be7c555c13334d7027807bd5ab9c2","status.workspaceTrust.1704818556336","status.workspaceTrust.d013fed5d28e4fa70632895857c026eb","status.workspaceTrust.1704873293296","status.workspaceTrust.1704873312099","status.workspaceTrust.1704873337939","status.workspaceTrust.1704985426108","status.workspaceTrust.ce6e2699e1340fb15241ba92919967ed","status.workspaceTrust.be9cd1e961d44cc59b8b8b74e6bbe792","status.workspaceTrust.1708260537153","status.workspaceTrust.35e89031377bfabfc3380c38c57f397d","status.workspaceTrust.404db827e82151a0b3e82047e82e9efa","status.workspaceTrust.1708279783791","status.workspaceTrust.50fb9ff19356900152e001e3154b73b9"]'
+  workbench.telemetryOptOutShown: "true"
+  workbench.view.debug.state.hidden: '[{"id":"workbench.debug.welcome","isHidden":false},{"id":"workbench.debug.variablesView","isHidden":false},{"id":"workbench.debug.watchExpressionsView","isHidden":false},{"id":"workbench.debug.callStackView","isHidden":false},{"id":"workbench.debug.loadedScriptsView","isHidden":false},{"id":"workbench.debug.breakPointsView","isHidden":false},{"id":"jsBrowserBreakpoints","isHidden":false},{"id":"jsExcludedCallers","isHidden":false},{"id":"CppSshTargetsView","isHidden":false},{"id":"platformio-debug.peripherals","isHidden":false},{"id":"platformio-debug.registers","isHidden":false},{"id":"platformio-debug.memory","isHidden":false},{"id":"platformio-debug.disassembly","isHidden":false},{"id":"jsDebugNetworkTree","isHidden":false},{"id":"st-cube-fault-detector.faultStatusRegisters","isHidden":false},{"id":"st-cube-debug-core.device-view","isHidden":false},{"id":"st-cube-debug-core.live-watch","isHidden":false},{"id":"stm32cube-ide-registers.peripheral-treetable","isHidden":false}]'
+  workbench.view.extension.ansible-explorer.state.hidden: '[{"id":"ansible-creator","isHidden":false},{"id":"lightspeed-explorer-treeview","isHidden":false},{"id":"lightspeed-feedback-webview","isHidden":false}]'
+  workbench.view.extension.bookmarks.state.hidden: '[{"id":"bookmarksExplorer","isHidden":false},{"id":"bookmarksHelpAndFeedback","isHidden":false}]'
+  workbench.view.extension.bruno.state.hidden: '[{"id":"bruno.sidebarView","isHidden":false}]'
+  workbench.view.extension.brunoLogsContainer.state.hidden: '[{"id":"bruno.logsView","isHidden":false}]'
+  workbench.view.extension.codeium.state.hidden: '[{"id":"codeium.chatPanelView","isHidden":false},{"id":"codeium.searchPanelView","isHidden":false}]'
+  workbench.view.extension.dockerView.state.hidden: '[{"id":"dockerContainers","isHidden":false},{"id":"dockerImages","isHidden":false},{"id":"dockerRegistries","isHidden":false},{"id":"dockerNetworks","isHidden":false},{"id":"dockerVolumes","isHidden":false},{"id":"vscode-docker.views.dockerContexts","isHidden":false},{"id":"vscode-docker.views.help","isHidden":false}]'
+  workbench.view.extension.github-cweijan-mysql.state.hidden: '[{"id":"github.cweijan.mysql","isHidden":false}]'
+  workbench.view.extension.github-cweijan-nosql.state.hidden: '[{"id":"github.cweijan.nosql","isHidden":false}]'
+  workbench.view.extension.gitlens.state.hidden: '[{"id":"gitlens.views.home","isHidden":false},{"id":"gitlens.views.workspaces","isHidden":false},{"id":"gitlens.views.account","isHidden":false},{"id":"gitlens.views.drafts","isHidden":false},{"id":"gitlens.views.welcome","isHidden":false},{"id":"gitlens.views.launchpad","isHidden":false}]'
+  workbench.view.extension.gitlensInspect.state.hidden: '[{"id":"gitlens.views.commitDetails","isHidden":false},{"id":"gitlens.views.lineHistory","isHidden":false},{"id":"gitlens.views.fileHistory","isHidden":false},{"id":"gitlens.views.timeline","isHidden":false},{"id":"gitlens.views.searchAndCompare","isHidden":false},{"id":"gitlens.views.pullRequest","isHidden":false}]'
+  workbench.view.extension.gitlensPanel.state.hidden: '[{"id":"gitlens.views.graph","isHidden":false},{"id":"gitlens.views.graphDetails","isHidden":false}]'
+  workbench.view.extension.grepperView.state.hidden: '[{"id":"grepperPopup","isHidden":false}]'
+  workbench.view.extension.jupyter-variables.state.hidden: '[{"id":"jupyterViewVariables","isHidden":false},{"id":"cell-tag","isHidden":false}]'
+  workbench.view.extension.latex-workshop-activitybar.state.hidden:
+    '[{"id":"latex-workshop-commands","isHidden":false},{"id":"latex-workshop-structure","isHidden":false},{"id":"latex-workshop-snippet-view","isHidden":false}]'
+  workbench.view.extension.liveshare.state.hidden: '[{"id":"liveshare.session","isHidden":false},{"id":"liveshare.help","isHidden":false},{"id":"liveshare.devtools","isHidden":false}]'
+  workbench.view.extension.makefile__viewContainer.state.hidden: '[{"id":"makefile.outline","isHidden":false}]'
+  workbench.view.extension.platformio.state.hidden: '[{"id":"platformio-ide.projectTasks","isHidden":false},{"id":"platformio-ide.quickAccess","isHidden":false}]'
+  workbench.view.extension.references-view.state.hidden: '[{"id":"references-view.tree","isHidden":false},{"id":"CppReferencesView","isHidden":false}]'
+  workbench.view.extension.stm32cube-ide-core-activity-id.state.hidden:
+    '[{"id":"st-cube-build.view-bundles-manager-ui","isHidden":false},{"id":"stm32cube-ide-core.actions-view.id","isHidden":false},{"id":"stm32cube-ide-core.resources-view.id","isHidden":false}]'
+  workbench.view.extension.test.state.hidden: '[{"id":"workbench.view.testing","isHidden":false},{"id":"go.test.profile","isHidden":false},{"id":"workbench.view.testCoverage","isHidden":false}]'
+  workbench.view.extension.thunder-client.state.hidden: '[{"id":"thunder-client-sidebar","isHidden":false}]'
+  workbench.view.extension.vscode-serial-monitor-tools.state.hidden:
+    '[{"id":"vscode-serial-monitor.monitor0","isHidden":false},{"id":"vscode-serial-monitor.monitor1","isHidden":false},{"id":"vscode-serial-monitor.monitor2","isHidden":false}]'
+  workbench.view.extension.wokwi-sidebar.state.hidden: '[{"id":"wokwi-explorer","isHidden":false}]'
+  workbench.view.extensions.state.hidden: '[{"id":"workbench.views.extensions.installed","isHidden":false},{"id":"workbench.views.extensions.searchOutdated","isHidden":false},{"id":"workbench.views.extensions.workspaceRecommendations","isHidden":false},{"id":"workbench.views.extensions.popular","isHidden":false},{"id":"workbench.views.extensions.searchRecentlyUpdated","isHidden":false},{"id":"workbench.views.extensions.otherRecommendations","isHidden":false},{"id":"extensions.recommendedList","isHidden":false},{"id":"workbench.views.extensions.enabled","isHidden":true},{"id":"workbench.views.extensions.disabled","isHidden":true},{"id":"workbench.views.extensions.marketplace","isHidden":false},{"id":"workbench.views.extensions.searchInstalled","isHidden":false},{"id":"workbench.views.extensions.searchEnabled","isHidden":false},{"id":"workbench.views.extensions.searchDisabled","isHidden":false},{"id":"workbench.views.extensions.searchBuiltin","isHidden":false},{"id":"workbench.views.extensions.searchWorkspaceUnsupported","isHidden":false},{"id":"workbench.views.extensions.builtinFeatureExtensions","isHidden":false},{"id":"workbench.views.extensions.builtinThemeExtensions","isHidden":false},{"id":"workbench.views.extensions.builtinProgrammingLanguageExtensions","isHidden":false},{"id":"workbench.views.extensions.untrustedUnsupportedExtensions","isHidden":false},{"id":"workbench.views.extensions.untrustedPartiallySupportedExtensions","isHidden":false},{"id":"workbench.views.extensions.virtualUnsupportedExtensions","isHidden":false},{"id":"workbench.views.extensions.virtualPartiallySupportedExtensions","isHidden":false},{"id":"workbench.views.extensions.deprecatedExtensions","isHidden":false},{"id":"workbench.views.extensions.local.installed","isHidden":false},{"id":"workbench.views.extensions.remote.installed","isHidden":false},{"id":"workbench.views.extensions.marketplaceAccess","isHidden":false},{"id":"workbench.views.mcp.installed","isHidden":false},{"id":"workbench.views.mcp.default.marketplace","isHidden":false},{"id":"workbench.views.mcp.default.welcomeView","isHidden":false},{"id":"workbench.views.agentPlugins.installed","isHidden":false},{"id":"workbench.views.agentPlugins.default.marketplace","isHidden":true},{"id":"workbench.views.extensions.restartRequired","isHidden":false},{"id":"workbench.views.agentPlugins.marketplace","isHidden":false},{"id":"workbench.views.mcp.marketplace","isHidden":false},{"id":"workbench.views.mcp.welcomeView","isHidden":false}]'
+  workbench.view.remote.state.hidden: '[{"id":"targetsContainers","isHidden":false},{"id":"detailsContainers","isHidden":false},{"id":"devVolumes","isHidden":false},{"id":"remoteTargets","isHidden":false},{"id":"remoteHub.views.workspaceRepositories","isHidden":false},{"id":"~remote.helpPanel","isHidden":false}]'
+  workbench.view.search.state.hidden: '[{"id":"workbench.view.search","isHidden":false}]'
+  workbench.view.sync.state.hidden: '[{"id":"workbench.views.sync.conflicts","isHidden":false},{"id":"workbench.views.sync.remoteActivity","isHidden":false},{"id":"workbench.views.sync.machines","isHidden":false},{"id":"workbench.views.sync.localActivity","isHidden":true},{"id":"workbench.views.sync.troubleshoot","isHidden":true}]'
+  workbench.views.extensions.installed.size: "72"
+  workbench.views.service.panel.6ccfcd46-73d3-4299-93aa-d618e89b6b4a.state.hidden:
+    '[{"id":"terminal","isHidden":false},{"id":"vscode-serial-monitor.monitor0","isHidden":true},{"id":"vscode-serial-monitor.monitor1","isHidden":false},{"id":"vscode-serial-monitor.monitor2","isHidden":false}]'
+  workbench.welcomePage.walkthroughMetadata: '[["GitHub.copilot-chat#copilotWelcome",{"firstSeen":1784209712706,"stepIDs":["copilot.setup.signIn","copilot.setup.signInNoAction","copilot.setup.signUp","copilot.setup.signUpNoAction","copilot.panelChat","copilot.edits","copilot.firstSuggest","copilot.inlineChatNotMac","copilot.inlineChatMac","copilot.sparkle"],"manaullyOpened":false}],["alefragnani.Bookmarks#bookmarksWelcome",{"firstSeen":1784209790660,"stepIDs":["toggle","navigateToBookmarks","defineLabelsForYourBookmarks","exclusiveSideBar","workingWithRemotes","customizingAppearance"],"manaullyOpened":false}],["eamodio.gitlens#welcome",{"firstSeen":1784209790660,"stepIDs":["get-started-community","welcome-in-trial","welcome-in-trial-expired","welcome-in-trial-expired-eligible","welcome-paid","visualize-code-history","ai-features","git-blame","accelerate-pr-reviews"],"manaullyOpened":false}],["ms-python.python#pythonWelcome",{"firstSeen":1784209790660,"stepIDs":["python.createPythonFolder","python.createPythonFile","python.installPythonWin8","python.installPythonMac","python.installPythonLinux","python.createEnvironment","python.runAndDebug","python.learnMoreWithDS"],"manaullyOpened":false}],["ms-python.python#pythonDataScienceWelcome",{"firstSeen":1784209790660,"stepIDs":["python.installJupyterExt","python.createNewNotebook","python.openInteractiveWindow","python.dataScienceLearnMore"],"manaullyOpened":false}],["ms-toolsai.jupyter#jupyterWelcome",{"firstSeen":1784209790660,"stepIDs":["ipynb.newUntitledIpynb","jupyter.selectKernel","jupyter.exploreAndDebug","jupyter.dataScienceLearnMore"],"manaullyOpened":false}],["ms-vscode.cpptools#cppWelcome",{"firstSeen":1784209790660,"stepIDs":["awaiting.activation.mac","awaiting.activation.linux","awaiting.activation.windows","awaiting.activation.windows10","awaiting.activation.windows11","no.compilers.found.mac","no.compilers.found.linux","no.compilers.found.windows","no.compilers.found.windows10","no.compilers.found.windows11","verify.compiler.mac","verify.compiler.linux","verify.compiler.windows","verify.compiler.windows10","verify.compiler.windows11","create.cpp.file","relaunch.developer.command.prompt.windows","run.project.mac","run.project.linux","run.project.windows","customize.debugging.linux","customize.debugging.windows","customize.debugging.mac"],"manaullyOpened":false}],["ms-vscode.remote-repositories#remoteRepositoriesWalkthrough",{"firstSeen":1784209790660,"stepIDs":["editCommitRepo","createGitHubPullRequest","continueOn","openRepo","remoteIndicator"],"manaullyOpened":false}],["platformio.platformio-ide#platformio-ide.welcome",{"firstSeen":1784209790660,"stepIDs":["platformio-core","platformio.ini","platformio-home","explore-more-resources","ready-to-start"],"manaullyOpened":false}],["STMicroelectronics.stm32cube-ide-core#stm32cube-ide-core-walkthrough-id",{"firstSeen":1784209790660,"stepIDs":["stm32cube-ide-core.walkthroughs.explore","stm32cube-ide-core.walkthroughs.project","stm32cube-ide-core.walkthroughs.edit","stm32cube-ide-core.walkthroughs.build","stm32cube-ide-core.walkthroughs.debug","stm32cube-ide-core.walkthroughs.bundles"],"manaullyOpened":false}],["VSpaceCode.vspacecode#vspacecode.welcome",{"firstSeen":1784209790660,"stepIDs":["vspacecode.welcome.configuration","vspacecode.welcome.tryout","vspacecode.welcome.customization"],"manaullyOpened":false}]]'
+removed: []
