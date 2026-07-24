@@ -1,0 +1,156 @@
+{
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.formatOnType": true
+  },
+  "arduino.useArduinoCli": true,
+  "autoDocstring.quoteStyle": "'''",
+  "C_Cpp.clang_format_fallbackStyle": "WebKit",
+  "C_Cpp.updateChannel": "Insiders",
+  "cmake.configureOnOpen": true,
+  "cmake.environment": {
+    "PATH": "/home/dhupee/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.46.0-linux-x64/resources/cube-cmake/linux/x86_64:/home/dhupee/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.4.0-linux-x64/resources/binaries/linux/x86_64:c:${env.PATH}"
+  },
+  "debug.allowBreakpointsEverywhere": true,
+  "docker.enableDockerComposeLanguageService": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.largeFileOptimizations": false,
+  "editor.lineNumbers": "relative",
+  "editor.linkedEditing": true,
+  "editor.renderWhitespace": "all",
+  "editor.suggestSelection": "first",
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.openRepositoryInParentFolders": "always",
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": true,
+    "plaintext": false,
+    "python": true,
+    "yaml": false
+  },
+  "grammarly.config.documentDialect": "american",
+  "grammarly.files.include": [
+    "**/readme.md",
+    "**/README.md",
+    "**/*.txt",
+    "**/*.md"
+  ],
+  "jupyter.alwaysTrustNotebooks": true,
+  "jupyter.askForKernelRestart": false,
+  "jupyter.jupyterServerType": "local",
+  "jupyter.textOutputLimit": 10000,
+  "jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+  ],
+  "local-sync.autobackup": true,
+  "makefile.configureOnOpen": true,
+  "markdown.extension.print.theme": "dark",
+  "platformio-ide.activateOnlyOnPlatformIOProject": true,
+  "python.formatting.provider": "none",
+  "remote.SSH.remotePlatform": {
+    "34.123.13.160": "linux",
+    "34.136.164.105": "linux",
+    "34.66.90.143": "linux",
+    "34.67.244.0": "linux",
+    "Coursera_Qwiklabs_SSH": "linux",
+    "Coursera_SSH": "linux",
+    "Puppet_Instances": "linux"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "settingsSync.ignoredExtensions": [],
+  "settingsSync.ignoredSettings": [
+    "-docker.dockerPath",
+    "-docker.environment",
+    "-docker.host",
+    "-vim.neovimConfigPath",
+    "-vim.neovimPath"
+  ],
+  "stm32cube-ide-clangd.detectExtensionConflicts": false,
+  "sync.autoDownload": true,
+  "sync.autoUpload": true,
+  "sync.gist": "162b52e9fca2b7920c0ee539373333e2",
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "vim.easymotion": true,
+  "vim.neovimUseConfigFile": true,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ","
+      ],
+      "commands": [
+        "vspacecode.space",
+        {
+          "args": "m",
+          "command": "whichkey.triggerKey"
+        }
+      ]
+    }
+  ],
+  "vim.useSystemClipboard": true,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<space>"
+      ],
+      "commands": [
+        "vspacecode.space"
+      ]
+    },
+    {
+      "before": [
+        ","
+      ],
+      "commands": [
+        "vspacecode.space",
+        {
+          "args": "m",
+          "command": "whichkey.triggerKey"
+        }
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "commands": [
+        "editor.action.indentLines"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "commands": [
+        "editor.action.outdentLines"
+      ]
+    }
+  ],
+  "vscode-office.autoTheme": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "workbench.colorCustomizations": {},
+  "workbench.colorTheme": "Dracula Theme",
+  "workbench.editor.tabSizing": "shrink",
+  "workbench.editor.tabSizingFixedMaxWidth": 80,
+  "workbench.iconTheme": "vscode-icons"
+}
