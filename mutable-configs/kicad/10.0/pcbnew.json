@@ -527,6 +527,9 @@
     "highlight_factor": 0.5,
     "select_factor": 0.75
   },
+  "import": {
+    "keep_kicad_layer_names": false
+  },
   "import_graphics": {
     "dxf_units": 0,
     "fix_discontinuities": true,

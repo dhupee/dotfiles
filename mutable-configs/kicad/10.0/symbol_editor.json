@@ -41,6 +41,9 @@
   },
   "drag_pins_along_with_edges": true,
   "edit_symbol_visible_columns": "0 1 2 3 4 5 6 7",
+  "editing": {
+    "arc_edit_mode": 0
+  },
   "field_editor": {
     "field_widths": {},
     "height": 0,

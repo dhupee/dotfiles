@@ -17,17 +17,75 @@
   "auto_backup": {
     "backup_on_autosave": false,
     "enabled": true,
+    "format": 1,
     "limit_daily_files": 5,
     "limit_total_files": 25,
     "limit_total_size": 104857600,
+    "location": 0,
     "min_interval": 300
   },
   "dialog": {
-    "controls": {}
+    "controls": {
+      "Plugin And Content Manager": {
+        "__geometry": {
+          "h": 527,
+          "w": 995,
+          "x": 0,
+          "y": 0
+        },
+        "wxNotebook_0": "Repository (118)",
+        "wxNotebook_0wxPanel_0wxChoice_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0": "Plugins (75)",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_0wxSplitterWindow_0": 519,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_0wxSplitterWindow_0wxPanel_0wxScrolledWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_0wxSplitterWindow_0wxPanel_0wxSearchCtrl_0": "",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_0wxSplitterWindow_0wxPanel_1wxScrolledWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_0wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxCheckBox_0": false,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_0wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxGrid_0": "0 1 2 3 4",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_0wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxHtmlWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_1wxSplitterWindow_0": 519,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_1wxSplitterWindow_0wxPanel_0wxScrolledWindow_0": 24,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_1wxSplitterWindow_0wxPanel_0wxSearchCtrl_0": "",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_1wxSplitterWindow_0wxPanel_1wxScrolledWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_1wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxCheckBox_0": false,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_1wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxGrid_0": "0 1 2 3 4",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_1wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxHtmlWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_2wxSplitterWindow_0": 519,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_2wxSplitterWindow_0wxPanel_0wxScrolledWindow_0": 32,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_2wxSplitterWindow_0wxPanel_0wxSearchCtrl_0": "",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_2wxSplitterWindow_0wxPanel_1wxScrolledWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_2wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxCheckBox_0": false,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_2wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxGrid_0": "0 1 2 3 4",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_2wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxHtmlWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_3wxSplitterWindow_0": 519,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_3wxSplitterWindow_0wxPanel_0wxScrolledWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_3wxSplitterWindow_0wxPanel_0wxSearchCtrl_0": "",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_3wxSplitterWindow_0wxPanel_1wxScrolledWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_3wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxCheckBox_0": false,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_3wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxGrid_0": "0 1 2 3 4",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_3wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxHtmlWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_4wxSplitterWindow_0": 519,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_4wxSplitterWindow_0wxPanel_0wxScrolledWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_4wxSplitterWindow_0wxPanel_0wxSearchCtrl_0": "",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_4wxSplitterWindow_0wxPanel_1wxScrolledWindow_0": 0,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_4wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxCheckBox_0": false,
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_4wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxGrid_0": "0 1 2 3 4",
+        "wxNotebook_0wxPanel_0wxNotebook_0wxPanel_4wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxHtmlWindow_0": 0,
+        "wxNotebook_0wxPanel_1wxPanel_0wxSplitterWindow_0": 525,
+        "wxNotebook_0wxPanel_1wxPanel_0wxSplitterWindow_0wxPanel_0wxScrolledWindow_0": 0,
+        "wxNotebook_0wxPanel_1wxPanel_0wxSplitterWindow_0wxPanel_0wxSearchCtrl_0": "",
+        "wxNotebook_0wxPanel_1wxPanel_0wxSplitterWindow_0wxPanel_1wxScrolledWindow_0": 0,
+        "wxNotebook_0wxPanel_1wxPanel_0wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxCheckBox_0": false,
+        "wxNotebook_0wxPanel_1wxPanel_0wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxGrid_0": "0 1 2 3 4",
+        "wxNotebook_0wxPanel_1wxPanel_0wxSplitterWindow_0wxPanel_1wxScrolledWindow_0wxHtmlWindow_0": 0,
+        "wxNotebook_0wxPanel_2wxGrid_0": "0 1 2 3"
+      }
+    }
   },
   "do_not_show_again": {
     "data_collection_prompt": true,
     "env_var_overwrite_warning": false,
+    "migrate_wrl_prompt": false,
     "scaled_3d_models_warning": false,
     "update_check_prompt": true,
     "zone_fill_warning": false
@@ -73,7 +131,7 @@
   },
   "meta": {
     "filename": "kicad_common.json",
-    "version": 5
+    "version": 6
   },
   "netclass_panel": {
     "eeschema_shown_columns": "0 11 12 13 14",
@@ -81,7 +139,7 @@
     "sash_pos": 314
   },
   "package_manager": {
-    "sash_pos": 654
+    "sash_pos": 519
   },
   "session": {
     "pinned_design_block_libs": [],
@@ -100,6 +158,7 @@
   "system": {
     "autosave_interval": 600,
     "clear_3d_cache_interval": 30,
+    "extra_3d_search_dirs": [],
     "file_explorer": "",
     "file_history_size": 9,
     "language": "Default",
