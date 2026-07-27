@@ -24,6 +24,7 @@
 
       # Compilers and other outside tooling
       clang
+      cmake
       fzf
       gnumake
       tree-sitter
