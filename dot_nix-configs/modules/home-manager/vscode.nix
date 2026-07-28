@@ -16,6 +16,11 @@
           stm32cubemx
           platformio-core
           uv
+
+          # debugger
+          gdb
+          openocd
+          stlink-gui
         ]
     );
   };

@@ -174,6 +174,7 @@
   # Make sure udev is installed for platformio
   services.udev.packages = with pkgs; [
     platformio-core.udev
+    stlink
   ];
 
   # adding /bin/bash, needed by platformio

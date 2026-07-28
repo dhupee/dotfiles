@@ -13,6 +13,7 @@
         "libvirtd"
         "networkmanager"
         "podman"
+        "plugdev"
         "wheel"
       ];
       shell = pkgs.zsh;
