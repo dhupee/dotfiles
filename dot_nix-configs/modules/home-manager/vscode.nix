@@ -9,8 +9,9 @@
           gnumake
           cmake
 
-          # Compiler
+          # Compiler and Interpreter
           gcc-arm-embedded
+          python3Minimal
 
           # Toolchain and Version Manager
           stm32cubemx
@@ -21,7 +22,7 @@
           gdb
           openocd
           stlink-gui
-          stm32flash
+          stm32loader
         ]
     );
   };
