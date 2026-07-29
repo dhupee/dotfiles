@@ -17,10 +17,11 @@
           platformio-core
           uv
 
-          # debugger
+          # Debugger and Programmer
           gdb
           openocd
           stlink-gui
+          stm32flash
         ]
     );
   };
