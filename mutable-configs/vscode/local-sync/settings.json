@@ -175,5 +175,7 @@
       "path": "pwsh",
       "icon": "terminal-powershell"
     }
-  }
+  },
+  "scm.defaultViewMode": "tree",
+  "editor.formatOnSave": true
 }
