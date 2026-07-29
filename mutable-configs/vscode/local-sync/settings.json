@@ -152,5 +152,28 @@
   "workbench.colorTheme": "Dracula Theme",
   "workbench.editor.tabSizing": "shrink",
   "workbench.editor.tabSizingFixedMaxWidth": 80,
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "containers.enableComposeLanguageService": false,
+  "stm32cube-ide-build-cmake.ignoreCubeProjectDiscovery": false,
+  "terminal.integrated.automationProfile.linux": {},
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "/usr/bin/bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "/home/dhupee/.nix-profile/bin/zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  }
 }
