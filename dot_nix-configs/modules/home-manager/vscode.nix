@@ -3,8 +3,8 @@
     enable = true;
     # package = pkgs.vscode-fhs;
     package = pkgs.vscode.fhsWithPackages (
-      ps:
-        with ps; [
+      pkgs:
+        (with pkgs; [
           # Tooling
           gnumake
           cmake
@@ -23,7 +23,11 @@
           openocd
           stlink-gui
           stm32loader
-        ]
+        ])
+        ++ (with pkgs.nerd-fonts; [
+          fira-code
+          hack
+        ])
     );
   };
 }

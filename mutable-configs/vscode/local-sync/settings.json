@@ -180,5 +180,6 @@
   "editor.formatOnSave": true
   "stm32cube-ide-clangd.enableFormatting": true,
   "stm32cube-ide-debug-core.device-manager.StlinkConnectionErrorNotification": false,
-  "bookmarks.saveBookmarksInProject": true
+  "bookmarks.saveBookmarksInProject": true,
+  "terminal.integrated.fontFamily": "'Hack Nerd Font'"
 }
