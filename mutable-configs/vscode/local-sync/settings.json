@@ -3,7 +3,7 @@
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
   "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
   },
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8",
@@ -178,4 +178,7 @@
   },
   "scm.defaultViewMode": "tree",
   "editor.formatOnSave": true
+  "stm32cube-ide-clangd.enableFormatting": true,
+  "stm32cube-ide-debug-core.device-manager.StlinkConnectionErrorNotification": false,
+  "bookmarks.saveBookmarksInProject": true
 }
