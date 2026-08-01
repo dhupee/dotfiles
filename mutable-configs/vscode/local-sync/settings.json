@@ -177,9 +177,15 @@
     }
   },
   "scm.defaultViewMode": "tree",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[c]": {
+    "editor.defaultFormatter": "STMicroelectronics.stm32cube-ide-clangd"
+  },
   "stm32cube-ide-clangd.enableFormatting": true,
   "stm32cube-ide-debug-core.device-manager.StlinkConnectionErrorNotification": false,
   "bookmarks.saveBookmarksInProject": true,
-  "terminal.integrated.fontFamily": "'Hack Nerd Font'"
+  "terminal.integrated.fontFamily": "'Hack Nerd Font'",
+  "hediet.vscode-drawio.resizeImages": null,
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+  "vim.smartRelativeLine": true
 }
