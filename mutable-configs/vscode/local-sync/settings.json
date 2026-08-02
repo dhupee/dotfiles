@@ -1,4 +1,7 @@
 {
+  "[c]": {
+    "editor.defaultFormatter": "STMicroelectronics.stm32cube-ide-clangd"
+  },
   "[cpp]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
   },
@@ -11,15 +14,19 @@
   },
   "arduino.useArduinoCli": true,
   "autoDocstring.quoteStyle": "'''",
+  "bookmarks.saveBookmarksInProject": true,
   "C_Cpp.clang_format_fallbackStyle": "WebKit",
   "C_Cpp.updateChannel": "Insiders",
   "cmake.configureOnOpen": true,
   "cmake.environment": {
     "PATH": "/home/dhupee/.vscode/extensions/stmicroelectronics.stm32cube-ide-build-cmake-1.46.0-linux-x64/resources/cube-cmake/linux/x86_64:/home/dhupee/.vscode/extensions/stmicroelectronics.stm32cube-ide-core-1.4.0-linux-x64/resources/binaries/linux/x86_64:c:${env.PATH}"
   },
+  "containers.enableComposeLanguageService": false,
   "debug.allowBreakpointsEverywhere": true,
   "docker.enableDockerComposeLanguageService": false,
   "editor.bracketPairColorization.enabled": true,
+  "editor.cursorSurroundingLines": 10,
+  "editor.formatOnSave": true,
   "editor.guides.bracketPairs": true,
   "editor.inlineSuggest.enabled": true,
   "editor.largeFileOptimizations": false,
@@ -47,6 +54,7 @@
     "**/*.txt",
     "**/*.md"
   ],
+  "hediet.vscode-drawio.resizeImages": null,
   "jupyter.alwaysTrustNotebooks": true,
   "jupyter.askForKernelRestart": false,
   "jupyter.jupyterServerType": "local",
@@ -58,7 +66,6 @@
   "local-sync.autobackup": true,
   "makefile.configureOnOpen": true,
   "markdown.extension.print.theme": "dark",
-  "platformio-ide.activateOnlyOnPlatformIOProject": true,
   "python.formatting.provider": "none",
   "remote.SSH.remotePlatform": {
     "34.123.13.160": "linux",
@@ -69,6 +76,7 @@
     "Coursera_SSH": "linux",
     "Puppet_Instances": "linux"
   },
+  "scm.defaultViewMode": "tree",
   "security.workspace.trust.untrustedFiles": "open",
   "settingsSync.ignoredExtensions": [],
   "settingsSync.ignoredSettings": [
@@ -78,114 +86,54 @@
     "-vim.neovimConfigPath",
     "-vim.neovimPath"
   ],
+  "stm32cube-ide-build-cmake.ignoreCubeProjectDiscovery": false,
   "stm32cube-ide-clangd.detectExtensionConflicts": false,
-  "sync.autoDownload": true,
-  "sync.autoUpload": true,
-  "sync.gist": "162b52e9fca2b7920c0ee539373333e2",
+  "stm32cube-ide-clangd.enableFormatting": true,
+  "stm32cube-ide-debug-core.device-manager.StlinkConnectionErrorNotification": false,
+  "terminal.integrated.automationProfile.linux": {},
   "terminal.integrated.defaultProfile.linux": "zsh",
+  "terminal.integrated.fontFamily": "'Hack Nerd Font'",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "icon": "terminal-bash",
+      "path": "/usr/bin/bash"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "pwsh": {
+      "icon": "terminal-powershell",
+      "path": "pwsh"
+    },
+    "tmux": {
+      "icon": "terminal-tmux",
+      "path": "tmux"
+    },
+    "zsh": {
+      "path": "/home/dhupee/.nix-profile/bin/zsh"
+    }
+  },
   "vim.easymotion": true,
+  "vim.highlightedyank.color": "#a9dc7660",
+  "vim.highlightedyank.enable": true,
+  "vim.hlsearch": true,
+  "vim.ignorecase": true,
+  "vim.inccommand": "replace",
+  "vim.incsearch": true,
+  "vim.leader": "space",
   "vim.neovimUseConfigFile": true,
-  "vim.normalModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<space>"
-      ],
-      "commands": [
-        "vspacecode.space"
-      ]
-    },
-    {
-      "before": [
-        ","
-      ],
-      "commands": [
-        "vspacecode.space",
-        {
-          "args": "m",
-          "command": "whichkey.triggerKey"
-        }
-      ]
-    }
-  ],
+  "vim.replaceWithRegister": true,
+  "vim.showcmd": true,
+  "vim.showmodename": true,
+  "vim.smartcase": true,
+  "vim.smartRelativeLine": true,
+  "vim.useCtrlKeys": true,
   "vim.useSystemClipboard": true,
-  "vim.visualModeKeyBindingsNonRecursive": [
-    {
-      "before": [
-        "<space>"
-      ],
-      "commands": [
-        "vspacecode.space"
-      ]
-    },
-    {
-      "before": [
-        ","
-      ],
-      "commands": [
-        "vspacecode.space",
-        {
-          "args": "m",
-          "command": "whichkey.triggerKey"
-        }
-      ]
-    },
-    {
-      "before": [
-        ">"
-      ],
-      "commands": [
-        "editor.action.indentLines"
-      ]
-    },
-    {
-      "before": [
-        "<"
-      ],
-      "commands": [
-        "editor.action.outdentLines"
-      ]
-    }
-  ],
-  "vscode-office.autoTheme": true,
   "vsicons.dontShowNewVersionMessage": true,
   "workbench.colorCustomizations": {},
   "workbench.colorTheme": "Dracula Theme",
   "workbench.editor.tabSizing": "shrink",
   "workbench.editor.tabSizingFixedMaxWidth": 80,
   "workbench.iconTheme": "vscode-icons",
-  "containers.enableComposeLanguageService": false,
-  "stm32cube-ide-build-cmake.ignoreCubeProjectDiscovery": false,
-  "terminal.integrated.automationProfile.linux": {},
-  "terminal.integrated.profiles.linux": {
-    "bash": {
-      "path": "/usr/bin/bash",
-      "icon": "terminal-bash"
-    },
-    "zsh": {
-      "path": "/home/dhupee/.nix-profile/bin/zsh"
-    },
-    "fish": {
-      "path": "fish"
-    },
-    "tmux": {
-      "path": "tmux",
-      "icon": "terminal-tmux"
-    },
-    "pwsh": {
-      "path": "pwsh",
-      "icon": "terminal-powershell"
-    }
-  },
-  "scm.defaultViewMode": "tree",
-  "editor.formatOnSave": true,
-  "[c]": {
-    "editor.defaultFormatter": "STMicroelectronics.stm32cube-ide-clangd"
-  },
-  "stm32cube-ide-clangd.enableFormatting": true,
-  "stm32cube-ide-debug-core.device-manager.StlinkConnectionErrorNotification": false,
-  "bookmarks.saveBookmarksInProject": true,
-  "terminal.integrated.fontFamily": "'Hack Nerd Font'",
-  "hediet.vscode-drawio.resizeImages": null,
-  "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "vim.smartRelativeLine": true
+  "workbench.secondarySideBar.defaultVisibility": "hidden"
 }
