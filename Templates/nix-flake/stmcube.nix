@@ -1,5 +1,5 @@
 {
-  description = "THE";
+  description = "Flake for working with STM32 microcontroller";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
@@ -29,8 +29,9 @@
 
           # Debugger and other utils
           compiledb
-          openocd
-          gdbgui
+          seer
+          stlink-gui
+          tio
         ];
 
         env-profile = ''
