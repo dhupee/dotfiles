@@ -8,10 +8,13 @@
         virtiofsd
         virtio-win
       ];
+      swtpm.enable = true;
     };
   };
-
-  boot.binfmt.emulatedSystems = ["aarch64"];
+  environment.systemPackages = with pkgs; [
+    dnsmasq
+  ];
+  boot.binfmt.emulatedSystems = ["aarch64-linux"];
 
   # Use this when using NixOS as Guest
   # services.qemuGuest.enable = true;
