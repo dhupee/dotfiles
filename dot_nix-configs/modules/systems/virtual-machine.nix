@@ -1,15 +1,25 @@
 {pkgs, ...}: {
   programs.virt-manager.enable = true;
-  virtualisation.libvirtd = {
-    enable = true;
-    qemu = {
-      package = pkgs.qemu;
-      vhostUserPackages = with pkgs; [
-        virtiofsd
-        virtio-win
-      ];
-      swtpm.enable = true;
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+      qemu = {
+        package = pkgs.qemu;
+        vhostUserPackages = with pkgs; [
+          /*
+          NOTE:
+          Windows Guest need to download this tools:
+          - virtio-win-guest-tools
+          - winfsp
+          then enable virtio from service.msc, then also start
+          */
+          virtiofsd
+          virtio-win
+        ];
+        swtpm.enable = true;
+      };
     };
+    spiceUSBRedirection.enable = true;
   };
   environment.systemPackages = with pkgs; [
     dnsmasq
