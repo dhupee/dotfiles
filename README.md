@@ -178,6 +178,7 @@ Then you can let it rip, remove Scoop or Nix, depending on the systems
 - [Nix Portable](https://github.com/DavHau/nix-portable)
 - [NixOS-Generator](https://github.com/nix-community/nixos-generators/)
 - [Scoop Package Manager](https://scoop.sh/)
+- [ReviOS](https://revi.cc/)
 
 ## References for me
 
