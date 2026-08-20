@@ -57,6 +57,12 @@
       url = "github:Gerg-L/spicetify-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # VM Curator
+    vm-curator = {
+      url = "github:mroboff/vm-curator";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -73,6 +79,7 @@
     spicetify-nix,
     nixos-wsl,
     nix-flatpak,
+    vm-curator,
   } @ inputs: let
     # SYSTEM VARIABLES
     system = "x86_64-linux"; # default systems for most of the machines
@@ -186,7 +193,7 @@
           )
         ];
         specialArgs = {
-          inherit pkgs-unstable self inputs;
+          inherit pkgs-unstable vm-curator self inputs;
         };
       };
 

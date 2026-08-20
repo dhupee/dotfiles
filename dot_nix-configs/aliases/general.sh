@@ -43,6 +43,9 @@ alias lzd="lazydocker"
 # Distrobox
 alias dtui="distrobox-tui"
 
+# VM-Curator
+alias vmc="vm-curator"
+
 # Tunneling url/localhost
 alias tunnel="cloudflared tunnel --url $1"
 

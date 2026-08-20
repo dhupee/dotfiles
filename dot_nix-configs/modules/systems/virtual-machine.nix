@@ -1,4 +1,8 @@
-{pkgs, ...}: {
+{
+  pkgs,
+  vm-curator,
+  ...
+}: {
   programs.virt-manager.enable = true;
   virtualisation = {
     libvirtd = {
@@ -23,6 +27,7 @@
   };
   environment.systemPackages = with pkgs; [
     dnsmasq
+    vm-curator.packages.${system}.default
   ];
   boot.binfmt.emulatedSystems = ["aarch64-linux"];
 
