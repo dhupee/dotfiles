@@ -12,6 +12,8 @@
       - [Uninstalling Scoop as cleanly as possible](#uninstalling-scoop-as-cleanly-as-possible)
   - [Removing Dotfiles](#removing-dotfiles)
   - [Tools I use in this dotfiles](#tools-i-use-in-this-dotfiles)
+    - [Nix Related](#nix-related)
+    - [Non-Nix Related](#non-nix-related)
   - [References for me](#references-for-me)
   - [To-Do List](#to-do-list)
 <!--toc:end-->
@@ -169,6 +171,8 @@ Then you can let it rip, remove Scoop or Nix, depending on the systems
 
 ## Tools I use in this dotfiles
 
+### Nix Related
+
 - [Home Manager](https://github.com/nix-community/home-manager)
 - [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer)
 - [Plasma Manager](https://github.com/nix-community/plasma-manager)
@@ -177,6 +181,9 @@ Then you can let it rip, remove Scoop or Nix, depending on the systems
 - [Spicetify Nix](https://github.com/Gerg-L/spicetify-nix)
 - [Nix Portable](https://github.com/DavHau/nix-portable)
 - [NixOS-Generator](https://github.com/nix-community/nixos-generators/)
+
+### Non-Nix Related
+
 - [Scoop Package Manager](https://scoop.sh/)
 - [ReviOS](https://revi.cc/)
 
@@ -195,5 +202,7 @@ Then you can let it rip, remove Scoop or Nix, depending on the systems
 
 ## To-Do List
 
+- [ ] Move Templates as Reuseable Nix Devshells or Nix Run
+- [ ] Clean up Nix settings in the flake, including github's access token
 - [ ] NixOS profile specifically for Klipper Servers, for my 3D printer
 - [ ] Live USB profile, packages as an custom ISO
