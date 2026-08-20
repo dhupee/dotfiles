@@ -8,6 +8,9 @@
     nixpkgs-droid.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+    # Determinate system's Nix
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+
     # Enables me to install flatpaks declaratively
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.7.0";
 
@@ -64,6 +67,7 @@
     nixpkgs-unstable,
     nix-cachyos-kernel,
     nix-on-droid,
+    determinate,
     home-manager,
     plasma-manager,
     spicetify-nix,
@@ -100,6 +104,16 @@
     };
 
     lib = nixpkgs.lib;
+
+    # Nix Configs
+    substituters = [
+      "https://install.determinate.systems"
+      "https://attic.xuyh0120.win/lantian"
+    ];
+    trusted-public-keys = [
+      "cache.flakehub.com-3:hJuILl5sVK4iKm86JzgdXW12Y2Hwd5G07qKtHTOcDCM="
+      "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
+    ];
   in {
     #===================NIX-ON-DROID CONFIGURATIONS==================================
     nixOnDroidConfigurations = {
@@ -151,6 +165,9 @@
           # directory of the configuration nix of this profile
           ./linux/nitro/configuration.nix
 
+          # Load the Determinate module
+          determinate.nixosModules.default
+
           # Nix-Flatpak, managing flatpak declaratively
           nix-flatpak.nixosModules.nix-flatpak
           (
@@ -161,9 +178,10 @@
               ];
               boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
 
-              # Binary cache for Cachy kernel
-              nix.settings.substituters = ["https://attic.xuyh0120.win/lantian"];
-              nix.settings.trusted-public-keys = ["lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="];
+              nix.settings = {
+                substituters = substituters;
+                trusted-public-keys = trusted-public-keys;
+              };
             }
           )
         ];
