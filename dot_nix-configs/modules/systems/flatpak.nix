@@ -20,14 +20,10 @@
     ];
 
     packages = [
-      # {
-      #   appId = "com.github.tchx84.Flatseal";
-      #   origin = "flathub";
-      # }
-      # {
-      #   appId = "com.vscodium.codium";
-      #   origin = "flathub";
-      # }
+      {
+        appId = "com.github.tchx84.Flatseal";
+        origin = "flathub";
+      }
       {
         appId = "com.usebottles.bottles";
         origin = "flathub";
@@ -40,6 +36,18 @@
         appId = "com.github.k4zmu2a.spacecadetpinball";
         origin = "flathub";
       }
+      {
+        appId = "org.kicad.KiCad";
+        origin = "flathub";
+      }
+      {
+        appId = "org.kicad.KiCad.Library.Packages3D";
+        origin = "flathub";
+      }
+      # {
+      #   appId = "com.vscodium.codium";
+      #   origin = "flathub";
+      # }
     ];
     # overrides = {
     #   "com.vscodium.codium" = {
