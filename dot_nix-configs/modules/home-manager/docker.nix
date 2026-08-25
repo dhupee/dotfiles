@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  config,
   lib,
   ...
 }: {
@@ -11,11 +12,8 @@
       lazydocker
     ];
 
-    # for easy login
-    activation = {
-      linkDockerSecrets = lib.hm.dag.entryAfter ["writeBoundary"] ''
-        ln -sf $HOME/.secrets/docker/config.json $HOME/.docker/config.json
-      '';
+    home.file = {
+      ".config/docker".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.secrets/docker";
     };
   };
 }

@@ -1,5 +1,6 @@
 {
   pkgs,
+  config,
   lib,
   ...
 }: {
@@ -11,10 +12,7 @@
     };
   };
 
-  # for easy login
-  home.activation = {
-    linkGhSecrets = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.secrets/gh/hosts.yml $HOME/.config/gh/hosts.yml
-    '';
+  home.file = {
+    ".config/gh/hosts.yml".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.secrets/gh/hosts.yml";
   };
 }

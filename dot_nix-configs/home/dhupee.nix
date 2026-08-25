@@ -119,25 +119,11 @@
       source = ../config/fastfetch/aayush/config.jsonc;
       force = true;
     };
-  };
 
-  # some config I have isn't read-only, so this thing is needed
-  home.activation = {
-    linkNgrokYml = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.secrets/ngrok $HOME/.config/
-    '';
-  };
-
-  home.activation = {
-    linkRcloneConf = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.secrets/rclone/ $HOME/.config/
-    '';
-  };
-
-  home.activation = {
-    linkBtopConf = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.local/share/chezmoi/mutable-configs/btop/ $HOME/.config/
-    '';
+    # Mutable Configs
+    ".config/ngrok".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.secrets/ngrok";
+    ".config/rclone".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.secrets/rclone";
+    ".config/btop".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/chezmoi/mutable-configs/btop";
   };
 
   # Let Home Manager install and manage itself.

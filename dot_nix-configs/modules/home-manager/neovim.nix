@@ -2,6 +2,7 @@
   pkgs,
   pkgs-unstable,
   inputs,
+  config,
   lib,
   ...
 }: {
@@ -92,21 +93,19 @@
   };
 
   # Add my configs to .config directory
-  xdg.configFile = {
-    "nvim" = {
+  home.file = {
+    ".config/nvim" = {
       source = ../../config/nvim;
       recursive = true;
+    };
+    ".config/nvim/lazy-lock.json" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/chezmoi/mutable-configs/nvim/lazy-lock.json";
+    };
+    ".config/nvim/lazyvim.json" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/chezmoi/mutable-configs/nvim/lazyvim.json";
     };
   };
 
   # Just in case
   nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-
-  # Lazy lock should be mutable for easy update, so symlink like this
-  home.activation = {
-    linkLazyLock = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.local/share/chezmoi/mutable-configs/nvim/lazy-lock.json $HOME/.config/nvim/
-      ln -sf $HOME/.local/share/chezmoi/mutable-configs/nvim/lazyvim.json $HOME/.config/nvim/
-    '';
-  };
 }

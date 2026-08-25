@@ -1,6 +1,7 @@
 {
   pkgs,
   pkgs-unstable,
+  config,
   lib,
   ...
 }: {
@@ -23,10 +24,8 @@
       ]);
 
     # for easy login
-    activation = {
-      linkDockerSecrets = lib.hm.dag.entryAfter ["writeBoundary"] ''
-        ln -sf $HOME/.secrets/docker/config.json $HOME/.docker/config.json
-      '';
+    file = {
+      ".config/docker/config.json".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.secrets/docker/config.json";
     };
 
     # For Lazydocker to work with podman

@@ -1,17 +1,18 @@
 {
   pkgs,
   pkgs-unstable,
+  config,
   lib,
   ...
 }: {
-  home.packages = with pkgs-unstable; [
-    kicad
-    # kicad-small
-  ];
+  home = {
+    packages = with pkgs-unstable; [
+      kicad
+      # kicad-small
+    ];
 
-  home.activation = {
-    linkKicadConfigs = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.local/share/chezmoi/mutable-configs/kicad $HOME/.config/
-    '';
+    file = {
+      ".config/kicad".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.local/share/chezmoi/mutable-configs/kicad";
+    };
   };
 }
