@@ -27,15 +27,21 @@
     # Using Nix on Android
     nix-on-droid = {
       url = "github:nix-community/nix-on-droid";
-      inputs.nixpkgs.follows = "nixpkgs-droid";
-      # inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
-
-      inputs.home-manager = {
-        url = "github:nix-community/home-manager/release-25.11";
-        # follows = "home-manager";
-
-        inputs.nixpkgs.follows = "nixpkgs-droid";
-        #   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+      inputs = {
+        nixpkgs = {
+          follows = "nixpkgs-droid";
+          # url = "github:NixOS/nixpkgs/nixos-25.11";
+        };
+        home-manager = {
+          url = "github:nix-community/home-manager/release-25.11";
+          # follows = "home-manager";
+          inputs = {
+            nixpkgs = {
+              follows = "nixpkgs-droid";
+              #   url = "github:NixOS/nixpkgs/nixos-25.11";
+            };
+          };
+        };
       };
     };
 
@@ -48,8 +54,10 @@
     # Ricing KDE Plasma Declaratively
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
     };
 
     # Ricing Spotify Declaratively
