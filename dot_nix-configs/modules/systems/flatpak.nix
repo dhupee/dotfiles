@@ -21,30 +21,37 @@
 
     packages = [
       {
-        appId = "com.github.tchx84.Flatseal";
-        origin = "flathub";
-      }
-      {
+        # Bottles
         appId = "com.usebottles.bottles";
         origin = "flathub";
       }
       {
+        # Flatseal
+        appId = "com.github.tchx84.Flatseal";
+        origin = "flathub";
+      }
+      {
+        # FreeCAD
         appId = "org.freecad.FreeCAD";
         origin = "flathub";
       }
       {
-        appId = "com.github.k4zmu2a.spacecadetpinball";
-        origin = "flathub";
-      }
-      {
+        # KiCad
         appId = "org.kicad.KiCad";
         origin = "flathub";
       }
       {
+        # KiCad's 3D Library
         appId = "org.kicad.KiCad.Library.Packages3D";
         origin = "flathub";
       }
+      {
+        # Space Cadet Pinball
+        appId = "com.github.k4zmu2a.spacecadetpinball";
+        origin = "flathub";
+      }
       # {
+      #   # VSCodium
       #   appId = "com.vscodium.codium";
       #   origin = "flathub";
       # }
