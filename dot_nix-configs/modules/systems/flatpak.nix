@@ -42,7 +42,8 @@
       }
       {
         # KiCad's 3D Library
-        appId = "org.kicad.KiCad.Library.Packages3D";
+        # appId = "org.kicad.KiCad.Library.Packages3D";
+        appId = "runtime/org.kicad.KiCad.Library.Packages3D/x86_64/stable";
         origin = "flathub";
       }
       {
