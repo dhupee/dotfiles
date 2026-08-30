@@ -3,8 +3,13 @@
   nix-flatpak,
   ...
 }: {
-  # https://docs.flatpak.org/en/latest/index.html
-  # https://github.com/gmodena/nix-flatpak
+  /*
+  NOTE:
+  Flatseal config is stored in ~/.local/share/flatpak/overrides
+  Further reading:
+    - https://docs.flatpak.org/en/latest/index.html
+    - https://github.com/gmodena/nix-flatpak
+  */
 
   services.flatpak = {
     enable = true;
