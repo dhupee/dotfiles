@@ -7,8 +7,9 @@
   ...
 }: {
   imports = [
-    # Include the results of the hardware scan.
-    /etc/nixos/hardware-configuration.nix
+    ../../machines/virts/hardware-configuration.nix
+
+    ../../modules/systems/qemu-guest.nix
   ];
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -125,10 +126,6 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  # Services related to qemu
-  services.qemuGuest.enable = true;
-  services.spice-vdagentd.enable = true; # enable copy and paste between host and guest
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
