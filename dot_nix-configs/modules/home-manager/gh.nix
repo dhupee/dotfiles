@@ -4,12 +4,15 @@
   lib,
   ...
 }: {
-  programs.gh = {
-    enable = true;
-    gitCredentialHelper.enable = true;
-    settings = {
-      git_protocol = "https";
+  programs = {
+    gh = {
+      enable = true;
+      gitCredentialHelper.enable = true;
+      settings = {
+        git_protocol = "https";
+      };
     };
+    gh-dash.enable = true;
   };
 
   home.file = {
