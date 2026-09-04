@@ -202,7 +202,7 @@ Then you can let it rip, remove Scoop or Nix, depending on the systems
 
 ## To-Do List
 
-- [ ] Move Templates as Reuseable Nix Devshells or Nix Run
-- [ ] Clean up Nix settings in the flake, including github's access token
+- [ ] ~~Move Templates as Reuseable Nix Devshells or Nix Run~~ Using Boxit based Container systems for Development environment, transition from template for non-nix projects
+- [x] Clean up Nix settings in the flake, including github's access token
 - [ ] NixOS profile specifically for Klipper Servers, for my 3D printer
 - [ ] Live USB profile, packages as an custom ISO
