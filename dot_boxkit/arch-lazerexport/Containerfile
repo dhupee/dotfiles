@@ -1,0 +1,16 @@
+FROM archlinux:latest
+
+ARG EXPORTER_VERSION=2.6.1
+
+RUN pacman -Syu --noconfirm && \
+    pacman -S --noconfirm bash git fastfetch base-devel wget && \
+    pacman -Scc --noconfirm &&\ 
+    wget --progress=dot:mega -O /usr/bin/BeatmapExporterCLI \
+    https://github.com/kabiiQ/BeatmapExporter/releases/download/v${EXPORTER_VERSION}/linux-BeatmapExporterCLI && \
+    chmod +x /usr/bin/BeatmapExporterCLI
+
+ENV SHELL=/bin/bash
+
+CMD ["/bin/bash"]
+
+

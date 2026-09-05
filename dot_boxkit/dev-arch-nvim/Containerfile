@@ -1,0 +1,14 @@
+FROM archlinux:latest
+
+RUN pacman -Syu --noconfirm && \
+    pacman -S --noconfirm zsh git neovim tree-sitter yazi fastfetch base-devel && \
+    pacman -Scc --noconfirm &&\ 
+    mkdir /usr/share/boxkit
+
+COPY --chmod=755 ./init_hooks.sh /usr/share/boxkit/init_hooks.sh
+
+ENV SHELL=/bin/zsh
+
+CMD ["/bin/zsh"]
+
+
