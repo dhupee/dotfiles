@@ -3,7 +3,7 @@
 dir_array=(
   "$HOME/.nix-configs/"
   "$HOME/.scripts/"
-  "$HOME/.distrobox-manifests/"
+  "$HOME/.boxkit/"
   "$HOME/Templates/"
   "$HOME/Wallpapers/"
   "$HOME/.node-red/"
