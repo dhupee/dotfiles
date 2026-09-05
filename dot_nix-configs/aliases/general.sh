@@ -53,6 +53,9 @@ alias bottles-backup="bash $HOME/.scripts/bash/bottles-backup.sh"
 alias fan-speed-full="sudo nbfc set --speed=100"
 alias fan-speed-auto="sudo nbfc set --auto"
 
+# Container
+alias ghcr-login="gh auth token | docker login ghcr.io --username YOUR_GITHUB_USERNAME --password-stdin"
+
 # Quick URL shortener
 shorten_url() {
   if [ -z "$1" ]; then
