@@ -37,6 +37,7 @@
       # Docker
       docker-compose-language-service
       docker-language-server
+      dockerfmt
       hadolint
 
       # Go
