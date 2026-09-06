@@ -47,7 +47,7 @@ on the front you will have:
 |---------------------------|-----------------------------------------------------------------------------|
 | `AppData`                 | Windows equivalent of `.config/` or `.local` I think                        |
 | `dot_config`              | Config files, for now it only have powershell                               |
-| `dot_distrobox-recipe`    | my recipe for distroboxes I might use, the command is long so having that is neat |
+| `dot_boxkit`    | Collection for Distrobox manifests and Containerfiles, Helping me making disposable work environment with Container |
 | `dot_scripts`             | my scripts, it has bash and powershell, some of them are carry over from my old dotfiles |
 | `dot_torrents`            | we are a pirate!!                                                           |
 | `dot_node-red`            | node-red stuff for IoT                                                      |
