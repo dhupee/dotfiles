@@ -88,6 +88,10 @@
       shellcheck
       shfmt
 
+      # VHDL & Verilog
+      vhdl-ls
+      verible
+
       # Yaml
       yaml-language-server
     ];
