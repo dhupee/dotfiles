@@ -89,6 +89,7 @@
       shfmt
 
       # VHDL & Verilog
+      slang-server
       vhdl-ls
       verible
 

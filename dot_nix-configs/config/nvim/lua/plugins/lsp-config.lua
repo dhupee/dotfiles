@@ -91,6 +91,7 @@ return {
           },
         },
         ruff = {},
+        slang_server = {},
         svelte = {},
         tailwindcss = {},
         templ = {},
