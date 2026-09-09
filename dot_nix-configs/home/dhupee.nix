@@ -51,11 +51,11 @@
   # Home Manager GC settings
   nix = {
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
+    # gc = {
+    #   automatic = true;
+    #   dates = "weekly";
+    #   options = "--delete-older-than 7d";
+    # };
   };
 
   # Packages
