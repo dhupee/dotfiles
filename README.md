@@ -70,7 +70,9 @@ then when it comes to my actual `.nix-configs`, the directories looks like this.
 | `linux`     | my systems configs for NixOS                                               |
 | `machines`  | `hardware-configuration.nix` backup and also hardware tweak for any machines I use|
 | `modules`   | modules of nix configs, seperated by systems and home-manager ofc          |
-| `theming`   | modules for my ricing, has Gnome, KDE Plasma 6, maybe Hyprland if I want a neckbeard | | `users`     | modules for users, if there's more than me, or if I need a user for specific machines | | `wsl`       | NixOS config on Windows Subsystem for Linux       |
+| `theming`   | modules for my ricing, has Gnome, KDE Plasma 6, maybe Hyprland if I want a neckbeard |
+| `users`     | modules for users, if there's more than me, or if I need a user for specific machines |
+| `wsl`       | NixOS config on Windows Subsystem for Linux       |
 
 This thing obviously can change overtime as this dotfiles grow, and I can forgot the directories.
 
