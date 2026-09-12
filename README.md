@@ -10,6 +10,7 @@
     - [Windows](#windows)
       - [Installing](#installing)
       - [Uninstalling Scoop as cleanly as possible](#uninstalling-scoop-as-cleanly-as-possible)
+  - [Boxkit](#boxkit)
   - [Removing Dotfiles](#removing-dotfiles)
   - [Tools I use in this dotfiles](#tools-i-use-in-this-dotfiles)
     - [Nix Related](#nix-related)
@@ -161,6 +162,10 @@ By design, Scoop isolates almost all instalation in `Scoop` folder in `%USERPROF
 
 1. **Restart your terminal** for changes to take effect.
 
+## Boxkit
+
+TBA
+
 ## Removing Dotfiles
 
 Because Dotfiles is managed using Chezmoi, in order to remove dotfiles from **BOTH** Sources and Destination, run:
@@ -204,7 +209,7 @@ Then you can let it rip, remove Scoop or Nix, depending on the systems
 
 ## To-Do List
 
-- [ ] ~~Move Templates as Reuseable Nix Devshells or Nix Run~~ Using Boxit based Container systems for Development environment, transition from template for non-nix projects
+- [x] ~~Move Templates as Reuseable Nix Devshells or Nix Run~~ Using Boxit based Container systems for Development environment, transition from template for non-nix projects
 - [x] Clean up Nix settings in the flake, including github's access token
 - [ ] NixOS profile specifically for Klipper Servers, for my 3D printer
 - [ ] Live USB profile, packages as an custom ISO
