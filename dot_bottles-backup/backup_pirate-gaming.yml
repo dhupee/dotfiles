@@ -2,8 +2,9 @@ Arch: win64
 CompatData: ''
 Creation_Date: '2026-05-23 14:49:38.123268'
 Custom_Path: false
+D7VK: d7vk-v2.2
 DLL_Overrides: {}
-DXVK: dxvk-2.7.1
+DXVK: dxvk-3.1
 Environment: Gaming
 Environment_Variables: {}
 External_Programs:
@@ -49,20 +50,80 @@ External_Programs:
         virtual_desktop: true
         vkd3d: null
         winebridge: null
-    3b2d7efd-21cd-4c6b-9f9b-67d0f2331b14:
-        arguments: null
+    353ba99c-0335-4945-a308-0ca2be94abbe:
+        executable: Tennis Titans.exe
+        folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/drive_c/Program
+            Files (x86)/GameHouse Games Collection/Tennis Titans
+        icon: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/icons/Tennis
+            Titans.png
+        id: 353ba99c-0335-4945-a308-0ca2be94abbe
+        name: Tennis Titans
+        path: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/drive_c/Program
+            Files (x86)/GameHouse Games Collection/Tennis Titans/Tennis Titans.exe
+        virtual_desktop: false
+    3769a0bf-a4a5-42cd-a500-a0f9c66f8879:
+        arguments: ''
+        arguments_enabled: true
+        automatic_backup: null
+        autostart: false
+        d7vk: false
+        discrete_gpu: true
         dxvk: null
+        dxvk_nvapi: null
+        eagle_scan:
+            clean: true
+            mtime: 1727001002
+            size: 14383616
+        environment: null
+        executable: gta_sa.exe
+        file_extensions: []
+        folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/drive_c/MagiPacks/Grand
+            Theft Auto - San Andreas
+        fsr: null
+        gamemode: true
+        gamescope: true
+        hide_console: null
+        icon: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/icons/gta_sa.png
+        id: 3769a0bf-a4a5-42cd-a500-a0f9c66f8879
+        latencyflex: null
+        name: gta_sa
+        path: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/drive_c/MagiPacks/Grand
+            Theft Auto - San Andreas/gta_sa.exe
+        post_script: null
+        post_script_args: null
+        pre_script: null
+        pre_script_args: null
+        pulseaudio_latency: null
+        removed: null
+        sync: esync
+        virtual_desktop: false
+        vkd3d: false
+        winebridge: null
+    3b2d7efd-21cd-4c6b-9f9b-67d0f2331b14:
+        arguments: ''
+        arguments_enabled: true
+        automatic_backup: null
+        autostart: false
+        d7vk: null
+        discrete_gpu: null
+        dxvk: false
         dxvk_nvapi: null
         eagle_scan:
             clean: true
             mtime: 1332446709
             size: 2614272
+        environment: null
         executable: CookingAcademy2.exe
+        file_extensions: []
         folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/drive_c/Program
             Files (x86)/Cooking Academy 2 - World Cuisine
+        fsr: null
+        gamemode: null
         gamescope: null
-        icon: com.usebottles.bottles-program
+        hide_console: null
+        icon: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/icons/CookingAcademy2.png
         id: 3b2d7efd-21cd-4c6b-9f9b-67d0f2331b14
+        latencyflex: null
         name: CookingAcademy2
         path: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/drive_c/Program
             Files (x86)/Cooking Academy 2 - World Cuisine/CookingAcademy2.exe
@@ -72,8 +133,9 @@ External_Programs:
         pre_script_args: null
         pulseaudio_latency: null
         removed: null
-        virtual_desktop: null
-        vkd3d: null
+        sync: null
+        virtual_desktop: true
+        vkd3d: false
         winebridge: null
     5d5f59b1-0ca5-4a2c-9fce-b6228a0aca0a:
         arguments: ''
@@ -87,14 +149,24 @@ External_Programs:
         path: C:\Program Files (x86)\GameHouse Games Collection\Feeding Frenzy\FeedingFrenzy.exe
     ac35cf96-a5d9-4a5c-a59b-6edd68f57822:
         arguments: ''
-        dxvk: null
+        arguments_enabled: true
+        automatic_backup: null
+        autostart: false
+        d7vk: null
+        discrete_gpu: null
+        dxvk: false
         dxvk_nvapi: null
+        environment: null
         executable: Zuma.exe
+        file_extensions: []
         folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/general-gaming/drive_c/Program
             Files (x86)/GameHouse Games Collection/Zuma Deluxe
-        gamescope: null
+        fsr: null
+        gamemode: null
+        gamescope: true
         icon: com.usebottles.bottles-program
         id: ac35cf96-a5d9-4a5c-a59b-6edd68f57822
+        latencyflex: null
         name: Zuma
         path: C:\Program Files (x86)\GameHouse Games Collection\Zuma Deluxe\Zuma.exe
         post_script: null
@@ -103,19 +175,35 @@ External_Programs:
         pre_script_args: null
         pulseaudio_latency: null
         removed: null
-        virtual_desktop: null
-        vkd3d: null
+        sync: null
+        virtual_desktop: false
+        vkd3d: false
         winebridge: null
     ac3b38ed-77f6-4362-9ec2-0c225d2dbd32:
         arguments: ''
+        arguments_enabled: true
+        automatic_backup: null
+        autostart: false
+        d7vk: null
+        discrete_gpu: null
         dxvk: false
         dxvk_nvapi: null
+        eagle_scan:
+            clean: true
+            mtime: 1727001002
+            size: 14383616
+        environment: null
         executable: gta_sa.exe
+        file_extensions: []
         folder: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/drive_c/MagiPacks/Grand
             Theft Auto - San Andreas
+        fsr: null
+        gamemode: null
         gamescope: null
+        hide_console: null
         icon: com.usebottles.bottles-program
         id: ac3b38ed-77f6-4362-9ec2-0c225d2dbd32
+        latencyflex: null
         name: 'Grand Theft Auto: San Andreas'
         path: /home/dhupee/.var/app/com.usebottles.bottles/data/bottles/bottles/pirate-gaming/drive_c/MagiPacks/Grand
             Theft Auto - San Andreas/gta_sa.exe
@@ -125,7 +213,8 @@ External_Programs:
         pre_script_args: null
         pulseaudio_latency: null
         removed: null
-        virtual_desktop: null
+        sync: null
+        virtual_desktop: false
         vkd3d: false
         winebridge: null
     c5ac445b-188d-433e-af4a-530c11bc3266:
@@ -189,6 +278,8 @@ Inherited_Environment_Variables:
 - WAYLAND_DISPLAY
 - XAUTHORITY
 - XDG_RUNTIME_DIR
+- XMODIFIERS
+- XDG_CONFIG_HOME
 Installed_Dependencies:
 - d3dx9
 - msls31
@@ -205,12 +296,15 @@ Limit_System_Environment: true
 NVAPI: dxvk-nvapi-v0.9.2
 Name: pirate-gaming
 Parameters:
+    adaptive_launch: false
     custom_dpi: 96
+    d7vk: true
     decorated: true
     discrete_gpu: true
     dxvk: true
     dxvk_nvapi: false
     fixme_logs: false
+    frame_rate_limit: 0
     fsr: false
     fsr_sharpening_strength: 8
     fullscreen_capture: false
@@ -226,7 +320,13 @@ Parameters:
     gamescope_scaling: false
     gamescope_window_height: 0
     gamescope_window_width: 0
+    hdr: false
+    hidraw_devices: []
     latencyflex: false
+    lsfg_vk: false
+    lsfg_vk_flow_scale: 1.0
+    lsfg_vk_multiplier: 2
+    lsfg_vk_performance_mode: false
     mangohud: false
     mangohud_display_on_game_start: true
     mouse_warp: true
@@ -253,14 +353,16 @@ Parameters:
     winebridge: false
 Path: pirate-gaming
 Registry_Rules: []
-Runner: soda-9.0-1
+Runner: soda-11.0-10
 RunnerPath: ''
 Sandbox:
+    share_input: false
     share_net: false
     share_sound: false
+    share_usb: false
 State: 0
 Uninstallers: {}
-Update_Date: '2026-06-09 21:14:49.284511'
+Update_Date: '2026-09-13 01:17:38.635848'
 VKD3D: vkd3d-proton-3.0.1-1-34ab1ce
 Versioning: false
 Versioning_Exclusion_Patterns: []
