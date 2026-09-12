@@ -45,12 +45,12 @@
   nix = {
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
     # Garbage Collection
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      # Options passed to nix-collect-garbage
-      options = "--delete-older-than 7d";
-    };
+    # gc = {
+    #   automatic = true;
+    #   dates = "weekly";
+    #   # Options passed to nix-collect-garbage
+    #   options = "--delete-older-than 7d";
+    # };
     # Optimization Settings
     optimise = {
       automatic = true; # Enable automatic optimization

@@ -1,3 +1,5 @@
+# NOTE: state the "destination directory", ~ is the rootdir
+
 #============GLOBAL============#
 
 # docs and scripts
@@ -23,7 +25,6 @@ Wallpapers
 #============WINDOWS============#
 {{ if eq .chezmoi.os "windows" }}
 .nix-configs
-.zellij-layouts
 Templates
 .secrets
 {{ end }}

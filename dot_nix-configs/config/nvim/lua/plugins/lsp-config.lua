@@ -91,6 +91,7 @@ return {
           },
         },
         ruff = {},
+        slang_server = {},
         svelte = {},
         tailwindcss = {},
         templ = {},
@@ -98,6 +99,8 @@ return {
         texlab = {},
         tflint = {},
         ts_ls = {},
+        verible = {},
+        vhdl_ls = {},
         volar = {},
         yamlls = {
           settings = {

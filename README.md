@@ -10,6 +10,7 @@
     - [Windows](#windows)
       - [Installing](#installing)
       - [Uninstalling Scoop as cleanly as possible](#uninstalling-scoop-as-cleanly-as-possible)
+  - [Boxkit](#boxkit)
   - [Removing Dotfiles](#removing-dotfiles)
   - [Tools I use in this dotfiles](#tools-i-use-in-this-dotfiles)
     - [Nix Related](#nix-related)
@@ -47,7 +48,7 @@ on the front you will have:
 |---------------------------|-----------------------------------------------------------------------------|
 | `AppData`                 | Windows equivalent of `.config/` or `.local` I think                        |
 | `dot_config`              | Config files, for now it only have powershell                               |
-| `dot_distrobox-recipe`    | my recipe for distroboxes I might use, the command is long so having that is neat |
+| `dot_boxkit`    | Collection for Distrobox manifests and Containerfiles, Helping me making disposable work environment with Container |
 | `dot_scripts`             | my scripts, it has bash and powershell, some of them are carry over from my old dotfiles |
 | `dot_torrents`            | we are a pirate!!                                                           |
 | `dot_node-red`            | node-red stuff for IoT                                                      |
@@ -70,7 +71,9 @@ then when it comes to my actual `.nix-configs`, the directories looks like this.
 | `linux`     | my systems configs for NixOS                                               |
 | `machines`  | `hardware-configuration.nix` backup and also hardware tweak for any machines I use|
 | `modules`   | modules of nix configs, seperated by systems and home-manager ofc          |
-| `theming`   | modules for my ricing, has Gnome, KDE Plasma 6, maybe Hyprland if I want a neckbeard | | `users`     | modules for users, if there's more than me, or if I need a user for specific machines | | `wsl`       | NixOS config on Windows Subsystem for Linux       |
+| `theming`   | modules for my ricing, has Gnome, KDE Plasma 6, maybe Hyprland if I want a neckbeard |
+| `users`     | modules for users, if there's more than me, or if I need a user for specific machines |
+| `wsl`       | NixOS config on Windows Subsystem for Linux       |
 
 This thing obviously can change overtime as this dotfiles grow, and I can forgot the directories.
 
@@ -159,6 +162,10 @@ By design, Scoop isolates almost all instalation in `Scoop` folder in `%USERPROF
 
 1. **Restart your terminal** for changes to take effect.
 
+## Boxkit
+
+TBA
+
 ## Removing Dotfiles
 
 Because Dotfiles is managed using Chezmoi, in order to remove dotfiles from **BOTH** Sources and Destination, run:
@@ -202,7 +209,7 @@ Then you can let it rip, remove Scoop or Nix, depending on the systems
 
 ## To-Do List
 
-- [ ] ~~Move Templates as Reuseable Nix Devshells or Nix Run~~ Using Boxit based Container systems for Development environment, transition from template for non-nix projects
+- [x] ~~Move Templates as Reuseable Nix Devshells or Nix Run~~ Using Boxit based Container systems for Development environment, transition from template for non-nix projects
 - [x] Clean up Nix settings in the flake, including github's access token
 - [ ] NixOS profile specifically for Klipper Servers, for my 3D printer
 - [ ] Live USB profile, packages as an custom ISO
