@@ -1,17 +1,18 @@
 {
   pkgs,
-  lib,
+  pkgs-unstable,
   spicetify-nix,
   ...
 }: let
-  spicePkgs = spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+  spicePkgs = spicetify-nix.legacyPackages.${pkgs.stdenv.system};
 in {
   programs.spicetify = {
     enable = true;
     # spicetifyPackage = pkgs.spicetify-cli;
-    # spotifyPackage = pkgs.spotify;
+    spotifyPackage = pkgs.spotify;
+    # spotifyPackage = pkgs-unstable.spotify;
     enabledExtensions = with spicePkgs.extensions; [
-      adblock
+      adblockify
       hidePodcasts
       catJamSynced
       shuffle # shuffle+ (special characters are sanitized out of extension names)
