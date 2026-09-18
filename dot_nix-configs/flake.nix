@@ -292,6 +292,24 @@
           inherit pkgs-unstable inputs;
         };
       };
+
+      # For VM stuff
+      virts = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
+        modules = [
+          # directory of my home configuration
+          ./home/virts.nix
+          {
+            home = {
+              username = "dhupee";
+              homeDirectory = "/home/dhupee";
+            };
+          }
+        ];
+        extraSpecialArgs = {
+          inherit pkgs-unstable inputs;
+        };
+      };
     };
 
     #======================= DOCKER IMAGES ===========================#
