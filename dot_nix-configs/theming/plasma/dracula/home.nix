@@ -100,25 +100,13 @@
         widgets = [
           {
             iconTasks = {
-              # launchers = [
-              #   "applications:firefox.desktop"
-              #   "applications:codium.desktop" # VSCodium
-              #   "applications:spotify.desktop"
-              #   "applications:com.mitchellh.ghostty.desktop"
-              #   "applications:systemsettings.desktop"
-              #   "applications:org.kicad.kicad.desktop"
-              #   "applications:startcenter.desktop"
-              #   "applications:vesktop.desktop" # Vesktop
-              #   "applications:OrcaSlicer.desktop"
-              #   "applications:org.kde.dolphin.desktop"
-              # ];
-
+              # NOTE: check the entry name in "/run/current-system/sw/share/applications"
               launchers = [
                 "applications:firefox.desktop"
                 "applications:spotify.desktop"
                 "applications:com.mitchellh.ghostty.desktop"
                 "applications:systemsettings.desktop"
-                "applications:org.kicad.kicad.desktop"
+                "applications:vlc.desktop"
                 "applications:startcenter.desktop"
                 "applications:vesktop.desktop" # Vesktop
                 "applications:com.orcaslicer.OrcaSlicer.desktop"
