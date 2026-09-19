@@ -1,23 +1,36 @@
 {pkgs, ...}: {
   services.xserver.enable = true;
-  # services.xserver.displayManager.sddm.enable = true; # this one uses x11
+
   services.displayManager.sddm = {
     enable = true;
-    wayland.enable = true; # this one uses wayland
+    wayland.enable = true;
   };
-
   services.displayManager.defaultSession = "hyprland-uwsm";
+
   programs.hyprland = {
     enable = true;
-    withUWSM = true; # recommended for most users
-    xwayland.enable = true; # Xwayland can be disabled.
+    withUWSM = true;
+    xwayland.enable = true;
+  };
+
+  programs.dms-shell = {
+    enable = true;
+
+    systemd = {
+      enable = true; # Systemd service for auto-start
+      restartIfChanged = true; # Auto-restart dms.service when dms-shell changes
+    };
+
+    # Core features
+    enableSystemMonitoring = true; # System monitoring widgets (dgop)
+    enableVPN = true; # VPN management widget
+    enableDynamicTheming = true; # Wallpaper-based theming (matugen)
+    enableAudioWavelength = true; # Audio visualizer (cava)
+    enableCalendarEvents = true; # Calendar integration (khal)
   };
 
   environment.sessionVariables = {
-    # hint electron apps to use wayland
     NIXOS_OZONE_WL = "1";
-
-    # in case my cursors go missing
     WLR_NO_HARDWARE_CURSORS = "1";
   };
 
