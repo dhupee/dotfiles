@@ -1,6 +1,7 @@
 {
   pkgs,
   lib,
+  config,
   ...
 }: {
   # Enabling opencode
@@ -40,21 +41,15 @@
   home.sessionVariables.OPENCODE_ENABLE_EXA = "1";
 
   # Symlink
-  home.activation = {
-    linkOpencodeRules = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.secrets/opencode/AGENTS.md $HOME/.config/opencode/AGENTS.md
-    '';
-  };
-
-  home.activation = {
-    linkOpencodeAuth = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.secrets/opencode/auth.json $HOME/.local/share/opencode/auth.json
-    '';
-  };
-
-  home.activation = {
-    linkCaveman = lib.hm.dag.entryAfter ["writeBoundary"] ''
-      ln -sf $HOME/.secrets/opencode/caveman.json $HOME/.config/opencode/caveman.json
-    '';
+  home.file = {
+    ".config/opencode/AGENTS.md" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.secrets/opencode/AGENTS.md";
+    };
+    ".local/share/opencode/auth.json" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.secrets/opencode/auth.json";
+    };
+    ".config/opencode/caveman.json" = {
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.secrets/opencode/caveman.json";
+    };
   };
 }
