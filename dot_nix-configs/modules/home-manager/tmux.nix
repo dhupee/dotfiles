@@ -20,6 +20,9 @@
       escapeTime = 0;
       terminal = "screen-256color";
       extraConfig = ''
+        # Auto Renumbering
+        set-option -g renumber-windows on
+
         # Rebind the splits
         unbind %
         bind | split-window -h
