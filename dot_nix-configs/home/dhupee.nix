@@ -37,8 +37,7 @@
     ../theming/plasma/dracula/home.nix
   ];
 
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
+  # Home Manager needs a bit of information about you and the paths it should manage.
   home.username = "dhupee";
   home.homeDirectory = "/home/dhupee";
 
@@ -51,11 +50,6 @@
   # Home Manager GC settings
   nix = {
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-    # gc = {
-    #   automatic = true;
-    #   dates = "weekly";
-    #   options = "--delete-older-than 7d";
-    # };
   };
 
   # Packages

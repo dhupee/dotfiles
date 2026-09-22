@@ -69,13 +69,6 @@ in {
   # nix store optimization
   nix = {
     nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-    # Garbage Collection
-    # gc = {
-    #   automatic = true;
-    #   dates = "weekly";
-    #   # Options passed to nix-collect-garbage
-    #   options = "--delete-older-than 7d";
-    # };
     # Optimization Settings
     optimise = {
       automatic = true; # Enable automatic optimization
@@ -160,9 +153,6 @@ in {
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
