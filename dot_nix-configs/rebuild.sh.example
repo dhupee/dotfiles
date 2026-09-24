@@ -10,6 +10,7 @@ HOME_MANAGER_REBUILD=true
 NIXOS_PROFILE="nitro"
 HOME_MANAGER_PROFILE="dhupee"
 HOME_MANAGER_BACKUP=true
+HOME_MANAGER_BACKUP_EXTENSION="hmbak"
 FLAKE_PATH="$HOME/.nix-configs" # Your custom flake directory
 
 # Colors for output
@@ -134,7 +135,7 @@ main() {
     log_info "Running Home Manager only..."
 
     if [ "$HOME_MANAGER_BACKUP" = true ]; then
-      backup_name="backup $(date '+%Y-%m-%d_%H-%M-%S')"
+      backup_name="${HOME_MANAGER_BACKUP_EXTENSION} $(date '+%Y-%m-%d_%H-%M-%S')"
       log_info "Creating backup: $backup_name"
       home-manager switch -b "$backup_name" --flake .#${HOME_MANAGER_PROFILE}
     else
