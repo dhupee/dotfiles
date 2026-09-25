@@ -1,112 +1,88 @@
 {pkgs, ...}: {
-  # ---- Kernel & Performance Tuning ----
-  # boot.kernelPackages = pkgs.linuxPackages_zen;
-  # NOTE: Kernel packages of choice move to flake for now
+  # ---- Kernel Parameters ----
   boot.kernelParams = [
-    "amd_pstate=passive" # AMD CPU freq. scaling driver (passive mode)
-    "pcie_aspm=off" # Disable PCIe ASPM (reduces NVMe latency)
-    "nvme_core.default_ps_max_latency_us=0" # Disable NVMe low-power states
+    "amd_pstate=active" # Modern AMD P-state driver (required by PPD's EPP control).
+    "pcie_aspm=off" # Disables PCIe ASPM to avoid NVMe latency spikes.
+    "nvme_core.default_ps_max_latency_us=0" # Disables NVMe low-power states to prevent I/O stalls.
   ];
+
+  # ---- Kernel Sysctl ----
   boot.kernel.sysctl = {
-    "scaling_governor" = "performance"; # Force CPU to stay at high freq
-    "vm.dirty_background_ratio" = 3; # Start background writeback early
-    "vm.dirty_ratio" = 40; # Max dirty pages before blocking writes
-    "vm.dirty_writeback_centisecs" = 500; # Flush dirty pages every 5 secs
-    "vm.dirty_expire_centisecs" = 500; # Dirty pages expire after 5 secs
-    "vm.swappiness" = 10; # Avoid swapping to disk
+    "vm.dirty_background_ratio" = 3; # Start background writeback early.
+    "vm.dirty_ratio" = 40; # Max dirty pages before blocking writes.
+    "vm.dirty_writeback_centisecs" = 1500; # Flush dirty pages every 15s.
+    "vm.dirty_expire_centisecs" = 3000; # Dirty pages expire after 30s.
+    "vm.swappiness" = 10; # Prefer RAM over swap.
   };
-  powerManagement.cpuFreqGovernor = "performance";
 
-  # Forces the NVMe device to use BFQ
-  services.udev.extraRules = ''
-    ACTION=="add|change", KERNEL=="nvme[0-9]*n[0-9]*", ATTR{queue/scheduler}="bfq"
-  '';
-
-  # Filesystem mount options
+  # ---- Filesystem ----
   fileSystems."/" = {
     options = [
-      "noatime" # Don't update access time on reads
-      "discard" # Real-time TRIM for SSD blocks
-      "commit=60" # Sync FS journal every 60 secs
+      "noatime" # Skip access-time updates on reads.
+      "discard" # Real-time TRIM for SSD blocks.
+      "commit=60" # Sync FS journal every 60s.
     ];
   };
+  services.fstrim.enable = true; # Periodic TRIM as a safety net.
 
-  # Enable FSTrim (periodic TRIM for SSD)
-  services.fstrim.enable = true;
-
-  # ZRAM (swap in RAM)
+  # ---- Swap ----
   zramSwap = {
     enable = true;
-    memoryPercent = 20; # Use 20% of RAM for compressed swap
-    algorithm = "lz4"; # Fast compression algorithm
-    priority = 100; # High priority, use ZRAM first
+    memoryPercent = 20; # Use 20% of RAM for compressed swap.
+    algorithm = "lz4"; # Fast compression algorithm.
+    priority = 100; # Higher priority than disk swap.
   };
 
-  # Load amdgpu module early in initrd
-  boot.initrd.kernelModules = ["amdgpu"];
+  # ---- Graphics ----
+  boot.initrd.kernelModules = ["amdgpu"]; # Load amdgpu early in initrd.
   services.xserver.videoDrivers = ["amdgpu"];
 
-  # Modern graphics stack (Mesa OpenGL / Vulkan)
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
     package = pkgs.mesa;
     package32 = pkgs.pkgsi686Linux.mesa;
   };
+  # hardware.amdgpu.amdvlk = true; # Uncomment to use AMDVLK instead of RADV.
 
-  # Vulkan: RADV is the default Mesa driver (best for most games)
-  # To switch to AMDVLK (AMD’s official driver), uncomment the next line.
-  # hardware.amdgpu.amdvlk = true;
-
-  # Hardware video acceleration (VA-API)
   environment.variables = {
-    LIBVA_DRIVER_NAME = "radeonsi";
-    VDPAU_DRIVER = "radeonsi";
+    LIBVA_DRIVER_NAME = "radeonsi"; # VA-API driver for hardware video decode.
+    VDPAU_DRIVER = "radeonsi"; # VDPAU driver for legacy video decode.
   };
 
-  # ---- ROCm / OpenCL for compute (Blender, DaVinci Resolve, etc.) ----
+  # ---- ROCm / OpenCL ----
   nixpkgs.config.rocmSupport = true;
   hardware.amdgpu.opencl.enable = true;
   hardware.graphics.extraPackages = with pkgs; [
-    rocmPackages.clr.icd # OpenCL ICD for ROCm
+    rocmPackages.clr.icd # OpenCL ICD for ROCm.
   ];
-
-  # Symlink ROCm libraries to standard /opt/rocm
   systemd.tmpfiles.rules = [
-    "L+ /opt/rocm - - - - ${pkgs.rocmPackages.clr}"
+    "L+ /opt/rocm - - - - ${pkgs.rocmPackages.clr}" # Symlink ROCm to /opt/rocm.
   ];
-
-  # For older AMD cards (Polaris / Vega) you might need this:
-  environment.variables.ROC_ENABLE_PRE_VEGA = "1";
+  environment.variables.ROC_ENABLE_PRE_VEGA = "1"; # Enable ROCm on Polaris/Vega GPUs.
 
   # ---- Monitoring & Overclocking ----
   programs.tuxclocker = {
-    enable = false; # Disabled, but available
+    enable = false;
     useUnfree = false;
-    # enabledNVIDIADevices = [ 0 1 ];  # not needed for AMD
   };
-
-  # AMD SMU (for sensors / overdrive)
   hardware.cpu = {
-    x86.msr.enable = true; # Enable MSR (for monitoring)
-    amd.ryzen-smu.enable = true; # Enable Ryzen SMU (sensors)
+    x86.msr.enable = true; # Enable MSR access for CPU monitoring.
+    amd.ryzen-smu.enable = true; # Enable Ryzen SMU sensors.
   };
-  programs.ryzen-monitor-ng.enable = false; # use tuxclocker instead
+  programs.ryzen-monitor-ng.enable = false;
+  hardware.amdgpu.overdrive.enable = true; # Allow GPU clock/voltage control.
 
-  # AMD GPU overdrive (allows clock / voltage control)
-  hardware.amdgpu.overdrive.enable = true;
+  # ---- Power Management ----
+  services.power-profiles-daemon.enable = true; # Dynamic CPU/GPU power profiles.
+  services.tlp.enable = false; # Conflicts with PPD; keep disabled.
 
-  # ---- Optional: Lact (another GPU control tool) ----
-  # systemd.services.lactd.wantedBy = [ "multi-user.target" ];
-  # environment.systemPackages = [ pkgs.lact ];
+  # Switch PPD profile automatically on AC plug/unplug.
+  services.udev.extraRules = ''
+    SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set power-saver"
+    SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance"
+  '';
 
-  # ---- PRIME (Dual GPU offload) ----
-  # Your Vega 8 iGPU will handle the desktop by default.
-  # To run an app on the discrete Radeon RX GPU, use `DRI_PRIME=1`:
-  #   DRI_PRIME=1 steam
-  #   DRI_PRIME=1 glxinfo | grep "OpenGL renderer"
-  # No additional configuration is required for AMD+AMD PRIME.
-
-  # ---- (Optional) Suspend fix for some AMD laptops ----
-  # boot.kernelParams = [ "modprobe.blacklist=amdgpu" ];
+  # ---- PRIME (Dual GPU) ----
+  # iGPU drives the desktop by default; run `DRI_PRIME=1 <cmd>` to use the dGPU.
 }
