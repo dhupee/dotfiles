@@ -2,7 +2,8 @@
 
 <!--toc:start-->
 - [Dhupee's Unified Dotfiles](#dhupees-unified-dotfiles)
-  - [What is this](#what-is-this)
+  - [Overview](#overview)
+    - [Design goals](#design-goals)
   - [Screenshots](#screenshots)
   - [File Structure](#file-structure)
   - [Installation](#installation)
@@ -13,8 +14,10 @@
   - [Boxkit](#boxkit)
   - [Removing Dotfiles](#removing-dotfiles)
   - [Tools I use in this dotfiles](#tools-i-use-in-this-dotfiles)
+    - [Core](#core)
     - [Nix Related](#nix-related)
-    - [Non-Nix Related](#non-nix-related)
+    - [Container Related](#container-related)
+    - [Windows Related](#windows-related)
   - [References for me](#references-for-me)
   - [To-Do List](#to-do-list)
 <!--toc:end-->
@@ -22,11 +25,26 @@
 > [!IMPORTANT]
 > I USE NIXOS, BTW
 
-## What is this
+## Overview
 
-This is my current dotfiles that I will use in the next few years or might be my last dotfiles repo, this repo is unified all of the tools i use, not only for NixOS, Android, WSL and Windows in limited sense, and maybe hopefully servers and Macs if i have money.
+This repo is my unified, long-term dotfiles and system configuration. I use it across NixOS, WSL, Android via Nix-on-Droid, Windows, and maybe servers and macOS, if I ever have the hardware for it.
 
-By combining both [Chezmoi](https://www.chezmoi.io/), [NixOS](https://nixos.org/), and [Home-Manager](https://github.com/nix-community/plasma-manager), not only I benefit from NixOS/Home-Manager reproducability for my Linux/WSL/Android config, using Chezmoi allows me to use my dotfiles on setups that don't/can't use Nix like Windows or Random PCs/Servers that shouldn't be littered with Nix immutability.
+It represents everything I've learned over the years in embedded systems, programming, and everything else I've done or experienced. It keeps everything I need in one place and makes it portable enough to use from a USB drive.
+
+It combines two layers:
+
+- **Chezmoi** manages dotfiles, templates, and encrypted secrets across almost any machine, including systems where Nix is unavailable or unwanted.
+- **NixOS + Home Manager** provide reproducible Linux, WSL, and Android environments.
+
+On Nix-capable systems, Home Manager handles most of the user configuration. On non-Nix systems, Chezmoi applies the portable parts: shell configs, scripts, aliases, and application configs. This lets me keep one repository without forcing Nix onto every machine.
+
+### Design goals
+
+- Reproducible NixOS, WSL, and Nix-on-Droid setups.
+- Portable dotfiles for Windows and ordinary Linux/macOS machines.
+- Encrypted secrets through Chezmoi.
+- One place for aliases, scripts, themes, wallpapers, and tool configs.
+- Nix where it makes sense; Chezmoi everywhere else.
 
 ---
 
@@ -164,7 +182,28 @@ By design, Scoop isolates almost all instalation in `Scoop` folder in `%USERPROF
 
 ## Boxkit
 
-TBA
+> [!IMPORTANT]
+> This section is intended to have a GitHub Action, since it's meant to be heavily cloud-native, mimicking how Fedora Atomic works.
+
+Boxkit is a collection of [Distrobox](https://github.com/89luca89/distrobox) manifests and Containerfiles, inspired by [universal-blue's boxkit](https://github.com/ublue-os/boxkit). It gives me disposable, mutable container environments for the times when Nix is the wrong tool for the job.
+
+There are a few cases where this approach beats the Nix ecosystem:
+
+- Cloud-native workloads that will always be deployed inside a container.
+- Proprietary tools like Vivado that expect a normal FHS layout.
+- Software with messy build systems that aren't worth writing a derivation for, or that only exists on something like AUR(Arch User Repository).
+- Things you just want to install normally, break, and throw away without touching your host system or home directory.
+
+On an immutable or Nix-managed system, Distrobox is the escape hatch. Containers can share your home directory and integrate with your desktop, so apps inside behave almost like native ones, but you get a full mutable filesystem and a normal package manager. Build once, enter whenever, delete when done.
+
+```
+dot_boxkit/
+├── arch-lazerexport/     # Containerfile + manifest
+├── dev-arch-nvim/        # with init_hooks.sh
+└── vivado-box/           # FPGA toolchain
+```
+
+Each subdirectory is a self-contained container: a `Containerfile` for the image, a `manifest.ini` for Distrobox, and optionally an `init_hooks.sh` for setup on entry. Swap in whatever distro or toolchain the job needs.
 
 ## Removing Dotfiles
 
@@ -178,21 +217,31 @@ Then you can let it rip, remove Scoop or Nix, depending on the systems
 
 ## Tools I use in this dotfiles
 
+### Core
+
+- [Chezmoi](https://www.chezmoi.io/) — dotfile manager across all machines, Nix or not.
+- [Age](https://github.com/FiloSottile/age) — encryption for secrets and private files, used through Chezmoi.
+
 ### Nix Related
 
-- [Home Manager](https://github.com/nix-community/home-manager)
-- [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer)
-- [Plasma Manager](https://github.com/nix-community/plasma-manager)
-- [Nix On Droid](https://github.com/nix-community/nix-on-droid)
-- [NixOS WSL](https://github.com/nix-community/NixOS-WSL)
-- [Spicetify Nix](https://github.com/Gerg-L/spicetify-nix)
-- [Nix Portable](https://github.com/DavHau/nix-portable)
-- [NixOS-Generator](https://github.com/nix-community/nixos-generators/)
+- [Home Manager](https://github.com/nix-community/home-manager) — user environment management.
+- [Determinate Nix Installer](https://github.com/DeterminateSystems/nix-installer) — reliable Nix installer with flakes enabled by default.
+- [Plasma Manager](https://github.com/nix-community/plasma-manager) — declarative KDE Plasma config.
+- [Nix On Droid](https://github.com/nix-community/nix-on-droid) — Nix for Android based on Termux.
+- [NixOS WSL](https://github.com/nix-community/NixOS-WSL) — NixOS on Windows Subsystem for Linux.
+- [Spicetify Nix](https://github.com/Gerg-L/spicetify-nix) — declarative Spotify theming.
+- [Nix Portable](https://github.com/DavHau/nix-portable) — Nix without installation, for locked-down machines.
+- [NixOS-Generator](https://github.com/nix-community/nixos-generators/) — build NixOS images for various targets, including ISOs.
 
-### Non-Nix Related
+### Container Related
 
-- [Scoop Package Manager](https://scoop.sh/)
-- [ReviOS](https://revi.cc/)
+- [Distrobox](https://github.com/89luca89/distrobox) — mutable containers integrated with the host, my escape hatch from Nix when needed.
+- [Boxkit](https://github.com/ublue-os/boxkit) — inspiration for my container manifest layout.
+
+### Windows Related
+
+- [Scoop Package Manager](https://scoop.sh/) — Windows package manager, keeps installs isolated in `%USERPROFILE%`.
+- [ReviOS](https://revi.cc/) — debloated Windows, less telemetry and overhead.
 
 ## References for me
 
@@ -209,7 +258,6 @@ Then you can let it rip, remove Scoop or Nix, depending on the systems
 
 ## To-Do List
 
-- [x] ~~Move Templates as Reuseable Nix Devshells or Nix Run~~ Using Boxit based Container systems for Development environment, transition from template for non-nix projects
-- [x] Clean up Nix settings in the flake, including github's access token
+- [ ] Add Github Actions for Boxkit, to fully enable cloud-native boxkit
 - [ ] NixOS profile specifically for Klipper Servers, for my 3D printer
 - [ ] Live USB profile, packages as an custom ISO
