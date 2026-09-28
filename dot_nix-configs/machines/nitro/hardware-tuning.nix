@@ -1,12 +1,12 @@
 {pkgs, ...}: {
-  # ---- Kernel Parameters ----
+  # Kernel Parameters
   boot.kernelParams = [
     "amd_pstate=active" # Modern AMD P-state driver (required by PPD's EPP control).
     "pcie_aspm=off" # Disables PCIe ASPM to avoid NVMe latency spikes.
     "nvme_core.default_ps_max_latency_us=0" # Disables NVMe low-power states to prevent I/O stalls.
   ];
 
-  # ---- Kernel Sysctl ----
+  # Kernel Sysctl
   boot.kernel.sysctl = {
     "vm.dirty_background_ratio" = 3; # Start background writeback early.
     "vm.dirty_ratio" = 40; # Max dirty pages before blocking writes.
@@ -15,7 +15,7 @@
     "vm.swappiness" = 10; # Prefer RAM over swap.
   };
 
-  # ---- Filesystem ----
+  # Filesystem
   fileSystems."/" = {
     options = [
       "noatime" # Skip access-time updates on reads.
@@ -25,7 +25,7 @@
   };
   services.fstrim.enable = true; # Periodic TRIM as a safety net.
 
-  # ---- Swap ----
+  # Swap
   zramSwap = {
     enable = true;
     memoryPercent = 20; # Use 20% of RAM for compressed swap.
@@ -33,10 +33,9 @@
     priority = 100; # Higher priority than disk swap.
   };
 
-  # ---- Graphics ----
+  # Graphics
   boot.initrd.kernelModules = ["amdgpu"]; # Load amdgpu early in initrd.
   services.xserver.videoDrivers = ["amdgpu"];
-
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
@@ -50,7 +49,7 @@
     VDPAU_DRIVER = "radeonsi"; # VDPAU driver for legacy video decode.
   };
 
-  # ---- ROCm / OpenCL ----
+  # ROCm / OpenCL
   nixpkgs.config.rocmSupport = true;
   hardware.amdgpu.opencl.enable = true;
   hardware.graphics.extraPackages = with pkgs; [
@@ -61,21 +60,27 @@
   ];
   environment.variables.ROC_ENABLE_PRE_VEGA = "1"; # Enable ROCm on Polaris/Vega GPUs.
 
-  # ---- Monitoring & Overclocking ----
-  programs.tuxclocker = {
-    enable = false;
-    useUnfree = false;
+  # Monitoring & Overclocking
+  programs = {
+    tuxclocker = {
+      enable = false;
+      useUnfree = false;
+    };
+    ryzen-monitor-ng.enable = false;
   };
   hardware.cpu = {
     x86.msr.enable = true; # Enable MSR access for CPU monitoring.
     amd.ryzen-smu.enable = true; # Enable Ryzen SMU sensors.
   };
-  programs.ryzen-monitor-ng.enable = false;
   hardware.amdgpu.overdrive.enable = true; # Allow GPU clock/voltage control.
 
-  # ---- Power Management ----
-  services.power-profiles-daemon.enable = true; # Dynamic CPU/GPU power profiles.
-  services.tlp.enable = false; # Conflicts with PPD; keep disabled.
+  # Power Management
+  powerManagement.cpuFreqGovernor = "powersave"; # Efficient for most modern mobile/desktop chips
+  services = {
+    power-profiles-daemon.enable = true; # Dynamic CPU/GPU power profiles.
+    tlp.enable = false; # Conflicts with PPD; keep disabled.
+    # lact.enable = true;
+  };
 
   # Switch PPD profile automatically on AC plug/unplug.
   services.udev.extraRules = ''
@@ -83,6 +88,6 @@
     SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="1", RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set performance"
   '';
 
-  # ---- PRIME (Dual GPU) ----
+  # PRIME (Dual GPU)
   # iGPU drives the desktop by default; run `DRI_PRIME=1 <cmd>` to use the dGPU.
 }

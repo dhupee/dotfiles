@@ -33,8 +33,8 @@ in {
   imports = [
     # Hardware
     ../../machines/nitro/hardware-configuration.nix
-    ../../machines/nitro/drivers.nix
-    ../../machines/nitro/nbfc.nix
+    ../../machines/nitro/hardware-tuning.nix
+    ../../machines/nitro/nbfc-config.nix
 
     # Gaming
     ../../modules/systems/gaming.nix
@@ -83,6 +83,8 @@ in {
       keep-derivations = true
     '';
   };
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -153,9 +155,6 @@ in {
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
   # Enable bluetooth
   hardware.bluetooth = {
