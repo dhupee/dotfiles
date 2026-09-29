@@ -60,13 +60,10 @@
   ];
   environment.variables.ROC_ENABLE_PRE_VEGA = "1"; # Enable ROCm on Polaris/Vega GPUs.
 
-  # Monitoring & Overclocking
-  programs = {
-    tuxclocker = {
-      enable = false;
-      useUnfree = false;
-    };
-    ryzen-monitor-ng.enable = false;
+  # Monitoring & Maybe overclocking
+  programs.corectrl = {
+    # NOTE: corectrl is in maintenance mode, work for this laptop but should be replaced in other machine.
+    enable = true;
   };
   hardware.cpu = {
     x86.msr.enable = true; # Enable MSR access for CPU monitoring.
@@ -75,13 +72,10 @@
   hardware.amdgpu.overdrive.enable = true; # Allow GPU clock/voltage control.
 
   # Power Management
-  powerManagement.cpuFreqGovernor = "powersave"; # Efficient for most modern mobile/desktop chips
+  powerManagement.cpuFreqGovernor = "powersave"; # Preventing throttling even in AC plug
   services = {
     power-profiles-daemon.enable = true; # Dynamic CPU/GPU power profiles.
-    tlp.enable = false; # Conflicts with PPD; keep disabled.
-    # lact.enable = true;
   };
-
   # Switch PPD profile automatically on AC plug/unplug.
   services.udev.extraRules = ''
     SUBSYSTEM=="power_supply", ENV{POWER_SUPPLY_ONLINE}=="0", RUN+="${pkgs.power-profiles-daemon}/bin/powerprofilesctl set power-saver"
