@@ -80,8 +80,6 @@
       # openscad
       pdfarranger
       pdfmm
-      platformio-core
-      # pulseview
       qbittorrent
       rclone
       rclone-browser
@@ -97,7 +95,6 @@
     ++ (with pkgs-unstable; [
       chezmoi
       firefox-bin
-      # logisim-evolution
       obsidian
       orca-slicer
       vesktop
