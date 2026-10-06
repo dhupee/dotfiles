@@ -126,7 +126,10 @@ This thing obviously can change overtime as this dotfiles grow, and I can forgot
 
 #### Installing
 
-Windows support is lighter than Linux/WSL, but Chezmoi makes it work. Setup takes four steps:
+Windows relies on Scoop to install the tooling, this provides UAC-free setup, and for non-personal workstation it provides clean install and containerized location without the needs of Administrator privileges.
+
+> [!NOTE]
+> This setup is intentionally kept minimal compared to my NixOS machines, but it gives you consistent scripts, aliases, and shell customisation on Windows.
 
 1. **Install Scoop** - This Dotfiles for Windows uses Scoop to install it's program, to install Scoop, run:
 
@@ -151,10 +154,7 @@ Windows support is lighter than Linux/WSL, but Chezmoi makes it work. Setup take
     chezmoi apply
     ```
 
-    Install your applications – The dotfiles only handle configs; you supply the actual software. I recommend Scoop for most CLI tools and Winget for apps that need system integration.
-
-> [!NOTE]
-> This setup is intentionally kept minimal compared to my NixOS machines, but it gives you consistent scripts, aliases, and shell customisation on Windows.
+4. **Install your applications** – The dotfiles only handle configs; you supply the actual software. Use Scoop as much as possible and Winget for apps that need system integration.
 
 #### Uninstalling Scoop as cleanly as possible
 
@@ -166,19 +166,22 @@ By design, Scoop isolates almost all instalation in `Scoop` folder in `%USERPROF
    scoop uninstall scoop
    ```
 
-1. **Delete leftover directories** (if they still exist)
+2. **Delete leftover directories** (if they still exist)
 
    ```powershell
    Remove-Item -Recurse -Force "$env:USERPROFILE\scoop" -ErrorAction SilentlyContinue
    Remove-Item -Recurse -Force "$env:USERPROFILE\.config\scoop" -ErrorAction SilentlyContinue
    ```
 
-1. **Clean your `PATH` and Scoop‑related environment variables**
+3. **Clean your `PATH` and Scoop‑related environment variables**
    Open *System Properties* → *Environment Variables* and remove:
    - Any user/system `Path` entries containing `scoop` (e.g., `%USERPROFILE%\scoop\shims`).
    - Any user/system variables named `SCOOP` or `SCOOP_GLOBAL`.
 
-1. **Restart your terminal** for changes to take effect.
+4. **Check Windows Credential Manager**
+   If you use git with/without gh-cli, you might need to clean that as well.
+
+5. **Restart your terminal** for changes to take effect.
 
 ## Boxkit
 
