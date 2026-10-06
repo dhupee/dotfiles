@@ -1,63 +1,54 @@
-# chezmoi-add.ps1
+## chezmoi-add.ps1
 
 # STATUS: OPERATIONAL
 
-# Hardcoded arrays
-$filePaths = @(
-    "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json",
-    "$env:LOCALAPPDATA\lazygit\config.yml",
-    "$env:APPDATA\helix\config.toml",
-    "$HOME\.gitconfig",
-    "$HOME\.wslconfig"
-)
+# Fetch managed paths from chezmoi, split by encryption state,
+# then re-add each one individually.
 
-$dirPaths = @(
-    # "$env:APPDATA\OrcaSlicer",
-    "$HOME\.config\powershell",
-    "$HOME\.node-red",
-    "$env:APPDATA\kicad"
-)
-
-# $encryptedFilePaths = @(
-#     "C:\Users\you\.ssh\config"
-# )
-
-# $encryptedDirPaths = @(
-#     "$HOME\.ssh"
-# )
-
-function Add-ToChezmoi {
+function Add-ManagedToChezmoi {
     param (
-        [string[]]$Paths,
-        [string]$Type,
+        [string]$Include,
+        [string]$Exclude,
         [switch]$Encrypt
     )
 
-    if (-not $Paths -or $Paths.Count -eq 0) {
-        Write-Host "Skipping $Type{} No paths"
+    $chezmoiArgs = @('managed', '--path-style', 'absolute')
+    if ($Include) { $chezmoiArgs += "--include=$Include" }
+    if ($Exclude) { $chezmoiArgs += "--exclude=$Exclude" }
+
+    $paths = & chezmoi @chezmoiArgs 2>$null
+
+    if (-not $paths -or $paths.Count -eq 0) {
+        Write-Host "No managed paths found (include=$Include exclude=$Exclude)"
         return
     }
 
-    foreach ($path in $Paths) {
-        if (-not (Test-Path $path)) {
-            Write-Host "Skipping missing $Type path: $path"
+    # Normalize: ensure it's always an array even for a single result
+    $paths = @($paths)
+
+    foreach ($path in $paths) {
+        $path = "$path".Trim()
+        if (-not $path) { continue }
+
+        if (-not (Test-Path -LiteralPath $path)) {
+            Write-Host "Skipping missing path: $path"
             continue
         }
 
-        $quotedPath = '"' + $path + '"'
         if ($Encrypt) {
-            Write-Host "Encrypting and adding $Type{} $path"
-            chezmoi re-add --encrypt -- $path
+            Write-Host "Encrypting and re-adding: $path"
+            # chezmoi re-add --re-encrypt -- $path
+            chezmoi re-add -- $path
         } else {
-            Write-Host "Adding $Type{} $path"
+            Write-Host "Re-adding: $path"
             chezmoi re-add -- $path
         }
     }
 }
 
-# Process each group
-Add-ToChezmoi -Paths $filePaths -Type "File"
-Add-ToChezmoi -Paths $dirPaths -Type "Directory"
-Add-ToChezmoi -Paths $encryptedFilePaths -Type "Encrypted File" -Encrypt
-Add-ToChezmoi -Paths $encryptedDirPaths -Type "Encrypted Directory" -Encrypt
+# Process all non-encrypted managed entries
+Add-ManagedToChezmoi -Exclude "encrypted"
+
+# Process only encrypted managed entries
+Add-ManagedToChezmoi -Include "encrypted" -Encrypt
 
