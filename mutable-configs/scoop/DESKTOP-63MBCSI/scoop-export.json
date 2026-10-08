@@ -1,0 +1,212 @@
+{
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main",
+            "Updated": "2026-10-08T15:43:14+07:00",
+            "Manifests": 1669
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2026-10-08T15:43:23+07:00",
+            "Manifests": 2406
+        },
+        {
+            "Name": "anderlli0053_DEV-tools",
+            "Source": "https://github.com/anderlli0053/DEV-tools",
+            "Updated": "2026-10-08T17:15:16+07:00",
+            "Manifests": 28096
+        }
+    ],
+    "apps": [
+        {
+            "Name": "7zip",
+            "Version": "26.04",
+            "Source": "main",
+            "Updated": "2026-10-06T17:21:52.1277499+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "anki",
+            "Version": "26.09.3",
+            "Source": "extras",
+            "Updated": "2026-10-07T21:41:44.586247+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "chezmoi",
+            "Version": "2.73.0",
+            "Source": "main",
+            "Updated": "2026-10-06T17:33:59.7061937+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "clipboard",
+            "Version": "0.10.0",
+            "Source": "main",
+            "Updated": "2026-10-06T20:58:08.9603052+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "delta",
+            "Version": "0.20.1",
+            "Source": "main",
+            "Updated": "2026-10-06T19:35:09.9843113+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "fastfetch",
+            "Version": "2.69.0",
+            "Source": "main",
+            "Updated": "2026-10-07T13:54:45.8979688+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "file",
+            "Version": "5.45",
+            "Source": "main",
+            "Updated": "2026-10-06T17:40:21.1497753+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "firefox",
+            "Version": "157.0",
+            "Updated": "2026-10-08T07:17:43.8118681+07:00",
+            "Info": "Install failed"
+        },
+        {
+            "Name": "fontbase",
+            "Version": "2026.7.0",
+            "Source": "extras",
+            "Updated": "2026-10-07T08:51:48.8062548+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "gh",
+            "Version": "2.102.0",
+            "Source": "main",
+            "Updated": "2026-10-06T20:01:16.3283983+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "git",
+            "Version": "2.56.0.2",
+            "Source": "main",
+            "Updated": "2026-10-06T17:24:25.801876+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "lazygit",
+            "Version": "0.66.0",
+            "Source": "extras",
+            "Updated": "2026-10-06T17:46:39.3768673+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "lessmsi",
+            "Version": "2.12.9",
+            "Source": "main",
+            "Updated": "2026-10-06T17:21:38.9274297+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "LibreOffice-Portable",
+            "Version": "25.2.3",
+            "Source": "anderlli0053_DEV-tools",
+            "Updated": "2026-10-06T22:25:32.0470788+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "neovim",
+            "Version": "0.12.5",
+            "Source": "main",
+            "Updated": "2026-10-06T17:36:26.4772908+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "psmux",
+            "Version": "3.3.8",
+            "Source": "main",
+            "Updated": "2026-10-06T17:38:13.7823071+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "pwsh",
+            "Version": "7.6.6",
+            "Source": "main",
+            "Updated": "2026-10-06T17:33:10.7506624+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "scoop-completion",
+            "Version": "0.3.0",
+            "Source": "extras",
+            "Updated": "2026-10-06T19:34:30.3223302+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "starship",
+            "Version": "1.26.0",
+            "Source": "main",
+            "Updated": "2026-10-06T19:33:26.8020803+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "symlinker",
+            "Version": "4.1.0",
+            "Source": "extras",
+            "Updated": "2026-10-06T21:54:49.1491138+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "tabby",
+            "Version": "1.0.238",
+            "Source": "extras",
+            "Updated": "2026-10-08T17:42:19.7100802+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "vcredist2022",
+            "Version": "14.51.36247.0",
+            "Source": "extras",
+            "Updated": "2026-10-06T17:37:58.5469094+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "vesktop",
+            "Version": "1.6.7",
+            "Source": "extras",
+            "Updated": "2026-10-06T21:46:01.1216919+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "vscode",
+            "Version": "1.141.0",
+            "Source": "extras",
+            "Updated": "2026-10-08T17:44:07.7354986+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "which",
+            "Version": "2.20",
+            "Source": "main",
+            "Updated": "2026-10-06T17:42:11.729287+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "yazi",
+            "Version": "26.9.1",
+            "Source": "main",
+            "Updated": "2026-10-06T17:39:30.1923677+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "zoxide",
+            "Version": "0.10.0",
+            "Source": "main",
+            "Updated": "2026-10-06T19:33:21.023558+07:00",
+            "Info": ""
+        }
+    ]
+}
