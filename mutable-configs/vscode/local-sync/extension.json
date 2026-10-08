@@ -46,6 +46,7 @@
   "ms-vscode.cpptools-extension-pack",
   "ms-vscode.cpptools-themes",
   "ms-vscode.makefile-tools",
+  "ms-vscode.powershell",
   "ms-vscode.remote-explorer",
   "ms-vscode.remote-repositories",
   "ms-vscode.remote-server",
