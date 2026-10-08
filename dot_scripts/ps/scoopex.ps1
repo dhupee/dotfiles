@@ -1,12 +1,20 @@
-# Define target path and filename
-$targetPath = Join-Path $HOME '.local\share\chezmoi\mutable-configs\scoop'
-$filename = 'scoop-export.json'
-$fullPath = Join-Path $targetPath $filename
+# Base path for scoop configs
+$basePath   = Join-Path $HOME '.local\share\chezmoi\mutable-configs\scoop'
 
-# Check if the directory exists
-if (Test-Path $targetPath) {
-    scoop export | Out-File -FilePath $fullPath -Encoding utf8
+# Per-machine subfolder
+$targetPath = Join-Path $basePath $env:COMPUTERNAME
+$fullPath   = Join-Path $targetPath 'scoop-export.json'
+
+# Create the per-machine directory if it doesn't exist
+if (-not (Test-Path $targetPath)) {
+    New-Item -ItemType Directory -Path $targetPath -Force | Out-Null
+}
+
+# Run the export and only write if it succeeded and produced output
+$json = scoop export
+if ($LASTEXITCODE -eq 0 -and $json) {
+    $json | Out-File -FilePath $fullPath -Encoding utf8
     Write-Host "Scoop export completed: $fullPath"
 } else {
-    Write-Host "Target path does not exist: $targetPath"
+    Write-Error "scoop export failed; file not overwritten."
 }
