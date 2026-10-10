@@ -6,11 +6,29 @@
 <!--toc:start-->
 - [USB Toolkit](#usb-toolkit)
   - [Tools List](#tools-list)
+    - [Installed Using PortableApps](#installed-using-portableapps)
+    - [Downloaded Manually](#downloaded-manually)
 <!--toc:end-->
 
 ## Tools List
 
 As reminder and list on what I download and possibly need in USB Drive:
+
+### Installed Using PortableApps
+
+Leveraging [PortableApps](https://portableapps.com/) on top of existing Ventoy install should gives flexibility on what kind of app I use when using it in.
+
+At the very least I would need:
+
+- 7Zip
+- Firefox
+- gVim
+- Libreoffice
+- Putty
+
+### Downloaded Manually
+
+This one is more specialized tool and should be installed seperately, or it might not exist in PortableApps or better not be installed from there.
 
 - [Visual Studio Code](https://code.visualstudio.com/docs/setup/portable)
 - [Bitwarden](https://bitwarden.com/)
