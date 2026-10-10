@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
-            "Updated": "2026-10-08T15:43:14+07:00",
-            "Manifests": 1669
+            "Updated": "2026-10-10T11:36:48+07:00",
+            "Manifests": 1671
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-08T15:43:23+07:00",
-            "Manifests": 2406
+            "Updated": "2026-10-10T11:39:05+07:00",
+            "Manifests": 2419
         },
         {
             "Name": "anderlli0053_DEV-tools",
             "Source": "https://github.com/anderlli0053/DEV-tools",
-            "Updated": "2026-10-08T17:15:16+07:00",
+            "Updated": "2026-10-10T07:41:22+07:00",
             "Manifests": 28096
         }
     ],
@@ -115,6 +115,13 @@
             "Version": "25.2.3",
             "Source": "anderlli0053_DEV-tools",
             "Updated": "2026-10-06T22:25:32.0470788+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "localsend",
+            "Version": "1.18.2",
+            "Source": "extras",
+            "Updated": "2026-10-10T12:47:13.2492846+07:00",
             "Info": ""
         },
         {
