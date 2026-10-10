@@ -16,5 +16,6 @@ As reminder and list on what I download and possibly need in USB Drive:
 - [Bitwarden](https://bitwarden.com/)
 - [Git Portable](https://git-scm.com/install/windows)
 - [Localsend](https://localsend.org/)
+- [PortableApps](https://portableapps.com/)
 
 Refer to [README](./README.md) on using Scoop in random PC for other tooling, along with how to uninstall it as cleanly as possible.
