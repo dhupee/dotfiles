@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
-            "Updated": "2026-10-10T11:36:48+07:00",
-            "Manifests": 1671
+            "Updated": "2026-10-16T11:33:46+07:00",
+            "Manifests": 1690
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-10T11:39:05+07:00",
-            "Manifests": 2419
+            "Updated": "2026-10-16T11:37:20+07:00",
+            "Manifests": 2425
         },
         {
             "Name": "anderlli0053_DEV-tools",
             "Source": "https://github.com/anderlli0053/DEV-tools",
-            "Updated": "2026-10-10T07:41:22+07:00",
+            "Updated": "2026-10-16T10:31:04+07:00",
             "Manifests": 28096
         }
     ],
@@ -36,9 +36,9 @@
         },
         {
             "Name": "chezmoi",
-            "Version": "2.73.0",
+            "Version": "2.73.1",
             "Source": "main",
-            "Updated": "2026-10-06T17:33:59.7061937+07:00",
+            "Updated": "2026-10-12T19:40:42.9150401+07:00",
             "Info": ""
         },
         {
@@ -57,9 +57,9 @@
         },
         {
             "Name": "fastfetch",
-            "Version": "2.69.0",
+            "Version": "2.70.0",
             "Source": "main",
-            "Updated": "2026-10-07T13:54:45.8979688+07:00",
+            "Updated": "2026-10-15T13:41:06.349408+07:00",
             "Info": ""
         },
         {
@@ -98,9 +98,9 @@
         },
         {
             "Name": "lazygit",
-            "Version": "0.66.0",
+            "Version": "0.66.1",
             "Source": "extras",
-            "Updated": "2026-10-06T17:46:39.3768673+07:00",
+            "Updated": "2026-10-15T13:41:13.5539541+07:00",
             "Info": ""
         },
         {
@@ -126,16 +126,23 @@
         },
         {
             "Name": "neovim",
-            "Version": "0.12.5",
+            "Version": "0.12.6",
             "Source": "main",
-            "Updated": "2026-10-06T17:36:26.4772908+07:00",
+            "Updated": "2026-10-15T13:42:02.0697205+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "obs-studio",
+            "Version": "32.2.2",
+            "Source": "extras",
+            "Updated": "2026-10-14T20:03:03.0003045+07:00",
             "Info": ""
         },
         {
             "Name": "psmux",
-            "Version": "3.3.8",
+            "Version": "3.4.0",
             "Source": "main",
-            "Updated": "2026-10-06T17:38:13.7823071+07:00",
+            "Updated": "2026-10-15T13:42:08.7784007+07:00",
             "Info": ""
         },
         {
@@ -143,6 +150,13 @@
             "Version": "7.6.6",
             "Source": "main",
             "Updated": "2026-10-06T17:33:10.7506624+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "qbittorrent",
+            "Version": "5.2.4",
+            "Source": "extras",
+            "Updated": "2026-10-16T13:15:27.9887293+07:00",
             "Info": ""
         },
         {
@@ -188,10 +202,17 @@
             "Info": ""
         },
         {
-            "Name": "vscode",
-            "Version": "1.141.0",
+            "Name": "vlc",
+            "Version": "3.0.24",
             "Source": "extras",
-            "Updated": "2026-10-08T17:44:07.7354986+07:00",
+            "Updated": "2026-10-16T13:18:43.1973841+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "vscode",
+            "Version": "1.141.2",
+            "Source": "extras",
+            "Updated": "2026-10-15T13:44:24.9815587+07:00",
             "Info": ""
         },
         {
@@ -206,6 +227,13 @@
             "Version": "26.9.1",
             "Source": "main",
             "Updated": "2026-10-06T17:39:30.1923677+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "yt-dlp",
+            "Version": "2026.08.19",
+            "Source": "main",
+            "Updated": "2026-10-16T13:02:10.5733876+07:00",
             "Info": ""
         },
         {
