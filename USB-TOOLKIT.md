@@ -5,10 +5,17 @@
 
 <!--toc:start-->
 - [USB Toolkit](#usb-toolkit)
+  - [Important Notes](#important-notes)
   - [Tools List](#tools-list)
     - [Installed Using PortableApps](#installed-using-portableapps)
     - [Downloaded Manually](#downloaded-manually)
 <!--toc:end-->
+
+## Important Notes
+
+- When Applying this toolkit setup, use quite performant flashdrive like Sandisk Ultra Flair.
+- If use Scoop on random PC, do consider how long you might used it, install might be long despite how clean it is.
+- Refer to [README](./README.md) on using Scoop in random PC for other tooling that's not listed below, along with how to uninstall it as cleanly as possible.
 
 ## Tools List
 
@@ -34,5 +41,3 @@ This one is more specialized tool and should be installed seperately, or it migh
 - [Bitwarden](https://bitwarden.com/)
 - [Git Portable](https://git-scm.com/install/windows)
 - [Localsend](https://localsend.org/)
-
-Refer to [README](./README.md) on using Scoop in random PC for other tooling, along with how to uninstall it as cleanly as possible.
