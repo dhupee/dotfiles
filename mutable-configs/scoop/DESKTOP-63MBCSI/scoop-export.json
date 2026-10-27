@@ -3,25 +3,31 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
-            "Updated": "2026-10-24T13:54:11+07:00",
-            "Manifests": 1700
+            "Updated": "2026-10-27T19:44:40+07:00",
+            "Manifests": 1702
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-24T14:26:52+07:00",
-            "Manifests": 2447
+            "Updated": "2026-10-27T21:59:10+07:00",
+            "Manifests": 2448
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-24T13:17:00+07:00",
+            "Updated": "2026-10-27T21:40:29+07:00",
             "Manifests": 629
+        },
+        {
+            "Name": "games",
+            "Source": "https://github.com/ScoopInstaller/Games",
+            "Updated": "2026-10-27T21:35:34+07:00",
+            "Manifests": 422
         },
         {
             "Name": "anderlli0053_DEV-tools",
             "Source": "https://github.com/anderlli0053/DEV-tools",
-            "Updated": "2026-10-24T10:35:55+07:00",
+            "Updated": "2026-10-27T22:17:54+07:00",
             "Manifests": 28096
         }
     ],
@@ -62,10 +68,24 @@
             "Info": ""
         },
         {
+            "Name": "deno",
+            "Version": "2.9.8",
+            "Source": "main",
+            "Updated": "2026-10-24T18:10:26.5865196+07:00",
+            "Info": ""
+        },
+        {
             "Name": "fastfetch",
             "Version": "2.70.0",
             "Source": "main",
             "Updated": "2026-10-15T13:41:06.349408+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "ffmpeg",
+            "Version": "9.0.2",
+            "Source": "main",
+            "Updated": "2026-10-24T18:12:44.6381494+07:00",
             "Info": ""
         },
         {
@@ -78,7 +98,7 @@
         {
             "Name": "firefox",
             "Version": "157.0",
-            "Updated": "2026-10-24T15:10:05.9298453+07:00",
+            "Updated": "2026-10-25T10:58:45.8576882+07:00",
             "Info": "Install failed"
         },
         {
@@ -90,16 +110,16 @@
         },
         {
             "Name": "gh",
-            "Version": "2.103.0",
+            "Version": "2.103.3",
             "Source": "main",
-            "Updated": "2026-10-23T11:38:13.0845992+07:00",
+            "Updated": "2026-10-27T22:50:49.4280016+07:00",
             "Info": ""
         },
         {
             "Name": "git",
-            "Version": "2.56.0.3",
+            "Version": "2.56.0.4",
             "Source": "main",
-            "Updated": "2026-10-23T11:40:10.6824507+07:00",
+            "Updated": "2026-10-27T22:53:02.0157047+07:00",
             "Info": ""
         },
         {
@@ -131,16 +151,24 @@
             "Info": ""
         },
         {
-            "Name": "MicrosoftVisualCppRedist-Install",
-            "Version": null,
-            "Updated": "2026-10-24T14:59:25.657709+07:00",
-            "Info": "Install failed"
+            "Name": "megacmd",
+            "Version": "2.7.0",
+            "Source": "main",
+            "Updated": "2026-10-25T07:35:33.0484431+07:00",
+            "Info": ""
         },
         {
             "Name": "neovim",
             "Version": "0.12.6",
             "Source": "main",
             "Updated": "2026-10-15T13:42:02.0697205+07:00",
+            "Info": ""
+        },
+        {
+            "Name": "osulazer",
+            "Version": "2026.1005.0-lazer",
+            "Source": "games",
+            "Updated": "2026-10-25T07:31:31.4160679+07:00",
             "Info": ""
         },
         {
@@ -250,9 +278,9 @@
         },
         {
             "Name": "vesktop",
-            "Version": "1.6.7",
+            "Version": "1.6.8",
             "Source": "extras",
-            "Updated": "2026-10-06T21:46:01.1216919+07:00",
+            "Updated": "2026-10-25T10:42:47.7272323+07:00",
             "Info": ""
         },
         {
@@ -285,9 +313,9 @@
         },
         {
             "Name": "yt-dlp",
-            "Version": "2026.10.21",
+            "Version": "2026.10.26",
             "Source": "main",
-            "Updated": "2026-10-23T11:42:46.9982534+07:00",
+            "Updated": "2026-10-27T22:53:07.5557459+07:00",
             "Info": ""
         },
         {
