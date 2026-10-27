@@ -7,11 +7,11 @@
   - [Screenshots](#screenshots)
   - [File Structure](#file-structure)
   - [Installation](#installation)
-    - [Linux / NixOS](#linux-nixos)
+    - [Linux / NixOS](#linux--nixos)
     - [Windows](#windows)
       - [Installing](#installing)
-      - [Uninstalling Scoop as cleanly as possible](#uninstalling-scoop-as-cleanly-as-possible)
   - [Boxkit](#boxkit)
+  - [USB Toolkit](#usb-toolkit)
   - [Removing Dotfiles](#removing-dotfiles)
   - [Tools I use in this dotfiles](#tools-i-use-in-this-dotfiles)
     - [Core](#core)
@@ -207,6 +207,10 @@ dot_boxkit/
 ```
 
 Each subdirectory is a self-contained container: a `Containerfile` for the image, a `manifest.ini` for Distrobox, and optionally an `init_hooks.sh` for setup on entry. Swap in whatever distro or toolchain the job needs.
+
+## USB Toolkit
+
+To use this Dotfiles as USB Toolkit, please refer to dedicated [README about this section](./USB-TOOLKIT.md)
 
 ## Removing Dotfiles
 
