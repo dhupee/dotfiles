@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "jnoortheen.nix-ide"
+        "jnoortheen.nix-ide",
+        "ms-vscode.powershell"
     ]
 }
