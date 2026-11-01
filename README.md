@@ -189,6 +189,8 @@ By design, Scoop isolates almost all instalation in `Scoop` folder in `%USERPROF
     - AppData
     - .config
     - .local
+    - Desktop Shortcuts
+    - Start Menu Shortcuts
 
     Find the clean it.
 
@@ -199,6 +201,7 @@ By design, Scoop isolates almost all instalation in `Scoop` folder in `%USERPROF
 
 5. **Check Windows Credential Manager**
    If you use git with/without gh-cli, you might need to clean that as well.
+
 6. **Check Registry Editor**
    Some Scoop installations recommend you to run `regedit` to tweak on `Open with` functionality or File Association.
 
