@@ -83,6 +83,7 @@
       qbittorrent
       rclone
       rclone-browser
+      smplayer
       speedtest-cli
       tectonic-unwrapped
       tldr
