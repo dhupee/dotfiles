@@ -64,6 +64,7 @@ function ssrm {
 
 Set-Alias c Clear-Host
 Set-Alias lg lazygit
+Set-Alias y yazi
 Set-Alias which Get-Command
 
 #===================================================================#
