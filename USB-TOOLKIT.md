@@ -74,5 +74,6 @@ These tools are handled separately because I prefer their own deployment methods
 - [Bitwarden](https://bitwarden.com/) - password management.
 - [Git for Windows](https://git-scm.com/install/windows) - version control and command-line workflows.
 - [LocalSend](https://localsend.org/) - local file transfers between supported devices.
+- [Tabby](https://tabby.sh/) - multi profile terminal emulator.
 
 The exact setup may change as I find better ways to keep the toolkit portable and useful across different machines.

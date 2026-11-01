@@ -1,5 +1,11 @@
 # chezmoi configuration file
 encryption = "age"
+
+# Prompted values are stored in the generated chezmoi config.
+{{- $machineRole := promptChoiceOnce . "machineRole" "What role does this machine serve?" (list "personal" "work" "shared" "server" "temporary") "personal" -}}
+{{- $personalAssets := promptBoolOnce . "personalAssets" "Deploy personal desktop assets (e.g. Wallpapers)?" (eq $machineRole "personal") -}}
+{{- $deployPrivateFiles := promptBoolOnce . "deployPrivateFiles" "Deploy personal private files (SSH keys and secrets)?" false -}}
+
 [add]
     secrets = "ignore"
 # You will find the age key in bitwarden's secure note
@@ -10,6 +16,11 @@ encryption = "age"
     symmetry = true
 [edit]
     command = "nvim"
+
+[data]
+    machineRole = {{ $machineRole | quote }}
+    personalAssets = {{ $personalAssets }}
+    deployPrivateFiles = {{ $deployPrivateFiles }}
 
 {{if eq .chezmoi.os "linux"}}
 [merge]
@@ -28,4 +39,5 @@ encryption = "age"
     command = "pwsh"
     args = ["-File",".scripts/ps/copy-profile.ps1"]
 {{end}}
+
 
