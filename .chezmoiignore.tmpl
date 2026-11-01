@@ -1,42 +1,50 @@
-# NOTE: state the "destination directory", ~ is the rootdir
+# NOTE: patterns refer to destination paths; ~ is the home directory.
 
-#============GLOBAL============#
-
-# docs and scripts
+# --- Global ---
 README.md
 USB-TOOLKIT.md
 *.sh
 *.ps1
 .editorconfig
-
-# Better not to clutter my home folder
 mutable-configs
 img
-
-# generated
 .vscode
 
-#=========WINDOWS & MAC=========#
+# --- Windows and macOS ---
 {{ if (or (eq .chezmoi.os "windows") (eq .chezmoi.os "darwin")) }}
 .bottles-backup
 .boxkit
-Wallpapers
 {{ end }}
 
-#============WINDOWS============#
+# --- Windows ---
 {{ if eq .chezmoi.os "windows" }}
 .nix-configs
 Templates
-.secrets
 {{ end }}
 
-#=============LINUX============#
+# --- Linux ---
 {{ if eq .chezmoi.os "linux" }}
 AppData
 OneDrive
 .gitconfig
 .wslconfig
 # .node-red
-
 .config/powershell
 {{ end }}
+
+# --- Machine role ---
+{{ if ne .machineRole "personal" }}
+.torrents
+{{ end }}
+
+# --- Personal assets ---
+{{ if not .personalAssets }}
+Wallpapers
+{{ end }}
+
+# --- Private material ---
+{{ if not .deployPrivateFiles }}
+.secrets
+.ssh
+{{ end }}
+
