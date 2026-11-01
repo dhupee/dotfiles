@@ -10,26 +10,27 @@ mutable-configs
 img
 .vscode
 
-# --- Windows and macOS ---
+# --- Windows and MacOS ---
 {{ if (or (eq .chezmoi.os "windows") (eq .chezmoi.os "darwin")) }}
 .bottles-backup
 .boxkit
 {{ end }}
 
-# --- Windows ---
-{{ if eq .chezmoi.os "windows" }}
-.nix-configs
-Templates
-{{ end }}
-
-# --- Linux ---
-{{ if eq .chezmoi.os "linux" }}
+# --- Linux and MacOS ---
+{{ if (or (eq .chezmoi.os "linux") (eq .chezmoi.os "darwin")) }}
 AppData
 OneDrive
 .gitconfig
 .wslconfig
 # .node-red
 .config/powershell
+.psmux.conf
+{{ end }}
+
+# --- Windows ---
+{{ if eq .chezmoi.os "windows" }}
+.nix-configs
+Templates
 {{ end }}
 
 # --- Machine role ---
