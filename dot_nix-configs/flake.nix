@@ -184,7 +184,8 @@
               nixpkgs.overlays = [
                 nix-cachyos-kernel.overlays.pinned
               ];
-              boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
+              # NOTE: switch to default kernel for now due to caches issue
+              # boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
 
               nix.settings = {
                 substituters = substituters;
