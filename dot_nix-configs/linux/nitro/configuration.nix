@@ -23,6 +23,7 @@
     ../../modules/systems/localsend.nix
     ../../modules/systems/podman.nix
     ../../modules/systems/qemu-host.nix
+    ../../modules/systems/tor.nix
 
     # Fonts
     ../../modules/systems/fonts.nix
